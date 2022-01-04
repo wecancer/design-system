@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TabSection /> should render snapshot correctly 1`] = `
+.c2 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.c3 {
+  font-size: 1rem;
+  font-family: Poppins,sans-serif;
+  color: #4E4B66;
+  text-align: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: 1rem;
+  position: relative;
+  -webkit-transition: all ease 250ms;
+  transition: all ease 250ms;
+  cursor: pointer;
+}
+
+.c3:hover {
+  color: #14142B;
+  background-color: #EFF0F6;
+}
+
+.c3:active {
+  color: #14142B;
+}
+
+.c3[aria-disabled='true'] {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.c3[aria-disabled='true']:hover {
+  background-color: transparent;
+}
+
+.c3[aria-selected='true'] {
+  color: #0080EB;
+}
+
+.c3[aria-selected='true']::after {
+  content: '●';
+  display: block;
+  margin: 0;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.c0 {
+  font-family: Poppins,sans-serif;
+}
+
+<section
+  class="c0"
+>
+  <header
+    class="c1"
+  >
+    <button
+      aria-disabled="false"
+      aria-selected="true"
+      class="c2 c3"
+      data-tabtarget="0"
+      role="tab"
+      type="button"
+    >
+      First tab
+    </button>
+    <button
+      aria-disabled="false"
+      aria-selected="false"
+      class="c2 c3"
+      data-tabtarget="1"
+      role="tab"
+      type="button"
+    >
+      Middle tab
+    </button>
+    <button
+      aria-disabled="false"
+      aria-selected="false"
+      class="c2 c3"
+      data-tabtarget="2"
+      role="tab"
+      type="button"
+    >
+      Last tab
+    </button>
+  </header>
+  This is my first tab
+</section>
+`;

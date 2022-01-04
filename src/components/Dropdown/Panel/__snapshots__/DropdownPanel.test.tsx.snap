@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownPanel /> should render snapshot correctly 1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+.c1 {
+  cursor: pointer;
+  font-family: Poppins,sans-serif;
+}
+
+.c2 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class=""
+  >
+    <div
+      class="c1"
+      role="button"
+      tabindex="0"
+    >
+      <p
+        class="c2"
+      >
+        empty options
+      </p>
+    </div>
+  </div>
+</div>
+`;

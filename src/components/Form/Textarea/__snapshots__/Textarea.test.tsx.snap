@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Textarea /> should render snapshot correctly 1`] = `
+.c5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c5 svg {
+  width: 1.375rem;
+  height: 1.375rem;
+}
+
+.c3 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.c0 {
+  position: relative;
+  font-family: Poppins,sans-serif;
+}
+
+.c1 {
+  width: 100%;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  box-sizing: border-box;
+  font-family: Poppins,sans-serif;
+  border-radius: 1rem;
+  outline: none;
+  background-color: #FCFCFC;
+  border: 1px solid #A0A3BD;
+}
+
+.c1:focus {
+  border-color: #14142B;
+}
+
+.c1:focus + label {
+  color: #6E7191;
+  font-size: 0.875rem;
+  top: -0.6875rem;
+}
+
+.c1 + label {
+  color: #6E7191;
+  font-size: 0.875rem;
+  top: -0.6875rem;
+}
+
+.c4 {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.c2 {
+  position: absolute;
+  top: 1rem;
+  left: 1.25rem;
+  padding: 0 0.25rem;
+  background: transition:all 250ms ease;
+  background: linear-gradient( 180deg,rgba(255,255,255,0) 0%,rgba(20,20,255,0) 50%,#FCFCFC 50%,#FCFCFC 100% );
+}
+
+<div
+  class="c0"
+>
+  <textarea
+    class="c1"
+    rows="2"
+  >
+    Text message
+  </textarea>
+  <label
+    class="c2"
+  >
+    Text label
+  </label>
+  <button
+    class="c3 c4"
+    type="button"
+  >
+    <div
+      class="c5"
+      data-icon-name="times"
+    >
+      <span />
+    </div>
+  </button>
+</div>
+`;

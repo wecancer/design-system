@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tooltip /> should render snapshot correctly 1`] = `
+.c0 {
+  font-family: Poppins,sans-serif;
+  position: relative;
+  display: inline-block;
+}
+
+.c0:hover > [role='tooltip'] {
+  visibility: visible;
+  opacity: 1;
+}
+
+<div
+  class="c0"
+>
+  <button
+    type="button"
+  >
+    hover me
+  </button>
+</div>
+`;

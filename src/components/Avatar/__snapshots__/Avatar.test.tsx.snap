@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Avatar /> should render snapshot correctly 1`] = `
+.c0 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.c0 figure {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.c0 figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+<div
+  class="c0"
+>
+  <figure>
+    <img
+      alt=""
+      src="https://randomuser.me/api/portraits/women/42.jpg"
+    />
+  </figure>
+</div>
+`;

@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Table /> should render snapshot correctly 1`] = `
+.c0 {
+  font-family: Poppins,sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.c9 {
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 8px 16px rgba(17,17,17,0.08);
+}
+
+.c4 {
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 8px 16px rgba(17,17,17,0.08);
+  background-color: #FFF4DF;
+}
+
+.c7 {
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 8px 16px rgba(17,17,17,0.08);
+  background-color: #FFDFED;
+}
+
+.c8 {
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 8px 16px rgba(17,17,17,0.08);
+  background-color: #EFF0F6;
+}
+
+.c5 {
+  display: grid;
+  border-radius: 1rem;
+  grid-template-columns: 100px 200px 1fr 1fr;
+}
+
+.c5 > .wc-table-cell:first-child {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.c5 > .wc-table-cell:last-child {
+  border-radius: 0 1rem 1rem 0 !important;
+}
+
+.c5 > .wc-table-cell-solid {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.c5 > .wc-table-cell:not(:last-child).wc-table-cell-solid ~ .wc-table-cell-solid {
+  border-radius: 0;
+}
+
+.c3 {
+  padding: 0.75rem 1rem;
+  background-color: #FCFCFC;
+}
+
+.c6 {
+  padding: 0.75rem 1rem;
+}
+
+.c1 {
+  margin-bottom: 0;
+}
+
+.c2 {
+  color: #6E7191;
+  font-size: 0.875rem;
+  display: grid;
+  grid-template-columns: 100px 200px 1fr 1fr;
+}
+
+.c2 .wc-table-cell {
+  background-color: transparent;
+}
+
+<ul
+  class="c0"
+>
+  <li
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Head 1
+      </div>
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Head 2
+      </div>
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Head 3
+      </div>
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Head 4
+      </div>
+    </div>
+  </li>
+  <li
+    class="c4"
+  >
+    <div
+      class="c5"
+    >
+      <div
+        class="c6 wc-table-cell"
+      >
+        Warning
+      </div>
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Item 2
+      </div>
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Item 3
+      </div>
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Proin viverra justo vitae aliquam pulvinar. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+      </div>
+    </div>
+  </li>
+  <li
+    class="c7"
+  >
+    <div
+      class="c5"
+    >
+      <div
+        class="c6 wc-table-cell"
+      >
+        Error!
+      </div>
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Item 2
+      </div>
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Item 3
+      </div>
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Phasellus vel velit et mi eleifend dignissim. Duis vitae mi magna. Proin in feugiat urna.
+      </div>
+    </div>
+  </li>
+  <li
+    class="c8"
+  >
+    <div
+      class="c5"
+    >
+      <div
+        class="c6 wc-table-cell"
+      >
+        Item 1
+      </div>
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Item 2
+      </div>
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Item 3
+      </div>
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      </div>
+    </div>
+  </li>
+  <li
+    class="c9"
+  >
+    <div
+      class="c5"
+    >
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Item 1
+      </div>
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Item 2
+      </div>
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Item 3
+      </div>
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Nulla iaculis, erat ultrices egestas pretium, metus augue efficitur massa, blandit elementum arcu dolor at erat.
+      </div>
+    </div>
+  </li>
+  <li
+    class="c9"
+  >
+    <div
+      class="c5"
+    >
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Item 1
+      </div>
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Item 2
+      </div>
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Item 3
+      </div>
+      <div
+        class="c3 wc-table-cell wc-table-cell-solid"
+      >
+        Item 4
+      </div>
+    </div>
+  </li>
+</ul>
+`;

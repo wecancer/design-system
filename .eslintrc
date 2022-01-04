@@ -1,0 +1,44 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["jest", "@typescript-eslint", "react-hooks", "styled-components-a11y", "import"],
+  "extends": [
+    "airbnb-typescript",
+    "prettier",
+    // "plugin:import/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jest/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:styled-components-a11y/recommended"
+  ],
+  "env": {
+    "jest/globals": true
+  },
+  "parserOptions": {
+    "project": ["./tsconfig.json"],
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    // "@typescript-eslint/explicit-function-return-type": ["off"],
+    "prettier/prettier": "error",
+    "import/no-unresolved": "error",
+    "import/prefer-default-export": ["off"],
+    "react/jsx-props-no-spreading": ["off"]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
+        "project": "./tsconfig.json"
+      }
+    }
+  }
+}

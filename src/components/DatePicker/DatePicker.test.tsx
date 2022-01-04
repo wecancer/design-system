@@ -1,0 +1,102 @@
+import React from 'react'
+import DatePicker from '.'
+import RangeDatePicker from './Range'
+import {render, fireEvent} from '../../testing'
+
+describe('<DatePicker />', () => {
+  it('should render snapshot correctly', () => {
+    const {container} = render(
+      <>
+        <DatePicker />
+      </>,
+    )
+    expect(container.firstChild).toMatchSnapshot()
+  })
+
+  it('should dispatch an expection when the value has the invalid type', () => {
+    const spy = jest.spyOn(console, 'error')
+    spy.mockImplementation(() => {})
+    try {
+      // eslint-disable-next-line
+      // @ts-ignore: Unreachable code error
+      expect(() => render(<DatePicker value="10/10/2010" />)).toThrowError(
+        'The value attribute should be a date instance.',
+      )
+    } catch (err) {
+      // do nothing
+    }
+    spy.mockRestore()
+  })
+
+  it('should open the calendar when the input has been focused', () => {
+    const {container} = render(<DatePicker />)
+    const inputTexts = container.querySelectorAll('input[type="text"]')
+    expect(inputTexts).toHaveLength(1)
+
+    expect(container.querySelector('.rdp')).toBeNull()
+    fireEvent.click(inputTexts[0] as HTMLElement)
+    expect(container.querySelector('.rdp')).toBeInstanceOf(HTMLElement)
+  })
+
+  it('should dispatch an event when the onChange is triggered', () => {
+    const callback = jest.fn()
+    const {container} = render(<DatePicker value={new Date()} onChange={callback} />)
+    const input = container.querySelector('input[type="text"]') as HTMLElement
+
+    fireEvent.click(input)
+    fireEvent.change(input, {target: {value: '10/10/2010'}})
+    fireEvent.blur(input)
+    expect(callback).toHaveBeenCalledTimes(1)
+  })
+
+  it('should open the calendar when click on the calendar icon button', () => {
+    const callback = jest.fn()
+    const {container} = render(<DatePicker value={new Date()} onChange={callback} />)
+    const button = container.querySelector('button') as HTMLElement
+
+    expect(container.querySelector('.rdp')).toBeNull()
+    fireEvent.click(button as HTMLElement)
+    expect(container.querySelector('.rdp')).toBeInstanceOf(HTMLElement)
+  })
+
+  it('should expect the new value when change the calendar', () => {
+    const {container} = render(
+      <DatePicker value={new Date()} onChange={({value}) => expect(value).toBeInstanceOf(Date)} />,
+    )
+
+    const input = container.querySelector('input[type="text"]') as HTMLElement
+    fireEvent.click(input)
+    const button = container.querySelector('.rdp-cell button') as HTMLElement
+    fireEvent.click(button)
+  })
+
+  it('should set the value undefined when the user type an invalid date format', () => {
+    const {container} = render(<DatePicker value={new Date()} onChange={({value}) => expect(value).toBeUndefined()} />)
+    const input = container.querySelector('input[type="text"]') as HTMLElement
+
+    fireEvent.click(input)
+    fireEvent.change(input, {target: {value: '50/30/9999'}})
+    fireEvent.blur(input)
+  })
+})
+
+describe('<RangeDatePicker />', () => {
+  it('should render snapshot correctly', () => {
+    const {container} = render(
+      <>
+        <RangeDatePicker value={{from: undefined, to: undefined}} />
+      </>,
+    )
+    expect(container.firstChild).toMatchSnapshot()
+  })
+
+  it('should open the calendar when the input has been focused', () => {
+    const {container} = render(<RangeDatePicker value={{from: undefined, to: undefined}} />)
+    const inputTexts = container.querySelectorAll('input[type="text"]')
+    expect(inputTexts).toHaveLength(2)
+
+    expect(container.querySelector('.rdp')).toBeNull()
+    fireEvent.click(inputTexts[0] as HTMLElement)
+    expect(container.querySelector('.rdp')).toBeInstanceOf(HTMLElement)
+  })
+})

@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> should render snapshot correctly 1`] = `
+.c3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c3 svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50%;
+  outline: none;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  background-color: #D9DBE9;
+}
+
+.c1[aria-disabled='true'] {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.c1[aria-disabled='false']:hover {
+  background-color: #A0A3BD;
+}
+
+.c1[aria-disabled='false']:focus {
+  box-shadow: 0 0 1px 6px #F1F2F7;
+}
+
+.c2 {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50%;
+  outline: none;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  color: #F7F7FC;
+  background-color: #0080EB;
+}
+
+.c2[aria-disabled='true'] {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.c2[aria-disabled='false']:hover {
+  background-color: #00318A;
+}
+
+.c2[aria-disabled='false']:focus {
+  box-shadow: 0 0 1px 6px #CEE2FF;
+}
+
+.c4 {
+  font-family: Poppins,sans-serif;
+  margin-left: 0.625rem;
+  cursor: pointer;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      aria-checked="false"
+      aria-disabled="false"
+      class="c1"
+      role="checkbox"
+      tabindex="0"
+    />
+  </div>
+  <div
+    class="c0"
+  >
+    <div
+      aria-checked="true"
+      aria-disabled="false"
+      class="c2"
+      role="checkbox"
+      tabindex="0"
+    >
+      <div
+        class="c3"
+        data-icon-name="check"
+      >
+        <span />
+      </div>
+    </div>
+  </div>
+  <div
+    class="c0"
+  >
+    <div
+      aria-checked="false"
+      aria-disabled="true"
+      class="c1"
+      role="checkbox"
+      tabindex="0"
+    />
+  </div>
+  <div
+    class="c0"
+  >
+    <div
+      aria-checked="true"
+      aria-disabled="true"
+      class="c2"
+      role="checkbox"
+      tabindex="0"
+    >
+      <div
+        class="c3"
+        data-icon-name="check"
+      >
+        <span />
+      </div>
+    </div>
+  </div>
+  <div
+    class="c0"
+  >
+    <div
+      aria-checked="true"
+      aria-disabled="true"
+      class="c2"
+      role="checkbox"
+      tabindex="0"
+    >
+      <div
+        class="c3"
+        data-icon-name="check"
+      >
+        <span />
+      </div>
+    </div>
+    <p
+      class="c4"
+      role="button"
+      tabindex="0"
+    >
+      I'm checked and disabled
+    </p>
+  </div>
+  <div
+    class="c0"
+  >
+    <div
+      aria-checked="false"
+      aria-disabled="false"
+      class="c1"
+      role="checkbox"
+      tabindex="0"
+    />
+    <p
+      class="c4"
+      role="button"
+      tabindex="0"
+    >
+      I'm available
+    </p>
+  </div>
+</div>
+`;

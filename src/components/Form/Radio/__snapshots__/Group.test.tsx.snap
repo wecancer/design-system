@@ -1,0 +1,282 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioGroup /> should render snapshot correctly 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50%;
+  outline: none;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  background-color: #D9DBE9;
+}
+
+.c2[aria-disabled='true'] {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.c2[aria-disabled='false']:hover {
+  background-color: #A0A3BD;
+}
+
+.c2[aria-disabled='false']:focus {
+  box-shadow: 0 0 1px 6px #F1F2F7;
+}
+
+.c4 {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50%;
+  outline: none;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  color: #F7F7FC;
+  background-color: #0080EB;
+}
+
+.c4[aria-disabled='true'] {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.c4[aria-disabled='false']:hover {
+  background-color: #00318A;
+}
+
+.c4[aria-disabled='false']:focus {
+  box-shadow: 0 0 1px 6px #CEE2FF;
+}
+
+.c4::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  background-color: #F7F7FC;
+}
+
+.c3 {
+  font-family: Poppins,sans-serif;
+  margin: 0 0 0 0.625rem;
+  cursor: pointer;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 > *:not(:last-child) {
+  margin-right: 20px;
+}
+
+.c5 {
+  display: block;
+}
+
+.c5 > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+<div>
+  <div
+    class="c0"
+    role="radiogroup"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        aria-checked="false"
+        aria-disabled="false"
+        class="c2"
+        role="radio"
+        tabindex="0"
+      />
+      <label
+        class="c3"
+      >
+        Item unchecked
+      </label>
+    </div>
+    <div
+      class="c1"
+    >
+      <div
+        aria-checked="true"
+        aria-disabled="false"
+        class="c4"
+        role="radio"
+        tabindex="0"
+      />
+      <label
+        class="c3"
+      >
+        Item checked
+      </label>
+    </div>
+    <div
+      class="c1"
+    >
+      <div
+        aria-checked="true"
+        aria-disabled="true"
+        class="c4"
+        role="radio"
+        tabindex="0"
+      />
+      <label
+        class="c3"
+      >
+        Item checked disabled
+      </label>
+    </div>
+    <div
+      class="c1"
+    >
+      <div
+        aria-checked="false"
+        aria-disabled="true"
+        class="c2"
+        role="radio"
+        tabindex="0"
+      />
+      <label
+        class="c3"
+      >
+        Item unchecked disabled
+      </label>
+    </div>
+  </div>
+  <div
+    class="c0"
+    role="radiogroup"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        aria-checked="false"
+        aria-disabled="false"
+        class="c2"
+        role="radio"
+        tabindex="0"
+      />
+      <label
+        class="c3"
+      >
+        Item unchecked
+      </label>
+    </div>
+    <div
+      class="c1"
+    >
+      <div
+        aria-checked="true"
+        aria-disabled="false"
+        class="c4"
+        role="radio"
+        tabindex="0"
+      />
+      <label
+        class="c3"
+      >
+        Item checked
+      </label>
+    </div>
+  </div>
+  <div
+    class="c5"
+    role="radiogroup"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        aria-checked="false"
+        aria-disabled="false"
+        class="c2"
+        role="radio"
+        tabindex="0"
+      />
+      <label
+        class="c3"
+      >
+        Item unchecked
+      </label>
+    </div>
+    <div
+      class="c1"
+    >
+      <div
+        aria-checked="true"
+        aria-disabled="false"
+        class="c4"
+        role="radio"
+        tabindex="0"
+      />
+      <label
+        class="c3"
+      >
+        Item checked
+      </label>
+    </div>
+  </div>
+</div>
+`;
