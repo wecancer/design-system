@@ -1,4 +1,5 @@
 import React from 'react'
+import '@testing-library/jest-dom'
 import {render, RenderResult} from '@testing-library/react'
 import WecancerProvider from './WecancerProvider'
 

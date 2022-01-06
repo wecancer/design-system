@@ -1,61 +1,3 @@
-const appearances = {
-  text: {
-    light: '#6E7191',
-    main: '#14142B',
-    darken: '#000000',
-  },
-  primary: {
-    light: '#6295ea',
-    main: '#4787f3',
-    darken: '#336ed2',
-  },
-  secondary: {
-    light: '#64DD80',
-    main: '#4ABC64',
-    darken: '#2AA851',
-  },
-  light: {
-    light: '#FAFAFA',
-    main: '#FFF',
-    darken: '#EFEFEF',
-  },
-  dark: {
-    light: '#CACACA',
-    main: '#515151',
-    darken: '#000',
-  },
-  success: {
-    light: '#F2FFFB',
-    main: '#00BA88',
-    darken: '#00936b',
-  },
-  warning: {
-    light: '#E0C71F',
-    main: '#E0C71F',
-    darken: '#CC8F02',
-  },
-  caution: {
-    light: '#f78726',
-    main: '#f78726',
-    darken: '#CC8F02',
-  },
-  danger: {
-    light: '#FFF3F8',
-    main: '#dc3545',
-    darken: '#90131f',
-  },
-  disabled: {
-    light: '#EFF0F6',
-    main: '#EFF0F6',
-    darken: '#A0A3BD',
-  },
-  reDesignColor: {
-    light: '#4786f3',
-    main: '#005ac0',
-    darken: '#00328f',
-  },
-}
-
 export type ColorsTemplate =
   | 'primary'
   | 'secondary'
@@ -69,6 +11,7 @@ export type ColorsTemplate =
   | 'success'
   | 'warning'
   | 'error'
+  | 'white'
 
 export enum BgTypes {
   turquoise = 'bgTurquoise',
@@ -81,8 +24,7 @@ export enum BgTypes {
   input = 'inputBg',
 }
 
-export default {
-  appearances,
+const theme = {
   colors: {
     primary: '#0080EB',
     darkPrimary: '#00318A',
@@ -161,49 +103,6 @@ export default {
   container: {
     maxWidth: '1000px',
   },
-  button: {
-    borderRadius: '0.8rem',
-    sizes: {
-      xs: {
-        paddingX: 8,
-        paddingY: 0,
-        fontSize: 'small',
-      },
-      sm: {
-        paddingX: 10,
-        paddingY: 10,
-        fontSize: 'small',
-      },
-      md: {
-        paddingX: 20,
-        paddingY: 10,
-        fontSize: 'default',
-      },
-      small: {
-        paddingX: '16px',
-        paddingY: '10px',
-        fontSize: 'xsmall',
-      },
-      medium: {
-        paddingX: '20px',
-        paddingY: '11px',
-        fontSize: 'small',
-      },
-      large: {
-        paddingX: '24px',
-        paddingY: '12px',
-        fontSize: 'default',
-      },
-    },
-  },
-  field: {
-    paddingX: 12,
-    paddingY: 6,
-    borderRadius: 3,
-    appearances: {
-      ...appearances,
-    },
-  },
   font: {
     lineHeight: 1.2,
     family: 'Roboto, sans-serif',
@@ -226,8 +125,6 @@ export default {
       xsmall: '0.8rem',
     },
   },
-  grid: {
-    gutterWidth: '15px',
-    columns: 12,
-  },
-} as const
+}
+
+export default theme

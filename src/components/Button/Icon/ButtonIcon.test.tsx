@@ -1,4 +1,3 @@
-import React from 'react'
 import ButtonIcon from '.'
 import {render, fireEvent} from '../../../testing'
 
