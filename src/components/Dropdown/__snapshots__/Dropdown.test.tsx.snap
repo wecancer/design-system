@@ -1,16 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Dropdown /> should render snapshot correctly 1`] = `
-.c0 {
-  position: relative;
-  display: inline-block;
-}
-
 <div
-  class="c0 custom-classname"
+  class="sc-bdvvtL iqkGDp custom-classname"
 >
   <div
-    class=""
+    class="sc-gsDKAQ"
   >
     <button
       type="button"

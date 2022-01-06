@@ -1,124 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IncrementStepper /> should render snapshot correctly 1`] = `
-.c3 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c3 svg {
-  width: 0.625rem;
-  height: 0.625rem;
-}
-
-.c1 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  outline: none;
-  border: none;
-  background: transparent;
-}
-
-.c0 {
-  display: grid;
-  grid-template-columns: 32px 40px 32px;
-  -webkit-column-gap: 0.5rem;
-  column-gap: 0.5rem;
-}
-
-.c4 {
-  text-align: center;
-  font-family: Poppins,sans-serif;
-  font-size: 1rem;
-  border: none;
-  background-color: transparent;
-}
-
-.c2 {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-family: Poppins,sans-serif;
-  border: 1px solid #EFF0F6;
-  background-color: #EFF0F6;
-  -webkit-transition: all ease 250ms;
-  transition: all ease 250ms;
-}
-
-.c2:not(:disabled):hover {
-  background-color: #FCFCFC;
-}
-
-.c2:active {
-  color: #0080EB;
-  border-color: #0080EB;
-}
-
-.c2:focus {
-  color: #0080EB;
-  border-color: #0080EB;
-  box-shadow: 0 0 1px 6px #CEE2FF;
-}
-
-.c2:disabled {
-  opacity: 0.7;
-  cursor: default;
-}
-
 <div>
   <div
-    class="c0"
+    class="sc-dkPtRN hPjXWK"
   >
     <button
-      class="c1 c2"
+      class="sc-gsDKAQ cIQQgU sc-eCImPb irpKkc"
       type="button"
     >
       <div
-        class="c3"
+        class="sc-bdvvtL hBtBol"
         data-icon-name="minus"
       >
-        <span />
+        <div>
+          mock svg
+        </div>
       </div>
     </button>
     <input
-      class="c4"
+      class="sc-hKwDye fcPFVX"
       type="text"
       value="10"
     />
     <button
-      class="c1 c2"
+      class="sc-gsDKAQ cIQQgU sc-eCImPb irpKkc"
       type="button"
     >
       <div
-        class="c3"
+        class="sc-bdvvtL hBtBol"
         data-icon-name="plus"
       >
-        <span />
+        <div>
+          mock svg
+        </div>
       </div>
     </button>
   </div>
