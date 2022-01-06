@@ -4,7 +4,7 @@ import DatePicker, {Props, DatePickerValue} from '.'
 import DatePickerRange, {Props as RangeProps, RangePickerValue} from './Range'
 
 const Template: Story<Props> = () => {
-  const [date, setValue] = useState<DatePickerValue>(new Date(Date.now()))
+  const [date, setValue] = useState<DatePickerValue | undefined>(new Date(Date.now()))
   return <DatePicker value={date} onChange={({value}) => setValue(value)} />
 }
 export const Default = Template.bind({})
