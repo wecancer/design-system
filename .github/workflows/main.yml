@@ -26,3 +26,4 @@ jobs:
           npm install -g yarn
           yarn
           yarn test
+          yarn lint
