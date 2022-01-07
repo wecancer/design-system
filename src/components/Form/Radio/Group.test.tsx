@@ -64,16 +64,10 @@ describe('<RadioGroup />', () => {
           expect(params.index).toBe(radioClickIndex)
           expect(params.item).toMatchObject(items[radioClickIndex])
 
-          params.itemsUpdated.forEach((item, index) => {
-            if (index === radioClickIndex) {
-              expect(item).toMatchObject({
-                ...items[index],
-                isChecked: true,
-              })
-              return
-            }
-            expect(item).toMatchObject(items[index])
-          })
+          expect(params.itemsUpdated[0]).toMatchObject(items[0])
+          expect(params.itemsUpdated[1]).toMatchObject({...items[1], isChecked: true})
+          expect(params.itemsUpdated[2]).toMatchObject(items[2])
+          expect(params.itemsUpdated[3]).toMatchObject(items[3])
         }}
       />,
     )
