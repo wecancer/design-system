@@ -1,4 +1,4 @@
-![example workflow](https://github.com/wecancer/design-system/actions/workflows/main/badge.svg)
+![example workflow](https://github.com/wecancer/design-system/actions/workflows/main.yml/badge.svg)
 
 # Getting Started with Create React App
 
