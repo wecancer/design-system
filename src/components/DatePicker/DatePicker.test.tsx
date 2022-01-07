@@ -4,15 +4,6 @@ import RangeDatePicker from './Range'
 import {render, fireEvent} from '../../testing'
 
 describe('<DatePicker />', () => {
-  it('should render snapshot correctly', () => {
-    const {container} = render(
-      <>
-        <DatePicker />
-      </>,
-    )
-    expect(container.firstChild).toMatchSnapshot()
-  })
-
   it('should dispatch an expection when the value has the invalid type', () => {
     const spy = jest.spyOn(console, 'error')
     spy.mockImplementation(() => {})
@@ -81,15 +72,6 @@ describe('<DatePicker />', () => {
 })
 
 describe('<RangeDatePicker />', () => {
-  it('should render snapshot correctly', () => {
-    const {container} = render(
-      <>
-        <RangeDatePicker value={{from: undefined, to: undefined}} />
-      </>,
-    )
-    expect(container.firstChild).toMatchSnapshot()
-  })
-
   it('should open the calendar when the input has been focused', () => {
     const {container} = render(<RangeDatePicker value={{from: undefined, to: undefined}} />)
     const inputTexts = container.querySelectorAll('input[type="text"]')
