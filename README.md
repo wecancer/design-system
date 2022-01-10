@@ -1,4 +1,4 @@
-![example workflow](https://github.com/wecancer/design-system/actions/workflows/main.yml/badge.svg)
+![example workflow](https://github.com/wecancer/design-system/actions/workflows/develop.yml/badge.svg)
 
 # WeCancer Design System
 
