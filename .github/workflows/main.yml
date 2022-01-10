@@ -27,11 +27,10 @@ jobs:
           yarn
           yarn test
           yarn lint
-          yarn build
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          external_repository: wecancer/wecancer.github.io
-          publish_branch: main
-          publish_dir: ./public
+          yarn run build-storybook
+      - name: Deploy with gh-pages
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/wecancer.github.io.git
+          npx gh-pages -d storybook-static -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
