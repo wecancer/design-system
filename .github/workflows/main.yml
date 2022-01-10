@@ -28,8 +28,12 @@ jobs:
           yarn test
           yarn lint
           yarn run build-storybook
-      - name: Deploy with gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy
+        uses: amondnet/vercel-action@v20
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
+          github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
+          vercel-args: '--prod' #Optional
+          vercel-org-id: ${{ secrets.ORG_ID}}  #Required
+          vercel-project-id: ${{ secrets.PROJECT_ID}} #Required 
+          working-directory: ./docs
