@@ -1,7 +1,8 @@
 {
   "name": "wecancer-design-system",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "wecancer-design-system.netlify.app",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -9,7 +10,7 @@
     "lint": "eslint ./src",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public -o docs"
+    "build-storybook": "build-storybook -s public -o dist"
   },
   "dependencies": {
     "@nivo/bar": "^0.78.0",
