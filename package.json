@@ -9,7 +9,7 @@
     "lint": "eslint ./src",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public -o docs"
   },
   "dependencies": {
     "@nivo/bar": "^0.78.0",
