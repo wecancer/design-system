@@ -1,4 +1,4 @@
-name: Testing and Storybook
+name: Tests, lint, build and deploy
 
 on:
   push:
