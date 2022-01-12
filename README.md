@@ -7,9 +7,9 @@
 <p align="center">
   Design, build, and create with WeCancer’s design system.
   <br />
-  <a href="https://wecancer-design-system.netlify.app/">Live demo</a>
+  <a href="https://wecancer-design-system.netlify.app/" target="_blank">Live demo</a>
   ·
-  <a href="https://github.com/wecancer/design-system/issues/new">Request feature</a>
+  <a href="https://github.com/wecancer/design-system/issues/new" target="_blank">Request feature</a>
 </p>
 
 <p align="center">
@@ -22,10 +22,10 @@
 ## Install
 
 NPM:
-
 ```
 npm install @wcancer/design-system
 ```
+
 Yarn:
 ```
 yarn add @wcancer/design-system
@@ -33,9 +33,11 @@ yarn add @wcancer/design-system
 
 ## Usage
 
+Before starting to use the Design System, you must add the `WecancerProvider` provider at the beginning of your application.
+
 ```jsx
 import React from 'react'
-import { Button, WecancerProvider } from 'wecancer-design-system'
+import { WecancerProvider, Button } from '@wcancer/design-system'
 
 function App() {
   return (
