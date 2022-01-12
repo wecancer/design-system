@@ -27,4 +27,4 @@ jobs:
           yarn
           yarn test
           yarn lint
-          yarn run build-storybook
+          yarn run build-demo

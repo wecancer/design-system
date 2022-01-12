@@ -1,4 +1,4 @@
-name: Tests, lint, build and deploy
+name: Deploy
 
 on:
   push:
@@ -22,12 +22,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: | 
+        run: |
           npm install -g yarn
           yarn
           yarn test
           yarn lint
-          yarn run build-storybook
+          yarn run build-demo
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
