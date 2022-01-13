@@ -25,13 +25,18 @@ jobs:
         run: |
           npm install -g yarn
           yarn
+      - name: Tests and linters
+        run: |
           yarn test
           yarn lint
-          yarn run build-demo
+      - name: Build
+        run: |
+          yarn build
+          yarn run build:demo
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: './dist'
+          publish-dir: './demo'
           production-branch: master
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions"
