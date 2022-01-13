@@ -36,7 +36,6 @@ yarn add @wcancer/design-system
 Before starting to use the Design System, you must add the `WecancerProvider` provider at the beginning of your application.
 
 ```jsx
-import React from 'react'
 import { WecancerProvider, Button } from '@wcancer/design-system'
 
 function App() {
@@ -64,7 +63,21 @@ yarn
 Now, you can run the project demo to explorer the Design System components. Run the command:
 
 ```
-yarn run demo
+yarn start
+```
+
+### Building
+
+Building to publish the project:
+
+```
+yarn build
+```
+
+Building demo:
+
+```
+yarn build:demo
 ```
 
 ## License
