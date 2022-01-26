@@ -15,6 +15,8 @@ const Container = styled.div`
 
 export type DatePickerValue = Date
 
+type ModifierStatus = ReactDayPicker.ActiveModifiers
+
 type OnChange = {
   value?: DatePickerValue
 }
@@ -89,12 +91,7 @@ const DatePicker = ({value, onChange, fromYear, toYear}: Props) => {
             locale={ptLocale}
             fromYear={fromYear}
             captionLayout="dropdown"
-            onSelect={(
-              date?: Date,
-              selectedDay?: Date,
-              modifiers?: ReactDayPicker.ModifierStatus,
-              evt?: React.MouseEvent,
-            ) => {
+            onSelect={(date?: Date, selectedDay?: Date, modifiers?: ModifierStatus, evt?: React.MouseEvent) => {
               if (date) {
                 evt?.stopPropagation()
                 setIsOpen(false)

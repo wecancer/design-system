@@ -4,7 +4,6 @@
   "extends": [
     "airbnb-typescript",
     "prettier",
-    // "plugin:import/recommended",
     "plugin:prettier/recommended",
     "plugin:jest/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -21,12 +20,19 @@
     }
   },
   "rules": {
-    // "@typescript-eslint/explicit-function-return-type": ["off"],
     "prettier/prettier": "error",
     "import/no-unresolved": "error",
     "import/prefer-default-export": ["off"],
     "react/jsx-props-no-spreading": ["off"]
   },
+  "overrides": [
+    {
+      "files": ["src/**/*.stories.tsx", "src/testing.tsx"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
+    }
+  ],
   "settings": {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]
@@ -36,7 +42,7 @@
     },
     "import/resolver": {
       "typescript": {
-        "alwaysTryTypes": true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
+        "alwaysTryTypes": true,
         "project": "./tsconfig.json"
       }
     }
