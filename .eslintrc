@@ -22,17 +22,10 @@
   "rules": {
     "prettier/prettier": "error",
     "import/no-unresolved": "error",
+    "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": ["off"],
     "react/jsx-props-no-spreading": ["off"]
   },
-  "overrides": [
-    {
-      "files": ["src/**/*.stories.tsx", "src/testing.tsx"],
-      "rules": {
-        "import/no-extraneous-dependencies": "off"
-      }
-    }
-  ],
   "settings": {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]

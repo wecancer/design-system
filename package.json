@@ -1,29 +1,26 @@
 {
   "name": "@wcancer/design-system",
-  "version": "0.1.6",
+  "version": "0.1.14",
   "private": false,
   "homepage": "wecancer-design-system.netlify.app",
   "license": "MIT",
-  "main": "dist/js/index.js",
-  "types": "dist/js/index.d.ts",
+  "main": "dist/wcancer-design-system.cjs.js",
+  "module": "dist/wcancer-design-system.esm.js",
   "scripts": {
     "test": "react-scripts test",
     "lint": "eslint ./src",
     "eject": "react-scripts eject",
     "start": "start-storybook -p 6006 -s public",
-    "build": "sh ./scripts/build.sh",
+    "build": "preconstruct build",
     "build:demo": "build-storybook -s public -o demo",
     "build:babel": "BABEL_ENV=esm babel --source-maps --extensions \".js,.ts,.tsx\" src --out-dir dist/js --plugins \"inline-react-svg,@babel/plugin-proposal-optional-chaining\""
   },
   "dependencies": {
     "date-fns": "^2.28.0",
     "nanoid": "^3.1.30",
-    "react": "^17.0.2",
+    "prop-types": "^15.8.1",
     "react-day-picker": "^8.0.0-beta.37",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
     "react-select": "^5.2.1",
-    "styled-components": "^5.3.3",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
@@ -31,6 +28,7 @@
     "@babel/cli": "^7.16.8",
     "@babel/plugin-proposal-export-default-from": "^7.16.7",
     "@babel/plugin-proposal-optional-chaining": "^7.16.7",
+    "@preconstruct/cli": "^2.1.5",
     "@storybook/addon-actions": "^6.4.9",
     "@storybook/addon-essentials": "^6.4.9",
     "@storybook/addon-links": "^6.4.9",
@@ -59,7 +57,16 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-styled-components-a11y": "^0.0.34",
     "prettier": "^2.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3",
+    "react-scripts": "5.0.0",
     "webpack": "^5.65.0"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3"
   },
   "publishConfig": {
     "access": "public",
