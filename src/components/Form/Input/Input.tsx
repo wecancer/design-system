@@ -19,25 +19,25 @@ const Input = styled.input<{hasGapLeft: boolean; hasGapRight: boolean}>`
     padding-bottom: 0;
     box-sizing: border-box;
     font-family: ${theme.font.familyRedesign};
-    border: 1px solid ${theme.colors.placeholder};
+    border: 2px solid ${theme.colors.placeholder};
     background-color: ${theme.colors.offWhite};
     border-radius: 1rem;
     outline: none;
 
     ${hasGapLeft
       ? css`
-          padding-left: 3rem;
+          padding-left: 2.5rem;
         `
       : css`
-          padding-left: 1.5rem;
+          padding-left: 1rem;
         `}
 
     ${hasGapRight
       ? css`
-          padding-right: 3rem;
+          padding-right: 2.5rem;
         `
       : css`
-          padding-right: 1.5rem;
+          padding-right: 1rem;
         `}
 
     &:focus {
@@ -83,8 +83,9 @@ const Label = styled.label<{hasGapLeft: boolean}>`
   ${({theme, hasGapLeft}) => css`
     position: absolute;
     top: 50%;
-    left: 1.25rem;
+    left: 1rem;
     padding: 0 4px;
+    transition: all 250ms ease;
     background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0) 0%,
@@ -92,11 +93,10 @@ const Label = styled.label<{hasGapLeft: boolean}>`
       ${theme.colors.offWhite} 50%,
       ${theme.colors.offWhite} 100%
     );
-    transition: all 250ms ease;
 
     ${hasGapLeft
       ? css`
-          transform: translate(1.5rem, -50%);
+          transform: translate(1.25rem, -50%);
         `
       : css`
           transform: translateY(-50%);
@@ -106,7 +106,7 @@ const Label = styled.label<{hasGapLeft: boolean}>`
 
 type InputTypes = 'text' | 'password' | 'email' | 'search'
 
-type Value = string | number | readonly string[]
+type Value = string
 
 type OnChangeParams = {
   value: Value
