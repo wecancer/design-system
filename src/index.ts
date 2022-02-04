@@ -1,3 +1,5 @@
+import styled, {css, useTheme} from 'styled-components'
+
 import theme from './styles/theme'
 import Loading from './components/Loading'
 import BoxContainer from './components/BoxContainer'
@@ -75,4 +77,8 @@ export {
   theme,
   Tooltip,
   WecancerProvider,
+  // styled
+  styled,
+  useTheme,
+  css,
 }
