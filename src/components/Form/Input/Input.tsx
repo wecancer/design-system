@@ -79,7 +79,7 @@ const ButtonRight = styled.button`
   transform: translateY(-50%);
 `
 
-const Label = styled.label<{hasGapLeft: boolean}>`
+export const Label = styled.label<{hasGapLeft: boolean}>`
   ${({theme, hasGapLeft}) => css`
     position: absolute;
     top: 50%;

@@ -11,8 +11,8 @@ const options = [
 describe('<Select />', () => {
   const KEY_DOWN = 40
 
-  it('should have the select placeholder', () => {
-    const {queryByText} = render(<Select placeholder="Select it!" options={[]} onChange={() => null} />)
+  it('should have the select label', () => {
+    const {queryByText} = render(<Select label="Select it!" options={[]} onChange={() => null} />)
     const placeholder = queryByText('Select it!')
     expect(placeholder).toBeInstanceOf(HTMLElement)
   })
@@ -23,24 +23,24 @@ describe('<Select />', () => {
   })
 
   it('should have an event to change the select value', () => {
-    const {queryByText} = render(
+    const {getByText, container} = render(
       <Select
+        label="Select..."
         options={options}
         className="select"
-        placeholder="Select..."
         onChange={({value}) => expect(value).toMatchObject(options[2])}
       />,
     )
 
-    const placeholderElement = queryByText('Select...') as HTMLElement
+    const label = container.querySelector('div[class*="-control"]') as HTMLElement
 
     // Focus and enable the dropdown of options.
-    fireEvent.focus(placeholderElement)
-    fireEvent.keyDown(placeholderElement, {
+    fireEvent.focus(label)
+    fireEvent.keyDown(label, {
       keyCode: KEY_DOWN,
     })
 
-    fireEvent.click(queryByText('Item 3') as HTMLElement)
+    fireEvent.click(getByText('Item 3') as HTMLElement)
   })
 
   it('should shows the select value', () => {

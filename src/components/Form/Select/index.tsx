@@ -1,16 +1,40 @@
-import React from 'react'
-import {useTheme} from 'styled-components'
+import {useRef, useState} from 'react'
+import styled, {useTheme, css} from 'styled-components'
+import {Label as InputLabel} from '../Input/Input'
 
 import ReactSelect, {
+  SelectInstance,
   MultiValueRemoveProps,
   MultiValueGenericProps,
   DropdownIndicatorProps,
   components as SelectComponents,
+  GroupBase,
 } from 'react-select'
 
 import Icon from '../../Icon'
 import {Option, Options} from './types'
 import selectStyles from './styles'
+
+const Label = styled(InputLabel)<{isFocused: boolean; hasValue: boolean}>`
+  z-index: 30;
+
+  ${({theme, isFocused, hasValue}) =>
+    isFocused || hasValue
+      ? css`
+          color: ${theme.colors.label};
+          font-size: 0.875rem;
+          transform: translateY(calc(-100% - 10px));
+          border-radius: 3px 3px 0 0;
+          background: ${!isFocused && hasValue ? theme.colors.inputBg : theme.colors.white};
+        `
+      : css`
+          background: transparent;
+        `}
+`
+
+const Container = styled.div`
+  position: relative;
+`
 
 export const MultiValueContainer = (props: MultiValueGenericProps<Option>) => (
   <SelectComponents.MultiValueContainer {...props} />
@@ -33,27 +57,38 @@ type ChangeParams = {
 }
 
 export type Props = {
+  label?: string
   value?: Option
   options: Options
   className?: string
-  placeholder?: string
   onChange(args: ChangeParams): void
 }
 
-const Select = ({options, onChange, placeholder, className, value}: Props) => {
+const Select = ({label, options, onChange, className, value}: Props) => {
   const theme = useTheme()
   const styles = selectStyles(theme)
+  const selectRef = useRef<SelectInstance<Option, true, GroupBase<Option>>>(null)
+  const [focused, setFocused] = useState(false)
 
   return (
-    <ReactSelect
-      value={value}
-      styles={styles}
-      options={options}
-      className={className}
-      placeholder={placeholder}
-      onChange={(val) => onChange({value: val as unknown as Option})}
-      components={{MultiValueContainer, DropdownIndicator, MultiValueRemove}}
-    />
+    <Container className={className}>
+      {label && (
+        <Label onClick={() => selectRef.current?.focus()} hasGapLeft={false} isFocused={focused} hasValue={!!value}>
+          {label}
+        </Label>
+      )}
+      <ReactSelect
+        value={value}
+        placeholder=""
+        ref={selectRef}
+        styles={styles}
+        options={options}
+        onBlur={() => setFocused(false)}
+        onFocus={() => setFocused(true)}
+        onChange={(val) => onChange({value: val as unknown as Option})}
+        components={{MultiValueContainer, DropdownIndicator, MultiValueRemove}}
+      />
+    </Container>
   )
 }
 
