@@ -22,13 +22,14 @@ type OnChange = {
 }
 
 export type Props = {
+  label?: string
   value?: DatePickerValue
   onChange?(params: OnChange): void
   fromYear?: number
   toYear?: number
 }
 
-const DatePicker = ({value, onChange, fromYear, toYear}: Props) => {
+const DatePicker = ({label, value, onChange, fromYear, toYear}: Props) => {
   if (value && !(value instanceof Date)) {
     throw new Error('The value attribute should be a date instance.')
   }
@@ -60,6 +61,7 @@ const DatePicker = ({value, onChange, fromYear, toYear}: Props) => {
       <Input
         type="text"
         {...inputProps}
+        label={label}
         value={`${inputProps.value}`}
         iconButtonRight={{
           onClick(e) {
