@@ -32,7 +32,7 @@ const selectStyles = ({font, colors}: DefaultTheme): StylesConfig<Option, true, 
   }),
   valueContainer: (styles) => ({
     ...styles,
-    padding: '0 0.625rem',
+    padding: '0 1rem',
   }),
   indicatorSeparator: () => ({
     display: 'none',

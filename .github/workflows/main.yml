@@ -25,10 +25,9 @@ jobs:
         run: |
           npm install -g yarn
           yarn
-      - name: Tests and linters
+      - name: Checking code
         run: |
-          yarn test
-          yarn lint
+          yarn run check
       - name: Build
         run: |
           yarn build

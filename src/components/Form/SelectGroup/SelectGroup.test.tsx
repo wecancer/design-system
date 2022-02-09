@@ -11,32 +11,25 @@ const options = [
 describe('<SelectGroup />', () => {
   const KEY_DOWN = 40
 
-  it('should have the SelectGroup placeholder', () => {
-    const {queryByText} = render(<SelectGroup placeholder="Select it!" options={[]} onChange={() => null} />)
-    const placeholder = queryByText('Select it!')
-    expect(placeholder).toBeInstanceOf(HTMLElement)
-  })
-
   it('should have the custom classname', () => {
     const {container} = render(<SelectGroup className="select" options={[]} onChange={() => null} />)
     expect(container.querySelector('.select')).toBeInstanceOf(HTMLElement)
   })
 
   it('should have an event to change the select value', () => {
-    const {queryByText} = render(
+    const {container, queryByText} = render(
       <SelectGroup
         options={options}
         className="select"
-        placeholder="Select..."
         onChange={({value}) => expect(value).toMatchObject([options[2]])}
       />,
     )
 
-    const placeholderElement = queryByText('Select...') as HTMLElement
+    const label = container.querySelector('div[class*="-control"]') as HTMLElement
 
     // Focus and enable the dropdown of options.
-    fireEvent.focus(placeholderElement)
-    fireEvent.keyDown(placeholderElement, {
+    fireEvent.focus(label)
+    fireEvent.keyDown(label, {
       keyCode: KEY_DOWN,
     })
 
@@ -49,7 +42,6 @@ describe('<SelectGroup />', () => {
         options={options}
         value={[options[1]]}
         className="select"
-        placeholder="Select..."
         onChange={({value}) => expect(value).toMatchObject(options[2])}
       />,
     )

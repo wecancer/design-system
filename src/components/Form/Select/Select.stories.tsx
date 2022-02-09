@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 import {Story} from '@storybook/react'
 
 import Select, {Props} from '.'
@@ -18,17 +18,13 @@ const Template: Story<Props> = (args) => {
 
 export const Default = Template.bind({})
 Default.args = {
-  value: options[1],
   options,
-  placeholder: 'Select an item...',
+  value: options[1],
+  label: 'Select item',
 }
 
 export default {
   title: 'Components/Form/Select',
   component: Select,
-  argTypes: {
-    placeholder: {
-      type: 'string',
-    },
-  },
+  argTypes: {},
 }
