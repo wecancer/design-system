@@ -69,7 +69,13 @@ export type Props = {
   isDisabled?: boolean
 }
 
-export default function Checkbox({label, isDisabled = false, isChecked = false, onChange, ...props}: Props) {
+export default function Checkbox({
+  label,
+  isDisabled = false,
+  isChecked = false,
+  onChange,
+  ...props
+}: Props) {
   return (
     <Container {...props}>
       <Check
@@ -84,7 +90,12 @@ export default function Checkbox({label, isDisabled = false, isChecked = false, 
         {isChecked && <Icon name="check" />}
       </Check>
       {label && (
-        <Label role="button" tabIndex={0} onClick={onChange} onKeyDown={onChange}>
+        <Label
+          role="button"
+          tabIndex={0}
+          onClick={onChange}
+          onKeyDown={onChange}
+        >
           {label}
         </Label>
       )}

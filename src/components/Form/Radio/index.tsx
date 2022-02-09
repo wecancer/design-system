@@ -83,7 +83,14 @@ export type Props = {
   isDisabled?: boolean
 }
 
-const Radio = ({id, label, isDisabled = false, isChecked = false, onChange, ...props}: Props) => (
+const Radio = ({
+  id,
+  label,
+  isDisabled = false,
+  isChecked = false,
+  onChange,
+  ...props
+}: Props) => (
   <Container {...props}>
     <Check
       id={id}

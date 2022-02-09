@@ -29,7 +29,9 @@ export const Label = styled(InputLabel)<{
           font-size: 0.875rem;
           transform: translateY(calc(-100% - 10px));
           border-radius: 3px 3px 0 0;
-          background: ${!isFocused && hasValue ? `transparent` : theme.colors.white};
+          background: ${!isFocused && hasValue
+            ? `transparent`
+            : theme.colors.white};
         `
       : css`
           background: transparent;
@@ -44,13 +46,17 @@ export const MultiValueContainer = (props: MultiValueGenericProps<Option>) => (
   <SelectComponents.MultiValueContainer {...props} />
 )
 
-export const DropdownIndicator = (props: DropdownIndicatorProps<Option, true>) => (
+export const DropdownIndicator = (
+  props: DropdownIndicatorProps<Option, true>,
+) => (
   <SelectComponents.DropdownIndicator {...props}>
     <Icon name="arrowDown" size={12} />
   </SelectComponents.DropdownIndicator>
 )
 
-export const MultiValueRemove = (props: MultiValueRemoveProps<Option, true>) => (
+export const MultiValueRemove = (
+  props: MultiValueRemoveProps<Option, true>,
+) => (
   <SelectComponents.MultiValueRemove {...props}>
     <Icon name="close" size={16} />
   </SelectComponents.MultiValueRemove>
@@ -71,13 +77,19 @@ export type Props = {
 const Select = ({label, options, onChange, className, value}: Props) => {
   const theme = useTheme()
   const styles = selectStyles(theme)
-  const selectRef = useRef<SelectInstance<Option, true, GroupBase<Option>>>(null)
+  const selectRef =
+    useRef<SelectInstance<Option, true, GroupBase<Option>>>(null)
   const [focused, setFocused] = useState(false)
 
   return (
     <Container className={className}>
       {label && (
-        <Label onClick={() => selectRef.current?.focus()} hasGapLeft={false} isFocused={focused} hasValue={!!value}>
+        <Label
+          onClick={() => selectRef.current?.focus()}
+          hasGapLeft={false}
+          isFocused={focused}
+          hasValue={!!value}
+        >
           {label}
         </Label>
       )}

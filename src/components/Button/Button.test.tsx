@@ -24,8 +24,12 @@ describe('<Button />', () => {
   })
 
   it('should add the className in button component', () => {
-    const {container} = render(<Button className="customClass">Custom class name</Button>)
-    expect(container.querySelector('.customClass')).toBeInstanceOf(HTMLButtonElement)
+    const {container} = render(
+      <Button className="customClass">Custom class name</Button>,
+    )
+    expect(container.querySelector('.customClass')).toBeInstanceOf(
+      HTMLButtonElement,
+    )
   })
 
   it('should receive the isDisabled attribute', () => {
@@ -35,15 +39,20 @@ describe('<Button />', () => {
 
   it('should receive the isLoading attribute', () => {
     const {container} = render(<Button isLoading>Something!</Button>)
-    expect(container.querySelector('[data-icon-name="spinnerSolid"]')).toBeDefined()
+    expect(
+      container.querySelector('[data-icon-name="spinnerSolid"]'),
+    ).toBeDefined()
   })
 
   it('should receive the onChange attribute', () => {
     const handleClick = jest.fn()
-    const {queryByText} = render(<Button onClick={handleClick}>{btnText}</Button>)
+    const {queryByText} = render(
+      <Button onClick={handleClick}>{btnText}</Button>,
+    )
     const btnElement = queryByText(btnText)
 
-    if (!btnElement) throw new Error(`Can't find the button with the text "${btnText}"`)
+    if (!btnElement)
+      throw new Error(`Can't find the button with the text "${btnText}"`)
 
     fireEvent.click(btnElement)
     expect(handleClick).toHaveBeenCalledTimes(1)

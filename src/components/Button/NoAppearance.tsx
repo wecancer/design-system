@@ -8,8 +8,8 @@ const BtnContainer = styled.button`
   border: none;
   background: transparent;
 `
-const ButtonNoAppearance = (props: Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'css'>): React.ReactElement => (
-  <BtnContainer type="button" {...props} />
-)
+const ButtonNoAppearance = (
+  props: Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'css'>,
+): React.ReactElement => <BtnContainer type="button" {...props} />
 
 export default ButtonNoAppearance

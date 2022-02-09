@@ -35,7 +35,9 @@ const Wrapper = styled.div<{gridColumns: string}>`
       border-radius: 1rem 0 0 1rem;
     }
 
-    & > .wc-table-cell:not(:last-child).wc-table-cell-solid ~ .wc-table-cell-solid {
+    &
+      > .wc-table-cell:not(:last-child).wc-table-cell-solid
+      ~ .wc-table-cell-solid {
       border-radius: 0;
     }
   `}

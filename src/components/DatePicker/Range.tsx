@@ -41,13 +41,22 @@ export type Props = {
 
 const defaultDateFormat = 'dd/MM/yyyy'
 
-const dateToString = (date?: Date) => (date ? fns.format(date, defaultDateFormat) : '')
+const dateToString = (date?: Date) =>
+  date ? fns.format(date, defaultDateFormat) : ''
 
-const DatePicker = ({value, onChange, startLabel, endLabel, fromYear, toYear}: Props) => {
+const DatePicker = ({
+  value,
+  onChange,
+  startLabel,
+  endLabel,
+  fromYear,
+  toYear,
+}: Props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [fromText, setFromText] = useState(dateToString(value.from))
   const [toText, setToText] = useState(dateToString(value.to))
-  const isTheLastMonthOfTheYear = value.from?.getMonth() === 11 && value.from?.getFullYear() === toYear
+  const isTheLastMonthOfTheYear =
+    value.from?.getMonth() === 11 && value.from?.getFullYear() === toYear
 
   const handleChange = (data?: RangePickerValue): void => {
     if (typeof onChange === 'function') {

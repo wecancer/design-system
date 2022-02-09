@@ -47,7 +47,9 @@ describe('<Checkbox />', () => {
     expect(handleClick).toHaveBeenCalledTimes(1)
 
     const unchecked = render(<Checkbox isChecked={false} />)
-    const uncheckedComponent = unchecked.container.querySelector('[role="checkbox"]') as HTMLElement
+    const uncheckedComponent = unchecked.container.querySelector(
+      '[role="checkbox"]',
+    ) as HTMLElement
     expect(uncheckedComponent.getAttribute('aria-checked')).toBe('false')
   })
 })

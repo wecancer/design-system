@@ -47,9 +47,14 @@ const Dropdown = ({axisX = 'left', children, trigger, ...props}: Props) => {
 
   return (
     <Wrapper onClickOutside={handleClose} {...props}>
-      <TriggerContainer ref={refTrigger}>{trigger({isOpen, handleClose, handleToggle})}</TriggerContainer>
+      <TriggerContainer ref={refTrigger}>
+        {trigger({isOpen, handleClose, handleToggle})}
+      </TriggerContainer>
       {isOpen && (
-        <BoxContainer axisX={axisX} triggerHeight={refTrigger.current?.offsetHeight || 0}>
+        <BoxContainer
+          axisX={axisX}
+          triggerHeight={refTrigger.current?.offsetHeight || 0}
+        >
           {children({isOpen, handleClose, handleToggle})}
         </BoxContainer>
       )}

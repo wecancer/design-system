@@ -29,7 +29,11 @@ const useToast = (): UseToast => {
     setToasts((map) => [...map, {id, message, type, state: 'opening'}])
 
     setTimeout(() => {
-      setToasts((map) => map.map((item) => (item.id === id ? {...item, state: 'closing'} : item)))
+      setToasts((map) =>
+        map.map((item) =>
+          item.id === id ? {...item, state: 'closing'} : item,
+        ),
+      )
 
       // 200ms after the animation, remove item from the array
       setTimeout(() => {

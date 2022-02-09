@@ -98,7 +98,8 @@ const createRootElement = () => {
 }
 
 const WecancerProvider = ({children}: Props) => {
-  const rootElement = document.getElementById(ROOT_ELEMENT_ID) || createRootElement()
+  const rootElement =
+    document.getElementById(ROOT_ELEMENT_ID) || createRootElement()
 
   return (
     <WecancerContext.Provider value={{rootElement}}>

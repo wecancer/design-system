@@ -18,7 +18,9 @@ const TabContext = ({children}: Props) => {
   const [tabActiveId, setTabActiveId] = useState<TabId | null>(null)
 
   return (
-    <TabSectionContext.Provider value={{tabIds, setTabIds, tabActiveId, setTabActiveId}}>
+    <TabSectionContext.Provider
+      value={{tabIds, setTabIds, tabActiveId, setTabActiveId}}
+    >
       <Container>{children}</Container>
     </TabSectionContext.Provider>
   )

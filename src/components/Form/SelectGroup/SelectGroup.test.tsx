@@ -12,7 +12,9 @@ describe('<SelectGroup />', () => {
   const KEY_DOWN = 40
 
   it('should have the custom classname', () => {
-    const {container} = render(<SelectGroup className="select" options={[]} onChange={() => null} />)
+    const {container} = render(
+      <SelectGroup className="select" options={[]} onChange={() => null} />,
+    )
     expect(container.querySelector('.select')).toBeInstanceOf(HTMLElement)
   })
 
@@ -25,7 +27,9 @@ describe('<SelectGroup />', () => {
       />,
     )
 
-    const label = container.querySelector('div[class*="-control"]') as HTMLElement
+    const label = container.querySelector(
+      'div[class*="-control"]',
+    ) as HTMLElement
 
     // Focus and enable the dropdown of options.
     fireEvent.focus(label)

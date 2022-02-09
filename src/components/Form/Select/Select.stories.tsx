@@ -13,7 +13,9 @@ const options = [
 
 const Template: Story<Props> = (args) => {
   const [val, setValue] = useState<Option>(null)
-  return <Select {...args} value={val} onChange={({value}) => setValue(value)} />
+  return (
+    <Select {...args} value={val} onChange={({value}) => setValue(value)} />
+  )
 }
 
 export const Default = Template.bind({})

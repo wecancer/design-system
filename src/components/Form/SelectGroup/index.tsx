@@ -3,7 +3,12 @@ import {useTheme} from 'styled-components'
 import Select from 'react-select'
 
 import selectStyles from '../Select/styles'
-import {MultiValueRemove, DropdownIndicator, MultiValueContainer, Props as SelectProps} from '../Select'
+import {
+  MultiValueRemove,
+  DropdownIndicator,
+  MultiValueContainer,
+  Props as SelectProps,
+} from '../Select'
 import {Options} from '../Select/types'
 
 type ChangeParams = {

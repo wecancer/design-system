@@ -12,13 +12,17 @@ describe('<Select />', () => {
   const KEY_DOWN = 40
 
   it('should have the select label', () => {
-    const {queryByText} = render(<Select label="Select it!" options={[]} onChange={() => null} />)
+    const {queryByText} = render(
+      <Select label="Select it!" options={[]} onChange={() => null} />,
+    )
     const placeholder = queryByText('Select it!')
     expect(placeholder).toBeInstanceOf(HTMLElement)
   })
 
   it('should have the custom classname', () => {
-    const {container} = render(<Select className="select" options={[]} onChange={() => null} />)
+    const {container} = render(
+      <Select className="select" options={[]} onChange={() => null} />,
+    )
     expect(container.querySelector('.select')).toBeInstanceOf(HTMLElement)
   })
 
@@ -32,7 +36,9 @@ describe('<Select />', () => {
       />,
     )
 
-    const label = container.querySelector('div[class*="-control"]') as HTMLElement
+    const label = container.querySelector(
+      'div[class*="-control"]',
+    ) as HTMLElement
 
     // Focus and enable the dropdown of options.
     fireEvent.focus(label)

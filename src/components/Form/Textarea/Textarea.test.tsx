@@ -6,8 +6,17 @@ describe('<Textarea />', () => {
   it('should render snapshot correctly', () => {
     const {container} = render(
       <>
-        <Textarea value="Text message" label="Text label" onChange={() => null} />
-        <Textarea value="Text message" label="Text label" onChange={() => null} rows={4} />
+        <Textarea
+          value="Text message"
+          label="Text label"
+          onChange={() => null}
+        />
+        <Textarea
+          value="Text message"
+          label="Text label"
+          onChange={() => null}
+          rows={4}
+        />
         <Textarea
           infoType="error"
           label="error label"
@@ -36,8 +45,15 @@ describe('<Textarea />', () => {
 
   it('should have a button to clear the textarea if the user want', () => {
     const handleClick = jest.fn()
-    const {container} = render(<Textarea value="Testing message..." onChange={() => null} onClear={handleClick} />)
-    const buttonClear = container.querySelector('[data-icon-name="times"]')?.parentNode as HTMLButtonElement
+    const {container} = render(
+      <Textarea
+        value="Testing message..."
+        onChange={() => null}
+        onClear={handleClick}
+      />,
+    )
+    const buttonClear = container.querySelector('[data-icon-name="times"]')
+      ?.parentNode as HTMLButtonElement
 
     fireEvent.click(buttonClear)
 

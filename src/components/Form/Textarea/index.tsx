@@ -142,7 +142,17 @@ export type Props = {
   onChange(params: OnChangeParams): void
 }
 
-const InputTextarea = ({id, value, label, onClear, rows = 2, onChange, infoType, infoMessage, ...props}: Props) => {
+const InputTextarea = ({
+  id,
+  value,
+  label,
+  onClear,
+  rows = 2,
+  onChange,
+  infoType,
+  infoMessage,
+  ...props
+}: Props) => {
   const hasValue = !!value
 
   return (
@@ -154,7 +164,9 @@ const InputTextarea = ({id, value, label, onClear, rows = 2, onChange, infoType,
         value={value}
         hasValue={hasValue}
         infoType={infoType}
-        onChange={(event) => onChange({value: event.currentTarget.value, event})}
+        onChange={(event) =>
+          onChange({value: event.currentTarget.value, event})
+        }
       />
       {label && <Label htmlFor={id}>{label}</Label>}
       {hasValue && (
@@ -162,7 +174,9 @@ const InputTextarea = ({id, value, label, onClear, rows = 2, onChange, infoType,
           <Icon name="times" size={22} />
         </ButtonClose>
       )}
-      {infoType && infoMessage && <Message type={infoType}>{infoMessage}</Message>}
+      {infoType && infoMessage && (
+        <Message type={infoType}>{infoMessage}</Message>
+      )}
     </Wrapper>
   )
 }

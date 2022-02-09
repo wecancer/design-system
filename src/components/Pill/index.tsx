@@ -14,7 +14,9 @@ const Text = styled.p`
   `}
 `
 
-const Container = styled.div<{fillColor: ColorsTemplate} & Pick<Props, 'size' | 'isActive'>>`
+const Container = styled.div<
+  {fillColor: ColorsTemplate} & Pick<Props, 'size' | 'isActive'>
+>`
   ${({isActive, theme, size, fillColor}) => css`
     display: inline-flex;
     align-items: center;
@@ -119,10 +121,29 @@ const Pill = ({
   }
 
   return (
-    <Container size={size} isActive={isActive} fillColor={fillColor} {...(isClickable ? clickProps : {})}>
-      {isChecked && <CheckIcon name="check" isActive={isActive} fillColor={fillColor} size={checkIconSize} />}
+    <Container
+      size={size}
+      isActive={isActive}
+      fillColor={fillColor}
+      {...(isClickable ? clickProps : {})}
+    >
+      {isChecked && (
+        <CheckIcon
+          name="check"
+          isActive={isActive}
+          fillColor={fillColor}
+          size={checkIconSize}
+        />
+      )}
       <Text>{label}</Text>
-      {hasClose && <CloseIcon name="close" isActive={isActive} fillColor={fillColor} size={closeIconSize} />}
+      {hasClose && (
+        <CloseIcon
+          name="close"
+          isActive={isActive}
+          fillColor={fillColor}
+          size={closeIconSize}
+        />
+      )}
     </Container>
   )
 }

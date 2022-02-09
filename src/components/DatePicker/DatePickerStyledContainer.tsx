@@ -50,7 +50,8 @@ export default styled.div`
           height: 0;
           border-style: solid;
           border-width: 0 0 0.5rem 0.5rem;
-          border-color: transparent transparent ${theme.colors.primary} transparent;
+          border-color: transparent transparent ${theme.colors.primary}
+            transparent;
           box-shadow: 0px 1px 1px rgba(0, 14, 51, 0.05);
         }
 

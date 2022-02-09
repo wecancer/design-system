@@ -7,7 +7,12 @@ const SPACE = 32
 describe('/events', () => {
   it('should be call the actions keys', () => {
     const handle = jest.fn()
-    const {queryByTestId} = render(<input data-testid="input" onKeyDown={(e) => keyActionClick(e, handle)} />)
+    const {queryByTestId} = render(
+      <input
+        data-testid="input"
+        onKeyDown={(e) => keyActionClick(e, handle)}
+      />,
+    )
     const input = queryByTestId('input') as HTMLInputElement
     fireEvent.keyDown(input, {
       keyCode: ENTER,

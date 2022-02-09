@@ -45,7 +45,9 @@ describe('<Radio />', () => {
     expect(handleClick).toHaveBeenCalledTimes(1)
 
     const unchecked = render(<Radio isChecked={false} />)
-    const uncheckedComponent = unchecked.container.querySelector('[role="radio"]') as HTMLElement
+    const uncheckedComponent = unchecked.container.querySelector(
+      '[role="radio"]',
+    ) as HTMLElement
     expect(uncheckedComponent.getAttribute('aria-checked')).toBe('false')
   })
 })

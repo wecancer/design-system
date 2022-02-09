@@ -12,7 +12,12 @@ describe('<IncrementStepper />', () => {
   })
 
   it('should increment the value when the button is clicked', () => {
-    const {container} = render(<IncrementStepper value={10} onChange={({value}) => expect(value).toBe(11)} />)
+    const {container} = render(
+      <IncrementStepper
+        value={10}
+        onChange={({value}) => expect(value).toBe(11)}
+      />,
+    )
     const button = container.querySelector('button:last-child')
 
     if (!button) throw new Error('Last button not found')
@@ -21,7 +26,12 @@ describe('<IncrementStepper />', () => {
   })
 
   it('should decrement the value when the button is clicked', () => {
-    const {container} = render(<IncrementStepper value={10} onChange={({value}) => expect(value).toBe(9)} />)
+    const {container} = render(
+      <IncrementStepper
+        value={10}
+        onChange={({value}) => expect(value).toBe(9)}
+      />,
+    )
     const button = container.querySelector('button:first-child')
 
     if (!button) throw new Error('First button not found')
@@ -30,7 +40,9 @@ describe('<IncrementStepper />', () => {
   })
 
   it('should disable the increment button when the max value is defined', () => {
-    const {container} = render(<IncrementStepper value={10} max={10} onChange={() => null} />)
+    const {container} = render(
+      <IncrementStepper value={10} max={10} onChange={() => null} />,
+    )
     const button = container.querySelector('button:last-child')
 
     if (!button) throw new Error('Last button not found')
@@ -39,7 +51,9 @@ describe('<IncrementStepper />', () => {
   })
 
   it('should disable the decrement button when the max value is defined', () => {
-    const {container} = render(<IncrementStepper value={10} min={10} onChange={() => null} />)
+    const {container} = render(
+      <IncrementStepper value={10} min={10} onChange={() => null} />,
+    )
     const button = container.querySelector('button:first-child')
 
     if (!button) throw new Error('First button not found')
@@ -48,7 +62,15 @@ describe('<IncrementStepper />', () => {
   })
 
   it('should disable the controls', () => {
-    const {container} = render(<IncrementStepper isDisabled value={0} min={-10} max={30} onChange={() => null} />)
+    const {container} = render(
+      <IncrementStepper
+        isDisabled
+        value={0}
+        min={-10}
+        max={30}
+        onChange={() => null}
+      />,
+    )
     const btnFirst = container.querySelector('button:first-child')
     const btnLast = container.querySelector('button:last-child')
     const input = container.querySelector('input')

@@ -58,7 +58,9 @@ const Cell = styled.div<{isLastItem: boolean; isCompleted: boolean}>`
         position: absolute;
         top: 16px;
         left: 50%;
-        background-color: ${isCompleted ? theme.colors.primary : theme.colors.line};
+        background-color: ${isCompleted
+          ? theme.colors.primary
+          : theme.colors.line};
       }
     `}
   `}
@@ -76,7 +78,12 @@ const Stepper = ({items, current = 1}: Props): React.ReactElement | null => {
   if (!items.length) return null
 
   return (
-    <Wrapper role="progressbar" aria-valuenow={current} aria-valuemin={0} aria-valuemax={items.length}>
+    <Wrapper
+      role="progressbar"
+      aria-valuenow={current}
+      aria-valuemin={0}
+      aria-valuemax={items.length}
+    >
       {items.map((step, index) => {
         const isCompleted = current - 1 > index
         const isLastItem = items.length - 1 === index
@@ -85,7 +92,9 @@ const Stepper = ({items, current = 1}: Props): React.ReactElement | null => {
 
         return (
           <Cell key={step.id} isLastItem={isLastItem} isCompleted={isCompleted}>
-            <Step isActived={isActived}>{isChecked ? <Icon name="check" /> : index + 1}</Step>
+            <Step isActived={isActived}>
+              {isChecked ? <Icon name="check" /> : index + 1}
+            </Step>
             {step.label && <Label isActived={isActived}>{step.label}</Label>}
           </Cell>
         )

@@ -4,7 +4,13 @@ import IncrementStepper, {Props} from '.'
 
 const Template: Story<Props> = (args) => {
   const [val, setValue] = useState(0)
-  return <IncrementStepper {...args} value={val} onChange={({value}) => setValue(value)} />
+  return (
+    <IncrementStepper
+      {...args}
+      value={val}
+      onChange={({value}) => setValue(value)}
+    />
+  )
 }
 
 export const Default = Template.bind({})

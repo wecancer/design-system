@@ -9,7 +9,11 @@ type ToastWrapperProps = {
 const ToastWrapper = ({message, delay}: ToastWrapperProps) => {
   const toast = useToast()
   return (
-    <button type="button" data-testid="button" onClick={() => toast(message, {delay})}>
+    <button
+      type="button"
+      data-testid="button"
+      onClick={() => toast(message, {delay})}
+    >
       Click me!
     </button>
   )
@@ -18,7 +22,11 @@ const ToastWrapper = ({message, delay}: ToastWrapperProps) => {
 const ToastSuccessWrapper = ({message}: ToastWrapperProps) => {
   const toast = useToast()
   return (
-    <button type="button" data-testid="button" onClick={() => toast.success(message)}>
+    <button
+      type="button"
+      data-testid="button"
+      onClick={() => toast.success(message)}
+    >
       Click me!
     </button>
   )
@@ -27,7 +35,11 @@ const ToastSuccessWrapper = ({message}: ToastWrapperProps) => {
 const ToastErrorWrapper = ({message}: ToastWrapperProps) => {
   const toast = useToast()
   return (
-    <button type="button" data-testid="button" onClick={() => toast.error(message)}>
+    <button
+      type="button"
+      data-testid="button"
+      onClick={() => toast.error(message)}
+    >
       Click me!
     </button>
   )
@@ -35,7 +47,9 @@ const ToastErrorWrapper = ({message}: ToastWrapperProps) => {
 
 describe('useToast', () => {
   it('should open the success toast', () => {
-    const {queryByTestId, queryByText} = render(<ToastWrapper message="Hello!" />)
+    const {queryByTestId, queryByText} = render(
+      <ToastWrapper message="Hello!" />,
+    )
 
     const button = queryByTestId('button')
 
@@ -49,7 +63,9 @@ describe('useToast', () => {
   it('should have delay property to configure the timeout of the toast', () => {
     jest.useFakeTimers()
 
-    const {queryByTestId, queryByText} = render(<ToastWrapper message="Hello!" />)
+    const {queryByTestId, queryByText} = render(
+      <ToastWrapper message="Hello!" />,
+    )
 
     const button = queryByTestId('button')
 
@@ -68,7 +84,9 @@ describe('useToast', () => {
   it('should remove the toast when click the close button from toast', () => {
     jest.useFakeTimers()
 
-    const {queryByTestId, queryByText} = render(<ToastWrapper message="Hello!" />)
+    const {queryByTestId, queryByText} = render(
+      <ToastWrapper message="Hello!" />,
+    )
 
     const button = queryByTestId('button')
 
@@ -78,13 +96,17 @@ describe('useToast', () => {
     const messageContainer = queryByText('Hello!') as HTMLElement
     expect(queryByText('Hello!')).toBeInstanceOf(HTMLElement)
 
-    const closeButton = messageContainer.parentNode?.querySelector('button') as HTMLElement
+    const closeButton = messageContainer.parentNode?.querySelector(
+      'button',
+    ) as HTMLElement
     fireEvent.click(closeButton)
     expect(queryByText('Hello!')).not.toBeInstanceOf(HTMLElement)
   })
 
   it('should render the success toast', () => {
-    const {queryByTestId, queryByText} = render(<ToastSuccessWrapper message="Success!" />)
+    const {queryByTestId, queryByText} = render(
+      <ToastSuccessWrapper message="Success!" />,
+    )
 
     const button = queryByTestId('button')
 
@@ -96,7 +118,9 @@ describe('useToast', () => {
   })
 
   it('should render the error toast', () => {
-    const {queryByTestId, queryByText} = render(<ToastErrorWrapper message="Error!" />)
+    const {queryByTestId, queryByText} = render(
+      <ToastErrorWrapper message="Error!" />,
+    )
 
     const button = queryByTestId('button')
 

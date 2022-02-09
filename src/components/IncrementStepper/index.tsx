@@ -69,7 +69,13 @@ export type Props = {
   onChange({value}: OnChangeParams): void
 }
 
-const IncrementStepper = ({isDisabled = false, value, min, max, onChange}: Props) => {
+const IncrementStepper = ({
+  isDisabled = false,
+  value,
+  min,
+  max,
+  onChange,
+}: Props) => {
   const isIncrementable = max === undefined || value < max
   const isDecrementable = min === undefined || value > min
 
@@ -87,7 +93,11 @@ const IncrementStepper = ({isDisabled = false, value, min, max, onChange}: Props
 
   return (
     <Container>
-      <BtnStepper type="button" disabled={!isDecrementable || isDisabled} onClick={handleDecrement}>
+      <BtnStepper
+        type="button"
+        disabled={!isDecrementable || isDisabled}
+        onClick={handleDecrement}
+      >
         <Icon size={10} name="minus" />
       </BtnStepper>
       <Input
@@ -115,7 +125,11 @@ const IncrementStepper = ({isDisabled = false, value, min, max, onChange}: Props
           }
         }}
       />
-      <BtnStepper type="button" disabled={!isIncrementable || isDisabled} onClick={handleIncrement}>
+      <BtnStepper
+        type="button"
+        disabled={!isIncrementable || isDisabled}
+        onClick={handleIncrement}
+      >
         <Icon size={10} name="plus" />
       </BtnStepper>
     </Container>

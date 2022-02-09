@@ -2,7 +2,11 @@ import React, {useContext, useEffect} from 'react'
 import styled, {css} from 'styled-components'
 import Context from './Card.context'
 
-const CardImageStyled = styled.div<{isLeft: boolean; heightSize: number; imageUrl: string}>`
+const CardImageStyled = styled.div<{
+  isLeft: boolean
+  heightSize: number
+  imageUrl: string
+}>`
   ${({imageUrl, heightSize, theme, isLeft}) => css`
     height: ${isLeft ? 78 : heightSize}px;
     font-family: ${theme.font.familyRedesign};
@@ -33,14 +37,24 @@ type Props = React.HTMLAttributes<HTMLDivElement> & {
   imageUrl: string
 }
 
-const CardImage = ({position, height = 100, ...props}: Props): React.ReactElement => {
+const CardImage = ({
+  position,
+  height = 100,
+  ...props
+}: Props): React.ReactElement => {
   const {gapDirection, setGapDirection} = useContext(Context)
 
   useEffect(() => {
     setGapDirection(position === 'top-left' ? 'left' : 'none')
   }, [position, setGapDirection])
 
-  return <CardImageStyled isLeft={gapDirection.includes('left')} heightSize={height} {...props} />
+  return (
+    <CardImageStyled
+      isLeft={gapDirection.includes('left')}
+      heightSize={height}
+      {...props}
+    />
+  )
 }
 
 export default CardImage

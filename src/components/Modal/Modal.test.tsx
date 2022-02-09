@@ -17,12 +17,16 @@ describe('<Modal />', () => {
         <Modal isOpen={false}>Something</Modal>
       </>,
     )
-    expect(container.querySelector('section header')).not.toBeInstanceOf(HTMLHeadingElement)
+    expect(container.querySelector('section header')).not.toBeInstanceOf(
+      HTMLHeadingElement,
+    )
   })
 
   it(`should render the modal if the attribute "isOpen" is defined be true`, () => {
     const {container} = render(<Modal>Something</Modal>)
-    expect(container.querySelector('section header')).not.toBeInstanceOf(HTMLHeadingElement)
+    expect(container.querySelector('section header')).not.toBeInstanceOf(
+      HTMLHeadingElement,
+    )
   })
 
   it('should render the title of the modal', () => {
@@ -58,7 +62,9 @@ describe('<Modal />', () => {
         Something
       </Modal>,
     )
-    const btnClose = baseElement.querySelector('section header button') as HTMLButtonElement
+    const btnClose = baseElement.querySelector(
+      'section header button',
+    ) as HTMLButtonElement
     fireEvent.click(btnClose)
     expect(handleClick).toHaveBeenCalledTimes(1)
   })

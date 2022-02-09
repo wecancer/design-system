@@ -51,7 +51,11 @@ const RadioGroup = ({items, onChange, isDisabled, line = 'row'}: Props) => (
           onChange({
             item,
             index,
-            itemsUpdated: arr.map((value) => (value.id === item.id ? {...item, isChecked: !item.isChecked} : value)),
+            itemsUpdated: arr.map((value) =>
+              value.id === item.id
+                ? {...item, isChecked: !item.isChecked}
+                : value,
+            ),
           })
         }
         isChecked={item.isChecked}

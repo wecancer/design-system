@@ -5,8 +5,9 @@ import Modal, {Props} from '.'
 const Template: Story<Props> = (args) => (
   <Modal {...args}>
     <p>
-      Etiam vitae fringilla mauris, eget laoreet tellus. Nunc et quam a turpis ornare pretium. Nullam sed fringilla
-      mauris. Proin fermentum ullamcorper velit at lobortis.
+      Etiam vitae fringilla mauris, eget laoreet tellus. Nunc et quam a turpis
+      ornare pretium. Nullam sed fringilla mauris. Proin fermentum ullamcorper
+      velit at lobortis.
     </p>
   </Modal>
 )

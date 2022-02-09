@@ -44,7 +44,12 @@ export type Props = {
   color?: ColorsAvailable
 }
 
-const Loading = ({type = 'solid', color = 'currentColor', title, size}: Props) => (
+const Loading = ({
+  type = 'solid',
+  color = 'currentColor',
+  title,
+  size,
+}: Props) => (
   <Container title={title} aria-label={title} spinColor={color}>
     <Icon name={loadingTypes[type]} size={size} />
   </Container>

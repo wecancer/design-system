@@ -123,7 +123,8 @@ const ToastProvider = ({children}: Props) => {
   const portal = usePortal()
   const [toastList, setToasts] = useState<Toast[]>([])
 
-  const handleRemoveItem = (id: string) => setToasts((toasts) => toasts.filter((item) => item.id !== id))
+  const handleRemoveItem = (id: string) =>
+    setToasts((toasts) => toasts.filter((item) => item.id !== id))
 
   return (
     <ToastContext.Provider value={{setToasts}}>
@@ -132,7 +133,11 @@ const ToastProvider = ({children}: Props) => {
         portal.add(
           <ToastList>
             {toastList.map((toast) => (
-              <ToastItem toastType={toast.type} key={toast.id} animEffect={toast.state}>
+              <ToastItem
+                toastType={toast.type}
+                key={toast.id}
+                animEffect={toast.state}
+              >
                 <ToastItemContent>{toast.message}</ToastItemContent>
                 <CloseButton onClick={() => handleRemoveItem(toast.id)}>
                   <Icon name="timesSolid" size={24} />

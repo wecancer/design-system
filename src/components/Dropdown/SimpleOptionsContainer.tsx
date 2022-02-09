@@ -61,7 +61,12 @@ type Props = {
   className?: string
 }
 
-const ListContainer = ({options, hasArrow, onSelect, ...props}: Props): React.ReactElement => {
+const ListContainer = ({
+  options,
+  hasArrow,
+  onSelect,
+  ...props
+}: Props): React.ReactElement => {
   return (
     <Container role="listbox" tabIndex={0} hasArrow={!!hasArrow} {...props}>
       {options.map((option) => (

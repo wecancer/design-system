@@ -18,11 +18,17 @@ const Template: Story = () => {
   return (
     <Grid>
       <Card>
-        <CardImage height={150} imageUrl="https://medicinasa.com.br/wp-content/uploads/2019/04/WeCancer2a.jpg" />
+        <CardImage
+          height={150}
+          imageUrl="https://medicinasa.com.br/wp-content/uploads/2019/04/WeCancer2a.jpg"
+        />
         <CardContent>The card with image</CardContent>
       </Card>
       <Card>
-        <CardImage position="top-left" imageUrl="https://medicinasa.com.br/wp-content/uploads/2019/04/WeCancer2a.jpg" />
+        <CardImage
+          position="top-left"
+          imageUrl="https://medicinasa.com.br/wp-content/uploads/2019/04/WeCancer2a.jpg"
+        />
         <CardContent>
           <p>Item 1</p>
           <p>Item 2</p>

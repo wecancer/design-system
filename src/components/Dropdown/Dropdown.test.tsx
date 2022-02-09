@@ -4,7 +4,10 @@ import {render, fireEvent} from '../../testing'
 describe('<Dropdown />', () => {
   it('should render snapshot correctly', () => {
     const {container} = render(
-      <Dropdown className="custom-classname" trigger={() => <button type="button">Click me!</button>}>
+      <Dropdown
+        className="custom-classname"
+        trigger={() => <button type="button">Click me!</button>}
+      >
         {() => <p>element hide</p>}
       </Dropdown>,
     )

@@ -113,7 +113,10 @@ type OnChangeParams = {
   event: React.ChangeEvent<HTMLInputElement> | null
 }
 
-export type Props = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'value' | 'type' | 'css' | 'onChange'> & {
+export type Props = Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  'value' | 'type' | 'css' | 'onChange'
+> & {
   id?: string
   label?: string
   value?: Value
@@ -139,14 +142,18 @@ const InputText = React.forwardRef<HTMLInputElement, Props>(
           id={id}
           hasGapLeft={hasGapLeft}
           hasGapRight={hasGapRight}
-          onChange={(event) => onChange({value: event.currentTarget.value, event})}
+          onChange={(event) =>
+            onChange({value: event.currentTarget.value, event})
+          }
         />
         {label && (
           <Label htmlFor={id} hasGapLeft={hasGapLeft}>
             {label}
           </Label>
         )}
-        {iconLeft && <IconLeft className="icon-left" size={14} name={iconLeft} />}
+        {iconLeft && (
+          <IconLeft className="icon-left" size={14} name={iconLeft} />
+        )}
         {iconButtonRight && (
           <ButtonRight type="button" onClick={iconButtonRight.onClick}>
             <Icon className="icon-right" name={iconButtonRight.type} />

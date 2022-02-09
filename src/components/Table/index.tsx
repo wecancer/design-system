@@ -34,7 +34,9 @@ export type Props = {
 
 const Table = ({children, cellsWitdh = []}: Props): React.ReactElement => {
   const [cellsW, setCellsWidth] = useState<string[]>(
-    parseCellsWidthArray(typeof cellsWitdh === 'string' ? cellsWitdh.split(' ') : cellsWitdh),
+    parseCellsWidthArray(
+      typeof cellsWitdh === 'string' ? cellsWitdh.split(' ') : cellsWitdh,
+    ),
   )
 
   return (

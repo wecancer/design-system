@@ -22,7 +22,11 @@ const Container = styled.div<{isIndependentContent: boolean}>`
 `
 
 type Props = React.HTMLAttributes<HTMLDivElement> & {
-  onClick?(e: React.KeyboardEvent<HTMLDivElement> | React.MouseEvent<HTMLDivElement, MouseEvent>): void
+  onClick?(
+    e:
+      | React.KeyboardEvent<HTMLDivElement>
+      | React.MouseEvent<HTMLDivElement, MouseEvent>,
+  ): void
 }
 
 const Card = ({onClick, ...props}: Props): React.ReactElement => {
@@ -33,12 +37,17 @@ const Card = ({onClick, ...props}: Props): React.ReactElement => {
           role: 'button',
           tabIndex: 0,
           onClick,
-          onKeyDown: (e: React.KeyboardEvent<HTMLDivElement>) => keyActionClick(e, () => onClick(e)),
+          onKeyDown: (e: React.KeyboardEvent<HTMLDivElement>) =>
+            keyActionClick(e, () => onClick(e)),
         }
       : {}
   return (
     <Context.Provider value={{gapDirection, setGapDirection}}>
-      <Container isIndependentContent={gapDirection === 'left'} {...props} {...btnProps} />
+      <Container
+        isIndependentContent={gapDirection === 'left'}
+        {...props}
+        {...btnProps}
+      />
     </Context.Provider>
   )
 }

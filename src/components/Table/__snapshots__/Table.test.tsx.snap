@@ -36,7 +36,7 @@ exports[`<Table /> should render snapshot correctly 1`] = `
     class="sc-gsDKAQ gMoRrl"
   >
     <div
-      class="sc-dkPtRN kzUVjI"
+      class="sc-dkPtRN oQTeg"
     >
       <div
         class="sc-hKwDye kLEQHB wc-table-cell"
@@ -64,7 +64,7 @@ exports[`<Table /> should render snapshot correctly 1`] = `
     class="sc-gsDKAQ dXKiIu"
   >
     <div
-      class="sc-dkPtRN kzUVjI"
+      class="sc-dkPtRN oQTeg"
     >
       <div
         class="sc-hKwDye kLEQHB wc-table-cell"
@@ -92,7 +92,7 @@ exports[`<Table /> should render snapshot correctly 1`] = `
     class="sc-gsDKAQ edYMjg"
   >
     <div
-      class="sc-dkPtRN kzUVjI"
+      class="sc-dkPtRN oQTeg"
     >
       <div
         class="sc-hKwDye kLEQHB wc-table-cell"
@@ -120,7 +120,7 @@ exports[`<Table /> should render snapshot correctly 1`] = `
     class="sc-gsDKAQ ciJzkl"
   >
     <div
-      class="sc-dkPtRN kzUVjI"
+      class="sc-dkPtRN oQTeg"
     >
       <div
         class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
@@ -148,7 +148,7 @@ exports[`<Table /> should render snapshot correctly 1`] = `
     class="sc-gsDKAQ ciJzkl"
   >
     <div
-      class="sc-dkPtRN kzUVjI"
+      class="sc-dkPtRN oQTeg"
     >
       <div
         class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"

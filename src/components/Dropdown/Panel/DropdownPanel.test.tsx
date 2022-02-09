@@ -22,7 +22,12 @@ describe('<DropdownPanel />', () => {
       <>
         <Dropdown label="empty options" onChange={() => {}} options={[]} />
         <Dropdown label="with " onChange={() => {}} options={options} />
-        <Dropdown label="testing" onChange={() => {}} options={options} value={options[0]} />
+        <Dropdown
+          label="testing"
+          onChange={() => {}}
+          options={options}
+          value={options[0]}
+        />
       </>,
     )
     expect(container.firstChild).toMatchSnapshot()
@@ -32,12 +37,18 @@ describe('<DropdownPanel />', () => {
     const index = 0
     const option = options[index]
     const {queryByText, queryByRole} = render(
-      <Dropdown label="Click me!" onChange={(value) => expect(option).toMatchObject(value.option)} options={options} />,
+      <Dropdown
+        label="Click me!"
+        onChange={(value) => expect(option).toMatchObject(value.option)}
+        options={options}
+      />,
     )
     const triggerButton = queryByText('Click me!')
     fireEvent.click(triggerButton as HTMLElement)
 
-    const buttonSelect = queryByRole('listbox')?.querySelectorAll('[role="button"]')[index] as HTMLElement
+    const buttonSelect = queryByRole('listbox')?.querySelectorAll(
+      '[role="button"]',
+    )[index] as HTMLElement
     fireEvent.click(buttonSelect)
   })
 

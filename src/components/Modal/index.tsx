@@ -58,7 +58,13 @@ export type Props = {
   onClose?(): void
 }
 
-const Modal = ({children, title, isOpen = false, onClose, width = 500}: Props) => {
+const Modal = ({
+  children,
+  title,
+  isOpen = false,
+  onClose,
+  width = 500,
+}: Props) => {
   const portal = usePortal()
 
   if (!isOpen) return null

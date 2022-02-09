@@ -13,17 +13,31 @@ describe('<Avatar />', () => {
         <Avatar initials="ANA" status="away" />
         <Avatar initials="ANA" status="busy" />
         <Avatar initials="ANA" status="online" />
-        <Avatar initials="ANA" src="https://randomuser.me/api/portraits/women/42.jpg" />
-        <Avatar src="https://randomuser.me/api/portraits/women/42.jpg" status="away" />
-        <Avatar src="https://randomuser.me/api/portraits/women/42.jpg" status="busy" />
-        <Avatar src="https://randomuser.me/api/portraits/women/42.jpg" status="online" />
+        <Avatar
+          initials="ANA"
+          src="https://randomuser.me/api/portraits/women/42.jpg"
+        />
+        <Avatar
+          src="https://randomuser.me/api/portraits/women/42.jpg"
+          status="away"
+        />
+        <Avatar
+          src="https://randomuser.me/api/portraits/women/42.jpg"
+          status="busy"
+        />
+        <Avatar
+          src="https://randomuser.me/api/portraits/women/42.jpg"
+          status="online"
+        />
       </>,
     )
     expect(container.firstChild).toMatchSnapshot()
   })
 
   it('should have the image tag with src property', () => {
-    const {container} = render(<Avatar src="https://randomuser.me/api/portraits/women/42.jpg" />)
+    const {container} = render(
+      <Avatar src="https://randomuser.me/api/portraits/women/42.jpg" />,
+    )
     expect(container.querySelector('img')).toHaveProperty('src')
   })
 

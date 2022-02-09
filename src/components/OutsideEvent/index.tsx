@@ -2,7 +2,10 @@ import React, {useRef, useEffect, useCallback} from 'react'
 
 type OnClickOutside = () => void
 
-export function useClickOutsideEvent(ref: React.RefObject<HTMLDivElement>, callback: OnClickOutside) {
+export function useClickOutsideEvent(
+  ref: React.RefObject<HTMLDivElement>,
+  callback: OnClickOutside,
+) {
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (!ref.current?.contains(event.target as Node)) {

@@ -31,7 +31,9 @@ describe('<DatePicker />', () => {
 
   it('should dispatch an event when the onChange is triggered', () => {
     const callback = jest.fn()
-    const {container} = render(<DatePicker value={new Date()} onChange={callback} />)
+    const {container} = render(
+      <DatePicker value={new Date()} onChange={callback} />,
+    )
     const input = container.querySelector('input[type="text"]') as HTMLElement
 
     fireEvent.click(input)
@@ -42,7 +44,9 @@ describe('<DatePicker />', () => {
 
   it('should open the calendar when click on the calendar icon button', () => {
     const callback = jest.fn()
-    const {container} = render(<DatePicker value={new Date()} onChange={callback} />)
+    const {container} = render(
+      <DatePicker value={new Date()} onChange={callback} />,
+    )
     const button = container.querySelector('button') as HTMLElement
 
     expect(container.querySelector('.rdp')).toBeNull()
@@ -52,7 +56,10 @@ describe('<DatePicker />', () => {
 
   it('should expect the new value when change the calendar', () => {
     const {container} = render(
-      <DatePicker value={new Date()} onChange={({value}) => expect(value).toBeInstanceOf(Date)} />,
+      <DatePicker
+        value={new Date()}
+        onChange={({value}) => expect(value).toBeInstanceOf(Date)}
+      />,
     )
 
     const input = container.querySelector('input[type="text"]') as HTMLElement
@@ -62,7 +69,12 @@ describe('<DatePicker />', () => {
   })
 
   it('should set the value undefined when the user type an invalid date format', () => {
-    const {container} = render(<DatePicker value={new Date()} onChange={({value}) => expect(value).toBeUndefined()} />)
+    const {container} = render(
+      <DatePicker
+        value={new Date()}
+        onChange={({value}) => expect(value).toBeUndefined()}
+      />,
+    )
     const input = container.querySelector('input[type="text"]') as HTMLElement
 
     fireEvent.click(input)
@@ -72,7 +84,11 @@ describe('<DatePicker />', () => {
 
   it('should defines the input label to datepicker component', () => {
     const {getByText} = render(
-      <DatePicker label="Birthday" value={new Date()} onChange={({value}) => expect(value).toBeUndefined()} />,
+      <DatePicker
+        label="Birthday"
+        value={new Date()}
+        onChange={({value}) => expect(value).toBeUndefined()}
+      />,
     )
     const label = getByText('Birthday')
 
@@ -82,7 +98,9 @@ describe('<DatePicker />', () => {
 
 describe('<RangeDatePicker />', () => {
   it('should open the calendar when the input has been focused', () => {
-    const {container} = render(<RangeDatePicker value={{from: undefined, to: undefined}} />)
+    const {container} = render(
+      <RangeDatePicker value={{from: undefined, to: undefined}} />,
+    )
     const inputTexts = container.querySelectorAll('input[type="text"]')
     expect(inputTexts).toHaveLength(2)
 

@@ -61,7 +61,12 @@ export type Props = {
   status?: 'online' | 'busy' | 'away' | null
 }
 
-const Avatar = ({src, initials = '', status = null, size = 100}: Props): React.ReactElement => {
+const Avatar = ({
+  src,
+  initials = '',
+  status = null,
+  size = 100,
+}: Props): React.ReactElement => {
   const {colors} = useTheme()
   const stateMap = {
     online: colors.success,

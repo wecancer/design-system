@@ -10,7 +10,8 @@ const Container = styled.section<{isDisabled: boolean; isActived: boolean}>`
     border-radius: 1rem;
     overflow: hidden;
     background-color: ${theme.colors.inputBg};
-    border: 2px solid ${isActived ? theme.colors.titleActive : theme.colors.inputBg};
+    border: 2px solid
+      ${isActived ? theme.colors.titleActive : theme.colors.inputBg};
     transition: border-color ease 250ms;
 
     ${isDisabled &&
@@ -77,12 +78,19 @@ type Props = {
   isOpenByDefault?: boolean
 }
 
-const Item = ({title, isDisabled, isOpenByDefault, children}: Props): React.ReactElement => {
+const Item = ({
+  title,
+  isDisabled,
+  isOpenByDefault,
+  children,
+}: Props): React.ReactElement => {
   const wrapRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
   const {current: id} = useRef<string>(`_${nanoid()}`)
   const {isMulti, listOpen, setListOpen} = useContext(Context)
-  const isOpen = listOpen.includes(wrapRef.current?.getAttribute('data-id') || '')
+  const isOpen = listOpen.includes(
+    wrapRef.current?.getAttribute('data-id') || '',
+  )
 
   useEffect(() => {
     wrapRef.current?.setAttribute('data-id', id)
@@ -100,7 +108,11 @@ const Item = ({title, isDisabled, isOpenByDefault, children}: Props): React.Reac
 
     if (isMulti) {
       // toggle multi list open
-      setListOpen(hasInList ? listOpen.filter((el) => el !== dataId) : [...listOpen, dataId])
+      setListOpen(
+        hasInList
+          ? listOpen.filter((el) => el !== dataId)
+          : [...listOpen, dataId],
+      )
       return
     }
     setListOpen(hasInList ? [] : [dataId])
@@ -123,7 +135,12 @@ const Item = ({title, isDisabled, isOpenByDefault, children}: Props): React.Reac
           </IconWrap>
         </AccordionTrigger>
       </Header>
-      <Content ref={contentRef} role="tabpanel" aria-hidden={!isOpen} aria-labelledby={id}>
+      <Content
+        ref={contentRef}
+        role="tabpanel"
+        aria-hidden={!isOpen}
+        aria-labelledby={id}
+      >
         {children}
       </Content>
     </Container>

@@ -19,7 +19,8 @@ describe('<Table />', () => {
           <TableCell>Item 2</TableCell>
           <TableCell>Item 3</TableCell>
           <TableCell>
-            Proin viverra justo vitae aliquam pulvinar. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+            Proin viverra justo vitae aliquam pulvinar. Interdum et malesuada
+            fames ac ante ipsum primis in faucibus.
           </TableCell>
         </TableRow>
         <TableRow>
@@ -27,22 +28,26 @@ describe('<Table />', () => {
           <TableCell>Item 2</TableCell>
           <TableCell>Item 3</TableCell>
           <TableCell>
-            Phasellus vel velit et mi eleifend dignissim. Duis vitae mi magna. Proin in feugiat urna.
+            Phasellus vel velit et mi eleifend dignissim. Duis vitae mi magna.
+            Proin in feugiat urna.
           </TableCell>
         </TableRow>
         <TableRow>
           <TableCell type="input">Item 1</TableCell>
           <TableCell>Item 2</TableCell>
           <TableCell>Item 3</TableCell>
-          <TableCell>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</TableCell>
+          <TableCell>
+            Orci varius natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus.
+          </TableCell>
         </TableRow>
         <TableRow>
           <TableCell>Item 1</TableCell>
           <TableCell>Item 2</TableCell>
           <TableCell>Item 3</TableCell>
           <TableCell>
-            Nulla iaculis, erat ultrices egestas pretium, metus augue efficitur massa, blandit elementum arcu dolor at
-            erat.
+            Nulla iaculis, erat ultrices egestas pretium, metus augue efficitur
+            massa, blandit elementum arcu dolor at erat.
           </TableCell>
         </TableRow>
         <TableRow>

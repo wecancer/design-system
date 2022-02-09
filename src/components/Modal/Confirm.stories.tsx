@@ -12,8 +12,9 @@ Default.args = {
   cancelLabel: 'Cancel',
   children: (
     <p>
-      Etiam vitae fringilla mauris, eget laoreet tellus. Nunc et quam a turpis ornare pretium. Nullam sed fringilla
-      mauris. Proin fermentum ullamcorper velit at lobortis.
+      Etiam vitae fringilla mauris, eget laoreet tellus. Nunc et quam a turpis
+      ornare pretium. Nullam sed fringilla mauris. Proin fermentum ullamcorper
+      velit at lobortis.
     </p>
   ),
 }

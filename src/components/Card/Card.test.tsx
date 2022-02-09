@@ -11,7 +11,10 @@ describe('<Card />', () => {
     const {container} = render(
       <>
         <Card>
-          <CardImage height={150} imageUrl="https://medicinasa.com.br/wp-content/uploads/2019/04/WeCancer2a.jpg" />
+          <CardImage
+            height={150}
+            imageUrl="https://medicinasa.com.br/wp-content/uploads/2019/04/WeCancer2a.jpg"
+          />
           <CardContent>The card with image</CardContent>
         </Card>
         <Card>

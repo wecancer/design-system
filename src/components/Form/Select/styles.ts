@@ -3,7 +3,10 @@ import {GroupBase, StylesConfig} from 'react-select'
 
 import {Option} from './types'
 
-const selectStyles = ({font, colors}: DefaultTheme): StylesConfig<Option, true, GroupBase<Option>> => ({
+const selectStyles = ({
+  font,
+  colors,
+}: DefaultTheme): StylesConfig<Option, true, GroupBase<Option>> => ({
   container: (styles) => ({
     ...styles,
     fontFamily: font.familyRedesign,

@@ -70,7 +70,9 @@ const DatePicker = ({label, value, onChange, fromYear, toYear}: Props) => {
           },
           type: 'calendar',
         }}
-        onChange={({event}) => inputProps.onChange?.(event as React.ChangeEvent<HTMLInputElement>)}
+        onChange={({event}) =>
+          inputProps.onChange?.(event as React.ChangeEvent<HTMLInputElement>)
+        }
         onBlur={(e) => {
           inputProps.onBlur?.(e as React.FocusEvent<HTMLInputElement>)
           const val = inputProps?.value || undefined
@@ -93,7 +95,12 @@ const DatePicker = ({label, value, onChange, fromYear, toYear}: Props) => {
             locale={ptLocale}
             fromYear={fromYear}
             captionLayout="dropdown"
-            onSelect={(date?: Date, selectedDay?: Date, modifiers?: ModifierStatus, evt?: React.MouseEvent) => {
+            onSelect={(
+              date?: Date,
+              selectedDay?: Date,
+              modifiers?: ModifierStatus,
+              evt?: React.MouseEvent,
+            ) => {
               if (date) {
                 evt?.stopPropagation()
                 setIsOpen(false)

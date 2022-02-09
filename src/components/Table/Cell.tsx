@@ -32,7 +32,10 @@ const TableCell = ({children, type = 'none'}: Props): React.ReactElement => {
     }
   }, [type, setTypeStyle])
 
-  const classNames = ['wc-table-cell', isSolidBg ? 'wc-table-cell-solid' : ''].filter((cname) => !!cname)
+  const classNames = [
+    'wc-table-cell',
+    isSolidBg ? 'wc-table-cell-solid' : '',
+  ].filter((cname) => !!cname)
 
   return (
     <Container className={classNames.join(' ')} isSolidBg={isSolidBg}>
