@@ -1,5 +1,5 @@
 import {addons} from '@storybook/addons'
-import theme from './WecancerTheme'
+import theme from './wecancer-theme'
 
 addons.setConfig({
   theme,

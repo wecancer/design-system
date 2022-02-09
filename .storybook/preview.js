@@ -1,6 +1,6 @@
 import React from 'react'
 import {ThemeProvider} from 'styled-components'
-import WecancerProvider from '../src/WecancerProvider'
+import WecancerProvider from '../src/wecancer-provider'
 
 export const decorators = [
   (Story) => (
