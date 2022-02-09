@@ -49,7 +49,6 @@ describe('<Select />', () => {
         options={options}
         value={options[1]}
         className="select"
-        placeholder="Select..."
         onChange={({value}) => expect(value).toMatchObject(options[2])}
       />,
     )

@@ -18,7 +18,6 @@ export const Default = Template.bind({})
 Default.args = {
   value: [options[0], options[2]],
   options,
-  placeholder: 'Select the items...',
 }
 
 export default {

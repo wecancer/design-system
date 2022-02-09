@@ -8,7 +8,10 @@
   "module": "dist/wcancer-design-system.esm.js",
   "scripts": {
     "test": "react-scripts test",
-    "lint": "eslint ./src",
+    "check": "CI=true yarn test && yarn run check:lint && yarn run check:prettier && yarn run check:types",
+    "check:prettier": "prettier --check './src'",
+    "check:lint": "eslint ./src",
+    "check:types": "tsc --project ./tsconfig.json",
     "eject": "react-scripts eject",
     "start": "start-storybook -p 6006 -s public",
     "build": "preconstruct build",

@@ -15,8 +15,12 @@ import Icon from '../../Icon'
 import {Option, Options} from './types'
 import selectStyles from './styles'
 
-const Label = styled(InputLabel)<{isFocused: boolean; hasValue: boolean}>`
+export const Label = styled(InputLabel)<{
+  isFocused: boolean
+  hasValue: boolean
+}>`
   z-index: 30;
+  padding-bottom: 0;
 
   ${({theme, isFocused, hasValue}) =>
     isFocused || hasValue
@@ -25,7 +29,7 @@ const Label = styled(InputLabel)<{isFocused: boolean; hasValue: boolean}>`
           font-size: 0.875rem;
           transform: translateY(calc(-100% - 10px));
           border-radius: 3px 3px 0 0;
-          background: ${!isFocused && hasValue ? theme.colors.inputBg : theme.colors.white};
+          background: ${!isFocused && hasValue ? `transparent` : theme.colors.white};
         `
       : css`
           background: transparent;
