@@ -1,7 +1,7 @@
 import React from 'react'
 import '@testing-library/jest-dom'
 import {render, RenderResult} from '@testing-library/react'
-import WecancerProvider from './WecancerProvider'
+import WecancerProvider from './wecancer-provider'
 
 type Props = {
   children: React.ReactNode
