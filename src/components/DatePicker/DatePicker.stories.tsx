@@ -5,7 +5,7 @@ import DatePickerRange, {Props as RangeProps, RangePickerValue} from './Range'
 
 const Template: Story<Props> = () => {
   const [date, setValue] = useState<DatePickerValue | undefined>(new Date(Date.now()))
-  return <DatePicker value={date} onChange={({value}) => setValue(value)} />
+  return <DatePicker label="Birthday" value={date} onChange={({value}) => setValue(value)} />
 }
 export const Default = Template.bind({})
 Default.args = {
@@ -21,6 +21,8 @@ export const Range = RangeTemplate.bind({})
 Range.args = {
   fromYear: 2018,
   toYear: 2025,
+  endLabel: 'End date',
+  startLabel: 'Start date',
 }
 
 export default {

@@ -35,13 +35,15 @@ export type Props = {
   onChange?(params: OnChange): void
   fromYear?: number
   toYear?: number
+  startLabel?: string
+  endLabel?: string
 }
 
 const defaultDateFormat = 'dd/MM/yyyy'
 
 const dateToString = (date?: Date) => (date ? fns.format(date, defaultDateFormat) : '')
 
-const DatePicker = ({value, onChange, fromYear, toYear}: Props) => {
+const DatePicker = ({value, onChange, startLabel, endLabel, fromYear, toYear}: Props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [fromText, setFromText] = useState(dateToString(value.from))
   const [toText, setToText] = useState(dateToString(value.to))
@@ -75,6 +77,7 @@ const DatePicker = ({value, onChange, fromYear, toYear}: Props) => {
         <Input
           type="text"
           value={fromText}
+          label={startLabel}
           placeholder="DD/MM/AAAA"
           onBlur={() => {
             if (fns.isMatch(fromText, defaultDateFormat)) {
@@ -112,6 +115,7 @@ const DatePicker = ({value, onChange, fromYear, toYear}: Props) => {
         <Input
           type="text"
           value={toText}
+          label={endLabel}
           placeholder="DD/MM/AAAA"
           onBlur={() => {
             if (fns.isMatch(toText, defaultDateFormat)) {

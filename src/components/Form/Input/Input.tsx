@@ -19,7 +19,7 @@ const Input = styled.input<{hasGapLeft: boolean; hasGapRight: boolean}>`
     padding-bottom: 0;
     box-sizing: border-box;
     font-family: ${theme.font.familyRedesign};
-    border: 2px solid ${theme.colors.placeholder};
+    border: 0.125rem solid ${theme.colors.placeholder};
     background-color: ${theme.colors.offWhite};
     border-radius: 1rem;
     outline: none;
@@ -48,7 +48,7 @@ const Input = styled.input<{hasGapLeft: boolean; hasGapRight: boolean}>`
     &:focus + label {
       color: ${theme.colors.label};
       font-size: 0.875rem;
-      transform: translateY(calc(-100% - 10px));
+      transform: translateY(calc(-100% - 0.625rem));
     }
   `}
 `
@@ -83,8 +83,8 @@ const Label = styled.label<{hasGapLeft: boolean}>`
   ${({theme, hasGapLeft}) => css`
     position: absolute;
     top: 50%;
-    left: 1rem;
-    padding: 0 4px;
+    left: 0.875rem;
+    padding: 0 0.25rem;
     transition: all 250ms ease;
     background: linear-gradient(
       180deg,

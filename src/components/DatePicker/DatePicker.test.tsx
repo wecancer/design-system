@@ -69,6 +69,15 @@ describe('<DatePicker />', () => {
     fireEvent.change(input, {target: {value: '50/30/9999'}})
     fireEvent.blur(input)
   })
+
+  it('should defines the input label to datepicker component', () => {
+    const {getByText} = render(
+      <DatePicker label="Birthday" value={new Date()} onChange={({value}) => expect(value).toBeUndefined()} />,
+    )
+    const label = getByText('Birthday')
+
+    expect(label).toBeInstanceOf(HTMLLabelElement)
+  })
 })
 
 describe('<RangeDatePicker />', () => {
@@ -80,5 +89,21 @@ describe('<RangeDatePicker />', () => {
     expect(container.querySelector('.rdp')).toBeNull()
     fireEvent.click(inputTexts[0] as HTMLElement)
     expect(container.querySelector('.rdp')).toBeInstanceOf(HTMLElement)
+  })
+
+  it('should defines the input label to rander datepicker component', () => {
+    const {getByText} = render(
+      <RangeDatePicker
+        endLabel="End"
+        startLabel="Start"
+        value={{from: undefined, to: undefined}}
+        onChange={({value}) => expect(value).toBeUndefined()}
+      />,
+    )
+    const end = getByText('End')
+    const start = getByText('Start')
+
+    expect(end).toBeInstanceOf(HTMLLabelElement)
+    expect(start).toBeInstanceOf(HTMLLabelElement)
   })
 })
