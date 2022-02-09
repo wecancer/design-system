@@ -1,4 +1,4 @@
-name: Tests, lint and build
+name: Check code and build
 
 on:
   push:
@@ -25,10 +25,9 @@ jobs:
         run: |
           npm install -g yarn
           yarn
-      - name: Tests and linters
+      - name: Checking code
         run: |
-          yarn test
-          yarn lint
+          yarn run check
       - name: Build
         run: |
           yarn build
