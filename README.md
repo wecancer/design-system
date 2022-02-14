@@ -23,12 +23,12 @@
 
 NPM:
 ```
-npm install @wcancer/design-system
+npm install @wecancer/design-system
 ```
 
 Yarn:
 ```
-yarn add @wcancer/design-system
+yarn add @wecancer/design-system
 ```
 
 ## Usage
@@ -36,7 +36,7 @@ yarn add @wcancer/design-system
 Before starting to use the Design System, you must add the `WecancerProvider` provider at the beginning of your application.
 
 ```jsx
-import { WecancerProvider, Button } from '@wcancer/design-system'
+import { WecancerProvider, Button } from '@wecancer/design-system'
 
 function App() {
   return (
