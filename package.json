@@ -1,6 +1,6 @@
 {
   "name": "@wcancer/design-system",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "private": false,
   "homepage": "wecancer-design-system.netlify.app",
   "license": "MIT",
@@ -10,6 +10,7 @@
     "node": "^16.14.0"
   },
   "scripts": {
+    "prepublishOnly": "yarn run check && yarn build",
     "test": "react-scripts test",
     "check": "CI=true yarn test && yarn run check:lint && yarn run check:prettier && yarn run check:types",
     "check:prettier": "prettier --check './src'",
