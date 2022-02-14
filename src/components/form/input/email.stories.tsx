@@ -1,10 +1,16 @@
-import {useState} from 'react'
-import {Story} from '@storybook/react'
-import InputEmail, {Props} from './Email'
+import { useState } from 'react'
+import { Story } from '@storybook/react'
+import InputEmail, { Props } from './email'
 
 const Template: Story<Props> = (args) => {
   const [email, setEmail] = useState('')
-  return <InputEmail {...args} onChange={({value}) => setEmail(value)} value={email} />
+  return (
+    <InputEmail
+      {...args}
+      onChange={({ value }) => setEmail(value)}
+      value={email}
+    />
+  )
 }
 
 export const Default = Template.bind({})
