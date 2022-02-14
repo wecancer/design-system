@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Table /> should render snapshot correctly 1`] = `
+<ul
+  class="sc-bdvvtL cvfeBv"
+>
+  <li
+    class="sc-eCImPb dfihNe"
+  >
+    <div
+      class="sc-jRQBWg efedTK"
+    >
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Head 1
+      </div>
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Head 2
+      </div>
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Head 3
+      </div>
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Head 4
+      </div>
+    </div>
+  </li>
+  <li
+    class="sc-gsDKAQ gMoRrl"
+  >
+    <div
+      class="sc-dkPtRN oQTeg"
+    >
+      <div
+        class="sc-hKwDye kLEQHB wc-table-cell"
+      >
+        Warning
+      </div>
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Item 2
+      </div>
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Item 3
+      </div>
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Proin viverra justo vitae aliquam pulvinar. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+      </div>
+    </div>
+  </li>
+  <li
+    class="sc-gsDKAQ dXKiIu"
+  >
+    <div
+      class="sc-dkPtRN oQTeg"
+    >
+      <div
+        class="sc-hKwDye kLEQHB wc-table-cell"
+      >
+        Error!
+      </div>
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Item 2
+      </div>
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Item 3
+      </div>
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Phasellus vel velit et mi eleifend dignissim. Duis vitae mi magna. Proin in feugiat urna.
+      </div>
+    </div>
+  </li>
+  <li
+    class="sc-gsDKAQ edYMjg"
+  >
+    <div
+      class="sc-dkPtRN oQTeg"
+    >
+      <div
+        class="sc-hKwDye kLEQHB wc-table-cell"
+      >
+        Item 1
+      </div>
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Item 2
+      </div>
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Item 3
+      </div>
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      </div>
+    </div>
+  </li>
+  <li
+    class="sc-gsDKAQ ciJzkl"
+  >
+    <div
+      class="sc-dkPtRN oQTeg"
+    >
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Item 1
+      </div>
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Item 2
+      </div>
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Item 3
+      </div>
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Nulla iaculis, erat ultrices egestas pretium, metus augue efficitur massa, blandit elementum arcu dolor at erat.
+      </div>
+    </div>
+  </li>
+  <li
+    class="sc-gsDKAQ ciJzkl"
+  >
+    <div
+      class="sc-dkPtRN oQTeg"
+    >
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Item 1
+      </div>
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Item 2
+      </div>
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Item 3
+      </div>
+      <div
+        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+      >
+        Item 4
+      </div>
+    </div>
+  </li>
+</ul>
+`;

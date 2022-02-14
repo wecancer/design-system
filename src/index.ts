@@ -1,51 +1,60 @@
-import styled, {css, useTheme} from 'styled-components'
+import styled, { css, useTheme } from 'styled-components'
 
 import theme from './styles/theme'
-import Loading from './components/Loading'
-import BoxContainer from './components/BoxContainer'
-import WecancerProvider from './WecancerProvider'
-import Tooltip from './components/Tooltip'
-import Dropdown from './components/Dropdown/Panel'
+import Loading from './components/loading'
+import BoxContainer from './components/box-container'
+import WecancerProvider from './wecancer-provider'
+import Tooltip from './components/tooltip'
+import Dropdown from './components/dropdown/Panel'
 
-import DatePicker from './components/DatePicker'
-import RangeDatePicker from './components/DatePicker/Range'
+import DatePicker from './components/date-picker'
+import RangeDatePicker from './components/date-picker/range'
 
-import Button from './components/Button'
-import ButtonIcon from './components/Button/Icon'
+import Button from './components/button'
+import ButtonIcon from './components/button/icon'
 
-import Icon from './components/Icon'
+import Avatar from './components/avatar'
+import Icon from './components/icon'
+import Pill from './components/pill'
+import Modal from './components/modal'
+import ModalConfirm from './components/modal/confirm'
 
-import Accordion from './components/Accordion'
-import AccordionItem from './components/Accordion/Item'
+import Accordion from './components/accordion'
+import AccordionItem from './components/accordion/item'
 
-import Card from './components/Card'
-import CardIcon from './components/Card/CardIcon'
-import CardImage from './components/Card/CardImage'
-import CardContent from './components/Card/CardContent'
+import Card from './components/card'
+import CardIcon from './components/card/card-icon'
+import CardImage from './components/card/card-image'
+import CardContent from './components/card/card-content'
 
-import Select from './components/Form/Select'
-import SelectGroup from './components/Form/SelectGroup'
-import Input from './components/Form/Input/Input'
-import InputText from './components/Form/Input/Text'
-import InputSearch from './components/Form/Input/Search'
-import InputPassword from './components/Form/Input/Password'
+import Select from './components/form/select'
+import Checkbox from './components/form/checkbox'
+import SelectGroup from './components/form/select-group'
+import Input from './components/form/input/input'
+import InputText from './components/form/input/text'
+import InputSearch from './components/form/input/search'
+import InputPassword from './components/form/input/password'
+import Textarea from './components/form/textarea'
 
-import Stepper from './components/Stepper'
-import IncrementStepper from './components/IncrementStepper'
+import Stepper from './components/stepper'
+import IncrementStepper from './components/increment-stepper'
 
-import Table from './components/Table'
-import TableRow from './components/Table/Row'
-import TableCell from './components/Table/Cell'
-import TableHeader from './components/Table/Header'
+import Table from './components/table'
+import TableRow from './components/table/row'
+import TableCell from './components/table/cell'
+import TableHeader from './components/table/header'
 
-import Tab from './components/Tab/Selection/Tab'
-import Tabs from './components/Tab/Selection/Tabs'
-import TabContext from './components/Tab/Selection'
-import TabContent from './components/Tab/Selection/TabContent'
+import Tab from './components/tab/selection/tab'
+import Tabs from './components/tab/selection/tabs'
+import TabContext from './components/tab/selection'
+import TabContent from './components/tab/selection/tab-content'
+
+import useToast from './hooks/toast'
 
 export {
   Accordion,
   AccordionItem,
+  Avatar,
   BoxContainer,
   Button,
   ButtonIcon,
@@ -53,6 +62,7 @@ export {
   CardIcon,
   CardImage,
   CardContent,
+  Checkbox,
   DatePicker,
   Dropdown,
   Icon,
@@ -62,6 +72,9 @@ export {
   InputSearch,
   InputPassword,
   Loading,
+  Modal,
+  ModalConfirm,
+  Pill,
   RangeDatePicker,
   Select,
   SelectGroup,
@@ -74,9 +87,12 @@ export {
   Tabs,
   TabContent,
   TabContext,
+  Textarea,
   theme,
   Tooltip,
   WecancerProvider,
+  // hooks
+  useToast,
   // styled
   styled,
   useTheme,

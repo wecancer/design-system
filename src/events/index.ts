@@ -1,4 +1,4 @@
-import {KeyboardEvent} from 'react'
+import { KeyboardEvent } from 'react'
 
 type Callback = () => void
 type KeyboardEvt = KeyboardEvent | KeyboardEvent<HTMLDivElement>
