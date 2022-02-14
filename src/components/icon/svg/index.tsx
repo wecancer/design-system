@@ -4,6 +4,7 @@ import ChartTreeMap from './chart-treemap.svg'
 import ChartBar from './chart-bar.svg'
 import CalendarSvg from './calendar.svg'
 import CheckSvg from './check.svg'
+import CheckCircleSvg from './check-circle.svg'
 import CloseSvg from './close.svg'
 import LongArrowRightSvg from './long-arrow-right.svg'
 import MinusSvg from './minus.svg'
@@ -23,6 +24,7 @@ export default {
   chartTreeMap: ChartTreeMap,
   calendar: CalendarSvg,
   check: CheckSvg,
+  checkCircle: CheckCircleSvg,
   close: CloseSvg,
   longArrowRight: LongArrowRightSvg,
   minus: MinusSvg,
