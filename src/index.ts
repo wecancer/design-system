@@ -29,12 +29,13 @@ import CardContent from './components/card/card-content'
 
 import Select from './components/form/select'
 import Checkbox from './components/form/checkbox'
-import SelectGroup from './components/form/select-group'
 import Input from './components/form/input/input'
-import InputText from './components/form/input/text'
-import InputSearch from './components/form/input/search'
-import InputPassword from './components/form/input/password'
 import Textarea from './components/form/textarea'
+import InputText from './components/form/input/text'
+import InputEmail from './components/form/input/email'
+import InputSearch from './components/form/input/search'
+import SelectGroup from './components/form/select-group'
+import InputPassword from './components/form/input/password'
 
 import Stepper from './components/stepper'
 import IncrementStepper from './components/increment-stepper'
@@ -68,9 +69,10 @@ export {
   Icon,
   IncrementStepper,
   Input,
-  InputText,
-  InputSearch,
+  InputEmail,
   InputPassword,
+  InputSearch,
+  InputText,
   Loading,
   Modal,
   ModalConfirm,
