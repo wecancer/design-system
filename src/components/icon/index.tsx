@@ -6,7 +6,7 @@ export type IconsTypes = keyof typeof map
 
 export const iconsMap = map
 
-type Props = {
+export type Props = {
   name: IconsTypes
   size?: number | string
   className?: string
