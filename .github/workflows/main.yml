@@ -2,18 +2,17 @@ name: Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [16.14.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -38,7 +37,7 @@ jobs:
           publish-dir: './demo'
           production-branch: master
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: "Deploy from GitHub Actions"
+          deploy-message: 'Deploy from GitHub Actions'
           enable-pull-request-comment: false
           enable-commit-comment: true
           overwrites-pull-request-comment: true
