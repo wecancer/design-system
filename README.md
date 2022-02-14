@@ -52,12 +52,10 @@ function App() {
 
 You need the `nodejs` and `yarn` instaled on your device to run this project in development.
 
-### Run the project
-
-Run the command below to install the dependencies:
+**To run the project**, go to the project path, run the command below to install the dependencies:
 
 ```
-yarn
+yarn install
 ```
 
 Now, you can run the project demo to explorer the Design System components. Run the command:
@@ -66,7 +64,22 @@ Now, you can run the project demo to explorer the Design System components. Run 
 yarn start
 ```
 
-### Building
+**Using patterns** to write and create resources:
+
+- File names with the kebab-case (exp: `my-file-name.ts`)
+- we're using the AirBnB eslint patterns
+- To create a component:
+  - Create component file: `component/{component-name}/index.tsx`
+  - Create test file: `component/{component-name}/{component-name}.test.tsx`
+  - Create demo file: `component/{component-name}/{component-name}.stories.tsx` (we're using the StoryBook)
+
+**Checking** the truth of the code with the command:
+
+```
+yarn run check
+```
+
+## Building
 
 Building to publish the project:
 
