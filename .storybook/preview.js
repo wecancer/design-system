@@ -1,5 +1,5 @@
 import React from 'react'
-import {ThemeProvider} from 'styled-components'
+import { ThemeProvider } from 'styled-components'
 import WecancerProvider from '../src/wecancer-provider'
 
 export const decorators = [
@@ -7,11 +7,11 @@ export const decorators = [
     <WecancerProvider>
       <Story />
     </WecancerProvider>
-  )
+  ),
 ]
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
