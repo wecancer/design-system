@@ -1,12 +1,12 @@
 import React from 'react'
-import {ThemeProvider, createGlobalStyle, css} from 'styled-components'
+import { ThemeProvider, createGlobalStyle, css } from 'styled-components'
 
 import themeVars from './styles/theme'
 import WecancerContext from './wecancer-context'
 import ToastProvider from './hooks/toast/toast-provider'
 
 const ResetHtml = createGlobalStyle`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@400;500;700&display=swap');
 
     * {
@@ -97,12 +97,12 @@ const createRootElement = () => {
   return weRoot
 }
 
-const WecancerProvider = ({children}: Props) => {
+const WecancerProvider = ({ children }: Props) => {
   const rootElement =
     document.getElementById(ROOT_ELEMENT_ID) || createRootElement()
 
   return (
-    <WecancerContext.Provider value={{rootElement}}>
+    <WecancerContext.Provider value={{ rootElement }}>
       <ThemeProvider theme={themeVars}>
         <ToastProvider>
           <ResetHtml />

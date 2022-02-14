@@ -1,9 +1,9 @@
 import Tooltip from '.'
-import {render, fireEvent} from '../../testing'
+import { render, fireEvent } from '../../testing'
 
 describe('<Tooltip />', () => {
   it('should render snapshot correctly', () => {
-    const {container} = render(
+    const { container } = render(
       <>
         <Tooltip>
           <button type="button">hover me</button>
@@ -29,7 +29,7 @@ describe('<Tooltip />', () => {
   })
 
   it('should shows the tooltip when the mouse hover on element', () => {
-    const {queryByTestId, container} = render(
+    const { queryByTestId, container } = render(
       <Tooltip tooltip="tooltip testing...">
         <button type="button" data-testid="hover-me">
           button tooltip

@@ -2,11 +2,11 @@ import Table from '.'
 import TableRow from './row'
 import TableCell from './cell'
 import TableHeader from './header'
-import {render} from '../../testing'
+import { render } from '../../testing'
 
 describe('<Table />', () => {
   it('should render snapshot correctly', () => {
-    const {container} = render(
+    const { container } = render(
       <Table cellsWitdh="100px 200px 1fr 1fr">
         <TableHeader>
           <TableCell>Head 1</TableCell>

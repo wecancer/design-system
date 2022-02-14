@@ -1,9 +1,9 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import Icon from '../icon'
 import ButtonNoAppearance from '../button/no-appearance'
-import {keyArrowDown, keyArrowUp} from '../../events'
+import { keyArrowDown, keyArrowUp } from '../../events'
 
 const Container = styled.div`
   display: grid;
@@ -12,7 +12,7 @@ const Container = styled.div`
 `
 
 const Input = styled.input`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     text-align: center;
     font-family: ${theme.font.familyRedesign};
     font-size: 1rem;
@@ -22,7 +22,7 @@ const Input = styled.input`
 `
 
 const BtnStepper = styled(ButtonNoAppearance)`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -66,7 +66,7 @@ export type Props = {
   max?: number
   value: number
   isDisabled?: boolean
-  onChange({value}: OnChangeParams): void
+  onChange({ value }: OnChangeParams): void
 }
 
 const IncrementStepper = ({
@@ -81,13 +81,13 @@ const IncrementStepper = ({
 
   const handleIncrement = () => {
     if (isIncrementable) {
-      onChange({value: value + 1})
+      onChange({ value: value + 1 })
     }
   }
 
   const handleDecrement = () => {
     if (isDecrementable) {
-      onChange({value: value - 1})
+      onChange({ value: value - 1 })
     }
   }
 
@@ -110,18 +110,18 @@ const IncrementStepper = ({
         }}
         onBlur={() => {
           if (typeof min === 'number' && value < min) {
-            onChange({value: min})
+            onChange({ value: min })
           }
           if (typeof max === 'number' && value > max) {
-            onChange({value: max})
+            onChange({ value: max })
           }
         }}
         onChange={(e) => {
           if (/^-?([0-9]+)$/.test(e.currentTarget.value)) {
-            onChange({value: +e.currentTarget.value})
+            onChange({ value: +e.currentTarget.value })
           }
           if (e.currentTarget.value === '') {
-            onChange({value: 0})
+            onChange({ value: 0 })
           }
         }}
       />

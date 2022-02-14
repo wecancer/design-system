@@ -1,9 +1,9 @@
 import Icon from '.'
-import {render} from '../../testing'
+import { render } from '../../testing'
 
 describe('<Icon />', () => {
   it('should render snapshot correctly', () => {
-    const {container} = render(
+    const { container } = render(
       <>
         <Icon name="arrowLeft" />
         <Icon name="check" />

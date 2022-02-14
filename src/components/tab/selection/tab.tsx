@@ -1,12 +1,12 @@
-import React, {useEffect, useContext} from 'react'
-import styled, {css} from 'styled-components'
+import React, { useEffect, useContext } from 'react'
+import styled, { css } from 'styled-components'
 
-import Context, {TabId} from './tab-section.context'
+import Context, { TabId } from './tab-section.context'
 import BtnNoAppearance from '../../button/no-appearance'
-import {keyActionClick} from '../../../events'
+import { keyActionClick } from '../../../events'
 
 const Item = styled(BtnNoAppearance)`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     font-size: 1rem;
     font-family: ${theme.font.familyRedesign};
     color: ${theme.colors.body};
@@ -55,8 +55,8 @@ type Props = {
   children: React.ReactNode
 }
 
-const Tab = ({children, target, isDisabled}: Props) => {
-  const {setTabIds, tabActiveId, setTabActiveId} = useContext(Context)
+const Tab = ({ children, target, isDisabled }: Props) => {
+  const { setTabIds, tabActiveId, setTabActiveId } = useContext(Context)
   const isSelected = tabActiveId === target
 
   const handleClick = () => {

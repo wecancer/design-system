@@ -3,17 +3,23 @@ import React from 'react'
 import Accordion from '.'
 import AccordionItem from './item'
 import Context from './accordion.context'
-import {render, fireEvent} from '../../testing'
+import { render, fireEvent } from '../../testing'
 
 describe('<Accordion />', () => {
   it('should have valid properties from context api', () => {
-    const {queryByText} = render(
+    const { queryByText } = render(
       <Context.Provider
-        value={{isMulti: false, listOpen: ['1', '2'], setListOpen: () => null}}
+        value={{
+          isMulti: false,
+          listOpen: ['1', '2'],
+          setListOpen: () => null,
+        }}
       >
         <>anything</>
         <Context.Consumer>
-          {({listOpen}) => <p data-testid="list-open">{listOpen.join(',')}</p>}
+          {({ listOpen }) => (
+            <p data-testid="list-open">{listOpen.join(',')}</p>
+          )}
         </Context.Consumer>
       </Context.Provider>,
     )
@@ -22,7 +28,7 @@ describe('<Accordion />', () => {
   })
 
   it('should have muiltiple tabs open', () => {
-    const {container, queryAllByRole} = render(
+    const { container, queryAllByRole } = render(
       <Accordion>
         <AccordionItem title="test 1">test 1</AccordionItem>
         <AccordionItem title="test 2">test 2</AccordionItem>
@@ -42,7 +48,7 @@ describe('<Accordion />', () => {
   })
 
   it('should have just one tab open', () => {
-    const {container, queryAllByRole} = render(
+    const { container, queryAllByRole } = render(
       <Accordion isMulti={false}>
         <AccordionItem title="test 1">test 1</AccordionItem>
         <AccordionItem title="test 2">test 2</AccordionItem>
@@ -62,7 +68,7 @@ describe('<Accordion />', () => {
   })
 
   it('should check if the aria-hidden is visible or not', () => {
-    const {container, queryAllByRole} = render(
+    const { container, queryAllByRole } = render(
       <Accordion isMulti={false}>
         <AccordionItem title="test 1">test 1</AccordionItem>
         <AccordionItem title="test 2">test 2</AccordionItem>

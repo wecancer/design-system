@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 import Icon from '../../icon'
 
 const Container = styled.div`
@@ -7,8 +7,8 @@ const Container = styled.div`
   align-items: center;
 `
 
-const Check = styled.div<{isChecked: boolean}>`
-  ${({isChecked, theme}) => css`
+const Check = styled.div<{ isChecked: boolean }>`
+  ${({ isChecked, theme }) => css`
     width: 32px;
     height: 32px;
     cursor: pointer;
@@ -54,7 +54,7 @@ const Check = styled.div<{isChecked: boolean}>`
 `
 
 const Label = styled.div`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     font-family: ${theme.font.familyRedesign};
     margin-left: 0.625rem;
     cursor: pointer;

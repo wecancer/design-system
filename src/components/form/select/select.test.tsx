@@ -1,18 +1,18 @@
 import Select from '.'
-import {render, fireEvent} from '../../../testing'
+import { render, fireEvent } from '../../../testing'
 
 const options = [
-  {value: '1', label: 'Item 1'},
-  {value: '2', label: 'Item 2'},
-  {value: '3', label: 'Item 3'},
-  {value: '4', label: 'Item 4'},
+  { value: '1', label: 'Item 1' },
+  { value: '2', label: 'Item 2' },
+  { value: '3', label: 'Item 3' },
+  { value: '4', label: 'Item 4' },
 ]
 
 describe('<Select />', () => {
   const KEY_DOWN = 40
 
   it('should have the select label', () => {
-    const {queryByText} = render(
+    const { queryByText } = render(
       <Select label="Select it!" options={[]} onChange={() => null} />,
     )
     const placeholder = queryByText('Select it!')
@@ -20,19 +20,19 @@ describe('<Select />', () => {
   })
 
   it('should have the custom classname', () => {
-    const {container} = render(
+    const { container } = render(
       <Select className="select" options={[]} onChange={() => null} />,
     )
     expect(container.querySelector('.select')).toBeInstanceOf(HTMLElement)
   })
 
   it('should have an event to change the select value', () => {
-    const {getByText, container} = render(
+    const { getByText, container } = render(
       <Select
         label="Select..."
         options={options}
         className="select"
-        onChange={({value}) => expect(value).toMatchObject(options[2])}
+        onChange={({ value }) => expect(value).toMatchObject(options[2])}
       />,
     )
 
@@ -50,12 +50,12 @@ describe('<Select />', () => {
   })
 
   it('should shows the select value', () => {
-    const {queryByText} = render(
+    const { queryByText } = render(
       <Select
         options={options}
         value={options[1]}
         className="select"
-        onChange={({value}) => expect(value).toMatchObject(options[2])}
+        onChange={({ value }) => expect(value).toMatchObject(options[2])}
       />,
     )
 

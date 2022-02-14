@@ -1,7 +1,7 @@
 import React from 'react'
-import {Story} from '@storybook/react'
+import { Story } from '@storybook/react'
 
-import TabContext, {Props} from '.'
+import TabContext, { Props } from '.'
 import Tab from './tab'
 import Tabs from './tabs'
 import TabContent from './tab-content'

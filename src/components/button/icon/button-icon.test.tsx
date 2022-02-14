@@ -1,9 +1,9 @@
 import ButtonIcon from '.'
-import {render, fireEvent} from '../../../testing'
+import { render, fireEvent } from '../../../testing'
 
 describe('<ButtonIcon />', () => {
   it('should render snapshot correctly', () => {
-    const {container} = render(
+    const { container } = render(
       <>
         <ButtonIcon icon="search" />
         <ButtonIcon primary icon="minus" />
@@ -16,7 +16,7 @@ describe('<ButtonIcon />', () => {
   })
 
   it('should add the className in button component', () => {
-    const {container} = render(
+    const { container } = render(
       <ButtonIcon className="customClass" icon="check" />,
     )
     expect(container.querySelector('.customClass')).toBeInstanceOf(
@@ -25,14 +25,14 @@ describe('<ButtonIcon />', () => {
   })
 
   it('should receive the isDisabled attribute', () => {
-    const {container} = render(
+    const { container } = render(
       <ButtonIcon className="customClass" icon="check" isDisabled />,
     )
     expect(container.querySelector('.customClass')).toBeDisabled()
   })
 
   it('should receive the isLoading attribute', () => {
-    const {container} = render(<ButtonIcon icon="check" isLoading />)
+    const { container } = render(<ButtonIcon icon="check" isLoading />)
     expect(
       container.querySelector('[data-icon-name="spinnerSolid"]'),
     ).toBeDefined()
@@ -40,7 +40,7 @@ describe('<ButtonIcon />', () => {
 
   it('should receive the onChange attribute', () => {
     const handleClick = jest.fn()
-    const {container} = render(
+    const { container } = render(
       <ButtonIcon icon="check" onClick={handleClick} />,
     )
     const btnElement = container.querySelector('button')

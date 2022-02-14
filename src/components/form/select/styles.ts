@@ -1,7 +1,7 @@
-import {DefaultTheme} from 'styled-components'
-import {GroupBase, StylesConfig} from 'react-select'
+import { DefaultTheme } from 'styled-components'
+import { GroupBase, StylesConfig } from 'react-select'
 
-import {Option} from './types'
+import { Option } from './types'
 
 const selectStyles = ({
   font,
@@ -11,7 +11,7 @@ const selectStyles = ({
     ...styles,
     fontFamily: font.familyRedesign,
   }),
-  option: (styles, {isSelected, isFocused}) => ({
+  option: (styles, { isSelected, isFocused }) => ({
     ...styles,
     padding: '0.375rem 1.5rem',
     ...(isSelected || isFocused
@@ -63,7 +63,7 @@ const selectStyles = ({
           boxShadow: `0 0 0.062rem 0.375rem ${colors.focusPrimary}`,
           backgroundColor: colors.white,
         }
-      : {borderColor: colors.inputBg, backgroundColor: colors.inputBg}),
+      : { borderColor: colors.inputBg, backgroundColor: colors.inputBg }),
     '&:hover': {
       borderColor: colors.inputBg,
     },

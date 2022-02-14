@@ -1,5 +1,5 @@
 import Dropdown from '.'
-import {render, fireEvent} from '../../../testing'
+import { render, fireEvent } from '../../../testing'
 
 describe('<DropdownPanel />', () => {
   const options = [
@@ -18,7 +18,7 @@ describe('<DropdownPanel />', () => {
   ]
 
   it('should render snapshot correctly', () => {
-    const {container} = render(
+    const { container } = render(
       <>
         <Dropdown label="empty options" onChange={() => {}} options={[]} />
         <Dropdown label="with " onChange={() => {}} options={options} />
@@ -36,7 +36,7 @@ describe('<DropdownPanel />', () => {
   it('must trigger an event of change when the element has been selected', () => {
     const index = 0
     const option = options[index]
-    const {queryByText, queryByRole} = render(
+    const { queryByText, queryByRole } = render(
       <Dropdown
         label="Click me!"
         onChange={(value) => expect(option).toMatchObject(value.option)}
@@ -54,7 +54,7 @@ describe('<DropdownPanel />', () => {
 
   it('should be use the label of value', () => {
     const option = options[0]
-    const {queryByText} = render(
+    const { queryByText } = render(
       <Dropdown
         value={option}
         label="Click me!"

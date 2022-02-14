@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Button from '../button'
-import Modal, {Props as ModalProps} from '.'
+import Modal, { Props as ModalProps } from '.'
 
 const Footer = styled.footer`
   display: flex;

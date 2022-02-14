@@ -1,8 +1,8 @@
 import React from 'react'
-import styled, {css, useTheme} from 'styled-components'
+import styled, { css, useTheme } from 'styled-components'
 
-const Container = styled.div<{avatarSize: number}>`
-  ${({avatarSize}) => css`
+const Container = styled.div<{ avatarSize: number }>`
+  ${({ avatarSize }) => css`
     width: ${avatarSize}px;
     height: ${avatarSize}px;
     position: relative;
@@ -24,8 +24,8 @@ const Container = styled.div<{avatarSize: number}>`
   `}
 `
 
-const Initials = styled.div<{avatarSize: number}>`
-  ${({theme, avatarSize}) => css`
+const Initials = styled.div<{ avatarSize: number }>`
+  ${({ theme, avatarSize }) => css`
     width: ${avatarSize}px;
     height: ${avatarSize}px;
     color: ${theme.colors.offWhite};
@@ -41,8 +41,8 @@ const Initials = styled.div<{avatarSize: number}>`
   `}
 `
 
-const Status = styled.div<{pointSize: number; pointColor: string}>`
-  ${({pointSize, pointColor, theme}) => css`
+const Status = styled.div<{ pointSize: number; pointColor: string }>`
+  ${({ pointSize, pointColor, theme }) => css`
     width: ${pointSize / 16}rem;
     height: ${pointSize / 16}rem;
     background-color: ${pointColor};
@@ -67,7 +67,7 @@ const Avatar = ({
   status = null,
   size = 100,
 }: Props): React.ReactElement => {
-  const {colors} = useTheme()
+  const { colors } = useTheme()
   const stateMap = {
     online: colors.success,
     busy: colors.orange,

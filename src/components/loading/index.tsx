@@ -1,8 +1,8 @@
 import React from 'react'
-import styled, {css, keyframes} from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 
-import Icon, {IconsTypes} from '../icon'
-import {ColorsTemplate} from '../../styles/theme'
+import Icon, { IconsTypes } from '../icon'
+import { ColorsTemplate } from '../../styles/theme'
 
 type ColorsAvailable = ColorsTemplate | 'currentColor'
 
@@ -15,8 +15,8 @@ const SpinAnimation = keyframes`
   }
 `
 
-const Container = styled.div<{spinColor: ColorsAvailable}>`
-  ${({spinColor, theme}) => css`
+const Container = styled.div<{ spinColor: ColorsAvailable }>`
+  ${({ spinColor, theme }) => css`
     ${spinColor !== 'currentColor' &&
     css`
       color: ${theme.colors[spinColor]};
@@ -32,7 +32,7 @@ const Container = styled.div<{spinColor: ColorsAvailable}>`
   `}
 `
 
-const loadingTypes: {[key: string]: IconsTypes} = {
+const loadingTypes: { [key: string]: IconsTypes } = {
   solid: 'spinnerSolid',
   dots: 'spinnerDots',
 }

@@ -1,4 +1,4 @@
-import {render} from '../../../testing'
+import { render } from '../../../testing'
 
 import Tab from './tab'
 import Tabs from './tabs'
@@ -7,7 +7,7 @@ import TabContent from './tab-content'
 
 describe('<TabSection />', () => {
   it('should render snapshot correctly', () => {
-    const {container} = render(
+    const { container } = render(
       <TabContext>
         <Tabs>
           <Tab target="0">First tab</Tab>
@@ -23,7 +23,7 @@ describe('<TabSection />', () => {
   })
 
   it('should render the 5 items in the tab section', () => {
-    const {getAllByRole} = render(
+    const { getAllByRole } = render(
       <TabContext>
         <Tabs>
           <Tab target="0">First tab</Tab>
@@ -40,7 +40,7 @@ describe('<TabSection />', () => {
   })
 
   it('should have the label item', () => {
-    const {getByText} = render(
+    const { getByText } = render(
       <TabContext>
         <Tabs>
           <Tab target="0">First tab</Tab>
@@ -59,7 +59,7 @@ describe('<TabSection />', () => {
   })
 
   it('should render the first item content by default', () => {
-    const {getByText, queryByText} = render(
+    const { getByText, queryByText } = render(
       <TabContext>
         <Tabs>
           <Tab target="0">First tab</Tab>

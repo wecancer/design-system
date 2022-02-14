@@ -1,11 +1,11 @@
 import React from 'react'
-import {screen, fireEvent} from '@testing-library/react'
-import {render} from '../../../testing'
+import { screen, fireEvent } from '@testing-library/react'
+import { render } from '../../../testing'
 import Checkbox from '.'
 
 describe('<Checkbox />', () => {
   it('should render snapshot correctly', () => {
-    const {container} = render(
+    const { container } = render(
       <>
         <Checkbox />
         <Checkbox isChecked />

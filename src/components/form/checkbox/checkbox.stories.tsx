@@ -1,6 +1,6 @@
 import React from 'react'
-import {Story} from '@storybook/react'
-import Checkbox, {Props} from '.'
+import { Story } from '@storybook/react'
+import Checkbox, { Props } from '.'
 
 const Template: Story<Props> = (args) => <Checkbox {...args} />
 

@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
-import styled, {css} from 'styled-components'
-import TableRowContext, {StyleType} from './table-row.context'
-import {BgTypes} from '../../styles/theme'
+import React, { useState } from 'react'
+import styled, { css } from 'styled-components'
+import TableRowContext, { StyleType } from './table-row.context'
+import { BgTypes } from '../../styles/theme'
 import useCalcGridColumns from './use-calc-grid-columns'
 
-const Container = styled.li<{typeStyle: StyleType}>`
-  ${({typeStyle, theme}) => css`
+const Container = styled.li<{ typeStyle: StyleType }>`
+  ${({ typeStyle, theme }) => css`
     border-radius: 1rem;
     margin-bottom: 1rem;
     box-shadow: 0px 8px 16px rgba(17, 17, 17, 0.08);
@@ -17,8 +17,8 @@ const Container = styled.li<{typeStyle: StyleType}>`
   `}
 `
 
-const Wrapper = styled.div<{gridColumns: string}>`
-  ${({gridColumns}) => css`
+const Wrapper = styled.div<{ gridColumns: string }>`
+  ${({ gridColumns }) => css`
     display: grid;
     border-radius: 1rem;
     grid-template-columns: ${gridColumns};
@@ -47,12 +47,12 @@ type Props = {
   children: React.ReactElement[]
 }
 
-const TableRow = ({children}: Props): React.ReactElement => {
+const TableRow = ({ children }: Props): React.ReactElement => {
   const [typeStyle, setTypeStyle] = useState<StyleType>('none')
   const gridColumns = useCalcGridColumns(children.length)
 
   return (
-    <TableRowContext.Provider value={{typeStyle, setTypeStyle}}>
+    <TableRowContext.Provider value={{ typeStyle, setTypeStyle }}>
       <Container typeStyle={typeStyle}>
         <Wrapper gridColumns={gridColumns}>{children}</Wrapper>
       </Container>

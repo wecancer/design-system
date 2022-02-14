@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Story} from '@storybook/react'
+import { Story } from '@storybook/react'
 
 import Card from '.'
 import CardIcon from './card-icon'

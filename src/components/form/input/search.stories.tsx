@@ -1,6 +1,6 @@
 import React from 'react'
-import {Story} from '@storybook/react'
-import InputSearch, {Props} from './search'
+import { Story } from '@storybook/react'
+import InputSearch, { Props } from './search'
 
 const Template: Story<Props> = (args) => <InputSearch {...args} />
 

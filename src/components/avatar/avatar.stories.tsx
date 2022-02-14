@@ -1,7 +1,7 @@
 import React from 'react'
-import {Story} from '@storybook/react'
+import { Story } from '@storybook/react'
 
-import Avatar, {Props} from '.'
+import Avatar, { Props } from '.'
 
 const Template: Story<Props> = (args) => <Avatar {...args} />
 

@@ -1,11 +1,11 @@
 import React from 'react'
-import styled, {css, FlattenSimpleInterpolation} from 'styled-components'
+import styled, { css, FlattenSimpleInterpolation } from 'styled-components'
 import Loading from '../loading'
 
 type Color = 'primary' | 'secondary' | 'default'
 
-export const ButtonStyled = styled.button<{colorType: Color}>`
-  ${({theme, colorType}) => css`
+export const ButtonStyled = styled.button<{ colorType: Color }>`
+  ${({ theme, colorType }) => css`
     height: 40px;
     font-size: 1rem;
     display: inline-block;

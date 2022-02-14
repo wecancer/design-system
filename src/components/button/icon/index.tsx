@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Loading from '../../loading'
-import Icon, {IconsTypes} from '../../icon'
-import {ButtonStyled} from '..'
+import Icon, { IconsTypes } from '../../icon'
+import { ButtonStyled } from '..'
 
 const Container = styled(ButtonStyled)`
   width: 40px;

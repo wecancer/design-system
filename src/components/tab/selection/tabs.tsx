@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useContext} from 'react'
+import React, { useEffect, useRef, useContext } from 'react'
 import styled from 'styled-components'
 
 import Context from './tab-section.context'
@@ -13,9 +13,9 @@ type Props = {
   children: React.ReactNode
 }
 
-const Tabs = ({children}: Props) => {
+const Tabs = ({ children }: Props) => {
   const ref = useRef<HTMLElement>(null)
-  const {setTabActiveId} = useContext(Context)
+  const { setTabActiveId } = useContext(Context)
 
   useEffect(() => {
     const target = ref.current?.querySelectorAll('[data-tabtarget]')

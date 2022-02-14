@@ -1,5 +1,5 @@
-import React, {useState, useRef} from 'react'
-import styled, {css} from 'styled-components'
+import React, { useState, useRef } from 'react'
+import styled, { css } from 'styled-components'
 
 import OutsideEvent from '../outside-event'
 
@@ -12,8 +12,8 @@ const Wrapper = styled(OutsideEvent)`
 
 const TriggerContainer = styled.div``
 
-const BoxContainer = styled.div<{triggerHeight: number; axisX: AxisX}>`
-  ${({triggerHeight, axisX}) => css`
+const BoxContainer = styled.div<{ triggerHeight: number; axisX: AxisX }>`
+  ${({ triggerHeight, axisX }) => css`
     position: absolute;
     top: ${triggerHeight + 10}px;
     ${axisX === 'left'
@@ -39,7 +39,7 @@ export type Props = {
   className?: string
 }
 
-const Dropdown = ({axisX = 'left', children, trigger, ...props}: Props) => {
+const Dropdown = ({ axisX = 'left', children, trigger, ...props }: Props) => {
   const refTrigger = useRef<HTMLDivElement>(null)
   const [isOpen, setOpen] = useState(false)
   const handleClose = () => setOpen(false)
@@ -48,14 +48,14 @@ const Dropdown = ({axisX = 'left', children, trigger, ...props}: Props) => {
   return (
     <Wrapper onClickOutside={handleClose} {...props}>
       <TriggerContainer ref={refTrigger}>
-        {trigger({isOpen, handleClose, handleToggle})}
+        {trigger({ isOpen, handleClose, handleToggle })}
       </TriggerContainer>
       {isOpen && (
         <BoxContainer
           axisX={axisX}
           triggerHeight={refTrigger.current?.offsetHeight || 0}
         >
-          {children({isOpen, handleClose, handleToggle})}
+          {children({ isOpen, handleClose, handleToggle })}
         </BoxContainer>
       )}
     </Wrapper>

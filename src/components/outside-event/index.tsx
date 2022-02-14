@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, useCallback} from 'react'
+import React, { useRef, useEffect, useCallback } from 'react'
 
 type OnClickOutside = () => void
 
@@ -23,7 +23,7 @@ type Props = React.HTMLAttributes<HTMLDivElement> & {
   onClickOutside: OnClickOutside
 }
 
-const OutsideEvent = ({onClickOutside, ...props}: Props) => {
+const OutsideEvent = ({ onClickOutside, ...props }: Props) => {
   const ref = useRef<HTMLDivElement>(null)
   const callback = useCallback(onClickOutside, [])
   useClickOutsideEvent(ref, callback)

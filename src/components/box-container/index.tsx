@@ -1,7 +1,7 @@
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export default styled.div<{primary?: boolean}>`
-  ${({theme, primary}) => css`
+export default styled.div<{ primary?: boolean }>`
+  ${({ theme, primary }) => css`
     padding: 1.5rem 1rem;
     background-color: ${theme.colors.white};
     border-radius: 1rem;

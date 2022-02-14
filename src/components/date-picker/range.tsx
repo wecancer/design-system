@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import * as ReactDayPicker from 'react-day-picker'
 import * as fns from 'date-fns'
@@ -77,7 +77,7 @@ const DatePicker = ({
       tabIndex={0}
       onClickOutside={() => null}
       onClick={() => setIsOpen(true)}
-      onBlur={({currentTarget, relatedTarget}) => {
+      onBlur={({ currentTarget, relatedTarget }) => {
         if (currentTarget.contains(relatedTarget as Node)) return
         setIsOpen(false)
       }}
@@ -114,7 +114,7 @@ const DatePicker = ({
             },
             type: 'calendar',
           }}
-          onChange={({value: val}) => {
+          onChange={({ value: val }) => {
             setFromText(`${val}`)
           }}
         />
@@ -151,7 +151,7 @@ const DatePicker = ({
             },
             type: 'calendar',
           }}
-          onChange={({value: val}) => {
+          onChange={({ value: val }) => {
             setToText(`${val}`)
           }}
         />

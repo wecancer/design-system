@@ -1,5 +1,5 @@
-import React, {useContext, useEffect} from 'react'
-import styled, {css} from 'styled-components'
+import React, { useContext, useEffect } from 'react'
+import styled, { css } from 'styled-components'
 import Context from './card.context'
 
 const CardImageStyled = styled.div<{
@@ -7,7 +7,7 @@ const CardImageStyled = styled.div<{
   heightSize: number
   imageUrl: string
 }>`
-  ${({imageUrl, heightSize, theme, isLeft}) => css`
+  ${({ imageUrl, heightSize, theme, isLeft }) => css`
     height: ${isLeft ? 78 : heightSize}px;
     font-family: ${theme.font.familyRedesign};
     background: url('${imageUrl}') no-repeat center;
@@ -42,7 +42,7 @@ const CardImage = ({
   height = 100,
   ...props
 }: Props): React.ReactElement => {
-  const {gapDirection, setGapDirection} = useContext(Context)
+  const { gapDirection, setGapDirection } = useContext(Context)
 
   useEffect(() => {
     setGapDirection(position === 'top-left' ? 'left' : 'none')

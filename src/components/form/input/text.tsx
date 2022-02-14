@@ -1,5 +1,5 @@
 import React from 'react'
-import Input, {Props as InputProps} from './input'
+import Input, { Props as InputProps } from './input'
 
 export type Props = Omit<InputProps, 'type' | 'iconButtonRight'>
 

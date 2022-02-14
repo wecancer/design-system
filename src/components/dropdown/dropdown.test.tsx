@@ -1,9 +1,9 @@
 import Dropdown from '.'
-import {render, fireEvent} from '../../testing'
+import { render, fireEvent } from '../../testing'
 
 describe('<Dropdown />', () => {
   it('should render snapshot correctly', () => {
-    const {container} = render(
+    const { container } = render(
       <Dropdown
         className="custom-classname"
         trigger={() => <button type="button">Click me!</button>}
@@ -15,16 +15,16 @@ describe('<Dropdown />', () => {
   })
 
   it('should be show dropdown options when the trigger as clicked', () => {
-    const {queryByTestId} = render(
+    const { queryByTestId } = render(
       <Dropdown
         className="testing"
-        trigger={({handleToggle}) => (
+        trigger={({ handleToggle }) => (
           <button data-testid="trigger" type="button" onClick={handleToggle}>
             Click me!
           </button>
         )}
       >
-        {({handleClose}) => (
+        {({ handleClose }) => (
           <div data-testid="container">
             <button data-testid="op1" type="button">
               Option 1
@@ -50,16 +50,16 @@ describe('<Dropdown />', () => {
   })
 
   it('should be toggle the dropdown options when the trigger as clicked', () => {
-    const {queryByTestId} = render(
+    const { queryByTestId } = render(
       <Dropdown
         className="testing"
-        trigger={({handleToggle}) => (
+        trigger={({ handleToggle }) => (
           <button data-testid="trigger" type="button" onClick={handleToggle}>
             Click me!
           </button>
         )}
       >
-        {({handleClose}) => (
+        {({ handleClose }) => (
           <div data-testid="container">
             <button data-testid="op1" type="button">
               Option 1

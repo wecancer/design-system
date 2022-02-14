@@ -1,9 +1,9 @@
 import Loading from '.'
-import {render} from '../../testing'
+import { render } from '../../testing'
 
 describe('<Loading />', () => {
   it('should render snapshot correctly', () => {
-    const {container} = render(
+    const { container } = render(
       <>
         <Loading />
         <Loading size="2.5rem" />

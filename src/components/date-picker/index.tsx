@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import * as ReactDayPicker from 'react-day-picker'
 import styled from 'styled-components'
 import * as fns from 'date-fns'
@@ -29,13 +29,13 @@ export type Props = {
   toYear?: number
 }
 
-const DatePicker = ({label, value, onChange, fromYear, toYear}: Props) => {
+const DatePicker = ({ label, value, onChange, fromYear, toYear }: Props) => {
   if (value && !(value instanceof Date)) {
     throw new Error('The value attribute should be a date instance.')
   }
 
   const [isOpen, setIsOpen] = useState<boolean>(false)
-  const {inputProps, dayPickerProps} = ReactDayPicker.useInput({
+  const { inputProps, dayPickerProps } = ReactDayPicker.useInput({
     format: 'dd/MM/yyyy',
     defaultSelected: value || undefined,
     required: true,
@@ -43,7 +43,7 @@ const DatePicker = ({label, value, onChange, fromYear, toYear}: Props) => {
 
   const handleChange = (data?: DatePickerValue): void => {
     if (typeof onChange === 'function') {
-      onChange({value: data})
+      onChange({ value: data })
     }
   }
 
@@ -53,7 +53,7 @@ const DatePicker = ({label, value, onChange, fromYear, toYear}: Props) => {
       tabIndex={0}
       onClick={() => setIsOpen(true)}
       onKeyDown={() => null}
-      onBlur={({currentTarget, relatedTarget}) => {
+      onBlur={({ currentTarget, relatedTarget }) => {
         if (currentTarget.contains(relatedTarget as Node)) return
         setIsOpen(false)
       }}
@@ -70,7 +70,7 @@ const DatePicker = ({label, value, onChange, fromYear, toYear}: Props) => {
           },
           type: 'calendar',
         }}
-        onChange={({event}) =>
+        onChange={({ event }) =>
           inputProps.onChange?.(event as React.ChangeEvent<HTMLInputElement>)
         }
         onBlur={(e) => {

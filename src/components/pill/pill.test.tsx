@@ -1,9 +1,9 @@
 import Pill from '.'
-import {render, fireEvent} from '../../testing'
+import { render, fireEvent } from '../../testing'
 
 describe('Pill Component', () => {
   it('should render basic Pill Component correctly', () => {
-    const {container} = render(
+    const { container } = render(
       <>
         <Pill label="test" />
         <Pill label="test actived" isActive />
@@ -13,7 +13,7 @@ describe('Pill Component', () => {
   })
 
   it('should render icons of Pill Component correctly', () => {
-    const {container} = render(
+    const { container } = render(
       <>
         <Pill label="has closed" hasClose />
         <Pill label="checked" isChecked />
@@ -25,7 +25,7 @@ describe('Pill Component', () => {
 
   it('should render checked and activied Pill Component correctly', () => {
     let item = 'none'
-    const {container} = render(
+    const { container } = render(
       <Pill
         label="test"
         onClick={() => {

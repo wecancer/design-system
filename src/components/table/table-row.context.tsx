@@ -1,5 +1,5 @@
 import React from 'react'
-import {BgTypes} from '../../styles/theme'
+import { BgTypes } from '../../styles/theme'
 
 export type StyleType = keyof typeof BgTypes | 'none'
 

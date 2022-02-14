@@ -1,13 +1,13 @@
-import React, {useContext, useEffect} from 'react'
-import styled, {css} from 'styled-components'
+import React, { useContext, useEffect } from 'react'
+import styled, { css } from 'styled-components'
 
 import TableRowContext from './table-row.context'
-import {BgTypes} from '../../styles/theme'
+import { BgTypes } from '../../styles/theme'
 
 type StyleType = keyof typeof BgTypes | 'none'
 
-const Container = styled.div<{isSolidBg: boolean}>`
-  ${({theme, isSolidBg}) => css`
+const Container = styled.div<{ isSolidBg: boolean }>`
+  ${({ theme, isSolidBg }) => css`
     padding: 0.75rem 1rem;
 
     ${isSolidBg &&
@@ -22,8 +22,8 @@ export type Props = {
   type?: StyleType
 }
 
-const TableCell = ({children, type = 'none'}: Props): React.ReactElement => {
-  const {setTypeStyle} = useContext(TableRowContext)
+const TableCell = ({ children, type = 'none' }: Props): React.ReactElement => {
+  const { setTypeStyle } = useContext(TableRowContext)
   const isSolidBg = type === 'none'
 
   useEffect(() => {

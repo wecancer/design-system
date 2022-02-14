@@ -1,7 +1,7 @@
 import React from 'react'
 import DatePicker from '.'
 import RangeDatePicker from './range'
-import {render, fireEvent} from '../../testing'
+import { render, fireEvent } from '../../testing'
 
 describe('<DatePicker />', () => {
   it('should dispatch an expection when the value has the invalid type', () => {
@@ -20,7 +20,7 @@ describe('<DatePicker />', () => {
   })
 
   it('should open the calendar when the input has been focused', () => {
-    const {container} = render(<DatePicker />)
+    const { container } = render(<DatePicker />)
     const inputTexts = container.querySelectorAll('input[type="text"]')
     expect(inputTexts).toHaveLength(1)
 
@@ -31,20 +31,20 @@ describe('<DatePicker />', () => {
 
   it('should dispatch an event when the onChange is triggered', () => {
     const callback = jest.fn()
-    const {container} = render(
+    const { container } = render(
       <DatePicker value={new Date()} onChange={callback} />,
     )
     const input = container.querySelector('input[type="text"]') as HTMLElement
 
     fireEvent.click(input)
-    fireEvent.change(input, {target: {value: '10/10/2010'}})
+    fireEvent.change(input, { target: { value: '10/10/2010' } })
     fireEvent.blur(input)
     expect(callback).toHaveBeenCalledTimes(1)
   })
 
   it('should open the calendar when click on the calendar icon button', () => {
     const callback = jest.fn()
-    const {container} = render(
+    const { container } = render(
       <DatePicker value={new Date()} onChange={callback} />,
     )
     const button = container.querySelector('button') as HTMLElement
@@ -55,10 +55,10 @@ describe('<DatePicker />', () => {
   })
 
   it('should expect the new value when change the calendar', () => {
-    const {container} = render(
+    const { container } = render(
       <DatePicker
         value={new Date()}
-        onChange={({value}) => expect(value).toBeInstanceOf(Date)}
+        onChange={({ value }) => expect(value).toBeInstanceOf(Date)}
       />,
     )
 
@@ -69,25 +69,25 @@ describe('<DatePicker />', () => {
   })
 
   it('should set the value undefined when the user type an invalid date format', () => {
-    const {container} = render(
+    const { container } = render(
       <DatePicker
         value={new Date()}
-        onChange={({value}) => expect(value).toBeUndefined()}
+        onChange={({ value }) => expect(value).toBeUndefined()}
       />,
     )
     const input = container.querySelector('input[type="text"]') as HTMLElement
 
     fireEvent.click(input)
-    fireEvent.change(input, {target: {value: '50/30/9999'}})
+    fireEvent.change(input, { target: { value: '50/30/9999' } })
     fireEvent.blur(input)
   })
 
   it('should defines the input label to datepicker component', () => {
-    const {getByText} = render(
+    const { getByText } = render(
       <DatePicker
         label="Birthday"
         value={new Date()}
-        onChange={({value}) => expect(value).toBeUndefined()}
+        onChange={({ value }) => expect(value).toBeUndefined()}
       />,
     )
     const label = getByText('Birthday')
@@ -98,8 +98,8 @@ describe('<DatePicker />', () => {
 
 describe('<RangeDatePicker />', () => {
   it('should open the calendar when the input has been focused', () => {
-    const {container} = render(
-      <RangeDatePicker value={{from: undefined, to: undefined}} />,
+    const { container } = render(
+      <RangeDatePicker value={{ from: undefined, to: undefined }} />,
     )
     const inputTexts = container.querySelectorAll('input[type="text"]')
     expect(inputTexts).toHaveLength(2)
@@ -110,12 +110,12 @@ describe('<RangeDatePicker />', () => {
   })
 
   it('should defines the input label to rander datepicker component', () => {
-    const {getByText} = render(
+    const { getByText } = render(
       <RangeDatePicker
         endLabel="End"
         startLabel="Start"
-        value={{from: undefined, to: undefined}}
-        onChange={({value}) => expect(value).toBeUndefined()}
+        value={{ from: undefined, to: undefined }}
+        onChange={({ value }) => expect(value).toBeUndefined()}
       />,
     )
     const end = getByText('End')

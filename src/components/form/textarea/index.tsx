@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import Icon from '../../icon'
 import ButtonNoAppearance from '../../button/no-appearance'
@@ -17,14 +17,14 @@ const createLabelBackground = (color: string) => css`
 `
 
 const Wrapper = styled.div`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     position: relative;
     font-family: ${theme.font.familyRedesign};
   `}
 `
 
-const Textarea = styled.textarea<{hasValue: boolean; infoType?: MessageType}>`
-  ${({theme, hasValue, infoType}) => css`
+const Textarea = styled.textarea<{ hasValue: boolean; infoType?: MessageType }>`
+  ${({ theme, hasValue, infoType }) => css`
     width: 100%;
     font-size: 1rem;
     padding: 1rem 1.5rem;
@@ -91,7 +91,7 @@ const ButtonClose = styled(ButtonNoAppearance)`
 `
 
 const Label = styled.label`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     position: absolute;
     top: 1rem;
     left: 1.25rem;
@@ -102,8 +102,8 @@ const Label = styled.label`
   `}
 `
 
-const Message = styled.p<{type: MessageType}>`
-  ${({theme, type}) => css`
+const Message = styled.p<{ type: MessageType }>`
+  ${({ theme, type }) => css`
     margin: 0;
     font-size: 0.875rem;
     font-weight: ${theme.font.weights.semiBold};
@@ -165,7 +165,7 @@ const InputTextarea = ({
         hasValue={hasValue}
         infoType={infoType}
         onChange={(event) =>
-          onChange({value: event.currentTarget.value, event})
+          onChange({ value: event.currentTarget.value, event })
         }
       />
       {label && <Label htmlFor={id}>{label}</Label>}

@@ -1,5 +1,5 @@
 import ModalConfirm from './confirm'
-import {render} from '../../testing'
+import { render } from '../../testing'
 
 describe('<ModalConfirm />', () => {
   beforeEach(() => {
@@ -11,7 +11,7 @@ describe('<ModalConfirm />', () => {
   })
 
   it('should render snapshot correctly', () => {
-    const {container} = render(
+    const { container } = render(
       <ModalConfirm cancelLabel="Cancel" confirmLabel="Confirm">
         Something
       </ModalConfirm>,

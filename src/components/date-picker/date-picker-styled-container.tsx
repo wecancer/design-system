@@ -1,7 +1,7 @@
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export default styled.div`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     position: absolute;
     top: calc(100% + 10px);
     left: 0;

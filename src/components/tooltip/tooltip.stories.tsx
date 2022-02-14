@@ -1,8 +1,8 @@
 import React from 'react'
-import {Story} from '@storybook/react'
+import { Story } from '@storybook/react'
 import styled from 'styled-components'
 
-import Tooltip, {Props} from '.'
+import Tooltip, { Props } from '.'
 
 const Wrap = styled.div`
   width: 100vw;

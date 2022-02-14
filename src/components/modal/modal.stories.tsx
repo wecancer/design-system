@@ -1,6 +1,6 @@
 import React from 'react'
-import {Story} from '@storybook/react'
-import Modal, {Props} from '.'
+import { Story } from '@storybook/react'
+import Modal, { Props } from '.'
 
 const Template: Story<Props> = (args) => (
   <Modal {...args}>

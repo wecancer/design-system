@@ -1,6 +1,6 @@
 import React from 'react'
-import {Story} from '@storybook/react'
-import ConfirmModal, {Props} from './confirm'
+import { Story } from '@storybook/react'
+import ConfirmModal, { Props } from './confirm'
 
 const Template: Story<Props> = (args) => <ConfirmModal {...args} />
 

@@ -1,10 +1,10 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
 type Position = 'top' | 'left' | 'bottom' | 'right'
 
 const Container = styled.div`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     font-family: ${theme.font.familyRedesign};
     position: relative;
     display: inline-block;
@@ -16,8 +16,8 @@ const Container = styled.div`
   `}
 `
 
-const Balloon = styled.div<{pos: Position; widthBalloon?: number}>`
-  ${({pos, theme, widthBalloon}) => css`
+const Balloon = styled.div<{ pos: Position; widthBalloon?: number }>`
+  ${({ pos, theme, widthBalloon }) => css`
     position: absolute;
     color: ${theme.colors.offWhite};
     background-color: ${theme.colors.body};
@@ -114,7 +114,7 @@ export type Props = {
   position?: Position
 }
 
-const Tooltip = ({children, tooltip, width, position = 'top'}: Props) => {
+const Tooltip = ({ children, tooltip, width, position = 'top' }: Props) => {
   return (
     <Container>
       {children}

@@ -1,6 +1,6 @@
-import {useRef, useState} from 'react'
-import styled, {useTheme, css} from 'styled-components'
-import {Label as InputLabel} from '../input/input'
+import { useRef, useState } from 'react'
+import styled, { useTheme, css } from 'styled-components'
+import { Label as InputLabel } from '../input/input'
 
 import ReactSelect, {
   SelectInstance,
@@ -12,7 +12,7 @@ import ReactSelect, {
 } from 'react-select'
 
 import Icon from '../../icon'
-import {Option, Options} from './types'
+import { Option, Options } from './types'
 import selectStyles from './styles'
 
 export const Label = styled(InputLabel)<{
@@ -22,7 +22,7 @@ export const Label = styled(InputLabel)<{
   z-index: 30;
   padding-bottom: 0;
 
-  ${({theme, isFocused, hasValue}) =>
+  ${({ theme, isFocused, hasValue }) =>
     isFocused || hasValue
       ? css`
           color: ${theme.colors.label};
@@ -74,7 +74,7 @@ export type Props = {
   onChange(args: ChangeParams): void
 }
 
-const Select = ({label, options, onChange, className, value}: Props) => {
+const Select = ({ label, options, onChange, className, value }: Props) => {
   const theme = useTheme()
   const styles = selectStyles(theme)
   const selectRef =
@@ -101,8 +101,12 @@ const Select = ({label, options, onChange, className, value}: Props) => {
         options={options}
         onBlur={() => setFocused(false)}
         onFocus={() => setFocused(true)}
-        onChange={(val) => onChange({value: val as unknown as Option})}
-        components={{MultiValueContainer, DropdownIndicator, MultiValueRemove}}
+        onChange={(val) => onChange({ value: val as unknown as Option })}
+        components={{
+          MultiValueContainer,
+          DropdownIndicator,
+          MultiValueRemove,
+        }}
       />
     </Container>
   )

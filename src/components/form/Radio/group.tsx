@@ -1,10 +1,10 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import Radio from '.'
 
-const Container = styled.div<{isRow: boolean}>`
-  ${({isRow}) =>
+const Container = styled.div<{ isRow: boolean }>`
+  ${({ isRow }) =>
     isRow
       ? css`
           display: block;
@@ -40,7 +40,7 @@ export type Props = {
   items: Item[]
 }
 
-const RadioGroup = ({items, onChange, isDisabled, line = 'row'}: Props) => (
+const RadioGroup = ({ items, onChange, isDisabled, line = 'row' }: Props) => (
   <Container role="radiogroup" isRow={line === 'row'}>
     {items.map((item, index, arr) => (
       <Radio
@@ -53,7 +53,7 @@ const RadioGroup = ({items, onChange, isDisabled, line = 'row'}: Props) => (
             index,
             itemsUpdated: arr.map((value) =>
               value.id === item.id
-                ? {...item, isChecked: !item.isChecked}
+                ? { ...item, isChecked: !item.isChecked }
                 : value,
             ),
           })

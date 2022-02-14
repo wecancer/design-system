@@ -1,10 +1,10 @@
-import {render, fireEvent} from '../../../testing'
+import { render, fireEvent } from '../../../testing'
 
 import Textarea from '.'
 
 describe('<Textarea />', () => {
   it('should render snapshot correctly', () => {
-    const {container} = render(
+    const { container } = render(
       <>
         <Textarea
           value="Text message"
@@ -45,7 +45,7 @@ describe('<Textarea />', () => {
 
   it('should have a button to clear the textarea if the user want', () => {
     const handleClick = jest.fn()
-    const {container} = render(
+    const { container } = render(
       <Textarea
         value="Testing message..."
         onChange={() => null}
@@ -61,16 +61,16 @@ describe('<Textarea />', () => {
   })
 
   it('should have an onChange event on component textarea', () => {
-    const {container} = render(
+    const { container } = render(
       <Textarea
         value=""
-        onChange={({value, event}) => {
+        onChange={({ value, event }) => {
           expect(value).toBe('testing change...')
           expect(event?.currentTarget.value).toBe('testing change...')
         }}
       />,
     )
     const textarea = container.querySelector('textarea') as HTMLElement
-    fireEvent.change(textarea, {target: {value: 'testing change...'}})
+    fireEvent.change(textarea, { target: { value: 'testing change...' } })
   })
 })

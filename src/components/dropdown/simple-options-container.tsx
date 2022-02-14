@@ -1,10 +1,10 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
-import {keyActionClick} from '../../events'
+import { keyActionClick } from '../../events'
 
 const Item = styled.div`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     cursor: pointer;
     padding: 0.625rem 1.5rem;
     transition: ease 250ms background-color;
@@ -15,8 +15,8 @@ const Item = styled.div`
   `}
 `
 
-const Container = styled.div<{hasArrow: boolean}>`
-  ${({theme, hasArrow}) => css`
+const Container = styled.div<{ hasArrow: boolean }>`
+  ${({ theme, hasArrow }) => css`
     font-family: ${theme.font.familyRedesign};
     min-width: 200px;
     max-width: 100%;

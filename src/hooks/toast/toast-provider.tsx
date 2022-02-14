@@ -1,5 +1,5 @@
-import React, {createContext, useState} from 'react'
-import styled, {css, keyframes} from 'styled-components'
+import React, { createContext, useState } from 'react'
+import styled, { css, keyframes } from 'styled-components'
 
 import usePortal from '../use-portal'
 import Icon from '../../components/icon'
@@ -63,11 +63,11 @@ const CloseButton = styled(ButtonNoAppearance)`
   position: absolute;
   top: 25px;
   right: 25px;
-  color: ${({theme}) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.white};
 `
 
-const ToastItem = styled.div<{toastType: ToastType; animEffect: ToastState}>`
-  ${({toastType, animEffect, theme}) => css`
+const ToastItem = styled.div<{ toastType: ToastType; animEffect: ToastState }>`
+  ${({ toastType, animEffect, theme }) => css`
     width: 375px;
     position: relative;
     text-align: center;
@@ -119,7 +119,7 @@ type Props = {
   children: React.ReactNode
 }
 
-const ToastProvider = ({children}: Props) => {
+const ToastProvider = ({ children }: Props) => {
   const portal = usePortal()
   const [toastList, setToasts] = useState<Toast[]>([])
 
@@ -127,7 +127,7 @@ const ToastProvider = ({children}: Props) => {
     setToasts((toasts) => toasts.filter((item) => item.id !== id))
 
   return (
-    <ToastContext.Provider value={{setToasts}}>
+    <ToastContext.Provider value={{ setToasts }}>
       {children}
       {toastList.length > 0 &&
         portal.add(

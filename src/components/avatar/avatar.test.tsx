@@ -1,11 +1,11 @@
 import React from 'react'
 
 import Avatar from '.'
-import {render} from '../../testing'
+import { render } from '../../testing'
 
 describe('<Avatar />', () => {
   it('should render snapshot correctly', () => {
-    const {container} = render(
+    const { container } = render(
       <>
         <Avatar src="https://randomuser.me/api/portraits/women/42.jpg" />
         <Avatar initials="ANA" />
@@ -35,14 +35,14 @@ describe('<Avatar />', () => {
   })
 
   it('should have the image tag with src property', () => {
-    const {container} = render(
+    const { container } = render(
       <Avatar src="https://randomuser.me/api/portraits/women/42.jpg" />,
     )
     expect(container.querySelector('img')).toHaveProperty('src')
   })
 
   it('must not have an image tag when src is not defined', () => {
-    const {container} = render(<Avatar initials="AB" />)
+    const { container } = render(<Avatar initials="AB" />)
     expect(container.querySelector('img')).toBeNull()
   })
 })

@@ -1,6 +1,6 @@
 import React from 'react'
-import {Story} from '@storybook/react'
-import Table, {Props} from '.'
+import { Story } from '@storybook/react'
+import Table, { Props } from '.'
 import TableRow from './row'
 import TableCell from './cell'
 import TableHeader from './header'

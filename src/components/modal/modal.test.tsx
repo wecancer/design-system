@@ -1,5 +1,5 @@
 import Modal from '.'
-import {render, fireEvent} from '../../testing'
+import { render, fireEvent } from '../../testing'
 
 describe('<Modal />', () => {
   beforeEach(() => {
@@ -11,7 +11,7 @@ describe('<Modal />', () => {
   })
 
   it(`should not render the modal if the attribute "isOpen" is not defined be false or undefined`, () => {
-    const {container} = render(
+    const { container } = render(
       <>
         <Modal>Something</Modal>
         <Modal isOpen={false}>Something</Modal>
@@ -23,7 +23,7 @@ describe('<Modal />', () => {
   })
 
   it(`should render the modal if the attribute "isOpen" is defined be true`, () => {
-    const {container} = render(<Modal>Something</Modal>)
+    const { container } = render(<Modal>Something</Modal>)
     expect(container.querySelector('section header')).not.toBeInstanceOf(
       HTMLHeadingElement,
     )
@@ -31,7 +31,7 @@ describe('<Modal />', () => {
 
   it('should render the title of the modal', () => {
     const title = 'Heading'
-    const {queryByText} = render(
+    const { queryByText } = render(
       <Modal title={title} isOpen>
         Something
       </Modal>,
@@ -40,7 +40,7 @@ describe('<Modal />', () => {
   })
 
   it('should render the chiledren elements', () => {
-    const {queryByTestId} = render(
+    const { queryByTestId } = render(
       <Modal isOpen>
         <ul data-testid="list">
           <li>item 1</li>
@@ -57,7 +57,7 @@ describe('<Modal />', () => {
   it('should handle the click on close modal', () => {
     const handleClick = jest.fn()
 
-    const {baseElement} = render(
+    const { baseElement } = render(
       <Modal isOpen onClose={handleClick}>
         Something
       </Modal>,

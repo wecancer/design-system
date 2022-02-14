@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Input, {Props as InputProps} from './input'
+import Input, { Props as InputProps } from './input'
 
 export type Props = Omit<
   InputProps,
@@ -17,7 +17,7 @@ const InputStyled = styled(Input)`
 `
 
 const InputSearch = React.forwardRef<HTMLInputElement, Props>(
-  ({onClear, ...props}: Props, ref) => (
+  ({ onClear, ...props }: Props, ref) => (
     <InputStyled
       {...props}
       ref={ref}

@@ -1,17 +1,17 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
-import Icon, {IconsTypes} from '../../icon'
+import Icon, { IconsTypes } from '../../icon'
 
 const Wrapper = styled.div`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     position: relative;
     font-family: ${theme.font.familyRedesign};
   `}
 `
 
-const Input = styled.input<{hasGapLeft: boolean; hasGapRight: boolean}>`
-  ${({theme, hasGapLeft, hasGapRight}) => css`
+const Input = styled.input<{ hasGapLeft: boolean; hasGapRight: boolean }>`
+  ${({ theme, hasGapLeft, hasGapRight }) => css`
     width: 100%;
     height: 40px;
     font-size: 1rem;
@@ -79,8 +79,8 @@ const ButtonRight = styled.button`
   transform: translateY(-50%);
 `
 
-export const Label = styled.label<{hasGapLeft: boolean}>`
-  ${({theme, hasGapLeft}) => css`
+export const Label = styled.label<{ hasGapLeft: boolean }>`
+  ${({ theme, hasGapLeft }) => css`
     position: absolute;
     top: 50%;
     left: 0.875rem;
@@ -130,7 +130,10 @@ export type Props = Omit<
 }
 
 const InputText = React.forwardRef<HTMLInputElement, Props>(
-  ({label, iconLeft, onChange, iconButtonRight, id, ...props}: Props, ref) => {
+  (
+    { label, iconLeft, onChange, iconButtonRight, id, ...props }: Props,
+    ref,
+  ) => {
     const hasGapLeft = !!iconLeft
     const hasGapRight = !!iconButtonRight
 
@@ -143,7 +146,7 @@ const InputText = React.forwardRef<HTMLInputElement, Props>(
           hasGapLeft={hasGapLeft}
           hasGapRight={hasGapRight}
           onChange={(event) =>
-            onChange({value: event.currentTarget.value, event})
+            onChange({ value: event.currentTarget.value, event })
           }
         />
         {label && (

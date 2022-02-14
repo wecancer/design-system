@@ -1,5 +1,5 @@
 import React from 'react'
-import {Story} from '@storybook/react'
+import { Story } from '@storybook/react'
 import styled from 'styled-components'
 import Button from '../../components/button'
 

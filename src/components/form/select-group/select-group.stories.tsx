@@ -1,12 +1,12 @@
-import React, {useState} from 'react'
-import {Story} from '@storybook/react'
-import SelectMulti, {Props} from '.'
+import React, { useState } from 'react'
+import { Story } from '@storybook/react'
+import SelectMulti, { Props } from '.'
 
 const options = [
-  {value: '1', label: 'Item 1'},
-  {value: '2', label: 'Item 2'},
-  {value: '3', label: 'Item 3'},
-  {value: '4', label: 'Item 4'},
+  { value: '1', label: 'Item 1' },
+  { value: '2', label: 'Item 2' },
+  { value: '3', label: 'Item 3' },
+  { value: '4', label: 'Item 4' },
 ]
 
 const Template: Story<Props> = (args) => {
@@ -15,7 +15,7 @@ const Template: Story<Props> = (args) => {
     <SelectMulti
       {...args}
       value={val}
-      onChange={({value}) => setValue(value)}
+      onChange={({ value }) => setValue(value)}
     />
   )
 }

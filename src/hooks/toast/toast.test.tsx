@@ -1,25 +1,25 @@
 import useToast from '.'
-import {render, fireEvent, act} from '../../testing'
+import { render, fireEvent, act } from '../../testing'
 
 type ToastWrapperProps = {
   message: string
   delay?: number
 }
 
-const ToastWrapper = ({message, delay}: ToastWrapperProps) => {
+const ToastWrapper = ({ message, delay }: ToastWrapperProps) => {
   const toast = useToast()
   return (
     <button
       type="button"
       data-testid="button"
-      onClick={() => toast(message, {delay})}
+      onClick={() => toast(message, { delay })}
     >
       Click me!
     </button>
   )
 }
 
-const ToastSuccessWrapper = ({message}: ToastWrapperProps) => {
+const ToastSuccessWrapper = ({ message }: ToastWrapperProps) => {
   const toast = useToast()
   return (
     <button
@@ -32,7 +32,7 @@ const ToastSuccessWrapper = ({message}: ToastWrapperProps) => {
   )
 }
 
-const ToastErrorWrapper = ({message}: ToastWrapperProps) => {
+const ToastErrorWrapper = ({ message }: ToastWrapperProps) => {
   const toast = useToast()
   return (
     <button
@@ -47,7 +47,7 @@ const ToastErrorWrapper = ({message}: ToastWrapperProps) => {
 
 describe('useToast', () => {
   it('should open the success toast', () => {
-    const {queryByTestId, queryByText} = render(
+    const { queryByTestId, queryByText } = render(
       <ToastWrapper message="Hello!" />,
     )
 
@@ -63,7 +63,7 @@ describe('useToast', () => {
   it('should have delay property to configure the timeout of the toast', () => {
     jest.useFakeTimers()
 
-    const {queryByTestId, queryByText} = render(
+    const { queryByTestId, queryByText } = render(
       <ToastWrapper message="Hello!" />,
     )
 
@@ -84,7 +84,7 @@ describe('useToast', () => {
   it('should remove the toast when click the close button from toast', () => {
     jest.useFakeTimers()
 
-    const {queryByTestId, queryByText} = render(
+    const { queryByTestId, queryByText } = render(
       <ToastWrapper message="Hello!" />,
     )
 
@@ -104,7 +104,7 @@ describe('useToast', () => {
   })
 
   it('should render the success toast', () => {
-    const {queryByTestId, queryByText} = render(
+    const { queryByTestId, queryByText } = render(
       <ToastSuccessWrapper message="Success!" />,
     )
 
@@ -118,7 +118,7 @@ describe('useToast', () => {
   })
 
   it('should render the error toast', () => {
-    const {queryByTestId, queryByText} = render(
+    const { queryByTestId, queryByText } = render(
       <ToastErrorWrapper message="Error!" />,
     )
 

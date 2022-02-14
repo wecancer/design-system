@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 import usePortal from '../../hooks/use-portal'
 
 import Icon from '../icon'
@@ -15,8 +15,8 @@ const Overlay = styled.div`
   z-index: 500;
 `
 
-const Container = styled.section<{widthSize: number}>`
-  ${({widthSize, theme}) => css`
+const Container = styled.section<{ widthSize: number }>`
+  ${({ widthSize, theme }) => css`
     width: ${widthSize}px;
     color: ${theme.colors.titleActive};
     font-family: ${theme.font.familyRedesign};
@@ -30,7 +30,7 @@ const Container = styled.section<{widthSize: number}>`
 `
 
 const Header = styled.header`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     h2 {
       font-size: 1.5rem;
       line-height: 2.375rem;

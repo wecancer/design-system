@@ -1,5 +1,5 @@
-import {keyActionClick} from '.'
-import {render, fireEvent} from '../testing'
+import { keyActionClick } from '.'
+import { render, fireEvent } from '../testing'
 
 const ENTER = 13
 const SPACE = 32
@@ -7,7 +7,7 @@ const SPACE = 32
 describe('/events', () => {
   it('should be call the actions keys', () => {
     const handle = jest.fn()
-    const {queryByTestId} = render(
+    const { queryByTestId } = render(
       <input
         data-testid="input"
         onKeyDown={(e) => keyActionClick(e, handle)}

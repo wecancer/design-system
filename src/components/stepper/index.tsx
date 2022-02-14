@@ -1,17 +1,17 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 import Icon from '../icon'
 
 const Wrapper = styled.div`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     width: 100%;
     display: flex;
     font-family: ${theme.font.familyRedesign};
   `}
 `
 
-const Step = styled.div<{isActived: boolean}>`
-  ${({isActived, theme}) =>
+const Step = styled.div<{ isActived: boolean }>`
+  ${({ isActived, theme }) =>
     css`
       width: 32px;
       height: 32px;
@@ -34,15 +34,15 @@ const Step = styled.div<{isActived: boolean}>`
     `}
 `
 
-const Label = styled.p<{isActived: boolean}>`
-  ${({theme, isActived}) => css`
+const Label = styled.p<{ isActived: boolean }>`
+  ${({ theme, isActived }) => css`
     color: ${isActived ? theme.colors.titleActive : theme.colors.label};
     text-align: center;
   `}
 `
 
-const Cell = styled.div<{isLastItem: boolean; isCompleted: boolean}>`
-  ${({theme, isLastItem, isCompleted}) => css`
+const Cell = styled.div<{ isLastItem: boolean; isCompleted: boolean }>`
+  ${({ theme, isLastItem, isCompleted }) => css`
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -74,7 +74,7 @@ export type Props = {
   }[]
 }
 
-const Stepper = ({items, current = 1}: Props): React.ReactElement | null => {
+const Stepper = ({ items, current = 1 }: Props): React.ReactElement | null => {
   if (!items.length) return null
 
   return (

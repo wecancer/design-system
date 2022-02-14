@@ -1,9 +1,9 @@
 import RadioGroup from './group'
-import {render, fireEvent} from '../../../testing'
+import { render, fireEvent } from '../../../testing'
 
 describe('<RadioGroup />', () => {
   it('should render snapshot correctly', () => {
-    const {container} = render(
+    const { container } = render(
       <>
         <RadioGroup
           line="column"
@@ -75,8 +75,8 @@ describe('<RadioGroup />', () => {
 
   it('should render all radio group disabled', () => {
     const items = [
-      {id: '1', isChecked: false, label: 'Item unchecked', isDisabled: false},
-      {id: '2', isChecked: true, label: 'Item checked', isDisabled: false},
+      { id: '1', isChecked: false, label: 'Item unchecked', isDisabled: false },
+      { id: '2', isChecked: true, label: 'Item checked', isDisabled: false },
       {
         id: '3',
         isChecked: true,
@@ -90,7 +90,7 @@ describe('<RadioGroup />', () => {
         isDisabled: false,
       },
     ]
-    const {getAllByRole} = render(
+    const { getAllByRole } = render(
       <RadioGroup line="row" items={items} isDisabled />,
     )
     const radios = getAllByRole('radio')
@@ -101,15 +101,15 @@ describe('<RadioGroup />', () => {
 
   it('should returns valid parameters on change event', () => {
     const items = [
-      {id: '1', isChecked: false, label: 'Item 1'},
-      {id: '2', isChecked: false, label: 'Item 2'},
-      {id: '3', isChecked: false, label: 'Item 3'},
-      {id: '4', isChecked: false, label: 'Item 4'},
+      { id: '1', isChecked: false, label: 'Item 1' },
+      { id: '2', isChecked: false, label: 'Item 2' },
+      { id: '3', isChecked: false, label: 'Item 3' },
+      { id: '4', isChecked: false, label: 'Item 4' },
     ]
 
     const radioClickIndex = 1
 
-    const {getAllByRole} = render(
+    const { getAllByRole } = render(
       <RadioGroup
         line="row"
         items={items}

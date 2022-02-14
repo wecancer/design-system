@@ -1,13 +1,13 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
-import {ColorsTemplate} from '../../styles/theme'
+import styled, { css } from 'styled-components'
+import { ColorsTemplate } from '../../styles/theme'
 
 import Icon from '../icon'
 
 type Size = 'small' | 'medium' | 'large'
 
 const Text = styled.p`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     font-family: ${theme.font.familyRedesign};
     font-weight: ${theme.font.weights.regular};
     margin: 0;
@@ -15,9 +15,9 @@ const Text = styled.p`
 `
 
 const Container = styled.div<
-  {fillColor: ColorsTemplate} & Pick<Props, 'size' | 'isActive'>
+  { fillColor: ColorsTemplate } & Pick<Props, 'size' | 'isActive'>
 >`
-  ${({isActive, theme, size, fillColor}) => css`
+  ${({ isActive, theme, size, fillColor }) => css`
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -73,7 +73,7 @@ type IconProps = {
 }
 
 const IconStyled = styled(Icon)<IconProps>`
-  ${({isActive, theme, fillColor}) =>
+  ${({ isActive, theme, fillColor }) =>
     isActive
       ? css`
           color: ${theme.colors.offWhite};

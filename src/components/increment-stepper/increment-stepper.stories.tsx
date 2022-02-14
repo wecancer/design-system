@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
-import {Story} from '@storybook/react'
-import IncrementStepper, {Props} from '.'
+import React, { useState } from 'react'
+import { Story } from '@storybook/react'
+import IncrementStepper, { Props } from '.'
 
 const Template: Story<Props> = (args) => {
   const [val, setValue] = useState(0)
@@ -8,7 +8,7 @@ const Template: Story<Props> = (args) => {
     <IncrementStepper
       {...args}
       value={val}
-      onChange={({value}) => setValue(value)}
+      onChange={({ value }) => setValue(value)}
     />
   )
 }

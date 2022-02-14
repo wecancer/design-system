@@ -1,13 +1,13 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
-import {keyActionClick} from '../../../events'
+import { keyActionClick } from '../../../events'
 
 import Dropdown from '..'
-import ListContainer, {Option} from '../simple-options-container'
+import ListContainer, { Option } from '../simple-options-container'
 
 const BtnTrigger = styled.div`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     cursor: pointer;
     font-family: ${theme.font.familyRedesign};
   `}
@@ -31,10 +31,10 @@ export type Props = {
   onChange(params: OnChange): void
 }
 
-const DropdownSelect = ({options, value, onChange, label}: Props) => {
+const DropdownSelect = ({ options, value, onChange, label }: Props) => {
   return (
     <Dropdown
-      trigger={({handleToggle}) => (
+      trigger={({ handleToggle }) => (
         <BtnTrigger
           tabIndex={0}
           role="button"
@@ -45,12 +45,12 @@ const DropdownSelect = ({options, value, onChange, label}: Props) => {
         </BtnTrigger>
       )}
     >
-      {({handleClose}) => (
+      {({ handleClose }) => (
         <ListContainer
           hasArrow
           options={options}
           onSelect={(option) => {
-            onChange({option})
+            onChange({ option })
             handleClose()
           }}
         />

@@ -1,7 +1,7 @@
-import React, {useContext} from 'react'
-import {nanoid} from 'nanoid/non-secure'
+import React, { useContext } from 'react'
+import { nanoid } from 'nanoid/non-secure'
 
-import {ToastContext, ToastType} from './toast-provider'
+import { ToastContext, ToastType } from './toast-provider'
 
 type ToastConfig = {
   delay?: number
@@ -22,16 +22,16 @@ type UseToast = {
 }
 
 const useToast = (): UseToast => {
-  const {setToasts} = useContext(ToastContext)
+  const { setToasts } = useContext(ToastContext)
 
   const dispatch = (type: ToastType, message: Message, config: ToastConfig) => {
     const id = nanoid()
-    setToasts((map) => [...map, {id, message, type, state: 'opening'}])
+    setToasts((map) => [...map, { id, message, type, state: 'opening' }])
 
     setTimeout(() => {
       setToasts((map) =>
         map.map((item) =>
-          item.id === id ? {...item, state: 'closing'} : item,
+          item.id === id ? { ...item, state: 'closing' } : item,
         ),
       )
 
@@ -43,15 +43,15 @@ const useToast = (): UseToast => {
   }
 
   function toast(message: Message, config?: ToastConfig) {
-    dispatch('default', message, {...configDefaults, ...config})
+    dispatch('default', message, { ...configDefaults, ...config })
   }
 
   toast.error = (message: Message, config?: ToastConfig) => {
-    dispatch('error', message, {...configDefaults, ...config})
+    dispatch('error', message, { ...configDefaults, ...config })
   }
 
   toast.success = (message: Message, config?: ToastConfig) => {
-    dispatch('success', message, {...configDefaults, ...config})
+    dispatch('success', message, { ...configDefaults, ...config })
   }
 
   return toast

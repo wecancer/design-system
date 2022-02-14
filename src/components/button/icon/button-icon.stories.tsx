@@ -1,6 +1,6 @@
 import React from 'react'
-import {Story} from '@storybook/react'
-import ButtonIcon, {Props} from '.'
+import { Story } from '@storybook/react'
+import ButtonIcon, { Props } from '.'
 
 const Template: Story<Props> = (args) => <ButtonIcon {...args} />
 

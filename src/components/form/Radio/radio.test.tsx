@@ -1,9 +1,9 @@
 import Radio from '.'
-import {render, screen, fireEvent} from '../../../testing'
+import { render, screen, fireEvent } from '../../../testing'
 
 describe('<Radio />', () => {
   it('should render snapshot correctly', () => {
-    const {container} = render(
+    const { container } = render(
       <>
         <Radio />
         <Radio isChecked />

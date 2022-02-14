@@ -4,11 +4,11 @@ import Card from '.'
 import CardIcon from './card-icon'
 import CardImage from './card-image'
 import CardContent from './card-content'
-import {render} from '../../testing'
+import { render } from '../../testing'
 
 describe('<Card />', () => {
   it('should render snapshot correctly', () => {
-    const {container} = render(
+    const { container } = render(
       <>
         <Card>
           <CardImage

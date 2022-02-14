@@ -1,6 +1,6 @@
-import {Story} from '@storybook/react'
+import { Story } from '@storybook/react'
 
-import Accordion, {Props} from '.'
+import Accordion, { Props } from '.'
 import ItemAccordion from './item'
 
 const Template: Story<Props> = () => {

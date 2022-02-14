@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
-import styled, {css} from 'styled-components'
+import React, { useState } from 'react'
+import styled, { css } from 'styled-components'
 
-import Context, {GapDirection} from './card.context'
-import {keyActionClick} from '../../events'
+import Context, { GapDirection } from './card.context'
+import { keyActionClick } from '../../events'
 
-const Container = styled.div<{isIndependentContent: boolean}>`
-  ${({theme, isIndependentContent}) => css`
+const Container = styled.div<{ isIndependentContent: boolean }>`
+  ${({ theme, isIndependentContent }) => css`
     position: relative;
 
     ${!isIndependentContent &&
@@ -29,7 +29,7 @@ type Props = React.HTMLAttributes<HTMLDivElement> & {
   ): void
 }
 
-const Card = ({onClick, ...props}: Props): React.ReactElement => {
+const Card = ({ onClick, ...props }: Props): React.ReactElement => {
   const [gapDirection, setGapDirection] = useState<GapDirection>('none')
   const btnProps =
     typeof onClick === 'function'
@@ -42,7 +42,7 @@ const Card = ({onClick, ...props}: Props): React.ReactElement => {
         }
       : {}
   return (
-    <Context.Provider value={{gapDirection, setGapDirection}}>
+    <Context.Provider value={{ gapDirection, setGapDirection }}>
       <Container
         isIndependentContent={gapDirection === 'left'}
         {...props}

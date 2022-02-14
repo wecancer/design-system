@@ -1,12 +1,12 @@
-import React, {useContext, useRef, useEffect} from 'react'
-import styled, {css} from 'styled-components'
-import {nanoid} from 'nanoid/non-secure'
+import React, { useContext, useRef, useEffect } from 'react'
+import styled, { css } from 'styled-components'
+import { nanoid } from 'nanoid/non-secure'
 
 import Context from './accordion.context'
 import Icon from '../icon'
 
-const Container = styled.section<{isDisabled: boolean; isActived: boolean}>`
-  ${({theme, isDisabled, isActived}) => css`
+const Container = styled.section<{ isDisabled: boolean; isActived: boolean }>`
+  ${({ theme, isDisabled, isActived }) => css`
     border-radius: 1rem;
     overflow: hidden;
     background-color: ${theme.colors.inputBg};
@@ -34,7 +34,7 @@ const Content = styled.div`
 `
 
 const AccordionTrigger = styled.div`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     display: grid;
     column-gap: 1.25rem;
     grid-template-columns: minmax(0, 1fr) 20px;
@@ -61,8 +61,8 @@ const AccordionTrigger = styled.div`
   `}
 `
 
-const IconWrap = styled.div<{isOpen: boolean}>`
-  ${({theme, isOpen}) => css`
+const IconWrap = styled.div<{ isOpen: boolean }>`
+  ${({ theme, isOpen }) => css`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,8 +86,8 @@ const Item = ({
 }: Props): React.ReactElement => {
   const wrapRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
-  const {current: id} = useRef<string>(`_${nanoid()}`)
-  const {isMulti, listOpen, setListOpen} = useContext(Context)
+  const { current: id } = useRef<string>(`_${nanoid()}`)
+  const { isMulti, listOpen, setListOpen } = useContext(Context)
   const isOpen = listOpen.includes(
     wrapRef.current?.getAttribute('data-id') || '',
   )

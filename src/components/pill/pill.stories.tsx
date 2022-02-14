@@ -1,7 +1,7 @@
 import React from 'react'
-import {Story} from '@storybook/react'
+import { Story } from '@storybook/react'
 
-import Pill, {Props} from '.'
+import Pill, { Props } from '.'
 
 const Template: Story<Props> = (args) => <Pill {...args} />
 

@@ -1,12 +1,12 @@
-import React, {useState} from 'react'
-import styled, {css} from 'styled-components'
+import React, { useState } from 'react'
+import styled, { css } from 'styled-components'
 
 import TableContext from './table.context'
 
 const allowPintSizes = /^\d{0,}(px|rem|fr|pt|%)$/
 
 const Container = styled.ul`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     font-family: ${theme.font.familyRedesign};
     margin: 0;
     padding: 0;
@@ -32,7 +32,7 @@ export type Props = {
   children: React.ReactNode
 }
 
-const Table = ({children, cellsWitdh = []}: Props): React.ReactElement => {
+const Table = ({ children, cellsWitdh = [] }: Props): React.ReactElement => {
   const [cellsW, setCellsWidth] = useState<string[]>(
     parseCellsWidthArray(
       typeof cellsWitdh === 'string' ? cellsWitdh.split(' ') : cellsWitdh,
@@ -40,7 +40,7 @@ const Table = ({children, cellsWitdh = []}: Props): React.ReactElement => {
   )
 
   return (
-    <TableContext.Provider value={{cellsWidth: cellsW, setCellsWidth}}>
+    <TableContext.Provider value={{ cellsWidth: cellsW, setCellsWidth }}>
       <Container>{children}</Container>
     </TableContext.Provider>
   )

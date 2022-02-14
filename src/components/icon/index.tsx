@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 import map from './svg'
 
 export type IconsTypes = keyof typeof map
@@ -12,12 +12,12 @@ type Props = {
   className?: string
 }
 
-const Wrapper = styled.div<{iconSize: string}>`
+const Wrapper = styled.div<{ iconSize: string }>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  ${({iconSize}) => css`
+  ${({ iconSize }) => css`
     svg {
       width: ${iconSize};
       height: ${iconSize};
@@ -25,7 +25,7 @@ const Wrapper = styled.div<{iconSize: string}>`
   `}
 `
 
-const Icon = ({name, size = 16, ...props}: Props) => {
+const Icon = ({ name, size = 16, ...props }: Props) => {
   const Component = map[name]
   const iconSize = typeof size === 'string' ? size : `${size / 16}rem`
   return (

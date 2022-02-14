@@ -1,9 +1,9 @@
 import IncrementStepper from '.'
-import {render, fireEvent} from '../../testing'
+import { render, fireEvent } from '../../testing'
 
 describe('<IncrementStepper />', () => {
   it('should render snapshot correctly', () => {
-    const {container} = render(
+    const { container } = render(
       <>
         <IncrementStepper value={10} onChange={() => null} />
       </>,
@@ -12,10 +12,10 @@ describe('<IncrementStepper />', () => {
   })
 
   it('should increment the value when the button is clicked', () => {
-    const {container} = render(
+    const { container } = render(
       <IncrementStepper
         value={10}
-        onChange={({value}) => expect(value).toBe(11)}
+        onChange={({ value }) => expect(value).toBe(11)}
       />,
     )
     const button = container.querySelector('button:last-child')
@@ -26,10 +26,10 @@ describe('<IncrementStepper />', () => {
   })
 
   it('should decrement the value when the button is clicked', () => {
-    const {container} = render(
+    const { container } = render(
       <IncrementStepper
         value={10}
-        onChange={({value}) => expect(value).toBe(9)}
+        onChange={({ value }) => expect(value).toBe(9)}
       />,
     )
     const button = container.querySelector('button:first-child')
@@ -40,7 +40,7 @@ describe('<IncrementStepper />', () => {
   })
 
   it('should disable the increment button when the max value is defined', () => {
-    const {container} = render(
+    const { container } = render(
       <IncrementStepper value={10} max={10} onChange={() => null} />,
     )
     const button = container.querySelector('button:last-child')
@@ -51,7 +51,7 @@ describe('<IncrementStepper />', () => {
   })
 
   it('should disable the decrement button when the max value is defined', () => {
-    const {container} = render(
+    const { container } = render(
       <IncrementStepper value={10} min={10} onChange={() => null} />,
     )
     const button = container.querySelector('button:first-child')
@@ -62,7 +62,7 @@ describe('<IncrementStepper />', () => {
   })
 
   it('should disable the controls', () => {
-    const {container} = render(
+    const { container } = render(
       <IncrementStepper
         isDisabled
         value={0}
