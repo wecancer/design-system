@@ -6,6 +6,9 @@
   "license": "MIT",
   "main": "dist/wcancer-design-system.cjs.js",
   "module": "dist/wcancer-design-system.esm.js",
+  "engines": {
+    "node": "^16.14.0"
+  },
   "scripts": {
     "test": "react-scripts test",
     "check": "CI=true yarn test && yarn run check:lint && yarn run check:prettier && yarn run check:types",
