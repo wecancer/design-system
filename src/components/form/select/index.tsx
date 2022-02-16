@@ -38,6 +38,16 @@ export const Label = styled(InputLabel)<{
         `}
 `
 
+export const Input = styled.input`
+  position: absolute;
+  bottom: -5px;
+  left: 15px;
+  z-index: -1;
+  width: 0px;
+  height: 0px;
+  border: 1px solid transparent;
+`
+
 const Container = styled.div`
   position: relative;
 `
@@ -72,9 +82,17 @@ export type Props = {
   options: Options
   className?: string
   onChange(args: ChangeParams): void
+  required?: boolean
 }
 
-const Select = ({ label, options, onChange, className, value }: Props) => {
+const Select = ({
+  label,
+  options,
+  onChange,
+  className,
+  value,
+  required = false,
+}: Props) => {
   const theme = useTheme()
   const styles = selectStyles(theme)
   const selectRef =
@@ -108,6 +126,15 @@ const Select = ({ label, options, onChange, className, value }: Props) => {
           MultiValueRemove,
         }}
       />
+      {required && (
+        <Input
+          required={required}
+          name="hidded-input"
+          type="text"
+          value={value?.value || ''}
+          onChange={() => null}
+        />
+      )}
     </Container>
   )
 }
