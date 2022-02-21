@@ -38,14 +38,16 @@ export const Label = styled(InputLabel)<{
         `}
 `
 
-export const Input = styled.input`
+const Input = styled.input`
   position: absolute;
   bottom: -5px;
-  left: 15px;
+  left: 0;
+  box-sizing: border-box;
   z-index: -1;
-  width: 0px;
   height: 0px;
   border: 1px solid transparent;
+  width: 100%;
+  opacity: 0;
 `
 
 const Container = styled.div`
