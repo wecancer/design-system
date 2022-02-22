@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Story } from '@storybook/react'
 
-import InputText from '../input/text'
 import Select, { Props } from '.'
 import { Option } from './types'
 
