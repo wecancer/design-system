@@ -33,6 +33,16 @@ export default {
         type: 'boolean',
       },
     },
+    error: {
+      control: {
+        type: 'boolean',
+      },
+    },
+    success: {
+      control: {
+        type: 'boolean',
+      },
+    },
     children: {
       control: {
         type: 'text',

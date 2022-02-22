@@ -11,6 +11,8 @@ describe('<Button />', () => {
       <>
         <Button primary>Primary</Button>
         <Button secondary>Secondary</Button>
+        <Button error>Error</Button>
+        <Button success>Success</Button>
         <Button isLoading>Loading content!</Button>
         <Button isDisabled>Button disabled</Button>
       </>,

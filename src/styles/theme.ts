@@ -78,6 +78,7 @@ const theme = {
     darkSuccess: '#00966D',
     lightSuccess: '#F2FFFB',
     bgSuccess: '#F2FFFB',
+    focusSuccess: '#C7F3E1',
 
     warning: '#F4B740',
     darkWarning: '#946200',
@@ -88,6 +89,7 @@ const theme = {
     darkError: '#90131F',
     lightError: '#FF84B7',
     bgError: '#FFDFED',
+    focusError: '#FFCECE',
   },
   boxShadow: {
     smooth: '0 4px 8px rgba(0, 0, 0, 0.06)',

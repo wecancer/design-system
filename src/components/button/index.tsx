@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components'
 import Loading from '../loading'
 
-type Color = 'primary' | 'secondary' | 'default'
+type Color = 'primary' | 'secondary' | 'error' | 'success' | 'default'
 
 export const ButtonStyled = styled.button<{ colorType: Color }>`
   ${({ theme, colorType }) => css`
@@ -54,6 +54,36 @@ export const ButtonStyled = styled.button<{ colorType: Color }>`
           }
         `
       }
+      if (colorType === 'error') {
+        return css`
+          color: ${theme.colors.white};
+          background-color: ${theme.colors.error};
+          border: 2px solid ${theme.colors.error};
+
+          &:not(:disabled):hover {
+            border-color: ${theme.colors.darkError};
+          }
+
+          &:focus {
+            box-shadow: 0 0 0.062rem 0.375rem ${theme.colors.focusError};
+          }
+        `
+      }
+      if (colorType === 'success') {
+        return css`
+          color: ${theme.colors.white};
+          background-color: ${theme.colors.success};
+          border: 2px solid ${theme.colors.success};
+
+          &:not(:disabled):hover {
+            border-color: ${theme.colors.darkSuccess};
+          }
+
+          &:focus {
+            box-shadow: 0 0 0.062rem 0.375rem ${theme.colors.focusSuccess};
+          }
+        `
+      }
       return css`
         color: ${theme.colors.primary};
         background-color: ${theme.colors.white};
@@ -74,6 +104,8 @@ export const ButtonStyled = styled.button<{ colorType: Color }>`
 export type Props = {
   type?: 'button' | 'reset' | 'submit'
   title?: string
+  error?: boolean
+  success?: boolean
   primary?: boolean
   className?: string
   secondary?: boolean
@@ -88,7 +120,9 @@ const Button = ({
   onClick,
   children,
   className,
+  error = false,
   type = 'button',
+  success = false,
   primary = false,
   secondary = false,
   isLoading = false,
@@ -103,6 +137,8 @@ const Button = ({
     colorType={((): Color => {
       if (primary) return 'primary'
       if (secondary) return 'secondary'
+      if (success) return 'success'
+      if (error) return 'error'
       return 'default'
     })()}
   >
