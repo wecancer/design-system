@@ -7,7 +7,7 @@ const allowPintSizes = /^\d{0,}(px|rem|fr|pt|%)$/
 
 const Container = styled.ul`
   ${({ theme }) => css`
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
     margin: 0;
     padding: 0;
     list-style: none;

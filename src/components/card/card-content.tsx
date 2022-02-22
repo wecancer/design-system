@@ -5,7 +5,7 @@ import Context, { GapDirection } from './card.context'
 
 export const CardContentStyled = styled.div<{ gapDirection: GapDirection }>`
   ${({ theme, gapDirection }) => css`
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
     background-color: ${theme.colors.offWhite};
 
     border-radius: 1rem;

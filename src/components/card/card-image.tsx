@@ -9,7 +9,7 @@ const CardImageStyled = styled.div<{
 }>`
   ${({ imageUrl, heightSize, theme, isLeft }) => css`
     height: ${isLeft ? 78 : heightSize}px;
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
     background: url('${imageUrl}') no-repeat center;
     background-size: cover;
     position: relative;

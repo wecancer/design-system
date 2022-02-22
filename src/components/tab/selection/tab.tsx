@@ -8,7 +8,7 @@ import { keyActionClick } from '../../../events'
 const Item = styled(BtnNoAppearance)`
   ${({ theme }) => css`
     font-size: 1rem;
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
     color: ${theme.colors.body};
     text-align: center;
     padding: 0.75rem 1.25rem;

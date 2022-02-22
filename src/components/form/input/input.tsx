@@ -6,7 +6,7 @@ import Icon, { IconsTypes } from '../../icon'
 const Wrapper = styled.div`
   ${({ theme }) => css`
     position: relative;
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
   `}
 `
 
@@ -18,7 +18,7 @@ const Input = styled.input<{ hasGapLeft: boolean; hasGapRight: boolean }>`
     padding-top: 0;
     padding-bottom: 0;
     box-sizing: border-box;
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
     border: 0.125rem solid ${theme.colors.placeholder};
     background-color: ${theme.colors.offWhite};
     border-radius: 1rem;

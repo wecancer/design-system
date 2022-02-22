@@ -14,7 +14,7 @@ const Container = styled.div`
 const Input = styled.input`
   ${({ theme }) => css`
     text-align: center;
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
     font-size: 1rem;
     border: none;
     background-color: transparent;
@@ -30,7 +30,7 @@ const BtnStepper = styled(ButtonNoAppearance)`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
     border: 1px solid ${theme.colors.inputBg};
     background-color: ${theme.colors.inputBg};
     transition: all ease 250ms;

@@ -69,7 +69,7 @@ const Check = styled.div<{ isChecked: boolean }>`
 
 const Label = styled.label`
   ${({ theme }) => css`
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
     margin: 0 0 0 0.625rem;
     cursor: pointer;
   `};
