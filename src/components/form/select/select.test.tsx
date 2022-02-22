@@ -63,4 +63,34 @@ describe('<Select />', () => {
 
     expect(value).toBeInstanceOf(HTMLElement)
   })
+
+  it('should contains input with required attribute', () => {
+    const { container } = render(
+      <Select
+        options={options}
+        value={options[1]}
+        className="select"
+        required
+        onChange={({ value }) => expect(value).toMatchObject(options[2])}
+      />,
+    )
+    const input = container.querySelector('input[name="hidded-input"]')
+
+    expect(input).toHaveAttribute('required')
+    expect(input).toBeInstanceOf(HTMLElement)
+    expect(input).toHaveAttribute('value', options[1].value)
+  })
+
+  it('should contains select without required', () => {
+    const { container } = render(
+      <Select
+        options={options}
+        value={options[1]}
+        className="select"
+        onChange={({ value }) => expect(value).toMatchObject(options[2])}
+      />,
+    )
+    const input = container.querySelector('input[name="hidded-input"]')
+    expect(input).toBeNull()
+  })
 })
