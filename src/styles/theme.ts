@@ -91,40 +91,13 @@ const theme = {
     bgError: '#FFDFED',
     focusError: '#FFCECE',
   },
-  boxShadow: {
-    smooth: '0 4px 8px rgba(0, 0, 0, 0.06)',
-    default: '0px 8px 16px rgba(17, 17, 17, 0.06)',
-    sharp: '0px 8px 16px rgba(17, 17, 17, 0.4)',
-  },
-  border: {
-    default: '1px solid ',
-  },
-  borderRadius: {
-    default: '1rem',
-  },
-  container: {
-    maxWidth: '1000px',
-  },
   font: {
-    lineHeight: 1.2,
-    family: 'Roboto, sans-serif',
-    familyRedesign: 'Poppins, sans-serif',
+    family: 'Poppins, sans-serif',
     weights: {
       light: '300',
       regular: '400',
       semiBold: '500',
       bold: '700',
-    },
-    sizes: {
-      'display-1': '3rem',
-      'display-2': '2.5rem',
-      'display-3': '2rem',
-      'display-4': '1.5rem',
-      'display-5': '1.25rem',
-      'display-6': '1rem',
-      default: '1rem',
-      small: '0.9rem',
-      xsmall: '0.8rem',
     },
   },
 }

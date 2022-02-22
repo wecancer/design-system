@@ -9,7 +9,7 @@ import ListContainer, { Option } from '../simple-options-container'
 const BtnTrigger = styled.div`
   ${({ theme }) => css`
     cursor: pointer;
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
   `}
 `
 

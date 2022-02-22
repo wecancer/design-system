@@ -24,7 +24,7 @@ const ResetHtml = createGlobalStyle`
       -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
       color: ${theme.colors.titleActive};
-      font-family: ${theme.font.familyRedesign};
+      font-family: ${theme.font.family};
       background-color: ${theme.colors.offWhite};
     }
 
@@ -43,7 +43,7 @@ const ResetHtml = createGlobalStyle`
     select,
     textarea {
       font-size: 1rem;
-      font-family: ${theme.font.familyRedesign};
+      font-family: ${theme.font.family};
     }
 
     h1 {

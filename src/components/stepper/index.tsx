@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   ${({ theme }) => css`
     width: 100%;
     display: flex;
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
   `}
 `
 

@@ -19,7 +19,7 @@ const createLabelBackground = (color: string) => css`
 const Wrapper = styled.div`
   ${({ theme }) => css`
     position: relative;
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
   `}
 `
 
@@ -29,7 +29,7 @@ const Textarea = styled.textarea<{ hasValue: boolean; infoType?: MessageType }>`
     font-size: 1rem;
     padding: 1rem 1.5rem;
     box-sizing: border-box;
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
     border-radius: 1rem;
     outline: none;
 

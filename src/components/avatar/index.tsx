@@ -30,7 +30,7 @@ const Initials = styled.div<{ avatarSize: number }>`
     height: ${avatarSize}px;
     color: ${theme.colors.offWhite};
     font-size: ${avatarSize / 16 / 3}rem;
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
     font-weight: ${theme.font.weights.bold};
     text-transform: uppercase;
     display: flex;

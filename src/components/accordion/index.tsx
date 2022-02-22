@@ -10,7 +10,7 @@ export type Props = {
 
 const Container = styled.div`
   ${({ theme }) => css`
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
 
     & > *:not(:last-child) {
       margin-bottom: 1.25rem;

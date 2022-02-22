@@ -19,7 +19,7 @@ const Container = styled.section<{ widthSize: number }>`
   ${({ widthSize, theme }) => css`
     width: ${widthSize}px;
     color: ${theme.colors.titleActive};
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
     position: relative;
     padding: 1.5rem;
     margin: 3rem auto;

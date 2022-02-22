@@ -9,7 +9,7 @@ const selectStyles = ({
 }: DefaultTheme): StylesConfig<Option, true, GroupBase<Option>> => ({
   container: (styles) => ({
     ...styles,
-    fontFamily: font.familyRedesign,
+    fontFamily: font.family,
   }),
   option: (styles, { isSelected, isFocused }) => ({
     ...styles,

@@ -17,7 +17,7 @@ const Item = styled.div`
 
 const Container = styled.div<{ hasArrow: boolean }>`
   ${({ theme, hasArrow }) => css`
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
     min-width: 200px;
     max-width: 100%;
     padding: 1rem 0;

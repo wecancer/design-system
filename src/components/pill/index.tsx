@@ -8,7 +8,7 @@ type Size = 'small' | 'medium' | 'large'
 
 const Text = styled.p`
   ${({ theme }) => css`
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
     font-weight: ${theme.font.weights.regular};
     margin: 0;
   `}

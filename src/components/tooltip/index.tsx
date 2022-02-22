@@ -5,7 +5,7 @@ type Position = 'top' | 'left' | 'bottom' | 'right'
 
 const Container = styled.div`
   ${({ theme }) => css`
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
     position: relative;
     display: inline-block;
 

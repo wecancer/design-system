@@ -5,7 +5,7 @@ import TabSectionContext, { TabId } from './tab-section.context'
 
 const Container = styled.section`
   ${({ theme }) => css`
-    font-family: ${theme.font.familyRedesign};
+    font-family: ${theme.font.family};
   `}
 `
 
