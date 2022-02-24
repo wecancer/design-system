@@ -13,7 +13,7 @@ describe('<Select />', () => {
 
   it('should have the select label', () => {
     const { queryByText } = render(
-      <Select label="Select it!" options={[]} onChange={() => null} />,
+      <Select label="Select it!" value="" options={[]} onChange={() => null} />,
     )
     const placeholder = queryByText('Select it!')
     expect(placeholder).toBeInstanceOf(HTMLElement)
@@ -21,7 +21,7 @@ describe('<Select />', () => {
 
   it('should have the custom classname', () => {
     const { container } = render(
-      <Select className="select" options={[]} onChange={() => null} />,
+      <Select className="select" options={[]} value="" onChange={() => null} />,
     )
     expect(container.querySelector('.select')).toBeInstanceOf(HTMLElement)
   })
@@ -29,10 +29,14 @@ describe('<Select />', () => {
   it('should have an event to change the select value', () => {
     const { getByText, container } = render(
       <Select
+        value=""
         label="Select..."
         options={options}
         className="select"
-        onChange={({ value }) => expect(value).toMatchObject(options[2])}
+        onChange={({ value, option }) => {
+          expect(value).toBe(options[2].value)
+          expect(option).toMatchObject(options[2])
+        }}
       />,
     )
 
@@ -53,9 +57,12 @@ describe('<Select />', () => {
     const { queryByText } = render(
       <Select
         options={options}
-        value={options[1]}
         className="select"
-        onChange={({ value }) => expect(value).toMatchObject(options[2])}
+        value={options[1].value}
+        onChange={({ value, option }) => {
+          expect(value).toBe(options[2].value)
+          expect(option).toMatchObject(options[2])
+        }}
       />,
     )
 
@@ -67,11 +74,14 @@ describe('<Select />', () => {
   it('should contains input with required attribute', () => {
     const { container } = render(
       <Select
-        options={options}
-        value={options[1]}
-        className="select"
         required
-        onChange={({ value }) => expect(value).toMatchObject(options[2])}
+        options={options}
+        className="select"
+        value={options[1].value}
+        onChange={({ value, option }) => {
+          expect(value).toBe(options[2].value)
+          expect(option).toMatchObject(options[2])
+        }}
       />,
     )
     const input = container.querySelector('input[name="hidded-input"]')
@@ -85,9 +95,12 @@ describe('<Select />', () => {
     const { container } = render(
       <Select
         options={options}
-        value={options[1]}
         className="select"
-        onChange={({ value }) => expect(value).toMatchObject(options[2])}
+        value={options[1].value}
+        onChange={({ value, option }) => {
+          expect(value).toBe(options[2].value)
+          expect(option).toMatchObject(options[2])
+        }}
       />,
     )
     const input = container.querySelector('input[name="hidded-input"]')
