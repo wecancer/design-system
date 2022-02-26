@@ -75,12 +75,13 @@ export const MultiValueRemove = (
 )
 
 type ChangeParams = {
-  value: Option
+  value: string
+  option: Option
 }
 
 export type Props = {
+  value: string
   label?: string
-  value?: Option
   options: Options
   className?: string
   onChange(args: ChangeParams): void
@@ -101,6 +102,10 @@ const Select = ({
     useRef<SelectInstance<Option, true, GroupBase<Option>>>(null)
   const [focused, setFocused] = useState(false)
 
+  const selected = value
+    ? options.find((item) => item?.value === value)
+    : undefined
+
   return (
     <Container className={className}>
       {label && (
@@ -114,14 +119,20 @@ const Select = ({
         </Label>
       )}
       <ReactSelect
-        value={value}
+        value={selected}
         placeholder=""
         ref={selectRef}
         styles={styles}
         options={options}
         onBlur={() => setFocused(false)}
         onFocus={() => setFocused(true)}
-        onChange={(val) => onChange({ value: val as unknown as Option })}
+        onChange={(val) => {
+          const optionValue: Option = val as unknown as Option
+          onChange({
+            value: optionValue?.value || '',
+            option: optionValue,
+          })
+        }}
         components={{
           MultiValueContainer,
           DropdownIndicator,
@@ -130,10 +141,10 @@ const Select = ({
       />
       {required && (
         <Input
-          required={required}
-          name="hidded-input"
           type="text"
-          value={value?.value || ''}
+          name="hidded-input"
+          required={required}
+          value={value || ''}
           onChange={() => null}
         />
       )}
