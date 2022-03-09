@@ -92,7 +92,7 @@ describe('<DatePicker />', () => {
     )
     const label = getByText('Birthday')
 
-    expect(label).toBeInstanceOf(HTMLLabelElement)
+    expect(label).toBeInstanceOf(HTMLDivElement)
   })
 })
 
@@ -121,7 +121,7 @@ describe('<RangeDatePicker />', () => {
     const end = getByText('End')
     const start = getByText('Start')
 
-    expect(end).toBeInstanceOf(HTMLLabelElement)
-    expect(start).toBeInstanceOf(HTMLLabelElement)
+    expect(end).toBeInstanceOf(HTMLDivElement)
+    expect(start).toBeInstanceOf(HTMLDivElement)
   })
 })

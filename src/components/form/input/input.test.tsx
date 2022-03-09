@@ -1,4 +1,3 @@
-import React from 'react'
 import { render, fireEvent } from '../../../testing'
 
 import Input from './input'
@@ -90,5 +89,25 @@ describe('<Input />', () => {
     fireEvent.click(buttonClear)
 
     expect(handleClick).toHaveBeenCalledTimes(1)
+  })
+
+  it('should focus on input when the label is clicked', () => {
+    const { container, getByText, baseElement } = render(
+      <Input
+        value=""
+        id="input"
+        type="text"
+        label="Label text"
+        onChange={() => null}
+      />,
+    )
+
+    const LabelItem = getByText('Label text')
+    fireEvent.click(LabelItem)
+
+    expect(
+      baseElement.ownerDocument.activeElement ===
+        container.querySelector('#input'),
+    ).toBeTruthy()
   })
 })

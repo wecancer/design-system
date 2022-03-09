@@ -1,9 +1,18 @@
-import React from 'react'
+import { useState } from 'react'
 import { Story } from '@storybook/react'
 import Input, { Props } from './input'
 import { iconsMap } from '../../icon'
 
-const Template: Story<Props> = (args) => <Input {...args} />
+const Template: Story<Props> = (args) => {
+  const [value, onChange] = useState('')
+  return (
+    <Input
+      {...args}
+      value={value}
+      onChange={(params) => onChange(params.value)}
+    />
+  )
+}
 
 export const Default = Template.bind({})
 Default.args = {

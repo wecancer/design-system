@@ -27,6 +27,7 @@ import CardIcon from './components/card/card-icon'
 import CardImage from './components/card/card-image'
 import CardContent from './components/card/card-content'
 
+import Radio from './components/form/radio'
 import Select from './components/form/select'
 import Checkbox from './components/form/checkbox'
 import Input from './components/form/input/input'
@@ -77,6 +78,7 @@ export {
   Modal,
   ModalConfirm,
   Pill,
+  Radio,
   RangeDatePicker,
   Select,
   SelectGroup,

@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useImperativeHandle, useRef } from 'react'
 import styled, { css } from 'styled-components'
+import { keyActionClick } from '../../../events'
 
 import Icon, { IconsTypes } from '../../icon'
 
@@ -44,8 +45,8 @@ const Input = styled.input<{ hasGapLeft: boolean; hasGapRight: boolean }>`
       border-color: ${theme.colors.titleActive};
     }
 
-    &[value]:not([value='']) + label,
-    &:focus + label {
+    &[value]:not([value='']) + div[data-label],
+    &:focus + div[data-label] {
       color: ${theme.colors.label};
       font-size: 0.875rem;
       transform: translateY(calc(-100% - 0.625rem));
@@ -79,12 +80,13 @@ const ButtonRight = styled.button`
   transform: translateY(-50%);
 `
 
-export const Label = styled.label<{ hasGapLeft: boolean }>`
+export const Label = styled.div<{ hasGapLeft: boolean }>`
   ${({ theme, hasGapLeft }) => css`
     position: absolute;
     top: 50%;
     left: 0.875rem;
     padding: 0 0.25rem;
+    outline: none;
     transition: all 250ms ease;
     background: linear-gradient(
       180deg,
@@ -134,15 +136,18 @@ const InputText = React.forwardRef<HTMLInputElement, Props>(
     { label, iconLeft, onChange, iconButtonRight, id, ...props }: Props,
     ref,
   ) => {
+    const innerRef = useRef<HTMLInputElement>(null)
     const hasGapLeft = !!iconLeft
     const hasGapRight = !!iconButtonRight
+
+    useImperativeHandle(ref, () => innerRef.current as HTMLInputElement)
 
     return (
       <Wrapper>
         <Input
           {...props}
-          ref={ref}
           id={id}
+          ref={innerRef}
           hasGapLeft={hasGapLeft}
           hasGapRight={hasGapRight}
           onChange={(event) =>
@@ -150,7 +155,18 @@ const InputText = React.forwardRef<HTMLInputElement, Props>(
           }
         />
         {label && (
-          <Label htmlFor={id} hasGapLeft={hasGapLeft}>
+          <Label
+            role="button"
+            tabIndex={0}
+            data-label="true"
+            aria-label={label}
+            aria-labelledby={id}
+            hasGapLeft={hasGapLeft}
+            onClick={() => innerRef.current?.focus()}
+            onKeyDown={(e) =>
+              keyActionClick(e, () => innerRef.current?.focus())
+            }
+          >
             {label}
           </Label>
         )}
