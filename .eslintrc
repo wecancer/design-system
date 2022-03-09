@@ -20,6 +20,7 @@
     }
   },
   "rules": {
+    "@typescript-eslint/no-unused-vars": "error",
     "prettier/prettier": "error",
     "import/no-unresolved": "error",
     "import/no-extraneous-dependencies": "off",
