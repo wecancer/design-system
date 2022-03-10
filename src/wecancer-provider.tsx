@@ -14,6 +14,12 @@ const ResetHtml = createGlobalStyle`
       margin: 0;
     }
 
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
     body {
       min-height: 100vh;
       line-height: 1.5;
