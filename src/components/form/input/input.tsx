@@ -157,7 +157,7 @@ const InputText = React.forwardRef<HTMLInputElement, Props>(
         {label && (
           <Label
             role="button"
-            tabIndex={0}
+            tabIndex={-1}
             data-label="true"
             aria-label={label}
             aria-labelledby={id}
