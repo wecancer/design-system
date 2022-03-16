@@ -28,6 +28,7 @@ const selectStyles = ({
     borderRadius: '0.625rem',
     border: 'none',
     boxShadow: 'none',
+    zIndex: '50',
   }),
   menuList: (styles) => ({
     ...styles,
