@@ -126,6 +126,7 @@ const Select = ({
         options={options}
         onBlur={() => setFocused(false)}
         onFocus={() => setFocused(true)}
+        openMenuOnFocus
         onChange={(val) => {
           const optionValue: Option = val as unknown as Option
           onChange({
