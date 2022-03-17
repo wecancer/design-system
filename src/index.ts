@@ -1,4 +1,4 @@
-import styled, { css, useTheme } from 'styled-components'
+import styled, { css, useTheme, createGlobalStyle } from 'styled-components'
 
 import theme from './styles/theme'
 import Loading from './components/loading'
@@ -92,13 +92,14 @@ export {
   TabContent,
   TabContext,
   Textarea,
-  theme,
   Tooltip,
   WecancerProvider,
   // hooks
   useToast,
   // styled
-  styled,
-  useTheme,
   css,
+  styled,
+  theme,
+  useTheme,
+  createGlobalStyle,
 }

@@ -14,7 +14,7 @@ const InputPassword = React.forwardRef<HTMLInputElement, Props>(
         ref={ref}
         {...props}
         iconButtonRight={{
-          type: isShowPassword ? 'unview' : 'view',
+          type: isShowPassword ? 'view' : 'unview',
           onClick() {
             setIsShowPassword(!isShowPassword)
           },

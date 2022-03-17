@@ -67,15 +67,15 @@ describe('<Input />', () => {
     const input = container.querySelector('input') as HTMLElement
     fireEvent.change(input, { target: { value: 'pwd' } })
 
-    const iconView = container.querySelector('[data-icon-name="view"]')
-    expect(iconView).toBeInstanceOf(HTMLElement)
+    const iconUnview = container.querySelector('[data-icon-name="unview"]')
+    expect(iconUnview).toBeInstanceOf(HTMLElement)
 
     expect(input).toHaveAttribute('type', 'password')
     fireEvent.click(buttonShowPwd)
     expect(input).toHaveAttribute('type', 'text')
 
-    const iconUnview = container.querySelector('[data-icon-name="unview"]')
-    expect(iconUnview).toBeInstanceOf(HTMLElement)
+    const iconView = container.querySelector('[data-icon-name="view"]')
+    expect(iconView).toBeInstanceOf(HTMLElement)
   })
 
   it('should have a button to clear the input if the user want', () => {
