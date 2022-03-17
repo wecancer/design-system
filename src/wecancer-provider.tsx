@@ -1,18 +1,10 @@
 import React from 'react'
-import {
-  DefaultTheme,
-  ThemeProvider,
-  createGlobalStyle,
-} from 'styled-components'
+import { DefaultTheme, ThemeProvider } from 'styled-components'
 
-import resetCSS from './reset-css'
+import ResetCSS from './reset-css'
 import innerTheme from './styles/theme'
 import WecancerContext from './wecancer-context'
 import ToastProvider from './hooks/toast/toast-provider'
-
-const Reset = createGlobalStyle`
-  ${resetCSS}
-`
 
 const ROOT_ELEMENT_ID = process?.env?.REACT_APP_ROOT_ELEMENT_ID || 'we-root'
 
@@ -36,7 +28,7 @@ const WecancerProvider = ({ children, theme }: Props) => {
     <WecancerContext.Provider value={{ rootElement }}>
       <ThemeProvider theme={theme || innerTheme}>
         <ToastProvider>
-          <Reset />
+          <ResetCSS />
           {children}
         </ToastProvider>
       </ThemeProvider>

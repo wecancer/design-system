@@ -1,6 +1,6 @@
-import { css } from 'styled-components'
+import { css, createGlobalStyle } from 'styled-components'
 
-const resetCSS = css`
+const ResetCSS = createGlobalStyle`
   ${({ theme }) => css`
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@400;500;700&display=swap');
 
@@ -85,4 +85,4 @@ const resetCSS = css`
   `}
 `
 
-export default resetCSS
+export default ResetCSS

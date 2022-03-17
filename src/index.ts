@@ -1,4 +1,4 @@
-import styled, { css, useTheme } from 'styled-components'
+import styled, { css, useTheme, createGlobalStyle } from 'styled-components'
 
 import theme from './styles/theme'
 import Loading from './components/loading'
@@ -101,4 +101,5 @@ export {
   styled,
   theme,
   useTheme,
+  createGlobalStyle,
 }
