@@ -11,6 +11,7 @@ const ROOT_ELEMENT_ID = process?.env?.REACT_APP_ROOT_ELEMENT_ID || 'we-root'
 type Props = {
   children: React.ReactNode
   theme?: DefaultTheme
+  hasStyledComponentsProvider?: boolean
 }
 
 const createRootElement = () => {
@@ -20,20 +21,30 @@ const createRootElement = () => {
   return weRoot
 }
 
-const WecancerProvider = ({ children, theme }: Props) => {
+const WecancerProvider = ({
+  children,
+  theme,
+  hasStyledComponentsProvider = true,
+}: Props) => {
   const rootElement =
     document.getElementById(ROOT_ELEMENT_ID) || createRootElement()
 
-  return (
+  const essentials = (
     <WecancerContext.Provider value={{ rootElement }}>
-      <ThemeProvider theme={theme || innerTheme}>
-        <ToastProvider>
-          <ResetCSS />
-          {children}
-        </ToastProvider>
-      </ThemeProvider>
+      <ToastProvider>
+        <ResetCSS />
+        {children}
+      </ToastProvider>
     </WecancerContext.Provider>
   )
+
+  if (hasStyledComponentsProvider) {
+    return (
+      <ThemeProvider theme={theme || innerTheme}>{essentials}</ThemeProvider>
+    )
+  }
+
+  return essentials
 }
 
 export default WecancerProvider
