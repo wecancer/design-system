@@ -84,6 +84,7 @@ export type Props = {
   label?: string
   options: Options
   className?: string
+  onFocus?(): void
   onChange(args: ChangeParams): void
   required?: boolean
 }
@@ -94,6 +95,7 @@ const Select = ({
   onChange,
   className,
   value,
+  onFocus,
   required = false,
 }: Props) => {
   const theme = useTheme()
@@ -125,7 +127,10 @@ const Select = ({
         styles={styles}
         options={options}
         onBlur={() => setFocused(false)}
-        onFocus={() => setFocused(true)}
+        onFocus={() => {
+          setFocused(true)
+          onFocus?.()
+        }}
         openMenuOnFocus
         onChange={(val) => {
           const optionValue: Option = val as unknown as Option
