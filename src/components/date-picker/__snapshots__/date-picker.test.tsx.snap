@@ -1,0 +1,976 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
+<div>
+  <div
+    class="sc-iCfMLu FBMMr"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="sc-gsDKAQ kdpXcC"
+    >
+      <input
+        class="sc-dkPtRN kHFFrW"
+        placeholder="24/03/2022"
+        type="text"
+        value=""
+      />
+      <button
+        class="sc-eCImPb jWvkiQ"
+        type="button"
+      >
+        <div
+          class="sc-bdvvtL bYGNWJ icon-right"
+          data-icon-name="calendar"
+        >
+          <div>
+            mock svg
+          </div>
+        </div>
+      </button>
+    </div>
+    <div
+      class="sc-gKclnd cyCAXb"
+    >
+      <div
+        class="rdp"
+      >
+        <div
+          class="rdp-months"
+        >
+          <div
+            class="rdp-month rdp-caption_start rdp-caption_end"
+          >
+            <div
+              class="rdp-caption"
+            >
+              <h2
+                aria-atomic="true"
+                aria-live="polite"
+                class="rdp-caption_label"
+                id="11"
+              >
+                março 2022
+              </h2>
+              <div
+                class="rdp-nav"
+              >
+                <button
+                  aria-label="Go to previous month"
+                  class="rdp-button_reset rdp-button rdp-nav_button rdp-nav_button_previous"
+                  type="button"
+                >
+                  <svg
+                    class="rdp-nav_icon"
+                    data-testid="iconLeft"
+                    height="16px"
+                    viewBox="0 0 120 120"
+                    width="16px"
+                  >
+                    <path
+                      d="M69.490332,3.34314575 C72.6145263,0.218951416 77.6798462,0.218951416 80.8040405,3.34314575 C83.8617626,6.40086786 83.9268205,11.3179931 80.9992143,14.4548388 L80.8040405,14.6568542 L35.461,60 L80.8040405,105.343146 C83.8617626,108.400868 83.9268205,113.317993 80.9992143,116.454839 L80.8040405,116.656854 C77.7463184,119.714576 72.8291931,119.779634 69.6923475,116.852028 L69.490332,116.656854 L18.490332,65.6568542 C15.4326099,62.5991321 15.367552,57.6820069 18.2951583,54.5451612 L18.490332,54.3431458 L69.490332,3.34314575 Z"
+                      fill="currentColor"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                </button>
+                <button
+                  aria-label="Go to next month"
+                  class="rdp-button_reset rdp-button rdp-nav_button rdp-nav_button_next"
+                  type="button"
+                >
+                  <svg
+                    class="rdp-nav_icon"
+                    data-testid="iconRight"
+                    height="16px"
+                    viewBox="0 0 120 120"
+                    width="16px"
+                  >
+                    <path
+                      d="M49.8040405,3.34314575 C46.6798462,0.218951416 41.6145263,0.218951416 38.490332,3.34314575 C35.4326099,6.40086786 35.367552,11.3179931 38.2951583,14.4548388 L38.490332,14.6568542 L83.8333725,60 L38.490332,105.343146 C35.4326099,108.400868 35.367552,113.317993 38.2951583,116.454839 L38.490332,116.656854 C41.5480541,119.714576 46.4651794,119.779634 49.602025,116.852028 L49.8040405,116.656854 L100.804041,65.6568542 C103.861763,62.5991321 103.926821,57.6820069 100.999214,54.5451612 L100.804041,54.3431458 L49.8040405,3.34314575 Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <table
+              aria-labelledby="11"
+              class="rdp-table"
+              role="grid"
+            >
+              <thead
+                class="rdp-head"
+              >
+                <tr
+                  class="rdp-head_row"
+                >
+                  <th
+                    class="rdp-head_cell"
+                    scope="col"
+                  >
+                    <span
+                      aria-hidden="true"
+                    >
+                      dom
+                    </span>
+                    <span
+                      class="rdp-vhidden"
+                    >
+                      domingo
+                    </span>
+                  </th>
+                  <th
+                    class="rdp-head_cell"
+                    scope="col"
+                  >
+                    <span
+                      aria-hidden="true"
+                    >
+                      seg
+                    </span>
+                    <span
+                      class="rdp-vhidden"
+                    >
+                      segunda-feira
+                    </span>
+                  </th>
+                  <th
+                    class="rdp-head_cell"
+                    scope="col"
+                  >
+                    <span
+                      aria-hidden="true"
+                    >
+                      ter
+                    </span>
+                    <span
+                      class="rdp-vhidden"
+                    >
+                      terça-feira
+                    </span>
+                  </th>
+                  <th
+                    class="rdp-head_cell"
+                    scope="col"
+                  >
+                    <span
+                      aria-hidden="true"
+                    >
+                      qua
+                    </span>
+                    <span
+                      class="rdp-vhidden"
+                    >
+                      quarta-feira
+                    </span>
+                  </th>
+                  <th
+                    class="rdp-head_cell"
+                    scope="col"
+                  >
+                    <span
+                      aria-hidden="true"
+                    >
+                      qui
+                    </span>
+                    <span
+                      class="rdp-vhidden"
+                    >
+                      quinta-feira
+                    </span>
+                  </th>
+                  <th
+                    class="rdp-head_cell"
+                    scope="col"
+                  >
+                    <span
+                      aria-hidden="true"
+                    >
+                      sex
+                    </span>
+                    <span
+                      class="rdp-vhidden"
+                    >
+                      sexta-feira
+                    </span>
+                  </th>
+                  <th
+                    class="rdp-head_cell"
+                    scope="col"
+                  >
+                    <span
+                      aria-hidden="true"
+                    >
+                      sab
+                    </span>
+                    <span
+                      class="rdp-vhidden"
+                    >
+                      sábado
+                    </span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                class="rdp-tbody"
+              >
+                <tr
+                  class="rdp-row"
+                >
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_outside"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        27
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        27º fevereiro (domingo)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_outside"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        28
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        28º fevereiro (segunda-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        1
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        1º março (terça-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        2
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        2º março (quarta-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        3
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        3º março (quinta-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        4
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        4º março (sexta-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        5
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        5º março (sábado)
+                      </span>
+                    </button>
+                  </td>
+                </tr>
+                <tr
+                  class="rdp-row"
+                >
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        6
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        6º março (domingo)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        7
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        7º março (segunda-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        8
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        8º março (terça-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        9
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        9º março (quarta-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        10
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        10º março (quinta-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        11
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        11º março (sexta-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        12
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        12º março (sábado)
+                      </span>
+                    </button>
+                  </td>
+                </tr>
+                <tr
+                  class="rdp-row"
+                >
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        13
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        13º março (domingo)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        14
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        14º março (segunda-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        15
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        15º março (terça-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        16
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        16º março (quarta-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        17
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        17º março (quinta-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        18
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        18º março (sexta-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        19
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        19º março (sábado)
+                      </span>
+                    </button>
+                  </td>
+                </tr>
+                <tr
+                  class="rdp-row"
+                >
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        20
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        20º março (domingo)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        21
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        21º março (segunda-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        22
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        22º março (terça-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        23
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        23º março (quarta-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_today"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        24
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        24º março (quinta-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        25
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        25º março (sexta-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        26
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        26º março (sábado)
+                      </span>
+                    </button>
+                  </td>
+                </tr>
+                <tr
+                  class="rdp-row"
+                >
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        27
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        27º março (domingo)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        28
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        28º março (segunda-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        29
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        29º março (terça-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        30
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        30º março (quarta-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        31
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        31º março (quinta-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_outside"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        1
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        1º abril (sexta-feira)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_outside"
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        2
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        2º abril (sábado)
+                      </span>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="sc-iCfMLu FBMMr"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="sc-gsDKAQ kdpXcC"
+    >
+      <input
+        class="sc-dkPtRN kHFFrW"
+        placeholder="24/03/2022"
+        type="text"
+        value=""
+      />
+      <button
+        class="sc-eCImPb jWvkiQ"
+        type="button"
+      >
+        <div
+          class="sc-bdvvtL bYGNWJ icon-right"
+          data-icon-name="calendar"
+        >
+          <div>
+            mock svg
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
