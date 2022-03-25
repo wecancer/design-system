@@ -19,6 +19,25 @@ describe('<Select />', () => {
     expect(placeholder).toBeInstanceOf(HTMLElement)
   })
 
+  it('should open the menu when it is focus', () => {
+    const { queryByText, container } = render(
+      <Select
+        options={options}
+        label="Select label"
+        value={options[1].value}
+        onFocus={() => {
+          expect(
+            container.querySelector('#react-select-2-listbox'),
+          ).toBeInTheDocument()
+        }}
+        onChange={() => null}
+      />,
+    )
+
+    const label = queryByText('Select label') as HTMLElement
+    fireEvent.click(label)
+  })
+
   it('should have the custom classname', () => {
     const { container } = render(
       <Select className="select" options={[]} value="" onChange={() => null} />,

@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components'
 export default styled.div`
   ${({ theme }) => css`
     position: absolute;
+    z-index: 35;
     top: calc(100% + 10px);
     left: 0;
     border-radius: 1rem;
