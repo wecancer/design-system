@@ -112,6 +112,7 @@ const Select = ({
     <Container className={className}>
       {label && (
         <Label
+          hasError={false}
           onClick={() => selectRef.current?.focus()}
           hasGapLeft={false}
           isFocused={focused}
