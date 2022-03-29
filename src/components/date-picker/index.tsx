@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import * as ReactDayPicker from 'react-day-picker'
 import styled from 'styled-components'
 import * as fns from 'date-fns'
-import ptLocale from 'date-fns/locale/pt-BR'
 
 import Input from '../form/input/input'
+import useFnsLocale from '../../locale/use-fns-locale'
 import DatePickerStyledContainer from './date-picker-styled-container'
 
 const defaultDateFormat = 'dd/MM/yyyy'
@@ -30,6 +30,7 @@ export type Props = {
 }
 
 const DatePicker = ({ label, value, onChange, fromYear, toYear }: Props) => {
+  const locale = useFnsLocale()
   if (value && !(value instanceof Date)) {
     throw new Error('The value attribute should be a date instance.')
   }
@@ -92,7 +93,7 @@ const DatePicker = ({ label, value, onChange, fromYear, toYear }: Props) => {
             toYear={toYear}
             showOutsideDays
             selected={value}
-            locale={ptLocale}
+            locale={locale}
             fromYear={fromYear}
             captionLayout="dropdown"
             onSelect={(
