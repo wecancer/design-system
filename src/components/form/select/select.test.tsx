@@ -20,22 +20,20 @@ describe('<Select />', () => {
   })
 
   it('should open the menu when it is focus', () => {
-    const { queryByText, container } = render(
+    const handleClick = jest.fn()
+    const { queryByText } = render(
       <Select
         options={options}
         label="Select label"
         value={options[1].value}
-        onFocus={() => {
-          expect(
-            container.querySelector('#react-select-2-listbox'),
-          ).toBeInTheDocument()
-        }}
+        onMenuOpen={handleClick}
         onChange={() => null}
       />,
     )
 
     const label = queryByText('Select label') as HTMLElement
     fireEvent.click(label)
+    expect(handleClick).toHaveBeenCalledTimes(1)
   })
 
   it('should have the custom classname', () => {

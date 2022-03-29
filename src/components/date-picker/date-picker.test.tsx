@@ -130,11 +130,11 @@ describe('Snapshot <DatePicker />', () => {
   it('should take a snapshot', () => {
     const { container } = render(
       <>
-        <DatePicker fromYear={2022} />
-        <DatePicker toYear={2025} />
+        <DatePicker fromYear={2022} toYear={2025} />
       </>,
     )
     const input = container.querySelector('input[type="text"]') as HTMLElement
+    fireEvent.change(input, { target: { placeholder: '22/02/2022' } })
     fireEvent.click(input)
     expect(container).toMatchSnapshot()
   })

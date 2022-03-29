@@ -3,7 +3,7 @@
 exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
 <div>
   <div
-    class="sc-iCfMLu FBMMr"
+    class="sc-furwcr gLQxJk"
     role="button"
     tabindex="0"
   >
@@ -11,13 +11,13 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
       class="sc-gsDKAQ kdpXcC"
     >
       <input
-        class="sc-dkPtRN kHFFrW"
-        placeholder="24/03/2022"
+        class="sc-dkPtRN erBYIA"
+        placeholder="22/02/2022"
         type="text"
         value=""
       />
       <button
-        class="sc-eCImPb jWvkiQ"
+        class="sc-eCImPb kfvWEQ"
         type="button"
       >
         <div
@@ -29,9 +29,10 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
           </div>
         </div>
       </button>
+      
     </div>
     <div
-      class="sc-gKclnd cyCAXb"
+      class="sc-iCfMLu fHXuZi"
     >
       <div
         class="rdp"
@@ -45,54 +46,167 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
             <div
               class="rdp-caption"
             >
-              <h2
-                aria-atomic="true"
-                aria-live="polite"
-                class="rdp-caption_label"
-                id="11"
-              >
-                março 2022
-              </h2>
               <div
-                class="rdp-nav"
+                class="rdp-caption_dropdowns"
               >
-                <button
-                  aria-label="Go to previous month"
-                  class="rdp-button_reset rdp-button rdp-nav_button rdp-nav_button_previous"
-                  type="button"
+                <div
+                  class="rdp-vhidden"
                 >
-                  <svg
-                    class="rdp-nav_icon"
-                    data-testid="iconLeft"
-                    height="16px"
-                    viewBox="0 0 120 120"
-                    width="16px"
+                  <h2
+                    aria-atomic="true"
+                    aria-live="polite"
+                    class="rdp-caption_label"
+                    id="11"
                   >
-                    <path
-                      d="M69.490332,3.34314575 C72.6145263,0.218951416 77.6798462,0.218951416 80.8040405,3.34314575 C83.8617626,6.40086786 83.9268205,11.3179931 80.9992143,14.4548388 L80.8040405,14.6568542 L35.461,60 L80.8040405,105.343146 C83.8617626,108.400868 83.9268205,113.317993 80.9992143,116.454839 L80.8040405,116.656854 C77.7463184,119.714576 72.8291931,119.779634 69.6923475,116.852028 L69.490332,116.656854 L18.490332,65.6568542 C15.4326099,62.5991321 15.367552,57.6820069 18.2951583,54.5451612 L18.490332,54.3431458 L69.490332,3.34314575 Z"
-                      fill="currentColor"
-                      fill-rule="nonzero"
-                    />
-                  </svg>
-                </button>
-                <button
-                  aria-label="Go to next month"
-                  class="rdp-button_reset rdp-button rdp-nav_button rdp-nav_button_next"
-                  type="button"
+                    March 2022
+                  </h2>
+                </div>
+                <div
+                  class="rdp-dropdown_month"
                 >
-                  <svg
-                    class="rdp-nav_icon"
-                    data-testid="iconRight"
-                    height="16px"
-                    viewBox="0 0 120 120"
-                    width="16px"
+                  <span
+                    class="rdp-vhidden"
                   >
-                    <path
-                      d="M49.8040405,3.34314575 C46.6798462,0.218951416 41.6145263,0.218951416 38.490332,3.34314575 C35.4326099,6.40086786 35.367552,11.3179931 38.2951583,14.4548388 L38.490332,14.6568542 L83.8333725,60 L38.490332,105.343146 C35.4326099,108.400868 35.367552,113.317993 38.2951583,116.454839 L38.490332,116.656854 C41.5480541,119.714576 46.4651794,119.779634 49.602025,116.852028 L49.8040405,116.656854 L100.804041,65.6568542 C103.861763,62.5991321 103.926821,57.6820069 100.999214,54.5451612 L100.804041,54.3431458 L49.8040405,3.34314575 Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </button>
+                    Month: 
+                  </span>
+                  <select
+                    aria-label="Month: "
+                    class="rdp-dropdown"
+                  >
+                    <option
+                      value="0"
+                    >
+                      January
+                    </option>
+                    <option
+                      value="1"
+                    >
+                      February
+                    </option>
+                    <option
+                      value="2"
+                    >
+                      March
+                    </option>
+                    <option
+                      value="3"
+                    >
+                      April
+                    </option>
+                    <option
+                      value="4"
+                    >
+                      May
+                    </option>
+                    <option
+                      value="5"
+                    >
+                      June
+                    </option>
+                    <option
+                      value="6"
+                    >
+                      July
+                    </option>
+                    <option
+                      value="7"
+                    >
+                      August
+                    </option>
+                    <option
+                      value="8"
+                    >
+                      September
+                    </option>
+                    <option
+                      value="9"
+                    >
+                      October
+                    </option>
+                    <option
+                      value="10"
+                    >
+                      November
+                    </option>
+                    <option
+                      value="11"
+                    >
+                      December
+                    </option>
+                  </select>
+                  <div
+                    aria-hidden="true"
+                    class="rdp-caption_label"
+                  >
+                    March
+                    <svg
+                      class="rdp-dropdown_icon"
+                      data-testid="iconDropdown"
+                      height="8px"
+                      viewBox="0 0 120 120"
+                      width="8px"
+                    >
+                      <path
+                        d="M4.22182541,48.2218254 C8.44222828,44.0014225 15.2388494,43.9273804 19.5496459,47.9996989 L19.7781746,48.2218254 L60,88.443 L100.221825,48.2218254 C104.442228,44.0014225 111.238849,43.9273804 115.549646,47.9996989 L115.778175,48.2218254 C119.998577,52.4422283 120.07262,59.2388494 116.000301,63.5496459 L115.778175,63.7781746 L67.7781746,111.778175 C63.5577717,115.998577 56.7611506,116.07262 52.4503541,112.000301 L52.2218254,111.778175 L4.22182541,63.7781746 C-0.0739418023,59.4824074 -0.0739418023,52.5175926 4.22182541,48.2218254 Z"
+                        fill="currentColor"
+                        fill-rule="nonzero"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="rdp-dropdown_month"
+                >
+                  <span
+                    class="rdp-vhidden"
+                  >
+                    Year: 
+                  </span>
+                  <select
+                    aria-label="Year: "
+                    class="rdp-dropdown"
+                  >
+                    <option
+                      value="2022"
+                    >
+                      2022
+                    </option>
+                    <option
+                      value="2023"
+                    >
+                      2023
+                    </option>
+                    <option
+                      value="2024"
+                    >
+                      2024
+                    </option>
+                    <option
+                      value="2025"
+                    >
+                      2025
+                    </option>
+                  </select>
+                  <div
+                    aria-hidden="true"
+                    class="rdp-caption_label"
+                  >
+                    2022
+                    <svg
+                      class="rdp-dropdown_icon"
+                      data-testid="iconDropdown"
+                      height="8px"
+                      viewBox="0 0 120 120"
+                      width="8px"
+                    >
+                      <path
+                        d="M4.22182541,48.2218254 C8.44222828,44.0014225 15.2388494,43.9273804 19.5496459,47.9996989 L19.7781746,48.2218254 L60,88.443 L100.221825,48.2218254 C104.442228,44.0014225 111.238849,43.9273804 115.549646,47.9996989 L115.778175,48.2218254 C119.998577,52.4422283 120.07262,59.2388494 116.000301,63.5496459 L115.778175,63.7781746 L67.7781746,111.778175 C63.5577717,115.998577 56.7611506,116.07262 52.4503541,112.000301 L52.2218254,111.778175 L4.22182541,63.7781746 C-0.0739418023,59.4824074 -0.0739418023,52.5175926 4.22182541,48.2218254 Z"
+                        fill="currentColor"
+                        fill-rule="nonzero"
+                      />
+                    </svg>
+                  </div>
+                </div>
               </div>
             </div>
             <table
@@ -113,12 +227,12 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                     <span
                       aria-hidden="true"
                     >
-                      dom
+                      Su
                     </span>
                     <span
                       class="rdp-vhidden"
                     >
-                      domingo
+                      Sunday
                     </span>
                   </th>
                   <th
@@ -128,12 +242,12 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                     <span
                       aria-hidden="true"
                     >
-                      seg
+                      Mo
                     </span>
                     <span
                       class="rdp-vhidden"
                     >
-                      segunda-feira
+                      Monday
                     </span>
                   </th>
                   <th
@@ -143,12 +257,12 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                     <span
                       aria-hidden="true"
                     >
-                      ter
+                      Tu
                     </span>
                     <span
                       class="rdp-vhidden"
                     >
-                      terça-feira
+                      Tuesday
                     </span>
                   </th>
                   <th
@@ -158,12 +272,12 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                     <span
                       aria-hidden="true"
                     >
-                      qua
+                      We
                     </span>
                     <span
                       class="rdp-vhidden"
                     >
-                      quarta-feira
+                      Wednesday
                     </span>
                   </th>
                   <th
@@ -173,12 +287,12 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                     <span
                       aria-hidden="true"
                     >
-                      qui
+                      Th
                     </span>
                     <span
                       class="rdp-vhidden"
                     >
-                      quinta-feira
+                      Thursday
                     </span>
                   </th>
                   <th
@@ -188,12 +302,12 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                     <span
                       aria-hidden="true"
                     >
-                      sex
+                      Fr
                     </span>
                     <span
                       class="rdp-vhidden"
                     >
-                      sexta-feira
+                      Friday
                     </span>
                   </th>
                   <th
@@ -203,12 +317,12 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                     <span
                       aria-hidden="true"
                     >
-                      sab
+                      Sa
                     </span>
                     <span
                       class="rdp-vhidden"
                     >
-                      sábado
+                      Saturday
                     </span>
                   </th>
                 </tr>
@@ -235,7 +349,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        27º fevereiro (domingo)
+                        27th February (Sunday)
                       </span>
                     </button>
                   </td>
@@ -255,7 +369,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        28º fevereiro (segunda-feira)
+                        28th February (Monday)
                       </span>
                     </button>
                   </td>
@@ -275,7 +389,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        1º março (terça-feira)
+                        1st March (Tuesday)
                       </span>
                     </button>
                   </td>
@@ -295,7 +409,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        2º março (quarta-feira)
+                        2nd March (Wednesday)
                       </span>
                     </button>
                   </td>
@@ -315,7 +429,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        3º março (quinta-feira)
+                        3rd March (Thursday)
                       </span>
                     </button>
                   </td>
@@ -335,7 +449,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        4º março (sexta-feira)
+                        4th March (Friday)
                       </span>
                     </button>
                   </td>
@@ -355,7 +469,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        5º março (sábado)
+                        5th March (Saturday)
                       </span>
                     </button>
                   </td>
@@ -379,7 +493,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        6º março (domingo)
+                        6th March (Sunday)
                       </span>
                     </button>
                   </td>
@@ -399,7 +513,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        7º março (segunda-feira)
+                        7th March (Monday)
                       </span>
                     </button>
                   </td>
@@ -419,7 +533,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        8º março (terça-feira)
+                        8th March (Tuesday)
                       </span>
                     </button>
                   </td>
@@ -439,7 +553,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        9º março (quarta-feira)
+                        9th March (Wednesday)
                       </span>
                     </button>
                   </td>
@@ -459,7 +573,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        10º março (quinta-feira)
+                        10th March (Thursday)
                       </span>
                     </button>
                   </td>
@@ -479,7 +593,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        11º março (sexta-feira)
+                        11th March (Friday)
                       </span>
                     </button>
                   </td>
@@ -499,7 +613,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        12º março (sábado)
+                        12th March (Saturday)
                       </span>
                     </button>
                   </td>
@@ -523,7 +637,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        13º março (domingo)
+                        13th March (Sunday)
                       </span>
                     </button>
                   </td>
@@ -543,7 +657,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        14º março (segunda-feira)
+                        14th March (Monday)
                       </span>
                     </button>
                   </td>
@@ -563,7 +677,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        15º março (terça-feira)
+                        15th March (Tuesday)
                       </span>
                     </button>
                   </td>
@@ -583,7 +697,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        16º março (quarta-feira)
+                        16th March (Wednesday)
                       </span>
                     </button>
                   </td>
@@ -603,7 +717,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        17º março (quinta-feira)
+                        17th March (Thursday)
                       </span>
                     </button>
                   </td>
@@ -623,7 +737,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        18º março (sexta-feira)
+                        18th March (Friday)
                       </span>
                     </button>
                   </td>
@@ -643,7 +757,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        19º março (sábado)
+                        19th March (Saturday)
                       </span>
                     </button>
                   </td>
@@ -667,7 +781,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        20º março (domingo)
+                        20th March (Sunday)
                       </span>
                     </button>
                   </td>
@@ -687,7 +801,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        21º março (segunda-feira)
+                        21st March (Monday)
                       </span>
                     </button>
                   </td>
@@ -707,7 +821,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        22º março (terça-feira)
+                        22nd March (Tuesday)
                       </span>
                     </button>
                   </td>
@@ -727,7 +841,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        23º março (quarta-feira)
+                        23rd March (Wednesday)
                       </span>
                     </button>
                   </td>
@@ -735,8 +849,8 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                     class="rdp-cell"
                   >
                     <button
-                      class="rdp-button_reset rdp-button rdp-day rdp-day_today"
-                      tabindex="0"
+                      class="rdp-button_reset rdp-button rdp-day"
+                      tabindex="-1"
                       type="button"
                     >
                       <span
@@ -747,7 +861,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        24º março (quinta-feira)
+                        24th March (Thursday)
                       </span>
                     </button>
                   </td>
@@ -767,7 +881,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        25º março (sexta-feira)
+                        25th March (Friday)
                       </span>
                     </button>
                   </td>
@@ -787,7 +901,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        26º março (sábado)
+                        26th March (Saturday)
                       </span>
                     </button>
                   </td>
@@ -811,7 +925,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        27º março (domingo)
+                        27th March (Sunday)
                       </span>
                     </button>
                   </td>
@@ -831,7 +945,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        28º março (segunda-feira)
+                        28th March (Monday)
                       </span>
                     </button>
                   </td>
@@ -839,8 +953,8 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                     class="rdp-cell"
                   >
                     <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_today"
+                      tabindex="0"
                       type="button"
                     >
                       <span
@@ -851,7 +965,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        29º março (terça-feira)
+                        29th March (Tuesday)
                       </span>
                     </button>
                   </td>
@@ -871,7 +985,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        30º março (quarta-feira)
+                        30th March (Wednesday)
                       </span>
                     </button>
                   </td>
@@ -891,7 +1005,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        31º março (quinta-feira)
+                        31st March (Thursday)
                       </span>
                     </button>
                   </td>
@@ -911,7 +1025,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        1º abril (sexta-feira)
+                        1st April (Friday)
                       </span>
                     </button>
                   </td>
@@ -931,7 +1045,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        2º abril (sábado)
+                        2nd April (Saturday)
                       </span>
                     </button>
                   </td>
@@ -941,35 +1055,6 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div
-    class="sc-iCfMLu FBMMr"
-    role="button"
-    tabindex="0"
-  >
-    <div
-      class="sc-gsDKAQ kdpXcC"
-    >
-      <input
-        class="sc-dkPtRN kHFFrW"
-        placeholder="24/03/2022"
-        type="text"
-        value=""
-      />
-      <button
-        class="sc-eCImPb jWvkiQ"
-        type="button"
-      >
-        <div
-          class="sc-bdvvtL bYGNWJ icon-right"
-          data-icon-name="calendar"
-        >
-          <div>
-            mock svg
-          </div>
-        </div>
-      </button>
     </div>
   </div>
 </div>
