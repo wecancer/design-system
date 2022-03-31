@@ -1,35 +1,42 @@
-import { useEffect, useState } from 'react'
+import React from 'react'
 import styled, { css } from 'styled-components'
 import Icon from '../icon'
 
 const Container = styled.div`
   display: flex;
   align-items: center;
-  max-width: 17.5rem;
 `
 
-type TNumber = {
-  currentPage?: boolean
-}
+const Separator = styled.span`
+  ${({ theme }) => css`
+    margin: 0 0.25rem;
+    font-weight: ${theme.font.weights.semiBold};
+    color: ${theme.colors.label};
+  `}
+`
 
-const Button = styled.button<TNumber>`
-  ${({ theme, currentPage = false }) => css`
+const Button = styled.button<{
+  isCurrent: boolean
+}>`
+  ${({ theme, isCurrent }) => css`
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 0.0625rem solid
-      ${currentPage ? theme.colors.primary : theme.colors.line};
+    border: 1px solid ${isCurrent ? theme.colors.primary : theme.colors.line};
     font-weight: ${theme.font.weights.regular};
     font-size: 1rem;
-    color: ${currentPage ? theme.colors.white : theme.colors.primary};
-    background-color: ${currentPage
-      ? theme.colors.primary
-      : theme.colors.white};
+    color: ${isCurrent ? theme.colors.white : theme.colors.primary};
+    background-color: ${isCurrent ? theme.colors.primary : theme.colors.white};
     cursor: pointer;
     margin: 0 0.25rem;
-    width: 25px;
-    height: 25px;
-    border-radius: 4px;
+    border-radius: 0.25rem;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
   `}
 `
 
@@ -38,117 +45,83 @@ type PaginateParams = {
 }
 
 export type Props = {
-  currentPage: number
   amount: number
+  currentPage: number
+  isDisabled?: boolean
   onPaginate(params: PaginateParams): void
 }
 
-type State = {
-  sliced: number[]
-  countDown: number
-  currentPage: number
-}
+const Pagination = ({ amount, onPaginate, currentPage, isDisabled }: Props) => {
+  const numberOfButtons = 5
+  const hasExpand = amount > numberOfButtons
+  const showFrom = (() => {
+    if (!hasExpand) return 1
 
-const Pagination = ({ amount, onPaginate, currentPage }: Props) => {
-  const bigger = amount > 5
-  const pages = Array.from(Array(amount).keys())
+    // don't move if the current page is on the end of the list
+    if (currentPage + 2 > amount) return amount - numberOfButtons + 1
 
-  const [state, setState] = useState<State>(() => {
-    if (bigger) {
-      return {
-        sliced: pages.slice(0, 5),
-        countDown: pages.length,
-        currentPage,
-      }
-    }
-    return {
-      sliced: pages,
-      countDown: 0,
-      currentPage,
-    }
-  })
+    // don't move if the current page is on the start of the list
+    if (currentPage > 2) return currentPage - 2
+    return 1
+  })()
 
-  useEffect(() => {
-    setState((prevState) => ({ ...prevState, currentPage }))
-    const doNotSlice =
-      (state.sliced.includes(Number(currentPage)) &&
-        state.countDown < pages.length) ||
-      currentPage === pages.length ||
-      currentPage > pages.length
-    if (doNotSlice) return
-    if (currentPage >= 6) {
-      setState((prevState) => ({
-        ...prevState,
-        sliced: pages.slice(currentPage - 5, currentPage),
-      }))
-    }
-    setState((prevState) => {
-      if (prevState.currentPage > currentPage && currentPage > 6) {
-        return {
-          currentPage,
-          sliced: pages.slice(currentPage - 5, currentPage),
-          countDown: prevState.countDown - 1,
-        }
-      }
-      if (currentPage < 6) {
-        return {
-          currentPage,
-          sliced: pages.slice(0, 5),
-          countDown: pages.length,
-        }
-      }
-      return prevState
-    })
-  }, [currentPage])
+  const itemsDisplayed = new Array(hasExpand ? numberOfButtons : amount)
+    .fill(null)
+    .map((el, index) => index + showFrom)
 
-  if (bigger) {
-    return (
-      <Container>
-        <Button
-          style={{ transform: 'rotate(180deg)' }}
-          onClick={() => onPaginate({ page: currentPage - 1 })}
-          name="icon"
-        >
-          <Icon name="arrowLeft" size={13} />
-        </Button>
-        {(state.sliced ?? []).map((page) => (
-          <Button
-            currentPage={currentPage === page + 1}
-            onClick={() => onPaginate({ page: page + 1 })}
-            type="button"
-            key={page}
-          >
-            {page + 1}
-          </Button>
-        ))}
-        <Button>...</Button>
-        <Button
-          onClick={() => onPaginate({ page: pages.length })}
-          currentPage={currentPage === pages.length}
-        >
-          {pages[pages.length - 1] + 1}
-        </Button>
-        <Button
-          name="icon"
-          onClick={() => onPaginate({ page: currentPage + 1 })}
-        >
-          <Icon name="arrowLeft" size={13} />
-        </Button>
-      </Container>
-    )
-  }
+  const isPrevButtonDisabled = currentPage === 1 || isDisabled
+  const isNextButtonDisabled = currentPage === amount || isDisabled
+
+  const handlePaginate = (page: number) => onPaginate({ page })
+  const hasLastPageButton = !itemsDisplayed.includes(amount)
+
   return (
-    <Container>
-      {(pages ?? []).map((page) => (
+    <Container role="navigation">
+      {hasExpand && (
         <Button
-          currentPage={currentPage === page + 1}
-          onClick={() => onPaginate({ page: page + 1 })}
           type="button"
-          key={page}
+          isCurrent={false}
+          disabled={isPrevButtonDisabled}
+          onClick={() => handlePaginate(currentPage - 1)}
         >
-          {page + 1}
+          <Icon name="arrowLeft" size={12} />
+        </Button>
+      )}
+      {itemsDisplayed.map((page) => (
+        <Button
+          key={page}
+          type="button"
+          disabled={isDisabled}
+          isCurrent={currentPage === page}
+          aria-current={currentPage === page}
+          onClick={() => handlePaginate(page)}
+        >
+          {page}
         </Button>
       ))}
+      {hasLastPageButton && (
+        <>
+          <Separator>...</Separator>
+          <Button
+            type="button"
+            disabled={isDisabled}
+            isCurrent={false}
+            onClick={() => handlePaginate(amount)}
+          >
+            {amount}
+          </Button>
+        </>
+      )}
+      {hasExpand && (
+        <Button
+          type="button"
+          isCurrent={false}
+          disabled={isNextButtonDisabled}
+          onClick={() => handlePaginate(currentPage + 1)}
+        >
+          <Icon name="arrowRight" size={12} />
+        </Button>
+      )}
     </Container>
   )
 }

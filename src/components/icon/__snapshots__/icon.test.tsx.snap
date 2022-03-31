@@ -3,7 +3,7 @@
 exports[`<Icon /> should render snapshot correctly 1`] = `
 <div
   class="sc-bdvvtL bYGNWJ"
-  data-icon-name="arrowLeft"
+  data-icon-name="arrowRight"
 >
   <div>
     mock svg

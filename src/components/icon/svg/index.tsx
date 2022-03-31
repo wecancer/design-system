@@ -1,3 +1,4 @@
+import ArrowRightSvg from './arrow-right.svg'
 import ArrowLeftSvg from './arrow-left.svg'
 import ArrowDownSvg from './arrow-down.svg'
 import ChartTreeMap from './chart-treemap.svg'
@@ -18,6 +19,7 @@ import UnviewSvg from './unview.svg'
 import ViewSvg from './view.svg'
 
 export default {
+  arrowRight: ArrowRightSvg,
   arrowLeft: ArrowLeftSvg,
   arrowDown: ArrowDownSvg,
   chartBar: ChartBar,
