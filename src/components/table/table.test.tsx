@@ -14,9 +14,9 @@ describe('<Table />', () => {
           <TableCell>Head 3</TableCell>
           <TableCell>Head 4</TableCell>
         </TableHeader>
-        <TableRow>
+        <TableRow onClick={() => null}>
           <TableCell type="warning">Warning</TableCell>
-          <TableCell>Item 2</TableCell>
+          <TableCell>Clickable</TableCell>
           <TableCell>Item 3</TableCell>
           <TableCell>
             Proin viverra justo vitae aliquam pulvinar. Interdum et malesuada
