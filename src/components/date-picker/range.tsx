@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import * as ReactDayPicker from 'react-day-picker'
 import * as fns from 'date-fns'
-import ptLocale from 'date-fns/locale/pt-BR'
 
 import Icon from '../icon'
 import Input from '../form/input/input'
 import OutsideEvent from '../outside-event'
+import useFnsLocale from '../../locale/use-fns-locale'
 import DatePickerStyledContainer from './date-picker-styled-container'
 
 const Container = styled(OutsideEvent)`
@@ -52,6 +52,7 @@ const DatePicker = ({
   fromYear,
   toYear,
 }: Props) => {
+  const fnsLocale = useFnsLocale()
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [fromText, setFromText] = useState(dateToString(value.from))
   const [toText, setToText] = useState(dateToString(value.to))
@@ -163,7 +164,7 @@ const DatePicker = ({
             showOutsideDays
             toYear={toYear}
             selected={value}
-            locale={ptLocale}
+            locale={fnsLocale}
             numberOfMonths={isTheLastMonthOfTheYear ? 1 : 2}
             fromYear={fromYear}
             captionLayout="dropdown"

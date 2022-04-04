@@ -3,6 +3,9 @@ import styled, { css } from 'styled-components'
 import { keyActionClick } from '../../../events'
 
 import Icon, { IconsTypes } from '../../icon'
+import useInputErrorValidation from './use-input-error-validation'
+
+const topGrap = '13px'
 
 const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -11,8 +14,12 @@ const Wrapper = styled.div`
   `}
 `
 
-const Input = styled.input<{ hasGapLeft: boolean; hasGapRight: boolean }>`
-  ${({ theme, hasGapLeft, hasGapRight }) => css`
+const Input = styled.input<{
+  hasGapLeft: boolean
+  hasGapRight: boolean
+  hasError: boolean
+}>`
+  ${({ theme, hasGapLeft, hasGapRight, hasError }) => css`
     width: 100%;
     height: 40px;
     font-size: 1rem;
@@ -20,10 +27,18 @@ const Input = styled.input<{ hasGapLeft: boolean; hasGapRight: boolean }>`
     padding-bottom: 0;
     box-sizing: border-box;
     font-family: ${theme.font.family};
-    border: 0.125rem solid ${theme.colors.placeholder};
-    background-color: ${theme.colors.offWhite};
     border-radius: 1rem;
     outline: none;
+
+    ${hasError
+      ? css`
+          background-color: ${theme.colors.bgError};
+          border: 0.125rem solid ${theme.colors.error};
+        `
+      : css`
+          background-color: ${theme.colors.offWhite};
+          border: 0.125rem solid ${theme.colors.placeholder};
+        `}
 
     ${hasGapLeft
       ? css`
@@ -41,7 +56,7 @@ const Input = styled.input<{ hasGapLeft: boolean; hasGapRight: boolean }>`
           padding-right: 1rem;
         `}
 
-    &:focus {
+    &:focus:not(:submit-invalid) {
       border-color: ${theme.colors.titleActive};
     }
 
@@ -57,8 +72,7 @@ const Input = styled.input<{ hasGapLeft: boolean; hasGapRight: boolean }>`
 const IconLeft = styled(Icon)`
   position: absolute;
   left: 1.25rem;
-  top: 50%;
-  transform: translateY(-50%);
+  top: ${topGrap};
 `
 
 const ButtonRight = styled.button`
@@ -75,26 +89,48 @@ const ButtonRight = styled.button`
   padding: 0;
   margin: 0;
   position: absolute;
-  top: 50%;
+  top: 4px;
   right: 1rem;
-  transform: translateY(-50%);
 `
 
-export const Label = styled.div<{ hasGapLeft: boolean }>`
-  ${({ theme, hasGapLeft }) => css`
+const Error = styled.p`
+  ${({ theme }) => css`
+    color: ${theme.colors.error};
+    font-size: 0.875rem;
+    font-weight: ${theme.font.weights.semiBold};
+    margin-top: 0.5rem;
+  `}
+`
+
+export const Label = styled.div<{ hasGapLeft: boolean; hasError: boolean }>`
+  ${({ theme, hasGapLeft, hasError }) => css`
     position: absolute;
-    top: 50%;
+    top: 20px;
     left: 0.875rem;
     padding: 0 0.25rem;
     outline: none;
     transition: all 250ms ease;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(20, 20, 255, 0) 50%,
-      ${theme.colors.offWhite} 50%,
-      ${theme.colors.offWhite} 100%
-    );
+
+    ${hasError
+      ? css`
+          color: ${theme.colors.darkError};
+          background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(20, 20, 255, 0) 50%,
+            ${theme.colors.bgError} 50%,
+            ${theme.colors.bgError} 100%
+          );
+        `
+      : css`
+          background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(20, 20, 255, 0) 50%,
+            ${theme.colors.offWhite} 50%,
+            ${theme.colors.offWhite} 100%
+          );
+        `}
 
     ${hasGapLeft
       ? css`
@@ -109,6 +145,11 @@ export const Label = styled.div<{ hasGapLeft: boolean }>`
 type InputTypes = 'text' | 'password' | 'email' | 'search'
 
 type Value = string
+
+type CustomValidation = {
+  message: string
+  isValid: boolean
+}
 
 type OnChangeParams = {
   value: Value
@@ -125,6 +166,7 @@ export type Props = Omit<
   type: InputTypes
   onChange(params: OnChangeParams): void
   iconLeft?: IconsTypes
+  customValidation?: CustomValidation
   iconButtonRight?: {
     type: IconsTypes
     onClick(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void
@@ -133,10 +175,26 @@ export type Props = Omit<
 
 const InputText = React.forwardRef<HTMLInputElement, Props>(
   (
-    { label, iconLeft, onChange, iconButtonRight, id, ...props }: Props,
+    {
+      id,
+      label,
+      iconLeft,
+      onChange,
+      iconButtonRight,
+      customValidation,
+      ...props
+    }: Props,
     ref,
   ) => {
     const innerRef = useRef<HTMLInputElement>(null)
+    const { errorMessage, hasError } = useInputErrorValidation(
+      { ref: innerRef, value: props.value || '' },
+      {
+        required: props.required,
+        email: props.type === 'email',
+      },
+      customValidation,
+    )
     const hasGapLeft = !!iconLeft
     const hasGapRight = !!iconButtonRight
 
@@ -148,11 +206,21 @@ const InputText = React.forwardRef<HTMLInputElement, Props>(
           {...props}
           id={id}
           ref={innerRef}
+          hasError={hasError}
           hasGapLeft={hasGapLeft}
           hasGapRight={hasGapRight}
-          onChange={(event) =>
-            onChange({ value: event.currentTarget.value, event })
-          }
+          onChange={(event) => {
+            const el = event.currentTarget
+
+            if (customValidation?.isValid === false) {
+              el.setCustomValidity(customValidation.message)
+            }
+            if (customValidation?.isValid === true) {
+              el.setCustomValidity('')
+            }
+
+            onChange({ value: el.value, event })
+          }}
         />
         {label && (
           <Label
@@ -160,6 +228,7 @@ const InputText = React.forwardRef<HTMLInputElement, Props>(
             tabIndex={-1}
             data-label="true"
             aria-label={label}
+            hasError={hasError}
             aria-labelledby={id}
             hasGapLeft={hasGapLeft}
             onClick={() => innerRef.current?.focus()}
@@ -178,6 +247,7 @@ const InputText = React.forwardRef<HTMLInputElement, Props>(
             <Icon className="icon-right" name={iconButtonRight.type} />
           </ButtonRight>
         )}
+        {errorMessage && <Error>{errorMessage}</Error>}
       </Wrapper>
     )
   },

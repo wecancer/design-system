@@ -12060,10 +12060,10 @@ react-colorful@^5.1.2:
   resolved "https://registry.yarnpkg.com/react-colorful/-/react-colorful-5.5.1.tgz#29d9c4e496f2ca784dd2bb5053a3a4340cfaf784"
   integrity sha512-M1TJH2X3RXEt12sWkpa6hLc/bbYS0H6F4rIqjQZ+RxNBstpY67d9TrFXtqdZwhpmBXcCwEi7stKqFue3ZRkiOg==
 
-react-day-picker@^8.0.0-beta.38:
-  version "8.0.0-beta.38"
-  resolved "https://registry.yarnpkg.com/react-day-picker/-/react-day-picker-8.0.0-beta.38.tgz#c8c8139ea4c1e70513d17f1e803a5708f10264e1"
-  integrity sha512-Uf4Yi2dyQG/Vud8oUnH6iDFcgz3Q2hHUwDNNa7Tu52rGq1UCwK1RkrkI1UqIaLowfe8w/Y9c1ZOMWp3cm14KVQ==
+react-day-picker@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/react-day-picker/-/react-day-picker-8.0.0.tgz#628133fe4d39db73d07e0d734efef0ab688f0eef"
+  integrity sha512-bW6gj4XqiZop7YMUCw1pro2r7qEGSk0IURTXGkuj8cLvm189kTS6p4Kl1UfijP8D2lfMcIWJ73VH8M87XSDIrQ==
   dependencies:
     "@reach/auto-id" "^0.16.0"
 
