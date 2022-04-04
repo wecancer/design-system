@@ -14,7 +14,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
         class="sc-dkPtRN erBYIA"
         placeholder="22/02/2022"
         type="text"
-        value=""
+        value="11/12/2012"
       />
       <button
         class="sc-eCImPb kfvWEQ"
@@ -58,7 +58,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                     class="rdp-caption_label"
                     id="11"
                   >
-                    March 2022
+                    December 2012
                   </h2>
                 </div>
                 <div
@@ -138,7 +138,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                     aria-hidden="true"
                     class="rdp-caption_label"
                   >
-                    March
+                    December
                     <svg
                       class="rdp-dropdown_icon"
                       data-testid="iconDropdown"
@@ -191,7 +191,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                     aria-hidden="true"
                     class="rdp-caption_label"
                   >
-                    2022
+                    2012
                     <svg
                       class="rdp-dropdown_icon"
                       data-testid="iconDropdown"
@@ -337,539 +337,8 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                     class="rdp-cell"
                   >
                     <button
-                      class="rdp-button_reset rdp-button rdp-day rdp-day_outside"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        27
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        27th February (Sunday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day rdp-day_outside"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        28
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        28th February (Monday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        1
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        1st March (Tuesday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        2
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        2nd March (Wednesday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        3
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        3rd March (Thursday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        4
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        4th March (Friday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        5
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        5th March (Saturday)
-                      </span>
-                    </button>
-                  </td>
-                </tr>
-                <tr
-                  class="rdp-row"
-                >
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        6
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        6th March (Sunday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        7
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        7th March (Monday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        8
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        8th March (Tuesday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        9
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        9th March (Wednesday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        10
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        10th March (Thursday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        11
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        11th March (Friday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        12
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        12th March (Saturday)
-                      </span>
-                    </button>
-                  </td>
-                </tr>
-                <tr
-                  class="rdp-row"
-                >
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        13
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        13th March (Sunday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        14
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        14th March (Monday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        15
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        15th March (Tuesday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        16
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        16th March (Wednesday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        17
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        17th March (Thursday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        18
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        18th March (Friday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        19
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        19th March (Saturday)
-                      </span>
-                    </button>
-                  </td>
-                </tr>
-                <tr
-                  class="rdp-row"
-                >
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        20
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        20th March (Sunday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        21
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        21st March (Monday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        22
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        22nd March (Tuesday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        23
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        23rd March (Wednesday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        24
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        24th March (Thursday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day"
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled rdp-day_outside"
+                      disabled=""
                       tabindex="-1"
                       type="button"
                     >
@@ -881,7 +350,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        25th March (Friday)
+                        25th November (Sunday)
                       </span>
                     </button>
                   </td>
@@ -889,7 +358,8 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                     class="rdp-cell"
                   >
                     <button
-                      class="rdp-button_reset rdp-button rdp-day"
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled rdp-day_outside"
+                      disabled=""
                       tabindex="-1"
                       type="button"
                     >
@@ -901,19 +371,16 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        26th March (Saturday)
+                        26th November (Monday)
                       </span>
                     </button>
                   </td>
-                </tr>
-                <tr
-                  class="rdp-row"
-                >
                   <td
                     class="rdp-cell"
                   >
                     <button
-                      class="rdp-button_reset rdp-button rdp-day"
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled rdp-day_outside"
+                      disabled=""
                       tabindex="-1"
                       type="button"
                     >
@@ -925,7 +392,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        27th March (Sunday)
+                        27th November (Tuesday)
                       </span>
                     </button>
                   </td>
@@ -933,7 +400,8 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                     class="rdp-cell"
                   >
                     <button
-                      class="rdp-button_reset rdp-button rdp-day"
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled rdp-day_outside"
+                      disabled=""
                       tabindex="-1"
                       type="button"
                     >
@@ -945,7 +413,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        28th March (Monday)
+                        28th November (Wednesday)
                       </span>
                     </button>
                   </td>
@@ -953,8 +421,9 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                     class="rdp-cell"
                   >
                     <button
-                      class="rdp-button_reset rdp-button rdp-day rdp-day_today"
-                      tabindex="0"
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled rdp-day_outside"
+                      disabled=""
+                      tabindex="-1"
                       type="button"
                     >
                       <span
@@ -965,7 +434,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        29th March (Tuesday)
+                        29th November (Thursday)
                       </span>
                     </button>
                   </td>
@@ -973,7 +442,8 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                     class="rdp-cell"
                   >
                     <button
-                      class="rdp-button_reset rdp-button rdp-day"
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled rdp-day_outside"
+                      disabled=""
                       tabindex="-1"
                       type="button"
                     >
@@ -985,7 +455,7 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        30th March (Wednesday)
+                        30th November (Friday)
                       </span>
                     </button>
                   </td>
@@ -993,27 +463,8 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                     class="rdp-cell"
                   >
                     <button
-                      class="rdp-button_reset rdp-button rdp-day"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      >
-                        31
-                      </span>
-                      <span
-                        class="rdp-vhidden"
-                      >
-                        31st March (Thursday)
-                      </span>
-                    </button>
-                  </td>
-                  <td
-                    class="rdp-cell"
-                  >
-                    <button
-                      class="rdp-button_reset rdp-button rdp-day rdp-day_outside"
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
                       tabindex="-1"
                       type="button"
                     >
@@ -1025,15 +476,20 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        1st April (Friday)
+                        1st December (Saturday)
                       </span>
                     </button>
                   </td>
+                </tr>
+                <tr
+                  class="rdp-row"
+                >
                   <td
                     class="rdp-cell"
                   >
                     <button
-                      class="rdp-button_reset rdp-button rdp-day rdp-day_outside"
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
                       tabindex="-1"
                       type="button"
                     >
@@ -1045,7 +501,738 @@ exports[`Snapshot <DatePicker /> should take a snapshot 1`] = `
                       <span
                         class="rdp-vhidden"
                       >
-                        2nd April (Saturday)
+                        2nd December (Sunday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        3
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        3rd December (Monday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        4
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        4th December (Tuesday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        5
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        5th December (Wednesday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        6
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        6th December (Thursday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        7
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        7th December (Friday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        8
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        8th December (Saturday)
+                      </span>
+                    </button>
+                  </td>
+                </tr>
+                <tr
+                  class="rdp-row"
+                >
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        9
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        9th December (Sunday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        10
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        10th December (Monday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      aria-pressed="true"
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_selected rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        11
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        11th December (Tuesday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        12
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        12th December (Wednesday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        13
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        13th December (Thursday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        14
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        14th December (Friday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        15
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        15th December (Saturday)
+                      </span>
+                    </button>
+                  </td>
+                </tr>
+                <tr
+                  class="rdp-row"
+                >
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        16
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        16th December (Sunday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        17
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        17th December (Monday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        18
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        18th December (Tuesday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        19
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        19th December (Wednesday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        20
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        20th December (Thursday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        21
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        21st December (Friday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        22
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        22nd December (Saturday)
+                      </span>
+                    </button>
+                  </td>
+                </tr>
+                <tr
+                  class="rdp-row"
+                >
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        23
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        23rd December (Sunday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        24
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        24th December (Monday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        25
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        25th December (Tuesday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        26
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        26th December (Wednesday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        27
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        27th December (Thursday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        28
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        28th December (Friday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        29
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        29th December (Saturday)
+                      </span>
+                    </button>
+                  </td>
+                </tr>
+                <tr
+                  class="rdp-row"
+                >
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        30
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        30th December (Sunday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        31
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        31st December (Monday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled rdp-day_outside"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        1
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        1st January (Tuesday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled rdp-day_outside"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        2
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        2nd January (Wednesday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled rdp-day_outside"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        3
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        3rd January (Thursday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled rdp-day_outside"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        4
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        4th January (Friday)
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="rdp-cell"
+                  >
+                    <button
+                      class="rdp-button_reset rdp-button rdp-day rdp-day_disabled rdp-day_outside"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      >
+                        5
+                      </span>
+                      <span
+                        class="rdp-vhidden"
+                      >
+                        5th January (Saturday)
                       </span>
                     </button>
                   </td>
