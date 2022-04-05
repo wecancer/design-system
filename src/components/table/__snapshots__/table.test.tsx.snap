@@ -33,7 +33,8 @@ exports[`<Table /> should render snapshot correctly 1`] = `
     </div>
   </li>
   <li
-    class="sc-gsDKAQ gMoRrl"
+    class="sc-gsDKAQ cVUWzY"
+    role="button"
   >
     <div
       class="sc-dkPtRN oQTeg"
@@ -46,7 +47,7 @@ exports[`<Table /> should render snapshot correctly 1`] = `
       <div
         class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
       >
-        Item 2
+        Clickable
       </div>
       <div
         class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
@@ -61,7 +62,7 @@ exports[`<Table /> should render snapshot correctly 1`] = `
     </div>
   </li>
   <li
-    class="sc-gsDKAQ dXKiIu"
+    class="sc-gsDKAQ UKGbb"
   >
     <div
       class="sc-dkPtRN oQTeg"
@@ -89,7 +90,7 @@ exports[`<Table /> should render snapshot correctly 1`] = `
     </div>
   </li>
   <li
-    class="sc-gsDKAQ edYMjg"
+    class="sc-gsDKAQ bcAwMB"
   >
     <div
       class="sc-dkPtRN oQTeg"
@@ -117,7 +118,7 @@ exports[`<Table /> should render snapshot correctly 1`] = `
     </div>
   </li>
   <li
-    class="sc-gsDKAQ ciJzkl"
+    class="sc-gsDKAQ fNypaA"
   >
     <div
       class="sc-dkPtRN oQTeg"
@@ -145,7 +146,7 @@ exports[`<Table /> should render snapshot correctly 1`] = `
     </div>
   </li>
   <li
-    class="sc-gsDKAQ ciJzkl"
+    class="sc-gsDKAQ fNypaA"
   >
     <div
       class="sc-dkPtRN oQTeg"
