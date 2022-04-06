@@ -7,13 +7,7 @@ import ButtonNoAppearance from '../../button/no-appearance'
 type MessageType = 'success' | 'error' | 'caption'
 
 const createLabelBackground = (color: string) => css`
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(20, 20, 255, 0) 50%,
-    ${color} 50%,
-    ${color} 100%
-  ); ;
+  background: ${color};
 `
 
 const Wrapper = styled.div`
@@ -27,7 +21,7 @@ const Textarea = styled.textarea<{ hasValue: boolean; infoType?: MessageType }>`
   ${({ theme, hasValue, infoType }) => css`
     width: 100%;
     font-size: 1rem;
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     box-sizing: border-box;
     font-family: ${theme.font.family};
     border-radius: 1rem;
@@ -37,7 +31,7 @@ const Textarea = styled.textarea<{ hasValue: boolean; infoType?: MessageType }>`
       if (infoType === 'success') {
         return css`
           background-color: ${theme.colors.bgSuccess};
-          border: 1px solid ${theme.colors.success};
+          border: 2px solid ${theme.colors.success};
 
           & + label {
             color: ${theme.colors.success} !important;
@@ -48,7 +42,7 @@ const Textarea = styled.textarea<{ hasValue: boolean; infoType?: MessageType }>`
       if (infoType === 'error') {
         return css`
           background-color: ${theme.colors.bgError};
-          border: 1px solid ${theme.colors.error};
+          border: 2px solid ${theme.colors.error};
 
           & + label {
             color: ${theme.colors.error} !important;
@@ -58,18 +52,21 @@ const Textarea = styled.textarea<{ hasValue: boolean; infoType?: MessageType }>`
       }
       return css`
         background-color: ${theme.colors.offWhite};
-        border: 1px solid ${theme.colors.placeholder};
+        border: 2px solid ${theme.colors.placeholder};
       `
     })()}
 
     &:focus {
-      border-color: ${theme.colors.titleActive};
+      background-color: ${theme.colors.white};
+      border-color: ${theme.colors.primary};
+      box-shadow: 0 0 0.062rem 0.375rem ${theme.colors.focusPrimary};
     }
 
     &:focus + label {
       color: ${theme.colors.label};
       font-size: 0.875rem;
       top: -0.6875rem;
+      background-color: ${theme.colors.white};
     }
 
     ${hasValue &&
@@ -94,11 +91,12 @@ const Label = styled.label`
   ${({ theme }) => css`
     position: absolute;
     top: 1rem;
-    left: 1.25rem;
+    left: 1rem;
     padding: 0 0.25rem;
     background: 
     transition: all 250ms ease;
-    ${createLabelBackground(theme.colors.offWhite)}
+    ${createLabelBackground(theme.colors.offWhite)};
+    transition: all 250ms ease;
   `}
 `
 

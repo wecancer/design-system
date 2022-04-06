@@ -55,7 +55,7 @@ const selectStyles = ({
   control: (styles, state) => ({
     ...styles,
     height: '40px',
-    borderRadius: '0.75rem',
+    borderRadius: '1rem',
     borderWidth: '0.125rem',
     ...(state.isFocused
       ? {
@@ -64,9 +64,9 @@ const selectStyles = ({
           boxShadow: `0 0 0.062rem 0.375rem ${colors.focusPrimary}`,
           backgroundColor: colors.white,
         }
-      : { borderColor: colors.inputBg, backgroundColor: colors.inputBg }),
+      : { borderColor: colors.placeholder, backgroundColor: colors.offWhite }),
     '&:hover': {
-      borderColor: colors.inputBg,
+      borderColor: colors.placeholder,
     },
   }),
   multiValue: (styles) => ({

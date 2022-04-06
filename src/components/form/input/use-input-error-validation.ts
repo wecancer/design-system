@@ -60,29 +60,29 @@ const useInputErrorValidation = (
   const isInvalid = [isInvalidRequired, isInvalidEmail].includes(true)
 
   useEffect(() => {
-    const element = ref.current as HTMLInputElement
+    const element = ref.current
     const handleInvalid = () => {
-      element.setCustomValidity(' ')
+      element?.setCustomValidity(' ')
       setIsShowError(true)
     }
-    element.addEventListener('invalid', handleInvalid, false)
+    element?.addEventListener('invalid', handleInvalid, false)
     return () => {
-      element.removeEventListener('invalid', handleInvalid, false)
+      element?.removeEventListener('invalid', handleInvalid, false)
     }
   }, [])
 
   useEffect(() => {
-    const element = ref.current as HTMLInputElement
-    element.setCustomValidity(isInvalid ? ' ' : '')
+    const element = ref.current
+    element?.setCustomValidity(isInvalid ? ' ' : '')
   }, [value])
 
   useEffect(() => {
     if (isCustomValid !== undefined) {
-      const element = ref.current as HTMLInputElement
+      const element = ref.current
 
       // using the custom validation with the HTML5
       // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Constraint_validation#constraint_api's_element.setcustomvalidity()
-      element.setCustomValidity(isCustomValid ? '' : ' ')
+      element?.setCustomValidity(isCustomValid ? '' : ' ')
     }
   }, [isCustomValid])
 

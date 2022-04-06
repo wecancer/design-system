@@ -29,6 +29,7 @@ const Input = styled.input<{
     font-family: ${theme.font.family};
     border-radius: 1rem;
     outline: none;
+    transition: all 250ms ease;
 
     ${hasError
       ? css`
@@ -56,13 +57,24 @@ const Input = styled.input<{
           padding-right: 1rem;
         `}
 
-    &:focus:not(:submit-invalid) {
-      border-color: ${theme.colors.titleActive};
+    &:focus {
+      border-color: ${theme.colors.primary};
+      ${hasError
+        ? css`
+            background-color: ${theme.colors.bgError};
+            border: 0.125rem solid ${theme.colors.error};
+            box-shadow: 0 0 0.062rem 0.375rem ${theme.colors.focusError};
+          `
+        : css`
+            background-color: ${theme.colors.white};
+            border: 0.125rem solid ${theme.colors.primary};
+            box-shadow: 0 0 0.062rem 0.375rem ${theme.colors.focusPrimary};
+          `}
     }
 
     &[value]:not([value='']) + div[data-label],
     &:focus + div[data-label] {
-      color: ${theme.colors.label};
+      color: ${hasError ? theme.colors.error : theme.colors.label};
       font-size: 0.875rem;
       transform: translateY(calc(-100% - 0.625rem));
     }
@@ -123,13 +135,7 @@ export const Label = styled.div<{ hasGapLeft: boolean; hasError: boolean }>`
           );
         `
       : css`
-          background: linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(20, 20, 255, 0) 50%,
-            ${theme.colors.offWhite} 50%,
-            ${theme.colors.offWhite} 100%
-          );
+          background-color: ${theme.colors.white};
         `}
 
     ${hasGapLeft

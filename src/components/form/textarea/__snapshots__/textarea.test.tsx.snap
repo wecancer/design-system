@@ -5,13 +5,13 @@ exports[`<Textarea /> should render snapshot correctly 1`] = `
   class="sc-gKclnd MTxUU"
 >
   <textarea
-    class="sc-iCfMLu hsjtxZ"
+    class="sc-iCfMLu PuLRv"
     rows="2"
   >
     Text message
   </textarea>
   <label
-    class="sc-pVTFL rWoKE"
+    class="sc-pVTFL eSYQwE"
   >
     Text label
   </label>

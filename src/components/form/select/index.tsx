@@ -14,28 +14,60 @@ import ReactSelect, {
 import Icon from '../../icon'
 import { Option, Options } from './types'
 import selectStyles from './styles'
+import useInputErrorValidation from '../input/use-input-error-validation'
 
 export const Label = styled(InputLabel)<{
+  hasError: boolean
   isFocused: boolean
   hasValue: boolean
 }>`
-  z-index: 30;
-  padding-bottom: 0;
+  ${({ theme, isFocused, hasValue, hasError }) => css`
+    z-index: 30;
+    padding-bottom: 0;
 
-  ${({ theme, isFocused, hasValue }) =>
-    isFocused || hasValue
-      ? css`
+    ${(() => {
+      if (isFocused || hasValue) {
+        return css`
           color: ${theme.colors.label};
           font-size: 0.875rem;
           transform: translateY(calc(-100% - 10px));
           border-radius: 3px 3px 0 0;
-          background: ${!isFocused && hasValue
-            ? `transparent`
-            : theme.colors.white};
+
+          ${(() => {
+            if (hasError) {
+              return css`
+                background: linear-gradient(
+                  180deg,
+                  rgba(255, 255, 255, 0) 0%,
+                  rgba(20, 20, 255, 0) 50%,
+                  ${theme.colors.bgError} 50%,
+                  ${theme.colors.bgError} 100%
+                );
+              `
+            }
+            return css`
+              background: ${theme.colors.white};
+            `
+          })()}
         `
-      : css`
-          background: transparent;
-        `}
+      }
+      if (hasError) {
+        return css`
+          color: ${theme.colors.darkError};
+          background: ${theme.colors.bgError};
+        `
+      }
+      return css`
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(20, 20, 255, 0) 50%,
+          ${theme.colors.white} 50%,
+          ${theme.colors.white} 100%
+        );
+      `
+    })()}
+  `}
 `
 
 const Input = styled.input`
@@ -50,8 +82,30 @@ const Input = styled.input`
   opacity: 0;
 `
 
-const Container = styled.div`
+const Container = styled.div<{ hasError: boolean; hasFocus: boolean }>`
   position: relative;
+
+  ${({ theme, hasError, hasFocus }) =>
+    hasError &&
+    css`
+      div[class*='control'] {
+        background-color: ${theme.colors.bgError};
+        border-color: ${theme.colors.error} !important;
+        ${hasFocus &&
+        css`
+          box-shadow: 0 0 0.062rem 0.375rem ${theme.colors.focusError} !important;
+        `}
+      }
+    `}
+`
+
+const Error = styled.p`
+  ${({ theme }) => css`
+    color: ${theme.colors.error};
+    font-size: 0.875rem;
+    font-weight: ${theme.font.weights.semiBold};
+    margin-top: 0.5rem;
+  `}
 `
 
 export const MultiValueContainer = (props: MultiValueGenericProps<Option>) => (
@@ -100,21 +154,29 @@ const Select = ({
   onMenuOpen,
   required = false,
 }: Props) => {
+  const inputRef = useRef<HTMLInputElement>(null)
   const theme = useTheme()
   const styles = selectStyles(theme)
   const selectRef =
     useRef<SelectInstance<Option, true, GroupBase<Option>>>(null)
   const [focused, setFocused] = useState(false)
 
+  const { hasError, errorMessage } = useInputErrorValidation(
+    { ref: inputRef, value: value || '' },
+    {
+      required,
+    },
+  )
+
   const selected = value
     ? options.find((item) => item?.value === value)
     : undefined
 
   return (
-    <Container className={className}>
+    <Container className={className} hasError={hasError} hasFocus={focused}>
       {label && (
         <Label
-          hasError={false}
+          hasError={hasError}
           onClick={() => selectRef.current?.focus()}
           hasGapLeft={false}
           isFocused={focused}
@@ -152,12 +214,14 @@ const Select = ({
       {required && (
         <Input
           type="text"
+          ref={inputRef}
           name="hidded-input"
           required={required}
           value={value || ''}
           onChange={() => null}
         />
       )}
+      {errorMessage && <Error>{errorMessage}</Error>}
     </Container>
   )
 }
