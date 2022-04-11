@@ -89,7 +89,7 @@ const theme = {
     darkError: '#90131F',
     lightError: '#FF84B7',
     bgError: '#FFDFED',
-    focusError: '#FFCECE',
+    focusError: '#FFEAEA',
   },
   font: {
     family: 'Poppins, sans-serif',

@@ -15,7 +15,7 @@ exports[`<Button /> should render snapshot correctly 1`] = `
     Secondary
   </button>
   <button
-    class="sc-dkPtRN xjvzV"
+    class="sc-dkPtRN gMSlJh"
     type="button"
   >
     Error
