@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Button from '../button'
 import Modal, { Props as ModalProps } from '.'
+import useTranslation from '../../locale/use-translation'
 
 const Footer = styled.footer`
   display: flex;
@@ -15,31 +16,34 @@ const Footer = styled.footer`
 `
 
 export type Props = ModalProps & {
-  cancelLabel: string
-  confirmLabel: string
   onCancel?(): void
   onConfirm?(): void
+  cancelLabel?: string
+  confirmLabel?: string
+  error?: boolean
 }
 
 const ModalConfirm = ({
+  error,
   children,
   onCancel,
   onConfirm,
   cancelLabel,
   confirmLabel,
   ...props
-}: Props): React.ReactElement => (
-  <Modal {...props}>
-    {children}
-    <Footer>
-      <Button secondary onClick={onCancel}>
-        {cancelLabel}
-      </Button>
-      <Button primary onClick={onConfirm}>
-        {confirmLabel}
-      </Button>
-    </Footer>
-  </Modal>
-)
+}: Props): React.ReactElement => {
+  const t = useTranslation()
+  return (
+    <Modal {...props}>
+      {children}
+      <Footer>
+        <Button onClick={onCancel}>{cancelLabel || t('Cancel')}</Button>
+        <Button onClick={onConfirm} error={error} primary={!error}>
+          {confirmLabel || t('Confirm')}
+        </Button>
+      </Footer>
+    </Modal>
+  )
+}
 
 export default ModalConfirm

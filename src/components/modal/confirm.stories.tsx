@@ -8,6 +8,7 @@ export const Default = Template.bind({})
 Default.args = {
   title: 'The confirm modal',
   isOpen: true,
+  error: false,
   confirmLabel: 'Confirm',
   cancelLabel: 'Cancel',
   children: (

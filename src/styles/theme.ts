@@ -22,6 +22,7 @@ export enum BgTypes {
   warning = 'bgWarning',
   error = 'bgError',
   input = 'inputBg',
+  line = 'line',
 }
 
 const theme = {

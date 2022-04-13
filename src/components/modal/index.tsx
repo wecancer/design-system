@@ -34,7 +34,7 @@ const Header = styled.header`
     h2 {
       font-size: 1.5rem;
       line-height: 2.375rem;
-      letter-spacing: 0.0469rem;
+      letter-spacing: 0;
       font-weight: ${theme.font.weights.semiBold};
       margin: 0 0 1rem;
       word-wrap: break-word;

@@ -32,6 +32,15 @@ const Template: Story<Props> = () => (
       </TableCell>
     </TableRow>
     <TableRow>
+      <TableCell type="line">Item 1</TableCell>
+      <TableCell>Item 2</TableCell>
+      <TableCell>Item 3</TableCell>
+      <TableCell>
+        Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+        ridiculus mus.
+      </TableCell>
+    </TableRow>
+    <TableRow>
       <TableCell type="input">Item 1</TableCell>
       <TableCell>Item 2</TableCell>
       <TableCell>Item 3</TableCell>
