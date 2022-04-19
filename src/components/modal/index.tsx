@@ -13,6 +13,7 @@ const Overlay = styled.div`
   left: 0;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 500;
+  overflow: hidden;
 `
 
 const Container = styled.section<{ widthSize: number }>`

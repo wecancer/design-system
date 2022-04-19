@@ -4,6 +4,7 @@ import Table, { Props } from '.'
 import TableRow from './row'
 import TableCell from './cell'
 import TableHeader from './header'
+import Pill from '../pill'
 
 const Template: Story<Props> = () => (
   <Table cellsWitdh="100px 200px 1fr 1fr">
@@ -25,7 +26,9 @@ const Template: Story<Props> = () => (
     <TableRow>
       <TableCell type="error">Error!</TableCell>
       <TableCell>Item 2</TableCell>
-      <TableCell>Item 3</TableCell>
+      <TableCell>
+        <Pill label="Example" isActive fillColor="magenta" />
+      </TableCell>
       <TableCell>
         Phasellus vel velit et mi eleifend dignissim. Duis vitae mi magna. Proin
         in feugiat urna.
