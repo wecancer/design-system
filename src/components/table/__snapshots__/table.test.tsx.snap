@@ -11,22 +11,22 @@ exports[`<Table /> should render snapshot correctly 1`] = `
       class="sc-jRQBWg efedTK"
     >
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Head 1
       </div>
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Head 2
       </div>
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Head 3
       </div>
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Head 4
       </div>
@@ -40,22 +40,22 @@ exports[`<Table /> should render snapshot correctly 1`] = `
       class="sc-dkPtRN oQTeg"
     >
       <div
-        class="sc-hKwDye kLEQHB wc-table-cell"
+        class="sc-hKwDye hKxfRJ wc-table-cell"
       >
         Warning
       </div>
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Clickable
       </div>
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Item 3
       </div>
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Proin viverra justo vitae aliquam pulvinar. Interdum et malesuada fames ac ante ipsum primis in faucibus.
       </div>
@@ -68,22 +68,22 @@ exports[`<Table /> should render snapshot correctly 1`] = `
       class="sc-dkPtRN oQTeg"
     >
       <div
-        class="sc-hKwDye kLEQHB wc-table-cell"
+        class="sc-hKwDye hKxfRJ wc-table-cell"
       >
         Error!
       </div>
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Item 2
       </div>
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Item 3
       </div>
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Phasellus vel velit et mi eleifend dignissim. Duis vitae mi magna. Proin in feugiat urna.
       </div>
@@ -96,22 +96,22 @@ exports[`<Table /> should render snapshot correctly 1`] = `
       class="sc-dkPtRN oQTeg"
     >
       <div
-        class="sc-hKwDye kLEQHB wc-table-cell"
+        class="sc-hKwDye hKxfRJ wc-table-cell"
       >
         Item 1
       </div>
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Item 2
       </div>
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Item 3
       </div>
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       </div>
@@ -124,22 +124,22 @@ exports[`<Table /> should render snapshot correctly 1`] = `
       class="sc-dkPtRN oQTeg"
     >
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Item 1
       </div>
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Item 2
       </div>
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Item 3
       </div>
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Nulla iaculis, erat ultrices egestas pretium, metus augue efficitur massa, blandit elementum arcu dolor at erat.
       </div>
@@ -152,22 +152,22 @@ exports[`<Table /> should render snapshot correctly 1`] = `
       class="sc-dkPtRN oQTeg"
     >
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Item 1
       </div>
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Item 2
       </div>
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Item 3
       </div>
       <div
-        class="sc-hKwDye gjBgKM wc-table-cell wc-table-cell-solid"
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
         Item 4
       </div>
