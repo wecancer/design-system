@@ -16,11 +16,12 @@ const Footer = styled.footer`
 `
 
 export type Props = ModalProps & {
+  error?: boolean
   onCancel?(): void
   onConfirm?(): void
   cancelLabel?: string
   confirmLabel?: string
-  error?: boolean
+  isConfirmLoading?: boolean
 }
 
 const ModalConfirm = ({
@@ -30,6 +31,7 @@ const ModalConfirm = ({
   onConfirm,
   cancelLabel,
   confirmLabel,
+  isConfirmLoading,
   ...props
 }: Props): React.ReactElement => {
   const t = useTranslation()
@@ -38,7 +40,12 @@ const ModalConfirm = ({
       {children}
       <Footer>
         <Button onClick={onCancel}>{cancelLabel || t('Cancel')}</Button>
-        <Button onClick={onConfirm} error={error} primary={!error}>
+        <Button
+          error={error}
+          primary={!error}
+          onClick={onConfirm}
+          isLoading={isConfirmLoading}
+        >
           {confirmLabel || t('Confirm')}
         </Button>
       </Footer>
