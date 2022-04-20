@@ -48,10 +48,11 @@ const closing = keyframes`
 
 const ToastList = styled.div`
   width: 400px;
-  position: absolute;
+  position: fixed;
   top: 25px;
   right: 0;
   overflow: hidden;
+  z-index: 600;
 
   & > * {
     margin-bottom: 20px;

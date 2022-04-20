@@ -7,6 +7,7 @@ import CalendarSvg from './calendar.svg'
 import CheckSvg from './check.svg'
 import CheckCircleSvg from './check-circle.svg'
 import CloseSvg from './close.svg'
+import CloseCircleSvg from './close-circle.svg'
 import Edit from './edit.svg'
 import LongArrowRightSvg from './long-arrow-right.svg'
 import MinusSvg from './minus.svg'
@@ -30,6 +31,7 @@ export default {
   check: CheckSvg,
   checkCircle: CheckCircleSvg,
   close: CloseSvg,
+  closeCircle: CloseCircleSvg,
   edit: Edit,
   longArrowRight: LongArrowRightSvg,
   minus: MinusSvg,
