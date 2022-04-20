@@ -15,6 +15,7 @@ import ButtonIcon from './components/button/icon'
 
 import Avatar from './components/avatar'
 import Icon from './components/icon'
+import Pagination from './components/pagination'
 import Pill from './components/pill'
 import Modal from './components/modal'
 import ModalConfirm from './components/modal/confirm'
@@ -77,6 +78,7 @@ export {
   Loading,
   Modal,
   ModalConfirm,
+  Pagination,
   Pill,
   Radio,
   RangeDatePicker,
