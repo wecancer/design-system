@@ -54,7 +54,7 @@ const selectStyles = ({
   }),
   control: (styles, state) => ({
     ...styles,
-    height: '40px',
+    minHeight: '40px',
     borderRadius: '1rem',
     borderWidth: '0.125rem',
     ...(state.isFocused
