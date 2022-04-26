@@ -105,7 +105,7 @@ describe('<Select />', () => {
 
     expect(input).toHaveAttribute('required')
     expect(input).toBeInstanceOf(HTMLElement)
-    expect(input).toHaveAttribute('value', options[1].value)
+    expect(input).toHaveAttribute('value', 'value')
   })
 
   it('should contains select without required', () => {

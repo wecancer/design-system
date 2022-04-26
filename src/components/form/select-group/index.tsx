@@ -1,17 +1,9 @@
 import React from 'react'
-import { useTheme } from 'styled-components'
-import Select from 'react-select'
+import { MultiValue } from 'react-select'
 
-import {
-  MultiValueRemove,
-  DropdownIndicator,
-  MultiValueContainer,
-  Props as SelectProps,
-} from '../select'
-
-import selectStyles from '../select/styles'
-import { Options } from '../select/types'
-import useTranslation from '../../../locale/use-translation'
+import GenericSelect from '../select/generic-select'
+import { Props as SelectProps } from '../select'
+import { Options, Option } from '../select/types'
 
 type ChangeParams = {
   value: Options
@@ -22,22 +14,26 @@ export type Props = Omit<SelectProps, 'value' | 'onChange'> & {
   onChange(args: ChangeParams): void
 }
 
-const SelectGroup = ({ options, onChange, className, value }: Props) => {
-  const t = useTranslation()
-  const theme = useTheme()
-  const styles = selectStyles(theme)
-
+const SelectGroup = ({
+  value,
+  label,
+  options,
+  onChange,
+  required,
+  className,
+}: Props) => {
   return (
-    <Select
+    <GenericSelect
       isMulti
+      label={label}
       value={value}
-      styles={styles}
       options={options}
+      required={required}
       className={className}
       closeMenuOnSelect={false}
-      noOptionsMessage={() => <p>{t('No options')}</p>}
-      onChange={(val) => onChange({ value: val as Options })}
-      components={{ MultiValueContainer, DropdownIndicator, MultiValueRemove }}
+      onChange={(val: MultiValue<Option>) =>
+        onChange({ value: val as Options })
+      }
     />
   )
 }

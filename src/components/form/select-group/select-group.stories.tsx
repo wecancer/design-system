@@ -21,6 +21,7 @@ const Template: Story<Props> = (args) => {
     <SelectMulti
       {...args}
       value={val}
+      label="Select group"
       onChange={({ value }) => setValue(value)}
     />
   )

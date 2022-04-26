@@ -81,8 +81,7 @@ const selectStyles = ({
     fontSize: '0.81rem',
     fontWeight: 400,
     color: colors.offWhite,
-    paddingLeft: '0.75rem',
-    paddingRight: '0.375rem',
+    padding: '0 0.375rem 0 0.75rem',
   }),
   multiValueRemove: (styles) => ({
     ...styles,
