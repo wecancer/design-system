@@ -13,9 +13,19 @@ exports[`<IncrementStepper /> should render snapshot correctly 1`] = `
         class="sc-bdvvtL hBtBol"
         data-icon-name="minus"
       >
-        <div>
-          mock svg
-        </div>
+        <svg
+          fill="none"
+          viewBox="0 0 21 2"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.79199 1L20.0003 1"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
       </div>
     </button>
     <input
@@ -31,9 +41,26 @@ exports[`<IncrementStepper /> should render snapshot correctly 1`] = `
         class="sc-bdvvtL hBtBol"
         data-icon-name="plus"
       >
-        <div>
-          mock svg
-        </div>
+        <svg
+          fill="none"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 1V19"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+          <path
+            d="M1 10L19 10"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
       </div>
     </button>
   </div>

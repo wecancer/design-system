@@ -27,9 +27,19 @@ exports[`<Checkbox /> should render snapshot correctly 1`] = `
         class="sc-bdvvtL bYGNWJ"
         data-icon-name="check"
       >
-        <div>
-          mock svg
-        </div>
+        <svg
+          fill="none"
+          viewBox="0 0 18 13"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17 1L6 12L1 7"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
       </div>
     </div>
   </div>
@@ -58,9 +68,19 @@ exports[`<Checkbox /> should render snapshot correctly 1`] = `
         class="sc-bdvvtL bYGNWJ"
         data-icon-name="check"
       >
-        <div>
-          mock svg
-        </div>
+        <svg
+          fill="none"
+          viewBox="0 0 18 13"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17 1L6 12L1 7"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
       </div>
     </div>
   </div>
@@ -78,9 +98,19 @@ exports[`<Checkbox /> should render snapshot correctly 1`] = `
         class="sc-bdvvtL bYGNWJ"
         data-icon-name="check"
       >
-        <div>
-          mock svg
-        </div>
+        <svg
+          fill="none"
+          viewBox="0 0 18 13"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17 1L6 12L1 7"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
       </div>
     </div>
     <div

@@ -5,9 +5,9 @@ const LongArrowRight = () => (
     <path
       d="M14.2827 5L20.9998 12L14.2827 19"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <line
       x1="19.7329"
@@ -15,8 +15,8 @@ const LongArrowRight = () => (
       x2="3.99985"
       y2="12.0317"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
+      strokeWidth="2"
+      strokeLinecap="round"
     />
   </svg>
 )

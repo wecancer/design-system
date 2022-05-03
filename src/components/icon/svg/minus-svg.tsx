@@ -5,9 +5,9 @@ const MinusSvg = () => (
     <path
       d="M1.79199 1L20.0003 1"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 )
