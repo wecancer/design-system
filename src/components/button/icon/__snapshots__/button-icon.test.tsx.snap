@@ -3,7 +3,7 @@
 exports[`<ButtonIcon /> should render snapshot correctly 1`] = `
 <div>
   <button
-    class="sc-dkPtRN sc-hKwDye fclDlP gYtlbe"
+    class="sc-dkPtRN hUtYLK"
   >
     <div
       class="sc-bdvvtL bYGNWJ"
@@ -32,7 +32,7 @@ exports[`<ButtonIcon /> should render snapshot correctly 1`] = `
     </div>
   </button>
   <button
-    class="sc-dkPtRN sc-hKwDye eNRuIq gYtlbe"
+    class="sc-dkPtRN hUtYLK"
   >
     <div
       class="sc-bdvvtL bYGNWJ"
@@ -54,7 +54,7 @@ exports[`<ButtonIcon /> should render snapshot correctly 1`] = `
     </div>
   </button>
   <button
-    class="sc-dkPtRN sc-hKwDye fclDlP gYtlbe"
+    class="sc-dkPtRN hUtYLK"
     title="title test"
   >
     <div
@@ -82,7 +82,7 @@ exports[`<ButtonIcon /> should render snapshot correctly 1`] = `
     </div>
   </button>
   <button
-    class="sc-dkPtRN sc-hKwDye fclDlP gYtlbe"
+    class="sc-dkPtRN hUtYLK"
     disabled=""
     title="title test"
   >
@@ -111,7 +111,7 @@ exports[`<ButtonIcon /> should render snapshot correctly 1`] = `
     </div>
   </button>
   <button
-    class="sc-dkPtRN sc-hKwDye fclDlP gYtlbe"
+    class="sc-dkPtRN hUtYLK"
   >
     <div
       class="sc-gsDKAQ cbKTir"
