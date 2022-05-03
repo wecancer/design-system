@@ -221,5 +221,23 @@ exports[`<Table /> should render snapshot correctly 1`] = `
       </div>
     </div>
   </li>
+  <li
+    class="sc-gsDKAQ iRVJcu"
+  >
+    <div
+      class="sc-dkPtRN dGrlTs"
+    >
+      <div
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
+      >
+        Item 1
+      </div>
+      <div
+        class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
+      >
+        Item 2
+      </div>
+    </div>
+  </li>
 </ul>
 `;

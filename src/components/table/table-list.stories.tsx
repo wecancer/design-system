@@ -67,6 +67,10 @@ const Template: Story<Props> = () => (
       <TableCell>Item 3</TableCell>
       <TableCell>Item 4</TableCell>
     </TableRow>
+    <TableRow borderNone>
+      <TableCell>Item 1</TableCell>
+      <TableCell>Item 2</TableCell>
+    </TableRow>
   </Table>
 )
 
