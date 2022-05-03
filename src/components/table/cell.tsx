@@ -41,7 +41,7 @@ const TableCell = ({ children, type = 'none' }: Props): React.ReactElement => {
 
   return (
     <Container className={classNames.join(' ')} isSolidBg={isSolidBg}>
-      {children}
+      <div>{children}</div>
     </Container>
   )
 }
