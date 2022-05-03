@@ -1,44 +1,93 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import Loading from '../../loading'
 import Icon, { IconsTypes } from '../../icon'
-import { ButtonStyled } from '..'
+import { ColorsTemplate } from '../../../styles/theme'
 
-const Container = styled(ButtonStyled)`
-  width: 40px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
+type Size = 'small' | 'medium' | 'large'
+
+const Container = styled.button<{
+  buttonSize: Size
+  isActive: boolean
+  fillColor: ColorsTemplate
+}>`
+  ${({ theme, isActive, fillColor, buttonSize }) => css`
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid ${theme.colors[fillColor]};
+
+    ${isActive
+      ? css`
+          color: ${theme.colors.offWhite};
+          background-color: ${theme.colors[fillColor]};
+        `
+      : css`
+          color: ${theme.colors[fillColor]};
+          background-color: ${theme.colors.offWhite};
+        `}
+
+    ${(() => {
+      if (buttonSize === 'large') {
+        return css`
+          width: 2.875rem;
+          height: 2.875rem;
+          flex: 0 0 2.875rem;
+          font-size: 1rem;
+        `
+      }
+      if (buttonSize === 'small') {
+        return css`
+          width: 1.875rem;
+          height: 1.875rem;
+          flex: 0 0 1.875rem;
+          font-size: 0.8125rem;
+        `
+      }
+      return css`
+        width: 2.375rem;
+        height: 2.375rem;
+        flex: 0 0 2.375rem;
+        font-size: 0.875rem;
+      `
+    })()}
+  `}
 `
 
 export type Props = {
+  size?: Size
   title?: string
   icon: IconsTypes
-  primary?: boolean
+  isActive?: boolean
   className?: string
   isLoading?: boolean
   isDisabled?: boolean
+  color?: ColorsTemplate
   onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
 const ButtonIcon = ({
   icon,
   title,
-  primary,
   onClick,
+  isActive,
   isLoading,
   className,
+  size = 'medium',
+  color = 'primary',
   isDisabled = false,
 }: Props): React.ReactElement => (
   <Container
     title={title}
     onClick={onClick}
+    fillColor={color}
+    buttonSize={size}
     disabled={isDisabled}
     className={className}
-    colorType={primary ? 'primary' : 'secondary'}
+    isActive={!!isActive}
   >
     {isLoading ? <Loading /> : <Icon name={icon} />}
   </Container>

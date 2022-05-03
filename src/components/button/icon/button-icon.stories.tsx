@@ -1,6 +1,9 @@
 import React from 'react'
 import { Story } from '@storybook/react'
 import ButtonIcon, { Props } from '.'
+import { iconsMap } from '../../icon'
+
+const sizes = ['small', 'medium', 'large']
 
 const Template: Story<Props> = (args) => <ButtonIcon {...args} />
 
@@ -18,7 +21,7 @@ export default {
         type: 'boolean',
       },
     },
-    isDisabled: {
+    isActive: {
       control: {
         type: 'boolean',
       },
@@ -26,6 +29,39 @@ export default {
     isLoading: {
       control: {
         type: 'boolean',
+      },
+    },
+    size: {
+      control: {
+        type: 'select',
+        options: sizes,
+      },
+    },
+    icon: {
+      control: {
+        type: 'select',
+        options: Object.keys(iconsMap),
+      },
+    },
+    color: {
+      control: {
+        type: 'select',
+        options: [
+          'primary',
+          'secondary',
+          'green',
+          'blue',
+          'turquoise',
+          'violet',
+          'pink',
+          'orange',
+          'purple',
+          'yellow',
+          'magenta',
+          'success',
+          'warning',
+          'error',
+        ],
       },
     },
   },
