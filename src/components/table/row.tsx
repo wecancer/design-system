@@ -54,12 +54,12 @@ type Props = {
       | React.KeyboardEvent<HTMLLIElement>
       | React.MouseEvent<HTMLLIElement, MouseEvent>,
   ): void
-  children: React.ReactElement[]
+  children: React.ReactNode
 }
 
 const TableRow = ({ children, onClick }: Props): React.ReactElement => {
   const [typeStyle, setTypeStyle] = useState<StyleType>('none')
-  const gridColumns = useCalcGridColumns(children.length)
+  const gridColumns = useCalcGridColumns(React.Children.count(children))
 
   const clickParams =
     typeof onClick === 'function'

@@ -5,8 +5,18 @@ exports[`<Icon /> should render snapshot correctly 1`] = `
   class="sc-bdvvtL bYGNWJ"
   data-icon-name="arrowRight"
 >
-  <div>
-    mock svg
-  </div>
+  <svg
+    fill="none"
+    viewBox="0 0 9 16"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1 1L7.96317 7.96317L1 14.9263"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+  </svg>
 </div>
 `;

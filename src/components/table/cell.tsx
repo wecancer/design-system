@@ -9,6 +9,8 @@ type StyleType = keyof typeof BgTypes | 'none'
 const Container = styled.div<{ isSolidBg: boolean }>`
   ${({ theme, isSolidBg }) => css`
     padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
 
     ${isSolidBg &&
     css`
@@ -39,7 +41,7 @@ const TableCell = ({ children, type = 'none' }: Props): React.ReactElement => {
 
   return (
     <Container className={classNames.join(' ')} isSolidBg={isSolidBg}>
-      {children}
+      <div>{children}</div>
     </Container>
   )
 }

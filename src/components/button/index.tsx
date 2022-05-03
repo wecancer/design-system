@@ -16,6 +16,7 @@ export const ButtonStyled = styled.button<{ colorType: Color }>`
     border-radius: 0.5rem;
     outline: none;
     transition: all 250ms ease;
+    white-space: nowrap;
 
     &:disabled {
       opacity: 0.5;
