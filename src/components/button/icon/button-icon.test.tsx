@@ -6,7 +6,7 @@ describe('<ButtonIcon />', () => {
     const { container } = render(
       <>
         <ButtonIcon icon="search" />
-        <ButtonIcon primary icon="minus" />
+        <ButtonIcon color="error" icon="minus" />
         <ButtonIcon title="title test" icon="view" />
         <ButtonIcon title="title test" icon="view" isDisabled />
         <ButtonIcon icon="view" isLoading />
