@@ -222,7 +222,7 @@ exports[`<Table /> should render snapshot correctly 1`] = `
     </div>
   </li>
   <li
-    class="sc-gsDKAQ iRVJcu"
+    class="sc-gsDKAQ fNypaA"
   >
     <div
       class="sc-dkPtRN dGrlTs"
@@ -230,12 +230,16 @@ exports[`<Table /> should render snapshot correctly 1`] = `
       <div
         class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
-        Item 1
+        <div>
+          Item 1
+        </div>
       </div>
       <div
         class="sc-hKwDye eDPjSw wc-table-cell wc-table-cell-solid"
       >
-        Item 2
+        <div>
+          Item 2
+        </div>
       </div>
     </div>
   </li>
