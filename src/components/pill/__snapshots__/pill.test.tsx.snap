@@ -37,9 +37,33 @@ exports[`Pill Component should render icons of Pill Component correctly 1`] = `
       class="sc-bdvvtL hZeSqt sc-hKwDye sc-jRQBWg bhCFhM fmYyGE"
       data-icon-name="close"
     >
-      <div>
-        mock svg
-      </div>
+      <svg
+        fill="none"
+        viewBox="0 0 22 22"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+        <path
+          d="M14 8L8 14"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+        <path
+          d="M8 8L14 14"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+      </svg>
     </div>
   </div>
   <div
@@ -49,9 +73,19 @@ exports[`Pill Component should render icons of Pill Component correctly 1`] = `
       class="sc-bdvvtL iEQYcl sc-hKwDye sc-eCImPb bhCFhM hWCMKE"
       data-icon-name="check"
     >
-      <div>
-        mock svg
-      </div>
+      <svg
+        fill="none"
+        viewBox="0 0 18 13"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M17 1L6 12L1 7"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+      </svg>
     </div>
     <p
       class="sc-gsDKAQ eHDJig"
@@ -66,9 +100,19 @@ exports[`Pill Component should render icons of Pill Component correctly 1`] = `
       class="sc-bdvvtL iEQYcl sc-hKwDye sc-eCImPb bhCFhM hWCMKE"
       data-icon-name="check"
     >
-      <div>
-        mock svg
-      </div>
+      <svg
+        fill="none"
+        viewBox="0 0 18 13"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M17 1L6 12L1 7"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+      </svg>
     </div>
     <p
       class="sc-gsDKAQ eHDJig"
@@ -79,9 +123,33 @@ exports[`Pill Component should render icons of Pill Component correctly 1`] = `
       class="sc-bdvvtL hZeSqt sc-hKwDye sc-jRQBWg bhCFhM fmYyGE"
       data-icon-name="close"
     >
-      <div>
-        mock svg
-      </div>
+      <svg
+        fill="none"
+        viewBox="0 0 22 22"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+        <path
+          d="M14 8L8 14"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+        <path
+          d="M8 8L14 14"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+      </svg>
     </div>
   </div>
 </div>

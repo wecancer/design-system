@@ -20,11 +20,11 @@ const Wrapper = styled.div<{ gridColumns: string }>`
 `
 
 type Props = {
-  children: React.ReactElement[]
+  children: React.ReactNode
 }
 
 const TableRowHeader = ({ children }: Props): React.ReactElement => {
-  const gridColumns = useCalcGridColumns(children.length)
+  const gridColumns = useCalcGridColumns(React.Children.count(children))
 
   return (
     <Container>
