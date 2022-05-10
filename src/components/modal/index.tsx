@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled, { css } from 'styled-components'
 import usePortal from '../../hooks/use-portal'
 
 import Icon from '../icon'
 import BtnNoAppearance from '../button/no-appearance'
+import { keyActionClick, KeyboardEvt, keyEsc } from '../../events'
 
 const Overlay = styled.div`
   width: 100vw;
@@ -24,6 +25,7 @@ const Container = styled.section<{ widthSize: number }>`
     position: relative;
     padding: 1.5rem;
     margin: 3rem auto;
+    z-index: 501;
     background-color: ${theme.colors.offWhite};
     border-radius: 1.5rem;
     box-shadow: 0px 2rem 4rem rgba(17, 17, 17, 0.08);
@@ -67,11 +69,35 @@ const Modal = ({
   width = 500,
 }: Props) => {
   const portal = usePortal()
+  const overlayRef = useRef(null)
+
+  useEffect(() => {
+    const handle = (e: KeyboardEvent) =>
+      keyEsc(e as unknown as KeyboardEvt, () => onClose?.())
+    window.addEventListener('keydown', handle)
+    return () => window.removeEventListener('keydown', handle)
+  }, [])
+
+  const handleCloseOverlayClick = (
+    e:
+      | React.MouseEvent<HTMLDivElement, MouseEvent>
+      | React.KeyboardEvent<HTMLDivElement>,
+  ) => {
+    if (overlayRef.current === e.target && onClose) {
+      onClose()
+    }
+  }
 
   if (!isOpen) return null
 
   return portal.add(
-    <Overlay>
+    <Overlay
+      role="button"
+      tabIndex={-1}
+      ref={overlayRef}
+      onClick={handleCloseOverlayClick}
+      onKeyDown={(e) => keyActionClick(e, () => handleCloseOverlayClick(e))}
+    >
       <Container widthSize={width}>
         <Header>
           {title && <h2>{title}</h2>}
