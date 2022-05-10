@@ -10,6 +10,7 @@ import ReactSelect, {
   MultiValueGenericProps,
   DropdownIndicatorProps,
   components as SelectComponents,
+  ActionMeta,
 } from 'react-select'
 
 import Icon from '../../icon'
@@ -140,7 +141,7 @@ export type Props = {
   onMenuOpen?(): void
   value: PropsValue<Option>
   closeMenuOnSelect?: boolean
-  onChange(args: PropsValue<Option>): void
+  onChange(args: PropsValue<Option>, actionMeta: ActionMeta<Option>): void
 }
 
 const GenericSelect = ({
