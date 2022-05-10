@@ -54,4 +54,48 @@ describe('<SelectGroup />', () => {
 
     expect(value).toBeInstanceOf(HTMLElement)
   })
+
+  it('should select all options', () => {
+    const { container, queryByText } = render(
+      <SelectGroup
+        value={[]}
+        options={options}
+        className="select"
+        onChange={({ value }) => expect(value).toHaveLength(options.length)}
+      />,
+    )
+
+    const label = container.querySelector(
+      'div[class*="-control"]',
+    ) as HTMLElement
+
+    fireEvent.focus(label)
+    fireEvent.keyDown(label, {
+      keyCode: KEY_DOWN,
+    })
+
+    fireEvent.click(queryByText('Select all') as HTMLElement)
+  })
+
+  it('should unselect all options', () => {
+    const { container, queryByText } = render(
+      <SelectGroup
+        value={options}
+        options={options}
+        className="select"
+        onChange={({ value }) => expect(value).toHaveLength(0)}
+      />,
+    )
+
+    const label = container.querySelector(
+      'div[class*="-control"]',
+    ) as HTMLElement
+
+    fireEvent.focus(label)
+    fireEvent.keyDown(label, {
+      keyCode: KEY_DOWN,
+    })
+
+    fireEvent.click(queryByText('Unselect all') as HTMLElement)
+  })
 })
