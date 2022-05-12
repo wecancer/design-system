@@ -14,6 +14,7 @@ const Container = styled.button<{
 }>`
   ${({ theme, isActive, fillColor, buttonSize }) => css`
     padding: 0;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;

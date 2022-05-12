@@ -4,6 +4,7 @@ import { MultiValue } from 'react-select'
 import GenericSelect from '../select/generic-select'
 import { Props as SelectProps } from '../select'
 import { Options, Option } from '../select/types'
+import useTranslation from '../../../locale/use-translation'
 
 type ChangeParams = {
   value: Options
@@ -11,6 +12,7 @@ type ChangeParams = {
 
 export type Props = Omit<SelectProps, 'value' | 'onChange'> & {
   value?: Options
+  hasSelectAll?: boolean
   onChange(args: ChangeParams): void
 }
 
@@ -21,19 +23,35 @@ const SelectGroup = ({
   onChange,
   required,
   className,
+  hasSelectAll = true,
 }: Props) => {
+  const t = useTranslation()
+
+  const isAllSelected = options.length === value?.length
+  const selectAllOption = {
+    label: t(isAllSelected ? 'Unselect all' : 'Select all'),
+    value: '__wcds_select-all',
+  }
+
+  const opts = hasSelectAll ? [selectAllOption, ...options] : options
+
   return (
     <GenericSelect
       isMulti
       label={label}
       value={value}
-      options={options}
+      options={opts}
       required={required}
       className={className}
       closeMenuOnSelect={false}
-      onChange={(val: MultiValue<Option>) =>
-        onChange({ value: val as Options })
-      }
+      onChange={(val: MultiValue<Option>, action) => {
+        const newOptionValue = val as Options
+        if (action.option?.value === selectAllOption.value) {
+          onChange({ value: isAllSelected ? [] : options })
+          return
+        }
+        onChange({ value: newOptionValue })
+      }}
     />
   )
 }

@@ -16,6 +16,7 @@ export const Default = Template.bind({})
 Default.args = {
   title: 'The modal title',
   isOpen: true,
+  onClose: () => console.log('close it!'),
 }
 
 export default {
