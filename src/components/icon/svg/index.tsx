@@ -9,6 +9,7 @@ import CheckCircleSvg from './check-circle-svg'
 import CloseCircleSvg from './close-circle-svg'
 import CloseSvg from './close-svg'
 import Edit from './edit-svg'
+import FileSvg from './file-svg'
 import LongArrowRightSvg from './long-arrow-right-svg'
 import MinusSvg from './minus-svg'
 import PlugSvg from './plus-svg'
@@ -33,6 +34,7 @@ const iconMap = {
   close: CloseSvg,
   closeCircle: CloseCircleSvg,
   edit: Edit,
+  file: FileSvg,
   longArrowRight: LongArrowRightSvg,
   minus: MinusSvg,
   plus: PlugSvg,
