@@ -3,7 +3,7 @@ import { KeyboardEvent } from 'react'
 type Callback = () => void
 export type KeyboardEvt = KeyboardEvent | KeyboardEvent<HTMLElement>
 
-export const keyActionClick = (e: KeyboardEvt, callback: Callback): void => {
+export const keyActionClick = (e: KeyboardEvt, callback?: Callback): void => {
   if (/Enter|\s/.test(e.key) && typeof callback === 'function') callback()
 }
 

@@ -3,15 +3,15 @@ import { MultiValue } from 'react-select'
 
 import GenericSelect from '../select/generic-select'
 import { Props as SelectProps } from '../select'
-import { Options, Option } from '../select/types'
+import { SelectOption, SelectOptions } from '../select/types'
 import useTranslation from '../../../locale/use-translation'
 
 type ChangeParams = {
-  value: Options
+  value: SelectOptions
 }
 
 export type Props = Omit<SelectProps, 'value' | 'onChange'> & {
-  value?: Options
+  value?: SelectOptions
   hasSelectAll?: boolean
   onChange(args: ChangeParams): void
 }
@@ -19,10 +19,10 @@ export type Props = Omit<SelectProps, 'value' | 'onChange'> & {
 const SelectGroup = ({
   value,
   label,
-  options,
   onChange,
   required,
   className,
+  options = [],
   hasSelectAll = true,
 }: Props) => {
   const t = useTranslation()
@@ -44,8 +44,8 @@ const SelectGroup = ({
       required={required}
       className={className}
       closeMenuOnSelect={false}
-      onChange={(val: MultiValue<Option>, action) => {
-        const newOptionValue = val as Options
+      onChange={(val: MultiValue<SelectOption>, action) => {
+        const newOptionValue = val as SelectOptions
         if (action.option?.value === selectAllOption.value) {
           onChange({ value: isAllSelected ? [] : options })
           return
