@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styled, { css } from 'styled-components'
+import { keyActionClick } from '../../../events'
 
 const Container = styled.div`
   display: flex;
@@ -67,7 +68,7 @@ const Check = styled.div<{ isChecked: boolean }>`
   `}
 `
 
-const Label = styled.label`
+const Label = styled.div`
   ${({ theme }) => css`
     font-family: ${theme.font.family};
     margin: 0 0 0 0.625rem;
@@ -75,35 +76,52 @@ const Label = styled.label`
   `};
 `
 
-export type Props = {
+export type RadioItem = {
   id?: string
   label?: string
-  onChange?(): void
   isChecked?: boolean
   isDisabled?: boolean
+}
+
+export type Props = RadioItem & {
+  onChange?(): void
 }
 
 const Radio = ({
   id,
   label,
+  onChange,
   isDisabled = false,
   isChecked = false,
-  onChange,
   ...props
-}: Props) => (
-  <Container {...props}>
-    <Check
-      id={id}
-      tabIndex={0}
-      role="radio"
-      onClick={onChange}
-      onKeyDown={onChange}
-      isChecked={isChecked}
-      aria-checked={isChecked}
-      aria-disabled={isDisabled}
-    />
-    {label && <Label htmlFor={id}>{label}</Label>}
-  </Container>
-)
+}: Props) => {
+  const checkRef = useRef<HTMLDivElement>(null)
+
+  return (
+    <Container {...props}>
+      <Check
+        id={id}
+        tabIndex={0}
+        role="radio"
+        ref={checkRef}
+        onClick={onChange}
+        onKeyDown={onChange}
+        isChecked={isChecked}
+        aria-checked={isChecked}
+        aria-disabled={isDisabled}
+      />
+      {label && (
+        <Label
+          tabIndex={0}
+          role="button"
+          onClick={onChange}
+          onKeyDown={(e) => keyActionClick(e, onChange)}
+        >
+          {label}
+        </Label>
+      )}
+    </Container>
+  )
+}
 
 export default Radio

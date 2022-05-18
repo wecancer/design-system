@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
-import Radio from '.'
+import Radio, { RadioItem } from '.'
 
 const Container = styled.div<{ isRow: boolean }>`
   ${({ isRow }) =>
@@ -20,24 +20,17 @@ const Container = styled.div<{ isRow: boolean }>`
         `}
 `
 
-type Item = {
-  id: string
-  label: string
-  isChecked: boolean
-  isDisabled?: boolean
-}
-
 type ChangeParams = {
-  item: Item
   index: number
-  itemsUpdated: Item[]
+  item: RadioItem
+  itemsUpdated: RadioItem[]
 }
 
 export type Props = {
-  onChange?(params: ChangeParams): void
+  items: RadioItem[]
   isDisabled?: boolean
-  line: 'row' | 'column'
-  items: Item[]
+  line?: 'row' | 'column'
+  onChange?(params: ChangeParams): void
 }
 
 const RadioGroup = ({ items, onChange, isDisabled, line = 'row' }: Props) => (
@@ -53,8 +46,8 @@ const RadioGroup = ({ items, onChange, isDisabled, line = 'row' }: Props) => (
             index,
             itemsUpdated: arr.map((value) =>
               value.id === item.id
-                ? { ...item, isChecked: !item.isChecked }
-                : value,
+                ? { ...value, isChecked: true }
+                : { ...value, isChecked: false },
             ),
           })
         }
