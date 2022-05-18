@@ -1,4 +1,4 @@
-export type Option =
+export type SelectOption =
   | null
   | undefined
   | {
@@ -6,4 +6,4 @@ export type Option =
       label: string
     }
 
-export type Options = Option[]
+export type SelectOptions = SelectOption[]

@@ -1,12 +1,11 @@
 import { DefaultTheme } from 'styled-components'
 import { GroupBase, StylesConfig } from 'react-select'
 
-import { Option } from './types'
+import { SelectOption } from './types'
 
-const selectStyles = ({
-  font,
-  colors,
-}: DefaultTheme): StylesConfig<Option, true, GroupBase<Option>> => ({
+type StyleConfig = StylesConfig<SelectOption, true, GroupBase<SelectOption>>
+
+const selectStyles = ({ font, colors }: DefaultTheme): StyleConfig => ({
   container: (styles) => ({
     ...styles,
     fontFamily: font.family,
