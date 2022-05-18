@@ -24,8 +24,8 @@ const PatientSvg = () => (
     <line x1="17" y1="4.5" x2="24" y2="4.5" stroke="currentColor" />
     <line x1="18" y1="10.5" x2="23" y2="10.5" stroke="currentColor" />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M20 8.5C20 8.77614 20.2239 9 20.5 9C20.7761 9 21 8.77614 21 8.5V8H21.5C21.7761 8 22 7.77614 22 7.5C22 7.22386 21.7761 7 21.5 7H21V6.5C21 6.22386 20.7761 6 20.5 6C20.2239 6 20 6.22386 20 6.5V7H19.5C19.2239 7 19 7.22386 19 7.5C19 7.77614 19.2239 8 19.5 8H20L20 8.5Z"
       fill="currentColor"
     />

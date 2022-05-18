@@ -56,11 +56,13 @@ exports[`<Radio /> should render snapshot correctly 1`] = `
       role="radio"
       tabindex="0"
     />
-    <label
+    <div
       class="sc-dkPtRN ebgbMx"
+      role="button"
+      tabindex="0"
     >
       I'm checked and disabled
-    </label>
+    </div>
   </div>
   <div
     class="sc-bdvvtL gowonf"
@@ -72,11 +74,13 @@ exports[`<Radio /> should render snapshot correctly 1`] = `
       role="radio"
       tabindex="0"
     />
-    <label
+    <div
       class="sc-dkPtRN ebgbMx"
+      role="button"
+      tabindex="0"
     >
       I'm available
-    </label>
+    </div>
   </div>
 </div>
 `;
