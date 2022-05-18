@@ -24,14 +24,14 @@ const InputSeparator = styled.span`
   margin: 0 10px;
 `
 
-export type RangePickerValue = ReactDayPicker.DateRange
+export type RangePickerDate = ReactDayPicker.DateRange
 
 type OnChange = {
-  value: RangePickerValue
+  value: RangePickerDate
 }
 
 export type Props = {
-  value: RangePickerValue
+  value: RangePickerDate
   onChange?(params: OnChange): void
   fromYear?: number
   toYear?: number
@@ -59,7 +59,7 @@ const DatePicker = ({
   const isTheLastMonthOfTheYear =
     value.from?.getMonth() === 11 && value.from?.getFullYear() === toYear
 
-  const handleChange = (data?: RangePickerValue): void => {
+  const handleChange = (data?: RangePickerDate): void => {
     if (typeof onChange === 'function') {
       onChange({
         value: {

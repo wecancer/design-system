@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Story } from '@storybook/react'
 import DatePicker, { Props, DatePickerValue } from '.'
-import DatePickerRange, { Props as RangeProps, RangePickerValue } from './range'
+import DatePickerRange, { Props as RangeProps, RangePickerDate } from './range'
 
 const Template: Story<Props> = () => {
   const [date, setValue] = useState<DatePickerValue | undefined>(
@@ -22,7 +22,7 @@ Default.args = {
 }
 
 const RangeTemplate: Story<RangeProps> = (args) => {
-  const [date, setValue] = useState<RangePickerValue>({
+  const [date, setValue] = useState<RangePickerDate>({
     from: new Date(2020, 10, 10),
     to: new Date(2020, 11, 18),
   })
