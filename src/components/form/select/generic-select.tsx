@@ -5,19 +5,19 @@ import { Label as InputLabel } from '../input/input'
 import ReactSelect, {
   GroupBase,
   PropsValue,
+  ActionMeta,
   SelectInstance,
   MultiValueRemoveProps,
   MultiValueGenericProps,
   DropdownIndicatorProps,
   components as SelectComponents,
-  ActionMeta,
 } from 'react-select'
 
 import Icon from '../../icon'
-import { Option, Options } from './types'
 import selectStyles from './styles'
-import useInputErrorValidation from '../input/use-input-error-validation'
 import useTranslation from '../../../locale/use-translation'
+import useInputErrorValidation from '../input/use-input-error-validation'
+import { SelectOption, SelectOptions } from './types'
 
 export const Label = styled(InputLabel)<{
   hasError: boolean
@@ -111,12 +111,12 @@ const Error = styled.p`
   `}
 `
 
-export const MultiValueContainer = (props: MultiValueGenericProps<Option>) => (
-  <SelectComponents.MultiValueContainer {...props} />
-)
+export const MultiValueContainer = (
+  props: MultiValueGenericProps<SelectOption>,
+) => <SelectComponents.MultiValueContainer {...props} />
 
 export const DropdownIndicator = (
-  props: DropdownIndicatorProps<Option, true>,
+  props: DropdownIndicatorProps<SelectOption, true>,
 ) => (
   <SelectComponents.DropdownIndicator {...props}>
     <Icon name="arrowDown" size={12} />
@@ -124,7 +124,7 @@ export const DropdownIndicator = (
 )
 
 export const MultiValueRemove = (
-  props: MultiValueRemoveProps<Option, true>,
+  props: MultiValueRemoveProps<SelectOption, true>,
 ) => (
   <SelectComponents.MultiValueRemove {...props}>
     <Icon name="close" size={16} />
@@ -133,15 +133,18 @@ export const MultiValueRemove = (
 
 export type Props = {
   label?: string
-  options: Options
+  options: SelectOptions
   onFocus?(): void
   isMulti?: boolean
   required?: boolean
   className?: string
   onMenuOpen?(): void
-  value: PropsValue<Option>
+  value: PropsValue<SelectOption>
   closeMenuOnSelect?: boolean
-  onChange(args: PropsValue<Option>, actionMeta: ActionMeta<Option>): void
+  onChange(
+    args: PropsValue<SelectOption>,
+    actionMeta: ActionMeta<SelectOption>,
+  ): void
 }
 
 const GenericSelect = ({
@@ -161,14 +164,14 @@ const GenericSelect = ({
   const theme = useTheme()
   const styles = selectStyles(theme)
   const selectRef =
-    useRef<SelectInstance<Option, true, GroupBase<Option>>>(null)
+    useRef<SelectInstance<SelectOption, true, GroupBase<SelectOption>>>(null)
   const [focused, setFocused] = useState(false)
 
   const hasValue = (() => {
     if (Array.isArray(value)) {
       return value.length > 0
     }
-    return !!(value as Option)?.value
+    return !!(value as SelectOption)?.value
   })()
 
   // just validate the requirement

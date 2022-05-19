@@ -3,15 +3,29 @@
 exports[`<Icon /> should render snapshot correctly 1`] = `
 <div
   class="sc-bdvvtL bYGNWJ"
-  data-icon-name="arrowRight"
+  data-icon-name="alertInfo"
 >
   <svg
     fill="none"
-    viewBox="0 0 9 16"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
+    <circle
+      cx="12"
+      cy="12"
+      r="11"
+      stroke="currentColor"
+      stroke-width="2"
+    />
     <path
-      d="M1 1L7.96317 7.96317L1 14.9263"
+      d="M12 7V12"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+    <path
+      d="M12 16V16.5"
       stroke="currentColor"
       stroke-linecap="round"
       stroke-linejoin="round"

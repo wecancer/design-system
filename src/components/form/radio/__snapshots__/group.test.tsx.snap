@@ -16,11 +16,13 @@ exports[`<RadioGroup /> should render snapshot correctly 1`] = `
         role="radio"
         tabindex="0"
       />
-      <label
+      <div
         class="sc-dkPtRN ebgbMx"
+        role="button"
+        tabindex="0"
       >
         Item unchecked
-      </label>
+      </div>
     </div>
     <div
       class="sc-bdvvtL gowonf"
@@ -32,11 +34,13 @@ exports[`<RadioGroup /> should render snapshot correctly 1`] = `
         role="radio"
         tabindex="0"
       />
-      <label
+      <div
         class="sc-dkPtRN ebgbMx"
+        role="button"
+        tabindex="0"
       >
         Item checked
-      </label>
+      </div>
     </div>
     <div
       class="sc-bdvvtL gowonf"
@@ -48,11 +52,13 @@ exports[`<RadioGroup /> should render snapshot correctly 1`] = `
         role="radio"
         tabindex="0"
       />
-      <label
+      <div
         class="sc-dkPtRN ebgbMx"
+        role="button"
+        tabindex="0"
       >
         Item checked disabled
-      </label>
+      </div>
     </div>
     <div
       class="sc-bdvvtL gowonf"
@@ -64,11 +70,13 @@ exports[`<RadioGroup /> should render snapshot correctly 1`] = `
         role="radio"
         tabindex="0"
       />
-      <label
+      <div
         class="sc-dkPtRN ebgbMx"
+        role="button"
+        tabindex="0"
       >
         Item unchecked disabled
-      </label>
+      </div>
     </div>
   </div>
   <div
@@ -85,11 +93,13 @@ exports[`<RadioGroup /> should render snapshot correctly 1`] = `
         role="radio"
         tabindex="0"
       />
-      <label
+      <div
         class="sc-dkPtRN ebgbMx"
+        role="button"
+        tabindex="0"
       >
         Item unchecked
-      </label>
+      </div>
     </div>
     <div
       class="sc-bdvvtL gowonf"
@@ -101,11 +111,13 @@ exports[`<RadioGroup /> should render snapshot correctly 1`] = `
         role="radio"
         tabindex="0"
       />
-      <label
+      <div
         class="sc-dkPtRN ebgbMx"
+        role="button"
+        tabindex="0"
       >
         Item checked
-      </label>
+      </div>
     </div>
   </div>
   <div
@@ -122,11 +134,13 @@ exports[`<RadioGroup /> should render snapshot correctly 1`] = `
         role="radio"
         tabindex="0"
       />
-      <label
+      <div
         class="sc-dkPtRN ebgbMx"
+        role="button"
+        tabindex="0"
       >
         Item unchecked
-      </label>
+      </div>
     </div>
     <div
       class="sc-bdvvtL gowonf"
@@ -138,11 +152,13 @@ exports[`<RadioGroup /> should render snapshot correctly 1`] = `
         role="radio"
         tabindex="0"
       />
-      <label
+      <div
         class="sc-dkPtRN ebgbMx"
+        role="button"
+        tabindex="0"
       >
         Item checked
-      </label>
+      </div>
     </div>
   </div>
 </div>

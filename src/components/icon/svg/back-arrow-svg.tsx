@@ -1,22 +1,25 @@
 import React from 'react'
 
-const CloseSvg = () => (
+const BackArrowSvg = () => (
   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
-      d="M6 6L18.7742 18.7742"
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      d="M9.71729 5L3.00021 12L9.71729 19"
     />
-    <path
-      d="M6 18.7742L18.7742 5.99998"
+    <line
+      x1="1"
+      y1="-1"
+      x2="16.7331"
+      y2="-1"
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
-      strokeLinejoin="round"
+      transform="matrix(1 0 0 -1 3.26709 11.0317)"
     />
   </svg>
 )
 
-export default CloseSvg
+export default BackArrowSvg
