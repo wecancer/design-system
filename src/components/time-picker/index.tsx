@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 
 const Container = styled.div`
   position: relative;
 `
 
-const TimePicker = styled.div`
+const InputTimePicker = styled.div`
   ${({ theme }) => css`
     width: 150px;
     height: 40px;
@@ -111,76 +111,54 @@ const Button = styled.button`
   `}
 `
 
-const InputTimePicker = () => {
+type OnChangeParams = {
+  value: string
+  event: React.ChangeEvent<HTMLInputElement> | null
+}
+
+type Props = {
+  id?: string
+  value: string
+  onChange(params: OnChangeParams): void
+}
+
+const TimePicker = ({ value, onChange, id, ...props }: Props) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false)
+  const [completeTime, setCompleteTime] = useState('')
 
   const [selectedHour, setSelectedHour] = useState('00')
-  const [hour, setHour] = useState([
-    '00',
-    '01',
-    '02',
-    '03',
-    '04',
-    '05',
-    '06',
-    '07',
-    '08',
-    '09',
-    '10',
-    '11',
-    '12',
-    '13',
-    '14',
-    '15',
-    '16',
-    '17',
-    '18',
-    '19',
-    '20',
-    '21',
-    '22',
-    '23',
-  ])
+  const hours = new Array(23)
+    .fill(null)
+    .map((item, index) => `${index + 1}`.padStart(2, '0'))
 
   const [selectedMinute, setSelectedMinute] = useState('00')
-  const [minute, setMinute] = useState([
-    '00',
-    '01',
-    '02',
-    '03',
-    '04',
-    '05',
-    '06',
-    '07',
-    '08',
-    '09',
-    '10',
-    '11',
-    '12',
-    '13',
-    '14',
-    '15',
-    '16',
-    '17',
-    '18',
-    '19',
-    '20',
-    '21',
-    '22',
-    '23',
-  ])
+  const minutes = new Array(23)
+    .fill(null)
+    .map((item, index) => `${index + 1}`.padStart(2, '0'))
+
+  useEffect(() => {
+    setCompleteTime(selectedHour + ':' + selectedMinute)
+  }, [selectedHour, selectedMinute])
+
+  console.log(completeTime)
 
   return (
-    <Container>
-      <TimePicker>
+    <Container {...props}>
+      <InputTimePicker id={id}>
         <Input
           onFocus={() => setIsOptionsOpen(true)}
           type="number"
           min="0"
           max="23"
           placeholder="00"
-          value={selectedHour}
-          onChange={(event) => setSelectedHour(event.currentTarget.value)}
+          value={parseInt(selectedHour) > 23 ? '23' : selectedHour}
+          onChange={(event) =>
+            setSelectedHour(
+              parseInt(event.currentTarget.value) > 23
+                ? '23'
+                : event.currentTarget.value,
+            )
+          }
         />
         :
         <Input
@@ -190,16 +168,22 @@ const InputTimePicker = () => {
           max="59"
           placeholder="00"
           value={selectedMinute}
-          onChange={(event) => setSelectedHour(event.currentTarget.value)}
+          onChange={(event) =>
+            setSelectedMinute(
+              parseInt(event.currentTarget.value) > 59
+                ? '00'
+                : event.currentTarget.value,
+            )
+          }
         />
-      </TimePicker>
+      </InputTimePicker>
       <OptionsTime
         isOpen={isOptionsOpen}
         onMouseLeave={() => setIsOptionsOpen(false)}
       >
         <Cell>
           <ul>
-            {hour.map((item) => (
+            {hours.map((item) => (
               <li>
                 <Button
                   value={item}
@@ -215,7 +199,7 @@ const InputTimePicker = () => {
         </Cell>
         <Cell>
           <ul>
-            {minute.map((item) => (
+            {minutes.map((item) => (
               <li>
                 <Button
                   value={item}
@@ -234,4 +218,4 @@ const InputTimePicker = () => {
   )
 }
 
-export default InputTimePicker
+export default TimePicker
