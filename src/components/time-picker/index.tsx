@@ -5,8 +5,8 @@ const Container = styled.div`
   position: relative;
 `
 
-const InputTimePicker = styled.div`
-  ${({ theme }) => css`
+const InputTimePicker = styled.div<{ isFocused?: boolean }>`
+  ${({ theme, isFocused }) => css`
     width: 150px;
     height: 40px;
     display: flex;
@@ -18,6 +18,13 @@ const InputTimePicker = styled.div`
     border: 0.125rem solid ${theme.colors.placeholder};
     outline: none;
     transition: all 250ms ease;
+    ${isFocused &&
+    css`
+      border-color: ${theme.colors.primary};
+      background-color: ${theme.colors.white};
+      border: 0.125rem solid ${theme.colors.primary};
+      box-shadow: 0 0 0.062rem 0.375rem ${theme.colors.focusPrimary};
+    `}
   `}
 `
 
@@ -25,7 +32,7 @@ const OptionsTime = styled.div<{ isOpen?: boolean }>`
   ${({ theme, isOpen }) => css`
     position: relative;
     z-index: 35;
-    top: 10px;
+    top: 35px;
     display: ${isOpen ? 'flex' : 'none'};
     justify-content: space-between;
     width: 150px;
@@ -92,6 +99,10 @@ const Cell = styled.div`
       border-radius: 0.3rem;
       background-color: ${theme.colors.offWhite};
       cursor: pointer;
+
+      &:hover {
+        background-color: ${theme.colors.focusPrimary};
+      }
     }
   `}
 `
@@ -104,10 +115,6 @@ const Button = styled.button`
     font-family: ${theme.font.family};
     font-size: 0.9rem;
     background-color: transparent;
-
-    &:hover < li {
-      background-color: red;
-    }
   `}
 `
 
@@ -123,8 +130,8 @@ type Props = {
 }
 
 const TimePicker = ({ value, onChange, id, ...props }: Props) => {
+  const [isInputFocused, setIsInputFocused] = useState(false)
   const [isOptionsOpen, setIsOptionsOpen] = useState(false)
-  const [completeTime, setCompleteTime] = useState('')
 
   const [selectedHour, setSelectedHour] = useState('00')
   const hours = new Array(23)
@@ -132,19 +139,25 @@ const TimePicker = ({ value, onChange, id, ...props }: Props) => {
     .map((item, index) => `${index + 1}`.padStart(2, '0'))
 
   const [selectedMinute, setSelectedMinute] = useState('00')
-  const minutes = new Array(23)
+  const minutes = new Array(59)
     .fill(null)
     .map((item, index) => `${index + 1}`.padStart(2, '0'))
 
   useEffect(() => {
-    setCompleteTime(selectedHour + ':' + selectedMinute)
-  }, [selectedHour, selectedMinute])
-
-  console.log(completeTime)
+    const [hour, minute] = value.split(':')
+    setSelectedHour(hour)
+    setSelectedMinute(minute)
+  }, [value])
 
   return (
-    <Container {...props}>
-      <InputTimePicker id={id}>
+    <Container
+      {...props}
+      onMouseEnter={() => {
+        setIsInputFocused(true)
+        setIsOptionsOpen(true)
+      }}
+    >
+      <InputTimePicker id={id} isFocused={isInputFocused}>
         <Input
           onFocus={() => setIsOptionsOpen(true)}
           type="number"
@@ -179,16 +192,18 @@ const TimePicker = ({ value, onChange, id, ...props }: Props) => {
       </InputTimePicker>
       <OptionsTime
         isOpen={isOptionsOpen}
-        onMouseLeave={() => setIsOptionsOpen(false)}
+        onMouseLeave={() => {
+          setIsInputFocused(false)
+          setIsOptionsOpen(false)
+        }}
       >
         <Cell>
           <ul>
             {hours.map((item) => (
-              <li>
+              <li key={item}>
                 <Button
                   value={item}
                   onClick={() => setSelectedHour(item)}
-                  key={item}
                   id={item}
                 >
                   {item}
@@ -200,11 +215,10 @@ const TimePicker = ({ value, onChange, id, ...props }: Props) => {
         <Cell>
           <ul>
             {minutes.map((item) => (
-              <li>
+              <li key={item}>
                 <Button
                   value={item}
                   onClick={() => setSelectedMinute(item)}
-                  key={item}
                   id={item}
                 >
                   {item}

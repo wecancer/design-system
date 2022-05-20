@@ -15,7 +15,7 @@ const Template: Story = (args) => {
 
 export const Default = Template.bind({})
 Default.args = {
-  id: 'label-id',
+  id: 'timepicker-id',
 }
 
 export default {

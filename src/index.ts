@@ -7,6 +7,7 @@ import WecancerProvider from './wecancer-provider'
 import Tooltip from './components/tooltip'
 import Dropdown from './components/dropdown/Panel'
 
+import TimePicker from './components/time-picker'
 import DatePicker from './components/date-picker'
 import RangeDatePicker, {
   RangePickerDate,
@@ -72,6 +73,7 @@ export {
   CardIcon,
   CardImage,
   Checkbox,
+  TimePicker,
   DatePicker,
   Dropdown,
   Icon,

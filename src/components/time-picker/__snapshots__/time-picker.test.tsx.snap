@@ -1,0 +1,785 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TimePicker /> should render snapshot correctly 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL kERQPB"
+  >
+    <div
+      class="sc-gsDKAQ ecBSKG"
+    >
+      <input
+        class="sc-hKwDye eXbYmh"
+        max="23"
+        min="0"
+        placeholder="00"
+        type="number"
+        value=""
+      />
+      :
+      <input
+        class="sc-hKwDye eXbYmh"
+        max="59"
+        min="0"
+        placeholder="00"
+        type="number"
+        value="00"
+      />
+    </div>
+    <div
+      class="sc-dkPtRN kvskaJ"
+    >
+      <div
+        class="sc-eCImPb aGLdi"
+      >
+        <ul>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="01"
+              value="01"
+            >
+              01
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="02"
+              value="02"
+            >
+              02
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="03"
+              value="03"
+            >
+              03
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="04"
+              value="04"
+            >
+              04
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="05"
+              value="05"
+            >
+              05
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="06"
+              value="06"
+            >
+              06
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="07"
+              value="07"
+            >
+              07
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="08"
+              value="08"
+            >
+              08
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="09"
+              value="09"
+            >
+              09
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="10"
+              value="10"
+            >
+              10
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="11"
+              value="11"
+            >
+              11
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="12"
+              value="12"
+            >
+              12
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="13"
+              value="13"
+            >
+              13
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="14"
+              value="14"
+            >
+              14
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="15"
+              value="15"
+            >
+              15
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="16"
+              value="16"
+            >
+              16
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="17"
+              value="17"
+            >
+              17
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="18"
+              value="18"
+            >
+              18
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="19"
+              value="19"
+            >
+              19
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="20"
+              value="20"
+            >
+              20
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="21"
+              value="21"
+            >
+              21
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="22"
+              value="22"
+            >
+              22
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="23"
+              value="23"
+            >
+              23
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="sc-eCImPb aGLdi"
+      >
+        <ul>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="01"
+              value="01"
+            >
+              01
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="02"
+              value="02"
+            >
+              02
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="03"
+              value="03"
+            >
+              03
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="04"
+              value="04"
+            >
+              04
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="05"
+              value="05"
+            >
+              05
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="06"
+              value="06"
+            >
+              06
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="07"
+              value="07"
+            >
+              07
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="08"
+              value="08"
+            >
+              08
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="09"
+              value="09"
+            >
+              09
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="10"
+              value="10"
+            >
+              10
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="11"
+              value="11"
+            >
+              11
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="12"
+              value="12"
+            >
+              12
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="13"
+              value="13"
+            >
+              13
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="14"
+              value="14"
+            >
+              14
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="15"
+              value="15"
+            >
+              15
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="16"
+              value="16"
+            >
+              16
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="17"
+              value="17"
+            >
+              17
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="18"
+              value="18"
+            >
+              18
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="19"
+              value="19"
+            >
+              19
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="20"
+              value="20"
+            >
+              20
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="21"
+              value="21"
+            >
+              21
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="22"
+              value="22"
+            >
+              22
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="23"
+              value="23"
+            >
+              23
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="24"
+              value="24"
+            >
+              24
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="25"
+              value="25"
+            >
+              25
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="26"
+              value="26"
+            >
+              26
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="27"
+              value="27"
+            >
+              27
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="28"
+              value="28"
+            >
+              28
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="29"
+              value="29"
+            >
+              29
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="30"
+              value="30"
+            >
+              30
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="31"
+              value="31"
+            >
+              31
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="32"
+              value="32"
+            >
+              32
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="33"
+              value="33"
+            >
+              33
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="34"
+              value="34"
+            >
+              34
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="35"
+              value="35"
+            >
+              35
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="36"
+              value="36"
+            >
+              36
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="37"
+              value="37"
+            >
+              37
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="38"
+              value="38"
+            >
+              38
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="39"
+              value="39"
+            >
+              39
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="40"
+              value="40"
+            >
+              40
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="41"
+              value="41"
+            >
+              41
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="42"
+              value="42"
+            >
+              42
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="43"
+              value="43"
+            >
+              43
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="44"
+              value="44"
+            >
+              44
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="45"
+              value="45"
+            >
+              45
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="46"
+              value="46"
+            >
+              46
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="47"
+              value="47"
+            >
+              47
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="48"
+              value="48"
+            >
+              48
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="49"
+              value="49"
+            >
+              49
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="50"
+              value="50"
+            >
+              50
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="51"
+              value="51"
+            >
+              51
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="52"
+              value="52"
+            >
+              52
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="53"
+              value="53"
+            >
+              53
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="54"
+              value="54"
+            >
+              54
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="55"
+              value="55"
+            >
+              55
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="56"
+              value="56"
+            >
+              56
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="57"
+              value="57"
+            >
+              57
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="58"
+              value="58"
+            >
+              58
+            </button>
+          </li>
+          <li>
+            <button
+              class="sc-jRQBWg NafIA"
+              id="59"
+              value="59"
+            >
+              59
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
