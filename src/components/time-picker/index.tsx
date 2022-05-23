@@ -120,7 +120,6 @@ const Button = styled.button`
 
 type OnChangeParams = {
   value: string
-  event: React.ChangeEvent<HTMLInputElement> | null
 }
 
 type Props = {
@@ -134,20 +133,24 @@ const TimePicker = ({ value, onChange, id, ...props }: Props) => {
   const [isOptionsOpen, setIsOptionsOpen] = useState(false)
 
   const [selectedHour, setSelectedHour] = useState('00')
-  const hours = new Array(23)
+  const hours = new Array(24)
     .fill(null)
-    .map((item, index) => `${index + 1}`.padStart(2, '0'))
+    .map((item, index) => `${index}`.padStart(2, '0'))
 
   const [selectedMinute, setSelectedMinute] = useState('00')
-  const minutes = new Array(59)
+  const minutes = new Array(60)
     .fill(null)
-    .map((item, index) => `${index + 1}`.padStart(2, '0'))
+    .map((item, index) => `${index}`.padStart(2, '0'))
 
   useEffect(() => {
     const [hour, minute] = value.split(':')
     setSelectedHour(hour)
     setSelectedMinute(minute)
   }, [value])
+
+  const handleChange = (hour: string, minute: string) => {
+    onChange({ value: `${hour}:${minute}` })
+  }
 
   return (
     <Container
@@ -165,13 +168,12 @@ const TimePicker = ({ value, onChange, id, ...props }: Props) => {
           max="23"
           placeholder="00"
           value={parseInt(selectedHour) > 23 ? '23' : selectedHour}
-          onChange={(event) =>
-            setSelectedHour(
-              parseInt(event.currentTarget.value) > 23
-                ? '23'
-                : event.currentTarget.value,
-            )
-          }
+          onChange={(event) => {
+            const newHour =
+              +event.currentTarget.value > 23 ? '23' : event.currentTarget.value
+            setSelectedHour(newHour)
+            handleChange(newHour, selectedMinute)
+          }}
         />
         :
         <Input
@@ -181,13 +183,12 @@ const TimePicker = ({ value, onChange, id, ...props }: Props) => {
           max="59"
           placeholder="00"
           value={selectedMinute}
-          onChange={(event) =>
-            setSelectedMinute(
-              parseInt(event.currentTarget.value) > 59
-                ? '00'
-                : event.currentTarget.value,
-            )
-          }
+          onChange={(event) => {
+            const newMinute =
+              +event.currentTarget.value > 59 ? '00' : event.currentTarget.value
+            setSelectedMinute(newMinute)
+            handleChange(selectedHour, newMinute)
+          }}
         />
       </InputTimePicker>
       <OptionsTime
@@ -202,8 +203,12 @@ const TimePicker = ({ value, onChange, id, ...props }: Props) => {
             {hours.map((item) => (
               <li key={item}>
                 <Button
+                  type="button"
                   value={item}
-                  onClick={() => setSelectedHour(item)}
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    handleChange(item, selectedMinute)
+                  }}
                   id={item}
                 >
                   {item}
@@ -217,8 +222,12 @@ const TimePicker = ({ value, onChange, id, ...props }: Props) => {
             {minutes.map((item) => (
               <li key={item}>
                 <Button
+                  type="button"
                   value={item}
-                  onClick={() => setSelectedMinute(item)}
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    handleChange(selectedHour, item)
+                  }}
                   id={item}
                 >
                   {item}

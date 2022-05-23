@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { Story } from '@storybook/react'
-import InputTimePicker from '.'
+import TimePicker from '.'
 
 const Template: Story = (args) => {
   const [value, onChange] = useState('')
   return (
-    <InputTimePicker
+    <TimePicker
       {...args}
       value={value}
       onChange={(params) => onChange(params.value)}
@@ -19,6 +19,6 @@ Default.args = {
 }
 
 export default {
-  title: 'Components/InputTimePicker',
-  component: InputTimePicker,
+  title: 'Components/TimePicker',
+  component: TimePicker,
 }
