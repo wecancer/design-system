@@ -5,7 +5,10 @@ describe('<DateTimePicker />', () => {
   it('should render snapshot correctly', () => {
     const { container } = render(
       <>
-        <DateTimePicker datetime={new Date()} onChange={() => null} />
+        <DateTimePicker
+          datetime={new Date(0, 0, 0, 0, 0)}
+          onChange={() => null}
+        />
       </>,
     )
     fireEvent.click(container)
