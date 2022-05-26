@@ -73,4 +73,18 @@ describe('<Textarea />', () => {
     const textarea = container.querySelector('textarea') as HTMLElement
     fireEvent.change(textarea, { target: { value: 'testing change...' } })
   })
+
+  it('should contains required attribute', () => {
+    const { container } = render(
+      <Textarea
+        required
+        value=""
+        onChange={({ value }) => {
+          expect(value).toBe('')
+        }}
+      />,
+    )
+    const textarea = container.querySelector('textarea')
+    expect(textarea).toHaveAttribute('required')
+  })
 })

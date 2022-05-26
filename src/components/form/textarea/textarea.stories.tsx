@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Story } from '@storybook/react'
 import TextArea, { Props } from '.'
+import Button from '../../button'
 
 const Template: Story<Props> = (args) => <TextArea {...args} />
 
@@ -12,6 +13,30 @@ Default.args = {
   infoType: undefined,
   onClear: () => null,
   onChange: () => null,
+}
+
+const RequiredTemplate: Story<Props> = (args) => {
+  const [val, setValue] = useState('')
+  return (
+    <form onSubmit={(e) => e.preventDefault()}>
+      <TextArea
+        {...args}
+        required
+        value={val}
+        onChange={({ value }) => setValue(value)}
+      />
+      <br />
+      <Button type="submit" primary onClick={() => null}>
+        Test required submit
+      </Button>
+    </form>
+  )
+}
+
+export const Required = RequiredTemplate.bind({})
+Required.args = {
+  label: 'Type anything',
+  required: true,
 }
 
 export default {
