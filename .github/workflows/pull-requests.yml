@@ -1,10 +1,8 @@
-name: Check code and build
+name: Deploy to production
 
 on:
-  push:
-    branches: [develop]
   pull_request:
-    branches: [develop]
+    branches: [main]
 
 jobs:
   build:
