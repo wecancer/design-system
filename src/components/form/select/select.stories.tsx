@@ -4,12 +4,9 @@ import Button from '../../button'
 
 import Select, { Props } from '.'
 
-const options = [
-  { value: '1', label: 'Item 1' },
-  { value: '2', label: 'Item 2' },
-  { value: '3', label: 'Item 3' },
-  { value: '4', label: 'Item 4' },
-]
+const options = new Array(30)
+  .fill(null)
+  .map((item, index) => ({ value: `${index}`, label: `Item ${index}` }))
 
 const Template: Story<Props> = (args) => {
   const [val, setValue] = useState('')
@@ -17,6 +14,8 @@ const Template: Story<Props> = (args) => {
     <Select
       {...args}
       value={val}
+      isMenuListLoading
+      onScrollEnd={() => console.log('testing onscroll end')}
       onChange={({ value, option }) => {
         console.log(value, option)
         setValue(value)

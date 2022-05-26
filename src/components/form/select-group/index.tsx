@@ -22,7 +22,9 @@ const SelectGroup = ({
   onChange,
   required,
   className,
+  onScrollEnd,
   options = [],
+  isMenuListLoading,
   hasSelectAll = true,
 }: Props) => {
   const t = useTranslation()
@@ -43,7 +45,9 @@ const SelectGroup = ({
       options={opts}
       required={required}
       className={className}
+      onScrollEnd={onScrollEnd}
       closeMenuOnSelect={false}
+      isMenuListLoading={isMenuListLoading}
       onChange={(val: MultiValue<SelectOption>, action) => {
         const newOptionValue = val as SelectOptions
         if (action.option?.value === selectAllOption.value) {

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { SelectOption, SelectOptions } from './types'
-import GenericSelect from './generic-select'
+import { SelectOption } from './types'
+import GenericSelect, { Props as GenericProps } from './generic-select'
 import { SingleValue } from 'react-select'
 
 type ChangeParams = {
@@ -9,14 +9,8 @@ type ChangeParams = {
   option: SelectOption
 }
 
-export type Props = {
+export type Props = Omit<GenericProps, 'value' | 'onChange'> & {
   value: string
-  label?: string
-  options?: SelectOptions
-  onFocus?(): void
-  required?: boolean
-  className?: string
-  onMenuOpen?(): void
   onChange(args: ChangeParams): void
 }
 
@@ -27,8 +21,10 @@ const Select = ({
   onChange,
   className,
   onMenuOpen,
+  onScrollEnd,
   options = [],
   required = false,
+  isMenuListLoading,
 }: Props) => {
   const selected = value
     ? options.find((item) => item?.value === value)
@@ -41,11 +37,13 @@ const Select = ({
       onFocus={onFocus}
       options={options}
       required={required}
+      className={className}
+      onMenuOpen={onMenuOpen}
+      onScrollEnd={onScrollEnd}
+      isMenuListLoading={isMenuListLoading}
       onChange={(option: SingleValue<SelectOption>) =>
         onChange({ value: `${option?.value}`, option })
       }
-      className={className}
-      onMenuOpen={onMenuOpen}
     />
   )
 }
