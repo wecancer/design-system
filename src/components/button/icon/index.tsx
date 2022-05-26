@@ -10,16 +10,22 @@ type Size = 'small' | 'medium' | 'large'
 const Container = styled.button<{
   buttonSize: Size
   isActive: boolean
+  isDisabled: boolean
   fillColor: ColorsTemplate
 }>`
-  ${({ theme, isActive, fillColor, buttonSize }) => css`
+  ${({ theme, isActive, fillColor, buttonSize, isDisabled }) => css`
     padding: 0;
-    cursor: pointer;
+    cursor: ${isDisabled ? 'default' : 'pointer'};
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     border: 2px solid ${theme.colors[fillColor]};
+
+    ${isDisabled &&
+    css`
+      opacity: 0.5;
+    `}
 
     ${isActive
       ? css`
@@ -67,6 +73,7 @@ export type Props = {
   isLoading?: boolean
   isDisabled?: boolean
   color?: ColorsTemplate
+  hasStopPropagation?: boolean
   onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
@@ -80,15 +87,24 @@ const ButtonIcon = ({
   size = 'medium',
   color = 'primary',
   isDisabled = false,
+  hasStopPropagation = false,
 }: Props): React.ReactElement => (
   <Container
     title={title}
-    onClick={onClick}
     fillColor={color}
     buttonSize={size}
-    disabled={isDisabled}
     className={className}
     isActive={!!isActive}
+    isDisabled={isDisabled}
+    onClick={(e) => {
+      if (hasStopPropagation) {
+        e.stopPropagation()
+      }
+
+      if (!isDisabled) {
+        onClick?.(e)
+      }
+    }}
   >
     {isLoading ? <Loading /> : <Icon name={icon} />}
   </Container>
