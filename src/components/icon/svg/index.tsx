@@ -12,6 +12,7 @@ import ChartPieSvg from './chart-pie-svg'
 import ChartTreeMap from './chart-treemap-svg'
 import CheckCircleSvg from './check-circle-svg'
 import CheckSvg from './check-svg'
+import ClockSvg from './clock-svg'
 import CloseCircleSvg from './close-circle-svg'
 import CloseSvg from './close-svg'
 import CommentSvg from './comment-svg'
@@ -55,6 +56,7 @@ const iconMap = {
   chartPie: ChartPieSvg,
   chartTreeMap: ChartTreeMap,
   check: CheckSvg,
+  clock: ClockSvg,
   checkCircle: CheckCircleSvg,
   close: CloseSvg,
   closeCircle: CloseCircleSvg,

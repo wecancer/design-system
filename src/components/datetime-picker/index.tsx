@@ -6,10 +6,12 @@ import TimePicker from '../time-picker'
 
 const Container = styled.div`
   width: 100%;
+  height: 40px;
   display: flex;
+  flex-direction: row;
 
-  & > div:first-child {
-    margin-right: 15px;
+  & > div:last-child {
+    margin-left: 20px;
   }
 `
 
@@ -20,10 +22,19 @@ type OnChangeParams = {
 type Props = {
   id?: string
   datetime: Date
+  labelDatePicker?: string
+  labelTimePicker?: string
   onChange(params: OnChangeParams): void
 }
 
-const DateTimePicker = ({ datetime, onChange, id, ...props }: Props) => {
+const DateTimePicker = ({
+  datetime,
+  onChange,
+  id,
+  labelDatePicker,
+  labelTimePicker,
+  ...props
+}: Props) => {
   const [dateValue, setDateValue] = useState(datetime)
   const [timeValue, setTimeValue] = useState(
     `${datetime.getHours()}:${datetime.getMinutes()}`,
@@ -32,10 +43,10 @@ const DateTimePicker = ({ datetime, onChange, id, ...props }: Props) => {
   return (
     <Container {...props}>
       <DatePicker
-        label="dd/mm/aaaa"
+        label={labelDatePicker}
         value={dateValue}
         onChange={({ value }) => {
-          setDateValue(value || new Date())
+          setDateValue(value || new Date(0, 0, 0, 0, 0, 0, 0))
           const newDate =
             value &&
             set(datetime, {
@@ -43,10 +54,11 @@ const DateTimePicker = ({ datetime, onChange, id, ...props }: Props) => {
               month: value.getMonth(),
               date: value.getDate(),
             })
-          onChange({ value: newDate || new Date() })
+          onChange({ value: newDate || new Date(0, 0, 0, 0, 0, 0, 0) })
         }}
       />
       <TimePicker
+        label={labelTimePicker}
         value={timeValue}
         onChange={({ value }) => {
           setTimeValue(value)

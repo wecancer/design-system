@@ -7,6 +7,9 @@ describe('<DateTimePicker />', () => {
       <>
         <DateTimePicker
           datetime={new Date(0, 0, 0, 0, 0)}
+          id="DateTimePicker-id"
+          labelDatePicker="labelDatePicker"
+          labelTimePicker="labelTimePicker"
           onChange={() => null}
         />
       </>,
