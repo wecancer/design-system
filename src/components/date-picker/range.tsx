@@ -161,7 +161,6 @@ const DatePicker = ({
         <DatePickerStyledContainer>
           <ReactDayPicker.DayPicker
             mode="range"
-            showOutsideDays
             toYear={toYear}
             selected={value}
             locale={fnsLocale}
