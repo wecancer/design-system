@@ -17,7 +17,10 @@ const Wrapper = styled.div`
   `}
 `
 
-const Textarea = styled.textarea<{ hasValue: boolean; infoType?: MessageType }>`
+const Textarea = styled.textarea<{
+  hasValue: boolean
+  infoType?: MessageType
+}>`
   ${({ theme, hasValue, infoType }) => css`
     width: 100%;
     font-size: 1rem;
@@ -134,6 +137,7 @@ export type Props = {
   rows?: number
   value: string
   label?: string
+  required?: boolean
   infoType?: MessageType
   infoMessage?: string
   onClear?(): void
@@ -144,6 +148,7 @@ const InputTextarea = ({
   id,
   value,
   label,
+  required,
   onClear,
   rows = 2,
   onChange,
@@ -160,6 +165,7 @@ const InputTextarea = ({
         id={id}
         rows={rows}
         value={value}
+        required={required}
         hasValue={hasValue}
         infoType={infoType}
         onChange={(event) =>
