@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import styled, { useTheme, css } from 'styled-components'
 import { Label as InputLabel } from '../input/input'
 
@@ -11,6 +11,7 @@ import ReactSelect, {
   MultiValueGenericProps,
   DropdownIndicatorProps,
   components as SelectComponents,
+  MenuListProps,
 } from 'react-select'
 
 import Icon from '../../icon'
@@ -18,6 +19,7 @@ import selectStyles from './styles'
 import useTranslation from '../../../locale/use-translation'
 import useInputErrorValidation from '../input/use-input-error-validation'
 import { SelectOption, SelectOptions } from './types'
+import Loading from '../../loading'
 
 export const Label = styled(InputLabel)<{
   hasError: boolean
@@ -73,6 +75,10 @@ export const Label = styled(InputLabel)<{
   `}
 `
 
+const LoadingContainer = styled.div`
+  padding: 1rem;
+`
+
 const Input = styled.input`
   position: absolute;
   bottom: -5px;
@@ -119,7 +125,7 @@ export const DropdownIndicator = (
   props: DropdownIndicatorProps<SelectOption, true>,
 ) => (
   <SelectComponents.DropdownIndicator {...props}>
-    <Icon name="arrowDown" size={12} />
+    <Icon name="arrowDown" size={18} />
   </SelectComponents.DropdownIndicator>
 )
 
@@ -131,16 +137,58 @@ export const MultiValueRemove = (
   </SelectComponents.MultiValueRemove>
 )
 
+export const menuList =
+  (onSrollEnd: () => void, isMenuListLoading?: boolean) =>
+  (props: MenuListProps<SelectOption, true>) => {
+    const ref = useRef<HTMLDivElement>(null)
+    const scrollEndCallback = useCallback(onSrollEnd, [])
+
+    useEffect(() => {
+      const handleScroll = (e: Event) => {
+        const { scrollHeight, scrollTop, offsetHeight } =
+          e.currentTarget as HTMLDivElement
+        if (scrollHeight - offsetHeight <= scrollTop + 200) {
+          onSrollEnd()
+        }
+      }
+      const { current } = ref
+
+      if (current) {
+        const element = current.querySelector('[class*="MenuList"]')
+        element?.addEventListener('scroll', handleScroll)
+      }
+
+      return () => {
+        ref.current?.removeEventListener('scroll', handleScroll)
+      }
+    }, [scrollEndCallback])
+
+    return (
+      <div ref={ref}>
+        <SelectComponents.MenuList {...props}>
+          {props.children}
+          {isMenuListLoading && (
+            <LoadingContainer>
+              <Loading />
+            </LoadingContainer>
+          )}
+        </SelectComponents.MenuList>
+      </div>
+    )
+  }
+
 export type Props = {
   label?: string
-  options: SelectOptions
   onFocus?(): void
   isMulti?: boolean
   required?: boolean
   className?: string
   onMenuOpen?(): void
-  value: PropsValue<SelectOption>
+  options: SelectOptions
+  onScrollEnd?: () => void
   closeMenuOnSelect?: boolean
+  isMenuListLoading?: boolean
+  value: PropsValue<SelectOption>
   onChange(
     args: PropsValue<SelectOption>,
     actionMeta: ActionMeta<SelectOption>,
@@ -158,6 +206,8 @@ const GenericSelect = ({
   onMenuOpen,
   required = false,
   closeMenuOnSelect,
+  isMenuListLoading,
+  onScrollEnd = () => null,
 }: Props) => {
   const t = useTranslation()
   const inputRef = useRef<HTMLInputElement>(null)
@@ -213,9 +263,10 @@ const GenericSelect = ({
           onFocus?.()
         }}
         components={{
-          MultiValueContainer,
-          DropdownIndicator,
           MultiValueRemove,
+          DropdownIndicator,
+          MultiValueContainer,
+          MenuList: menuList(onScrollEnd, isMenuListLoading),
         }}
       />
       {required && (

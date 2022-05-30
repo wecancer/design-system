@@ -13,7 +13,6 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/wecancer/design-system/actions/workflows/develop.yml/badge.svg" alt="Tests, lint and build" />
   <img src="https://github.com/wecancer/design-system/actions/workflows/main.yml/badge.svg" alt="Deploy" />
 </p>
 

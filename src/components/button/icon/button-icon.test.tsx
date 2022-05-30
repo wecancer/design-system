@@ -25,10 +25,16 @@ describe('<ButtonIcon />', () => {
   })
 
   it('should receive the isDisabled attribute', () => {
+    const handleClick = jest.fn()
     const { container } = render(
-      <ButtonIcon className="customClass" icon="check" isDisabled />,
+      <ButtonIcon icon="check" onClick={handleClick} isDisabled />,
     )
-    expect(container.querySelector('.customClass')).toBeDisabled()
+    const btnElement = container.querySelector('button')
+
+    if (!btnElement) throw new Error("Can't find the icon button")
+
+    fireEvent.click(btnElement)
+    expect(handleClick).toHaveBeenCalledTimes(0)
   })
 
   it('should receive the isLoading attribute', () => {
