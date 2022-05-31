@@ -51,6 +51,7 @@ import Table from './components/table'
 import TableRow from './components/table/row'
 import TableCell from './components/table/cell'
 import TableHeader from './components/table/header'
+import TableHeaderCell from './components/table/header-cell'
 
 import Tab from './components/tab/selection/tab'
 import Tabs from './components/tab/selection/tabs'
@@ -102,6 +103,7 @@ export {
   Table,
   TableCell,
   TableHeader,
+  TableHeaderCell,
   TableRow,
   Tabs,
   Textarea,
