@@ -4,15 +4,16 @@ import Table, { Props } from '.'
 import TableRow from './row'
 import TableCell from './cell'
 import TableHeader from './header'
+import TableHeaderCell from './header-cell'
 import Pill from '../pill'
 
 const Template: Story<Props> = () => (
   <Table cellsWitdh="100px 200px 1fr 1fr">
     <TableHeader>
-      <TableCell>Head 1</TableCell>
-      <TableCell>Head 2</TableCell>
-      <TableCell>Head 3</TableCell>
-      <TableCell>Head 4</TableCell>
+      <TableHeaderCell>Head 1</TableHeaderCell>
+      <TableHeaderCell>Head 2</TableHeaderCell>
+      <TableHeaderCell>Head 3</TableHeaderCell>
+      <TableHeaderCell>Head 4</TableHeaderCell>
     </TableHeader>
     <TableRow onClick={() => alert('First row was clicked')}>
       <TableCell type="warning">Warning</TableCell>
