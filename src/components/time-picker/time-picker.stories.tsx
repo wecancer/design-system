@@ -43,7 +43,12 @@ const OverlapTemplate: Story = (args) => {
         onChange={() => {}}
       />
       <br></br>
-      <SelectGroup value={options} label="test select" onChange={() => {}} />
+      <SelectGroup
+        options={options}
+        value={options}
+        label="test select"
+        onChange={() => {}}
+      />
     </form>
   )
 }
