@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import styled, { css } from 'styled-components'
 import Icon from '../icon'
 import { Label as InputLabel } from '../form/input/input'
@@ -63,7 +63,7 @@ const Label = styled(InputLabel)<{
 
 const InputTimePicker = styled.div<{ isFocused?: boolean }>`
   ${({ theme, isFocused }) => css`
-    width: 200px;
+    width: 140px;
     height: 40px;
     display: flex;
     align-items: center;
@@ -74,6 +74,7 @@ const InputTimePicker = styled.div<{ isFocused?: boolean }>`
     border: 0.125rem solid ${theme.colors.placeholder};
     outline: none;
     transition: all 250ms ease;
+    outline: none;
 
     ${isFocused &&
     css`
@@ -82,23 +83,22 @@ const InputTimePicker = styled.div<{ isFocused?: boolean }>`
       border: 0.125rem solid ${theme.colors.primary};
       box-shadow: 0 0 0.062rem 0.375rem ${theme.colors.focusPrimary};
     `}
-
-    & > div[data-icon-name] {
-      cursor: pointer;
-    }
   `}
 `
 
-const OptionsTime = styled.div<{ isOpen?: boolean }>`
-  ${({ theme, isOpen }) => css`
+const OptionsTime = styled.div`
+  ${({ theme }) => css`
+    width: 140px;
+    height: 200px;
     position: absolute;
+    overflow: hidden;
     z-index: 35;
     top: 50px;
-    display: ${isOpen ? 'flex' : 'none'};
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    padding: 0.625rem 0;
     justify-content: space-between;
-    width: 200px;
-    height: 200px;
-    padding: 5px;
     border-radius: 1rem;
     background-color: ${theme.colors.inputBg};
   `}
@@ -123,16 +123,12 @@ const Input = styled.input`
   }
 `
 
-const Cell = styled.div`
+const OptionCol = styled.div`
   ${({ theme }) => css`
     position: relative;
-    z-index: 34;
     width: 100%;
     overflow: hidden;
-
-    &:hover {
-      overflow-y: scroll;
-    }
+    overflow-y: scroll;
 
     &::-webkit-scrollbar {
       width: 3px;
@@ -143,51 +139,26 @@ const Cell = styled.div`
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: #ccc;
+      background-color: ${theme.colors.label};
       border-radius: 20px;
     }
-
-    & > ul {
-      width: 100%;
-      list-style: none;
-    }
-
-    & > ul > li {
-      width: 85px;
-      margin: 10px 5px;
-      padding: 5px;
-      text-align: center;
-      border-radius: 0.3rem;
-      background-color: ${theme.colors.offWhite};
-      cursor: pointer;
-
-      &:hover {
-        background-color: ${theme.colors.focusPrimary};
-      }
-    }
   `}
 `
+
 const Button = styled.button`
   ${({ theme }) => css`
-    cursor: pointer;
     width: 100%;
-    height: 100%;
-    border: none;
+    height: 32px;
+    cursor: pointer;
     font-family: ${theme.font.family};
     font-size: 0.9rem;
+    border: none;
     background-color: transparent;
-  `}
-`
 
-const ButtonIcon = styled.button`
-  display: flex;
-  align-items: center;
-  height: 100%;
-  border: none;
-  outline: 0;
-  background-color: transparent;
-  padding-left: 80px;
-  cursor: pointer;
+    &:hover {
+      background-color: ${theme.colors.line};
+    }
+  `}
 `
 
 type OnChangeParams = {
@@ -195,47 +166,65 @@ type OnChangeParams = {
 }
 
 type Props = {
-  id?: string
   value: string
   label?: string
   onChange(params: OnChangeParams): void
 }
 
-const TimePicker = ({ value, onChange, id, label, ...props }: Props) => {
-  const innerRef = useRef<HTMLInputElement>(null)
+const TimePicker = ({ value, onChange, label }: Props) => {
+  const hourInputRef = useRef<HTMLInputElement>(null)
+  const minuteInputRef = useRef<HTMLInputElement>(null)
 
   const [isInputFocused, setIsInputFocused] = useState(false)
   const [isOptionsOpen, setIsOptionsOpen] = useState(false)
 
-  const [selectedHour, setSelectedHour] = useState('00')
   const hours = new Array(24)
     .fill(null)
     .map((item, index) => `${index}`.padStart(2, '0'))
 
-  const [selectedMinute, setSelectedMinute] = useState('00')
   const minutes = new Array(60)
     .fill(null)
     .map((item, index) => `${index}`.padStart(2, '0'))
 
-  useEffect(() => {
-    const [hour, minute] = value.split(':')
-    setSelectedHour(hour)
-    setSelectedMinute(minute)
-  }, [value])
+  const [selectedHour, selectedMinute] = value.split(':')
 
-  const handleChange = (hour: string, minute: string) => {
+  const handleChange = (hour: string, minute: string) =>
     onChange({ value: `${hour}:${minute}` })
+
+  const handleFocused = (isFocused: boolean) => {
+    setIsInputFocused(isFocused)
+
+    if (!isFocused) {
+      setTimeout(() => setIsOptionsOpen(isFocused), 200)
+      return
+    }
+
+    setIsOptionsOpen(isFocused)
   }
 
   return (
-    <Container {...props}>
-      <InputTimePicker id={id} isFocused={isInputFocused}>
+    <Container>
+      <InputTimePicker
+        role="button"
+        tabIndex={-1}
+        onKeyDown={() => null}
+        onClick={(e) => {
+          if (
+            e.target !== hourInputRef.current &&
+            e.target !== minuteInputRef.current
+          ) {
+            hourInputRef.current?.focus()
+            handleFocused(true)
+          }
+        }}
+        isFocused={isInputFocused}
+      >
         {label && (
           <Label
             hasError={false}
             onClick={() => {
-              setIsInputFocused(true)
-              innerRef.current?.focus()
+              handleFocused(true)
+              hourInputRef.current?.focus()
             }}
             hasGapLeft={false}
             isFocused={isInputFocused}
@@ -246,105 +235,72 @@ const TimePicker = ({ value, onChange, id, label, ...props }: Props) => {
         )}
         <div>
           <Input
-            id="hour"
-            onFocus={() => {
-              setIsInputFocused(true)
-              setIsOptionsOpen(true)
-            }}
+            onFocus={() => handleFocused(true)}
+            onBlur={() => handleFocused(false)}
             placeholder={selectedHour}
             type="number"
-            ref={innerRef}
+            ref={hourInputRef}
             value={selectedHour}
             onChange={(event) => {
-              setIsOptionsOpen(true)
-              const newHour =
-                +event.currentTarget.value > 23 ||
-                +event.currentTarget.value < 0 ||
-                +event.currentTarget.value.length > 2
-                  ? '00'
-                  : event.currentTarget.value
-              setSelectedHour(newHour)
-              handleChange(newHour, selectedMinute)
+              handleFocused(true)
+              const val = +event.currentTarget.value
+              const newHour = val > 23 || val < 0 ? '00' : val
+              handleChange(`${newHour}`, selectedMinute)
             }}
           />
           :
           <Input
-            id="minute"
-            onFocus={() => {
-              setIsInputFocused(true)
-              setIsOptionsOpen(true)
-            }}
+            ref={minuteInputRef}
+            onFocus={() => handleFocused(true)}
+            onBlur={() => handleFocused(false)}
             placeholder={selectedMinute}
             type="number"
             value={selectedMinute}
             onChange={(event) => {
-              setIsOptionsOpen(true)
-              const newMinute =
-                +event.currentTarget.value > 59 ||
-                +event.currentTarget.value < 0 ||
-                +event.currentTarget.value.length > 2
-                  ? '00'
-                  : event.currentTarget.value
-              setSelectedMinute(newMinute)
-              handleChange(selectedHour, newMinute)
+              handleFocused(true)
+              const val = +event.currentTarget.value
+              const newMinute = val > 59 || val < 0 ? '00' : val
+              handleChange(selectedHour, `${newMinute}`)
             }}
           />
         </div>
-        <ButtonIcon
-          onClick={() => {
-            setIsInputFocused(true)
-            innerRef.current?.focus()
-          }}
-        >
-          <Icon name="clock" />
-        </ButtonIcon>
+        <Icon name="clock" />
       </InputTimePicker>
-      <OptionsTime
-        isOpen={isOptionsOpen}
-        onMouseLeave={() => {
-          setIsInputFocused(false)
-          setIsOptionsOpen(false)
-        }}
-      >
-        <Cell>
-          <ul>
+
+      {isOptionsOpen && (
+        <OptionsTime role="listbox">
+          <OptionCol>
             {hours.map((item) => (
-              <li key={item}>
-                <Button
-                  type="button"
-                  value={item}
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    handleChange(item, selectedMinute)
-                  }}
-                  id={`hour-${item}`}
-                >
-                  {item}
-                </Button>
-              </li>
+              <Button
+                key={item}
+                type="button"
+                value={item}
+                onClick={(e) => {
+                  e.stopPropagation()
+                  handleChange(item, selectedMinute)
+                }}
+              >
+                {item}
+              </Button>
             ))}
-          </ul>
-        </Cell>
-        <Cell>
-          <ul>
+          </OptionCol>
+          <OptionCol>
             {minutes.map((item) => (
-              <li key={item}>
-                <Button
-                  type="button"
-                  value={item}
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    handleChange(selectedHour, item)
-                  }}
-                  id={`minute-${item}`}
-                >
-                  {item}
-                </Button>
-              </li>
+              <Button
+                key={item}
+                type="button"
+                value={item}
+                onClick={(e) => {
+                  e.stopPropagation()
+                  handleChange(selectedHour, item)
+                }}
+              >
+                {item}
+              </Button>
             ))}
-          </ul>
-        </Cell>
-      </OptionsTime>
+          </OptionCol>
+        </OptionsTime>
+      )}
     </Container>
   )
 }

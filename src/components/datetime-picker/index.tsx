@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { set } from 'date-fns'
 import DatePicker from '../date-picker'
@@ -20,7 +20,6 @@ type OnChangeParams = {
 }
 
 type Props = {
-  id?: string
   datetime: Date
   labelDatePicker?: string
   labelTimePicker?: string
@@ -30,45 +29,34 @@ type Props = {
 const DateTimePicker = ({
   datetime,
   onChange,
-  id,
   labelDatePicker,
   labelTimePicker,
-  ...props
-}: Props) => {
-  const [dateValue, setDateValue] = useState(datetime)
-  const [timeValue, setTimeValue] = useState(
-    `${datetime.getHours()}:${datetime.getMinutes()}`,
-  )
-
-  return (
-    <Container {...props}>
-      <DatePicker
-        label={labelDatePicker}
-        value={dateValue}
-        onChange={({ value }) => {
-          setDateValue(value || new Date(0, 0, 0, 0, 0, 0, 0))
-          const newDate =
-            value &&
-            set(datetime, {
-              year: value.getFullYear(),
-              month: value.getMonth(),
-              date: value.getDate(),
-            })
-          onChange({ value: newDate || new Date(0, 0, 0, 0, 0, 0, 0) })
-        }}
-      />
-      <TimePicker
-        label={labelTimePicker}
-        value={timeValue}
-        onChange={({ value }) => {
-          setTimeValue(value)
-          const [hours, minutes] = timeValue.split(':')
-          const newDate = set(datetime, { hours: +hours, minutes: +minutes })
-          onChange({ value: newDate })
-        }}
-      />
-    </Container>
-  )
-}
+}: Props) => (
+  <Container>
+    <DatePicker
+      label={labelDatePicker}
+      value={datetime}
+      onChange={({ value }) => {
+        const newDate =
+          value &&
+          set(datetime, {
+            year: value.getFullYear(),
+            month: value.getMonth(),
+            date: value.getDate(),
+          })
+        onChange({ value: newDate || new Date(0, 0, 0, 0, 0, 0, 0) })
+      }}
+    />
+    <TimePicker
+      label={labelTimePicker}
+      value={`${datetime.getHours()}:${datetime.getMinutes()}`}
+      onChange={({ value }) => {
+        const [hours, minutes] = value.split(':')
+        const newDate = set(datetime, { hours: +hours, minutes: +minutes })
+        onChange({ value: newDate })
+      }}
+    />
+  </Container>
+)
 
 export default DateTimePicker
