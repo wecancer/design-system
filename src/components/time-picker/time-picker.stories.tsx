@@ -12,7 +12,6 @@ const options = [
 
 const Template: Story = (args) => {
   const [value, onChange] = useState('00:00')
-  console.log(value)
   return (
     <TimePicker
       {...args}

@@ -18,11 +18,13 @@ export const Default = Template.bind({})
 Default.args = {
   labelTimePicker: 'Time',
   labelDatePicker: 'Date',
-  id: 'datetime-picker-id',
 }
 
 const ShowValueTemplate: Story = (args) => {
-  const [dateTime, setDateTime] = useState(new Date(0, 0, 0, 10, 10, 10, 0))
+  const [dateTime, setDateTime] = useState(
+    new Date(2010, 10, 15, 10, 10, 10, 0),
+  )
+
   return (
     <form onSubmit={(e) => e.preventDefault()}>
       <DateTimePicker
@@ -42,7 +44,6 @@ export const ShowValue = ShowValueTemplate.bind({})
 ShowValue.args = {
   labelTimePicker: 'Time',
   labelDatePicker: 'Date',
-  id: 'datetime-picker-id',
 }
 
 export default {

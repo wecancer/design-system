@@ -5,7 +5,6 @@ describe('<TimePicker />', () => {
   it('should render snapshot correctly', () => {
     const { container } = render(
       <TimePicker
-        id="timepicker-id"
         label="timepicker-label"
         value="12:34"
         onChange={() => null}
@@ -31,7 +30,9 @@ describe('<TimePicker />', () => {
         }}
       />,
     )
-    const inputHour = container.querySelector('#hour') as HTMLElement
+    const inputHour = container.querySelector(
+      'input:first-child',
+    ) as HTMLElement
     fireEvent.change(inputHour, { target: { value: '10' } })
   })
 
@@ -44,7 +45,9 @@ describe('<TimePicker />', () => {
         }}
       />,
     )
-    const inputMinute = container.querySelector('#minute') as HTMLElement
+    const inputMinute = container.querySelector(
+      'input:nth-child(2)',
+    ) as HTMLElement
     fireEvent.change(inputMinute, { target: { value: '50' } })
   })
 
@@ -57,7 +60,9 @@ describe('<TimePicker />', () => {
         }}
       />,
     )
-    const inputHour = container.querySelector('#hour') as HTMLElement
+    const inputHour = container.querySelector(
+      'input:first-child',
+    ) as HTMLElement
     fireEvent.change(inputHour, { target: { value: '-5' } })
   })
 
@@ -70,7 +75,9 @@ describe('<TimePicker />', () => {
         }}
       />,
     )
-    const inputHour = container.querySelector('#hour') as HTMLElement
+    const inputHour = container.querySelector(
+      'input:first-child',
+    ) as HTMLElement
     fireEvent.change(inputHour, { target: { value: '40' } })
   })
 
@@ -83,7 +90,9 @@ describe('<TimePicker />', () => {
         }}
       />,
     )
-    const inputMinute = container.querySelector('#minute') as HTMLElement
+    const inputMinute = container.querySelector(
+      'input:nth-child(2)',
+    ) as HTMLElement
     fireEvent.change(inputMinute, { target: { value: '-8' } })
   })
 
@@ -96,12 +105,14 @@ describe('<TimePicker />', () => {
         }}
       />,
     )
-    const inputMinute = container.querySelector('#minute') as HTMLElement
+    const inputMinute = container.querySelector(
+      'input:nth-child(2)',
+    ) as HTMLElement
     fireEvent.change(inputMinute, { target: { value: '80' } })
   })
 
   it('should click on hour cell and get the correct value', () => {
-    const { container } = render(
+    const { getAllByText, container } = render(
       <TimePicker
         value="09:00"
         onChange={({ value }) => {
@@ -109,12 +120,13 @@ describe('<TimePicker />', () => {
         }}
       />,
     )
-    const cellHour = container.querySelector('#hour-20') as HTMLElement
-    fireEvent.click(cellHour)
+    const input = container.querySelector('input') as HTMLElement
+    fireEvent.focus(input)
+    fireEvent.click(getAllByText('20')[0])
   })
 
   it('should click on minute cell and get the correct value', () => {
-    const { container } = render(
+    const { container, getByText } = render(
       <TimePicker
         value="13:00"
         onChange={({ value }) => {
@@ -122,7 +134,8 @@ describe('<TimePicker />', () => {
         }}
       />,
     )
-    const cellMinute = container.querySelector('#minute-59') as HTMLElement
-    fireEvent.click(cellMinute)
+    const input = container.querySelector('input') as HTMLElement
+    fireEvent.focus(input)
+    fireEvent.click(getByText('59'))
   })
 })
