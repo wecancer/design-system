@@ -11,14 +11,14 @@ exports[`<Table /> should render snapshot correctly 1`] = `
       class="sc-jRQBWg efedTK"
     >
       <div
-        class="sc-iCfMLu hBVVuY wc-table-cell"
+        class="sc-iCfMLu QsSWr wc-table-cell"
       >
         <div>
           Head 1
         </div>
       </div>
       <div
-        class="sc-iCfMLu hBVVuY wc-table-cell"
+        class="sc-iCfMLu QsSWr wc-table-cell"
         role="button"
         tabindex="0"
       >
@@ -41,7 +41,7 @@ exports[`<Table /> should render snapshot correctly 1`] = `
         </div>
       </div>
       <div
-        class="sc-iCfMLu hBVVuY wc-table-cell"
+        class="sc-iCfMLu QsSWr wc-table-cell"
         role="button"
         tabindex="0"
       >
@@ -64,7 +64,7 @@ exports[`<Table /> should render snapshot correctly 1`] = `
         </div>
       </div>
       <div
-        class="sc-iCfMLu hBVVuY wc-table-cell"
+        class="sc-iCfMLu QsSWr wc-table-cell"
       >
         <div>
           Head 4

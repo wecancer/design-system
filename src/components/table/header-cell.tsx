@@ -1,18 +1,16 @@
 import React, { useState } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { keyActionClick } from '../../events'
 import Icon from '../icon'
 
 const Container = styled.div`
-  ${() => css`
-    padding: 0.75rem 1rem;
-    display: flex;
-    align-items: center;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
 
-    &[role='button'] {
-      cursor: pointer;
-    }
-  `}
+  &[role='button'] {
+    cursor: pointer;
+  }
 `
 
 const SortIcon = styled(Icon)`
