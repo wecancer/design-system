@@ -29,6 +29,7 @@ import PlugSvg from './plus-svg'
 import ProcedureSvg from './procedure-svg'
 import SearchSvg from './search-svg'
 import SettingsSvg from './settings-svg'
+import SortSvg from './sort-svg'
 import SpinnerDots from './spinner-dots-svg'
 import SpinnerSolid from './spinner-solid-svg'
 import StethoscopeSvg from './stethoscope-svg'
@@ -74,6 +75,7 @@ const iconMap = {
   procedure: ProcedureSvg,
   search: SearchSvg,
   settings: SettingsSvg,
+  sort: SortSvg,
   spinnerDots: SpinnerDots,
   spinnerSolid: SpinnerSolid,
   stethoscope: StethoscopeSvg,

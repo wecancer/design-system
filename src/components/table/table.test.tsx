@@ -2,17 +2,18 @@ import Table from '.'
 import TableRow from './row'
 import TableCell from './cell'
 import TableHeader from './header'
-import { render } from '../../testing'
+import TableHeaderCell from './header-cell'
+import { render, fireEvent } from '../../testing'
 
 describe('<Table />', () => {
   it('should render snapshot correctly', () => {
     const { container } = render(
       <Table cellsWitdh="100px 200px 1fr 1fr">
         <TableHeader>
-          <TableCell>Head 1</TableCell>
-          <TableCell>Head 2</TableCell>
-          <TableCell>Head 3</TableCell>
-          <TableCell>Head 4</TableCell>
+          <TableHeaderCell>Head 1</TableHeaderCell>
+          <TableHeaderCell onSort={() => null}>Head 2</TableHeaderCell>
+          <TableHeaderCell onSort={() => null}>Head 3</TableHeaderCell>
+          <TableHeaderCell>Head 4</TableHeaderCell>
         </TableHeader>
         <TableRow onClick={() => null}>
           <TableCell type="warning">Warning</TableCell>
@@ -63,5 +64,35 @@ describe('<Table />', () => {
       </Table>,
     )
     expect(container.firstChild).toMatchSnapshot()
+  })
+
+  it('should sort cell on table header', () => {
+    const handleClick = jest.fn()
+    let count = 0
+    const { getByText } = render(
+      <Table cellsWitdh="100px 200px 1fr 1fr">
+        <TableHeader>
+          <TableHeaderCell>Head 1</TableHeaderCell>
+          <TableHeaderCell
+            onSort={({ direction }) => {
+              count++
+              handleClick()
+              expect(direction).toBe(count === 1 ? 1 : -1)
+            }}
+          >
+            Head 2
+          </TableHeaderCell>
+        </TableHeader>
+        <TableRow>
+          <TableCell>Item 1</TableCell>
+          <TableCell>Item 2</TableCell>
+        </TableRow>
+      </Table>,
+    )
+    const headSort = getByText('Head 2')
+    fireEvent.click(headSort)
+    fireEvent.click(headSort)
+
+    expect(handleClick).toBeCalledTimes(2)
   })
 })
