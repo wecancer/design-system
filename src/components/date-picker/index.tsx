@@ -62,6 +62,7 @@ const DatePicker = ({ label, value, onChange, fromYear, toYear }: Props) => {
       <Input
         type="text"
         {...inputProps}
+        placeholder=""
         label={label}
         value={`${inputProps.value}`}
         iconButtonRight={{
