@@ -14,10 +14,7 @@ const Template: Story<Props> = (args) => {
     <Select
       {...args}
       value={val}
-      isMenuListLoading
-      onScrollEnd={() => console.log('testing onscroll end')}
-      onChange={({ value, option }) => {
-        console.log(value, option)
+      onChange={({ value }) => {
         setValue(value)
       }}
     />

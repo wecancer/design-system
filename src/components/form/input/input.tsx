@@ -114,7 +114,7 @@ const Error = styled.p`
   `}
 `
 
-export const Label = styled.div<{ hasGapLeft: boolean; hasError: boolean }>`
+export const Label = styled.div<{ hasGapLeft?: boolean; hasError?: boolean }>`
   ${({ theme, hasGapLeft, hasError }) => css`
     position: absolute;
     top: 20px;

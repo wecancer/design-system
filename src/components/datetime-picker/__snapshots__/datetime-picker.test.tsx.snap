@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DateTimePicker /> should render snapshot correctly 1`] = `
+<div>
+  <div
+    class="sc-ksdxgE dpSShT"
+  >
+    <div
+      class="sc-furwcr gLQxJk"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="sc-gsDKAQ kdpXcC"
+      >
+        <input
+          class="sc-dkPtRN kNILkx"
+          placeholder="01/06/2022"
+          type="text"
+          value="31/12/1899"
+        />
+        <div
+          aria-label="labelDatePicker"
+          class="sc-gKclnd fTVuoW"
+          data-label="true"
+          role="button"
+          tabindex="-1"
+        >
+          labelDatePicker
+        </div>
+        <button
+          class="sc-eCImPb kfvWEQ"
+          type="button"
+        >
+          <div
+            class="sc-bdvvtL bYGNWJ icon-right"
+            data-icon-name="calendar"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                height="19"
+                rx="3"
+                stroke="currentColor"
+                stroke-width="2"
+                width="20"
+                x="2"
+                y="3"
+              />
+              <path
+                d="M7 1V3"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M17 1V3"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M2 8H22"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M6.5 13H7.5"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M11.5 13H12.5"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M16.5 13H17.5"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M6.5 17H7.5"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M11.5 17H12.5"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M16.5 17H17.5"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </button>
+        
+      </div>
+    </div>
+    <div
+      class="sc-pVTFL gOVlmP"
+    >
+      <div
+        class="sc-kDTinF gpBNoi"
+        role="button"
+        tabindex="-1"
+      >
+        <div
+          class="sc-gKclnd sc-jrQzAO fTVuoW bLkIfw"
+        >
+          labelTimePicker
+        </div>
+        <div>
+          <input
+            class="sc-crHmcD dMOKes"
+            placeholder="0"
+            type="number"
+            value="0"
+          />
+          :
+          <input
+            class="sc-crHmcD dMOKes"
+            placeholder="0"
+            type="number"
+            value="0"
+          />
+        </div>
+        <div
+          class="sc-bdvvtL bYGNWJ"
+          data-icon-name="clock"
+        >
+          <svg
+            fill="none"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M11.0978 2.02367C9.16631 2.21288 7.38115 2.92485 5.81595 4.13021C5.05374 4.71717 4.06389 5.82029 3.49187 6.72015C3.24483 7.10879 2.76393 8.09359 2.59166 8.56357C2.39905 9.08911 2.19375 9.8922 2.09273 10.5154C1.96909 11.2781 1.96909 12.7262 2.09273 13.4889C2.26754 14.5672 2.54409 15.4388 3.01743 16.4038C3.5346 17.4581 4.07234 18.2054 4.93347 19.0665C5.79463 19.9277 6.54193 20.4654 7.59618 20.9826C8.56118 21.4559 9.43283 21.7325 10.5111 21.9073C11.2738 22.0309 12.7219 22.0309 13.4846 21.9073C14.5629 21.7325 15.4345 21.4559 16.3995 20.9826C17.4538 20.4654 18.2011 19.9277 19.0622 19.0665C19.9234 18.2054 20.4611 17.4581 20.9783 16.4038C21.3218 15.7035 21.4945 15.2446 21.6796 14.5408C21.9261 13.6036 21.9886 13.0899 21.9886 12.0021C21.9886 10.9144 21.9261 10.4007 21.6796 9.46346C21.4945 8.7597 21.3218 8.30076 20.9783 7.60048C20.4611 6.54623 19.9234 5.79893 19.0622 4.93777C18.2011 4.07664 17.4538 3.5389 16.3995 3.02173C15.4355 2.54881 14.5466 2.26668 13.5042 2.1027C12.9291 2.01224 11.6449 1.97006 11.0978 2.02367ZM12.9286 3.59281C14.8365 3.80296 16.583 4.64878 17.9671 6.0329C19.5911 7.65686 20.4491 9.72036 20.4491 12.0021C20.4491 14.2839 19.5911 16.3474 17.9671 17.9714C16.3431 19.5954 14.2796 20.4534 11.9978 20.4534C9.71606 20.4534 7.65256 19.5954 6.0286 17.9714C4.40464 16.3474 3.54665 14.2839 3.54665 12.0021C3.54665 9.72036 4.40464 7.65686 6.0286 6.0329C7.39374 4.66776 9.15848 3.80554 11.0197 3.59438C11.4503 3.54555 12.4917 3.54469 12.9286 3.59281ZM11.6607 6.71674C11.4728 6.80208 11.3198 6.98836 11.2561 7.20922C11.2236 7.32198 11.2144 8.04918 11.223 9.8111C11.2346 12.1929 11.237 12.2605 11.3156 12.413C11.3811 12.5398 11.6931 12.7945 12.9589 13.7548C13.8183 14.4066 14.6 14.9871 14.696 15.0447C15.3502 15.4369 16.1235 14.7388 15.7924 14.0549C15.7131 13.8911 15.5558 13.7613 14.2423 12.776L12.7804 11.6794V9.49907C12.7804 7.97312 12.767 7.27879 12.7358 7.18571C12.6249 6.85435 12.338 6.64362 11.9978 6.64362C11.901 6.64362 11.7493 6.67652 11.6607 6.71674Z"
+              fill="black"
+              fill-rule="evenodd"
+              stroke="currentColor"
+              stroke-width="0.5"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
