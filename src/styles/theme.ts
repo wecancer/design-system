@@ -23,6 +23,7 @@ export enum BgTypes {
   error = 'bgError',
   input = 'inputBg',
   line = 'line',
+  white = 'offWhite',
 }
 
 const theme = {

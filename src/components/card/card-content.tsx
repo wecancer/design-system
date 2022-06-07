@@ -1,12 +1,16 @@
 import React, { useContext } from 'react'
 import styled, { css } from 'styled-components'
+import { BgTypes } from '../../styles/theme'
 
 import Context, { GapDirection } from './card.context'
 
-export const CardContentStyled = styled.div<{ gapDirection: GapDirection }>`
-  ${({ theme, gapDirection }) => css`
+export const CardContentStyled = styled.div<{
+  gapDirection: GapDirection
+  bgColor: BgTypes
+}>`
+  ${({ theme, gapDirection, bgColor }) => css`
     font-family: ${theme.font.family};
-    background-color: ${theme.colors.offWhite};
+    background-color: ${theme.colors[bgColor]};
 
     border-radius: 1rem;
     position: relative;
@@ -26,11 +30,17 @@ export const CardContentStyled = styled.div<{ gapDirection: GapDirection }>`
   `}
 `
 
-type Props = React.HTMLAttributes<HTMLDivElement>
+type Props = {
+  children: React.ReactNode
+}
 
-const CardContent = (props: Props): React.ReactElement => {
-  const { gapDirection } = useContext(Context)
-  return <CardContentStyled gapDirection={gapDirection} {...props} />
+const CardContent = ({ children }: Props): React.ReactElement => {
+  const { gapDirection, bgColor } = useContext(Context)
+  return (
+    <CardContentStyled bgColor={bgColor} gapDirection={gapDirection}>
+      {children}
+    </CardContentStyled>
+  )
 }
 
 export default CardContent
