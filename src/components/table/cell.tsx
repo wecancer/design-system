@@ -20,11 +20,16 @@ const Container = styled.div<{ isSolidBg: boolean }>`
 `
 
 export type Props = {
-  children: React.ReactNode
   type?: StyleType
+  className?: string
+  children: React.ReactNode
 }
 
-const TableCell = ({ children, type = 'none' }: Props): React.ReactElement => {
+const TableCell = ({
+  children,
+  className,
+  type = 'none',
+}: Props): React.ReactElement => {
   const { setTypeStyle } = useContext(TableRowContext)
   const isSolidBg = type === 'none'
 
@@ -35,6 +40,7 @@ const TableCell = ({ children, type = 'none' }: Props): React.ReactElement => {
   }, [type, setTypeStyle])
 
   const classNames = [
+    className,
     'wc-table-cell',
     isSolidBg ? 'wc-table-cell-solid' : '',
   ].filter((cname) => !!cname)
