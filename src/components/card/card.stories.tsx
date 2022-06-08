@@ -6,12 +6,14 @@ import Card from '.'
 import CardIcon from './card-icon'
 import CardImage from './card-image'
 import CardContent from './card-content'
+import CardValue from './card-value'
+import { BgTypes } from '../../styles/theme'
 
 const Grid = styled.div`
   display: grid;
-  column-gap: 1rem;
+  gap: 1rem;
   align-items: flex-start;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 `
 
 const Template: Story = () => {
@@ -41,6 +43,14 @@ const Template: Story = () => {
       </Card>
       <Card onClick={(e) => e.preventDefault()}>
         <CardContent>Card clickable</CardContent>
+      </Card>
+      <Card bgColor={BgTypes.error} onClick={(e) => e.preventDefault()}>
+        <CardValue fillColor="error" value={10} label="Patients" />
+        <CardContent>Card clickable</CardContent>
+      </Card>
+      <Card>
+        <CardValue value="+99" label="Notes" />
+        <CardContent>Check it out!</CardContent>
       </Card>
     </Grid>
   )

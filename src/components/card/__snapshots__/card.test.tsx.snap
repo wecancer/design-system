@@ -9,7 +9,7 @@ exports[`<Card /> should render snapshot correctly 1`] = `
       class="sc-hKwDye bjuJie"
     />
     <div
-      class="sc-eCImPb lctUKu"
+      class="sc-iCfMLu dPfeOm"
     >
       The card with image
     </div>
@@ -21,7 +21,7 @@ exports[`<Card /> should render snapshot correctly 1`] = `
       class="sc-hKwDye fTarJn"
     />
     <div
-      class="sc-eCImPb iBctbf"
+      class="sc-iCfMLu hyKfPD"
     >
       <p>
         Item 1
@@ -60,7 +60,7 @@ exports[`<Card /> should render snapshot correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-eCImPb lctUKu"
+      class="sc-iCfMLu dPfeOm"
     >
       Card with icon
     </div>
@@ -71,9 +71,63 @@ exports[`<Card /> should render snapshot correctly 1`] = `
     tabindex="0"
   >
     <div
-      class="sc-eCImPb lctUKu"
+      class="sc-iCfMLu dPfeOm"
     >
       Card clickable
+    </div>
+  </div>
+  <div
+    class="sc-bdvvtL bPDKIS"
+    role="button"
+    style="display: grid; grid-template-columns: minmax(0, 90px) 1fr; align-items: center;"
+    tabindex="0"
+  >
+    <div
+      class="sc-eCImPb hcFpqB"
+    >
+      <p
+        class="sc-jRQBWg jSBYXt"
+      >
+         
+        10
+         
+      </p>
+      <p
+        class="sc-gKclnd vZma-d"
+      >
+        Patients
+      </p>
+    </div>
+    <div
+      class="sc-iCfMLu KhiQc"
+    >
+      Card clickable
+    </div>
+  </div>
+  <div
+    class="sc-bdvvtL gdXJKY"
+    style="display: grid; grid-template-columns: minmax(0, 90px) 1fr; align-items: center;"
+  >
+    <div
+      class="sc-eCImPb imEwWK"
+    >
+      <p
+        class="sc-jRQBWg jSBYXt"
+      >
+         
+        +99
+         
+      </p>
+      <p
+        class="sc-gKclnd vZma-d"
+      >
+        Notes
+      </p>
+    </div>
+    <div
+      class="sc-iCfMLu dPfeOm"
+    >
+      Check it out!
     </div>
   </div>
 </div>

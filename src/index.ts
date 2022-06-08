@@ -1,6 +1,6 @@
 import styled, { css, useTheme, createGlobalStyle } from 'styled-components'
 
-import theme from './styles/theme'
+import theme, { BgTypes, ColorsTemplate } from './styles/theme'
 import Loading from './components/loading'
 import BoxContainer from './components/box-container'
 import WecancerProvider from './wecancer-provider'
@@ -30,6 +30,7 @@ import AccordionItem from './components/accordion/item'
 import Card from './components/card'
 import CardIcon from './components/card/card-icon'
 import CardImage from './components/card/card-image'
+import CardValue from './components/card/card-value'
 import CardContent from './components/card/card-content'
 
 import Select from './components/form/select'
@@ -61,7 +62,14 @@ import TabContent from './components/tab/selection/tab-content'
 import useToast from './hooks/toast'
 import { SelectOption, SelectOptions } from './components/form/select/types'
 
-export type { SelectOption, SelectOptions, RadioItem, RangePickerDate }
+export type {
+  BgTypes,
+  RadioItem,
+  SelectOption,
+  SelectOptions,
+  ColorsTemplate,
+  RangePickerDate,
+}
 
 export {
   Accordion,
@@ -74,6 +82,7 @@ export {
   CardContent,
   CardIcon,
   CardImage,
+  CardValue,
   Checkbox,
   TimePicker,
   DatePicker,
