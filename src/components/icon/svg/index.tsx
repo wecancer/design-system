@@ -23,6 +23,8 @@ import ForwardArrowSvg from './forward-arrow-svg'
 import HomeSvg from './home-svg'
 import LongArrowRightSvg from './long-arrow-right-svg'
 import MinusSvg from './minus-svg'
+import MoreSvg from './more-svg'
+import MoreVertSvg from './more-vert-svg'
 import PatientSvg from './patient-svg'
 import PendenciesSvg from './pendencies-svg'
 import PlugSvg from './plus-svg'
@@ -69,6 +71,8 @@ const iconMap = {
   home: HomeSvg,
   longArrowRight: LongArrowRightSvg,
   minus: MinusSvg,
+  more: MoreSvg,
+  moreVert: MoreVertSvg,
   patient: PatientSvg,
   pendencies: PendenciesSvg,
   plus: PlugSvg,
