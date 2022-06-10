@@ -16,7 +16,7 @@ export default {
   title: 'Components/Button/Icon',
   component: ButtonIcon,
   argTypes: {
-    primary: {
+    flat: {
       control: {
         type: 'boolean',
       },
@@ -47,20 +47,21 @@ export default {
       control: {
         type: 'select',
         options: [
-          'primary',
-          'secondary',
-          'green',
           'blue',
+          'error',
+          'green',
+          'magenta',
+          'orange',
+          'pink',
+          'primary',
+          'purple',
+          'secondary',
+          'success',
+          'text',
           'turquoise',
           'violet',
-          'pink',
-          'orange',
-          'purple',
-          'yellow',
-          'magenta',
-          'success',
           'warning',
-          'error',
+          'yellow',
         ],
       },
     },
