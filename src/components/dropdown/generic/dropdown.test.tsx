@@ -1,5 +1,5 @@
 import Dropdown from '.'
-import { render, fireEvent } from '../../testing'
+import { render, fireEvent } from '../../../testing'
 
 describe('<Dropdown />', () => {
   it('should render snapshot correctly', () => {

@@ -3,8 +3,8 @@ import styled, { css } from 'styled-components'
 
 import { keyActionClick } from '../../../events'
 
-import Dropdown from '..'
-import ListContainer, { Option } from '../simple-options-container'
+import Dropdown, { AxisX } from '../generic'
+import ListContainer, { MenuItem } from '../generic/simple-options-container'
 
 const BtnTrigger = styled.div`
   ${({ theme }) => css`
@@ -20,20 +20,16 @@ const Label = styled.p`
   margin: 0;
 `
 
-type OnChange = {
-  option: Option
-}
-
 export type Props = {
   label: string
-  value?: Option
-  options: Option[]
-  onChange(params: OnChange): void
+  axisX?: AxisX
+  items: MenuItem[]
 }
 
-const DropdownSelect = ({ options, value, onChange, label }: Props) => {
+const DropdownSelect = ({ items, label, axisX = 'left' }: Props) => {
   return (
     <Dropdown
+      axisX={axisX}
       trigger={({ handleToggle }) => (
         <BtnTrigger
           tabIndex={0}
@@ -41,19 +37,12 @@ const DropdownSelect = ({ options, value, onChange, label }: Props) => {
           onClick={handleToggle}
           onKeyDown={(e) => keyActionClick(e, handleToggle)}
         >
-          <Label>{value?.label || label}</Label>
+          <Label>{label}</Label>
         </BtnTrigger>
       )}
     >
-      {({ handleClose }) => (
-        <ListContainer
-          hasArrow
-          options={options}
-          onSelect={(option) => {
-            onChange({ option })
-            handleClose()
-          }}
-        />
+      {(actions) => (
+        <ListContainer axisX={axisX} actions={actions} hasArrow items={items} />
       )}
     </Dropdown>
   )

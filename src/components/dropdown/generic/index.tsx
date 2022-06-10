@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react'
 import styled, { css } from 'styled-components'
 
-import OutsideEvent from '../outside-event'
+import OutsideEvent from '../../outside-event'
 
-type AxisX = 'left' | 'right'
+export type AxisX = 'left' | 'right'
 
 const Wrapper = styled(OutsideEvent)`
   position: relative;

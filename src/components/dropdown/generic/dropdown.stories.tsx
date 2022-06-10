@@ -17,7 +17,7 @@ Default.args = {
 }
 
 export default {
-  title: 'Components/Dropdown',
+  title: 'Components/Dropdown/Generic',
   component: Dropdown,
   argTypes: {
     axisX: {
