@@ -49,6 +49,7 @@ const Wrapper = styled.div<{ gridColumns: string }>`
 `
 
 type Props = {
+  className?: string
   onClick?(
     event:
       | React.KeyboardEvent<HTMLLIElement>
@@ -57,7 +58,11 @@ type Props = {
   children: React.ReactNode
 }
 
-const TableRow = ({ children, onClick }: Props): React.ReactElement => {
+const TableRow = ({
+  onClick,
+  children,
+  className,
+}: Props): React.ReactElement => {
   const [typeStyle, setTypeStyle] = useState<StyleType>('none')
   const gridColumns = useCalcGridColumns(React.Children.count(children))
 
@@ -74,7 +79,7 @@ const TableRow = ({ children, onClick }: Props): React.ReactElement => {
 
   return (
     <TableRowContext.Provider value={{ typeStyle, setTypeStyle }}>
-      <Container {...clickParams} typeStyle={typeStyle}>
+      <Container className={className} {...clickParams} typeStyle={typeStyle}>
         <Wrapper gridColumns={gridColumns}>{children}</Wrapper>
       </Container>
     </TableRowContext.Provider>

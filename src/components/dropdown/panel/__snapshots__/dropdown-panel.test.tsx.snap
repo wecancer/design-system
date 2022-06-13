@@ -8,12 +8,12 @@ exports[`<DropdownPanel /> should render snapshot correctly 1`] = `
     class="sc-gsDKAQ"
   >
     <div
-      class="sc-gKclnd bjIOAc"
+      class="sc-iCfMLu iGWyQt"
       role="button"
       tabindex="0"
     >
       <p
-        class="sc-iCfMLu khdyVP"
+        class="sc-furwcr dlyZeQ"
       >
         empty options
       </p>

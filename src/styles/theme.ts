@@ -12,6 +12,7 @@ export type ColorsTemplate =
   | 'warning'
   | 'error'
   | 'white'
+  | 'text'
 
 export enum BgTypes {
   turquoise = 'bgTurquoise',
@@ -41,6 +42,7 @@ const theme = {
     extraLightSecondary: '#7CEB93',
     bgSecondary: '#C7EBC6',
 
+    text: '#14142B',
     titleActive: '#14142B',
     body: '#4E4B66',
     label: '#6E7191',

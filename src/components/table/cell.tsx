@@ -5,12 +5,35 @@ import TableRowContext from './table-row.context'
 import { BgTypes } from '../../styles/theme'
 
 type StyleType = keyof typeof BgTypes | 'none'
+type Alignment = 'center' | 'left' | 'right'
 
-const Container = styled.div<{ isSolidBg: boolean }>`
-  ${({ theme, isSolidBg }) => css`
+const Container = styled.div<{ isSolidBg: boolean; align: Alignment }>`
+  ${({ theme, isSolidBg, align }) => css`
     padding: 0.75rem 1rem;
     display: flex;
     align-items: center;
+
+    ${(() => {
+      if (align === 'center') {
+        return css`
+          justify-content: center;
+          text-align: center;
+        `
+      }
+
+      if (align === 'right') {
+        return css`
+          justify-content: flex-end;
+          text-align: right;
+        `
+      }
+
+      // left by default
+      return css`
+        justify-content: flex-start;
+        text-align: left;
+      `
+    })()}
 
     ${isSolidBg &&
     css`
@@ -21,6 +44,7 @@ const Container = styled.div<{ isSolidBg: boolean }>`
 
 export type Props = {
   type?: StyleType
+  align?: Alignment
   className?: string
   children: React.ReactNode
 }
@@ -29,6 +53,7 @@ const TableCell = ({
   children,
   className,
   type = 'none',
+  align = 'left',
 }: Props): React.ReactElement => {
   const { setTypeStyle } = useContext(TableRowContext)
   const isSolidBg = type === 'none'
@@ -46,7 +71,11 @@ const TableCell = ({
   ].filter((cname) => !!cname)
 
   return (
-    <Container className={classNames.join(' ')} isSolidBg={isSolidBg}>
+    <Container
+      align={align}
+      className={classNames.join(' ')}
+      isSolidBg={isSolidBg}
+    >
       <div>{children}</div>
     </Container>
   )

@@ -1,11 +1,14 @@
 import styled, { css, useTheme, createGlobalStyle } from 'styled-components'
 
 import theme, { BgTypes, ColorsTemplate } from './styles/theme'
+import { keyActionClick, keyArrowDown, keyArrowUp, keyEsc } from './events'
+
 import Loading from './components/loading'
 import BoxContainer from './components/box-container'
 import WecancerProvider from './wecancer-provider'
 import Tooltip from './components/tooltip'
-import Dropdown from './components/dropdown/Panel'
+import Dropdown from './components/dropdown/panel'
+import DropdownIcon from './components/dropdown/icon'
 
 import TimePicker from './components/time-picker'
 import DatePicker from './components/date-picker'
@@ -63,7 +66,6 @@ import useToast from './hooks/toast'
 import { SelectOption, SelectOptions } from './components/form/select/types'
 
 export type {
-  BgTypes,
   RadioItem,
   SelectOption,
   SelectOptions,
@@ -75,6 +77,7 @@ export {
   Accordion,
   AccordionItem,
   Avatar,
+  BgTypes,
   BoxContainer,
   Button,
   ButtonIcon,
@@ -88,6 +91,7 @@ export {
   DatePicker,
   DateTimePicker,
   Dropdown,
+  DropdownIcon,
   Icon,
   IncrementStepper,
   Input,
@@ -126,4 +130,9 @@ export {
   styled,
   theme,
   useTheme,
+  // helpers
+  keyActionClick,
+  keyArrowDown,
+  keyArrowUp,
+  keyEsc,
 }

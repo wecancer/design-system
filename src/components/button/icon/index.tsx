@@ -8,34 +8,56 @@ import { ColorsTemplate } from '../../../styles/theme'
 type Size = 'small' | 'medium' | 'large'
 
 const Container = styled.button<{
+  isFlat: boolean
   buttonSize: Size
   isActive: boolean
   isDisabled: boolean
   fillColor: ColorsTemplate
 }>`
-  ${({ theme, isActive, fillColor, buttonSize, isDisabled }) => css`
+  ${({ theme, isActive, fillColor, buttonSize, isDisabled, isFlat }) => css`
     padding: 0;
     cursor: ${isDisabled ? 'default' : 'pointer'};
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    border: 2px solid ${theme.colors[fillColor]};
 
     ${isDisabled &&
     css`
       opacity: 0.5;
     `}
 
-    ${isActive
+    ${isFlat
       ? css`
-          color: ${theme.colors.offWhite};
-          background-color: ${theme.colors[fillColor]};
+          border-radius: 0.625rem;
+          border: none;
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.03);
+          }
         `
       : css`
-          color: ${theme.colors[fillColor]};
-          background-color: ${theme.colors.offWhite};
+          border-radius: 50%;
+          border: 2px solid ${theme.colors[fillColor]};
         `}
+
+    ${(() => {
+      if (isActive) {
+        if (isFlat) {
+          return css`
+            color: ${theme.colors[fillColor]};
+            background: none;
+          `
+        }
+        return css`
+          color: ${theme.colors.offWhite};
+          background: ${theme.colors[fillColor]};
+        `
+      }
+      return css`
+        color: ${theme.colors[fillColor]};
+        background: ${isFlat ? 'none' : theme.colors.offWhite};
+      `
+    })()}
 
     ${(() => {
       if (buttonSize === 'large') {
@@ -66,6 +88,7 @@ const Container = styled.button<{
 
 export type Props = {
   size?: Size
+  flat?: boolean
   title?: string
   icon: IconsTypes
   isActive?: boolean
@@ -84,6 +107,7 @@ const ButtonIcon = ({
   isActive,
   isLoading,
   className,
+  flat = false,
   size = 'medium',
   color = 'primary',
   isDisabled = false,
@@ -91,6 +115,7 @@ const ButtonIcon = ({
 }: Props): React.ReactElement => (
   <Container
     title={title}
+    isFlat={flat}
     fillColor={color}
     buttonSize={size}
     className={className}

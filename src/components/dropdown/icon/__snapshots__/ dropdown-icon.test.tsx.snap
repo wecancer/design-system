@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownIcon /> should render snapshot correctly 1`] = `
+<div
+  class="sc-hKwDye jdqdhL"
+>
+  <div
+    class="sc-eCImPb"
+  >
+    <button
+      class="sc-dkPtRN bEkLdo"
+    >
+      <div
+        class="sc-bdvvtL bYGNWJ"
+        data-icon-name="more"
+      >
+        <svg
+          fill="none"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="7"
+            cy="12"
+            fill="currentColor"
+            r="2"
+            transform="rotate(-90 7 12)"
+          />
+          <circle
+            cx="17"
+            cy="12"
+            fill="currentColor"
+            r="2"
+            transform="rotate(-90 17 12)"
+          />
+        </svg>
+      </div>
+    </button>
+  </div>
+</div>
+`;
