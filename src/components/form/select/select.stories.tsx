@@ -15,6 +15,7 @@ const options = generateOptionsFrom(0)
 
 const Template: Story<Props> = (args) => {
   const [val, setValue] = useState('')
+
   return (
     <Select
       {...args}
@@ -35,6 +36,7 @@ Default.args = {
 
 const RequiredTemplate: Story<Props> = (args) => {
   const [val, setValue] = useState('')
+
   return (
     <form onSubmit={(e) => e.preventDefault()}>
       <Select {...args} value={val} onChange={({ value }) => setValue(value)} />
@@ -56,6 +58,7 @@ Required.args = {
 const InfinityScrollTemplate: Story<Props> = () => {
   const [value, setValue] = useState('')
   const [opts, setOpts] = useState<SelectOption[]>(generateOptionsFrom(0))
+
   return (
     <form onSubmit={(e) => e.preventDefault()}>
       <Select

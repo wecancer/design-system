@@ -19,19 +19,17 @@ const DropdownIcon = ({
   icon = 'moreVert',
   axisX = 'left',
   iconColor = 'text',
-}: Props) => {
-  return (
-    <GenericDropdown
-      axisX={axisX}
-      trigger={({ handleToggle }) => (
-        <ButtonIcon flat icon={icon} color={iconColor} onClick={handleToggle} />
-      )}
-    >
-      {(actions) => (
-        <ListContainer axisX={axisX} actions={actions} hasArrow items={items} />
-      )}
-    </GenericDropdown>
-  )
-}
+}: Props) => (
+  <GenericDropdown
+    axisX={axisX}
+    trigger={({ handleToggle }) => (
+      <ButtonIcon flat icon={icon} color={iconColor} onClick={handleToggle} />
+    )}
+  >
+    {(actions) => (
+      <ListContainer axisX={axisX} actions={actions} hasArrow items={items} />
+    )}
+  </GenericDropdown>
+)
 
 export default DropdownIcon

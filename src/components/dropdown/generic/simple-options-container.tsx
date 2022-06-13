@@ -81,20 +81,18 @@ const ListContainer = ({
   axisX,
   actions,
   hasArrow,
-}: Props): React.ReactElement => {
-  return (
-    <Container axisX={axisX} role="listbox" tabIndex={0} hasArrow={!!hasArrow}>
-      {items.map((item) => (
-        <Item
-          key={item.id}
-          textColor={item?.textColor || 'text'}
-          onClick={() => item.onClick?.(actions)}
-        >
-          <Label>{item.label}</Label>
-        </Item>
-      ))}
-    </Container>
-  )
-}
+}: Props): React.ReactElement => (
+  <Container axisX={axisX} role="listbox" tabIndex={0} hasArrow={!!hasArrow}>
+    {items.map((item) => (
+      <Item
+        key={item.id}
+        textColor={item?.textColor || 'text'}
+        onClick={() => item.onClick?.(actions)}
+      >
+        <Label>{item.label}</Label>
+      </Item>
+    ))}
+  </Container>
+)
 
 export default ListContainer
