@@ -11,15 +11,16 @@ const Container = styled.section`
 
 export type Props = {
   children: React.ReactNode
+  active?: string
 }
 
-const TabContext = ({ children }: Props) => {
+const TabContext = ({ children, active }: Props) => {
   const [tabIds, setTabIds] = useState<TabId[]>([])
-  const [tabActiveId, setTabActiveId] = useState<TabId | null>(null)
+  const [tabActiveId, setTabActiveId] = useState<TabId | null>(active || null)
 
   return (
     <TabSectionContext.Provider
-      value={{ tabIds, setTabIds, tabActiveId, setTabActiveId }}
+      value={{ tabIds, setTabIds, tabActiveId, setTabActiveId, active }}
     >
       <Container>{children}</Container>
     </TabSectionContext.Provider>

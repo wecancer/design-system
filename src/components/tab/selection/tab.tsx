@@ -53,14 +53,16 @@ type Props = {
   target: TabId
   isDisabled?: boolean
   children: React.ReactNode
+  onClick?: () => void
 }
 
-const Tab = ({ children, target, isDisabled }: Props) => {
+const Tab = ({ children, target, isDisabled, onClick }: Props) => {
   const { setTabIds, tabActiveId, setTabActiveId } = useContext(Context)
   const isSelected = tabActiveId === target
 
   const handleClick = () => {
     setTabActiveId(target)
+    if (onClick) onClick()
   }
 
   // register the target ID

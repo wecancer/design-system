@@ -15,12 +15,12 @@ type Props = {
 
 const Tabs = ({ children }: Props) => {
   const ref = useRef<HTMLElement>(null)
-  const { setTabActiveId } = useContext(Context)
+  const { setTabActiveId, active } = useContext(Context)
 
   useEffect(() => {
     const target = ref.current?.querySelectorAll('[data-tabtarget]')
 
-    if (target?.length) {
+    if (!active?.length && target?.length) {
       setTabActiveId(target[0].getAttribute('data-tabtarget'))
     }
   }, [setTabActiveId])
