@@ -8,6 +8,8 @@ type TabSectionContext = {
 
   tabIds: TabId[]
   setTabIds: React.Dispatch<React.SetStateAction<TabId[]>>
+
+  activeDefault?: string
 }
 
 const defaultValue = {

@@ -80,4 +80,23 @@ describe('<TabSection />', () => {
     expect(midleContent).toBeNull()
     expect(lastContent).toBeNull()
   })
+
+  it('should active the Middle tab', () => {
+    const { getByText } = render(
+      <TabContext activeDefault="1">
+        <Tabs>
+          <Tab target="0">First tab</Tab>
+          <Tab target="1">Middle tab</Tab>
+          <Tab target="2">Last tab</Tab>
+        </Tabs>
+        <TabContent id="0">This is my first tab</TabContent>
+        <TabContent id="1">This is my middle tab</TabContent>
+        <TabContent id="2">This is my last tab</TabContent>
+      </TabContext>,
+    )
+
+    const frist = getByText('This is my middle tab')
+
+    expect(frist).toBeInstanceOf(HTMLElement)
+  })
 })
