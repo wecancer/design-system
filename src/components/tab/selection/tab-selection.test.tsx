@@ -83,7 +83,7 @@ describe('<TabSection />', () => {
 
   it('should active the Middle tab', () => {
     const { getByText } = render(
-      <TabContext active="1">
+      <TabContext activeDefault="1">
         <Tabs>
           <Tab target="0">First tab</Tab>
           <Tab target="1">Middle tab</Tab>
