@@ -140,19 +140,12 @@ export const MultiValueRemove = (
 type HandleScrollEnd = () => void
 
 type MenuList = {
-  lastScrollTop: number
   isMenuListLoading?: boolean
   onScrollEnd: HandleScrollEnd
-  setLastScrollTop: React.Dispatch<React.SetStateAction<number>>
 }
 
 export const menuList =
-  ({
-    onScrollEnd,
-    lastScrollTop,
-    setLastScrollTop,
-    isMenuListLoading,
-  }: MenuList) =>
+  ({ onScrollEnd, isMenuListLoading }: MenuList) =>
   (props: MenuListProps<SelectOption, true>) => {
     const ref = useRef<HTMLDivElement>(null)
     const scrollEndCallback = useCallback(onScrollEnd, [])
@@ -162,7 +155,6 @@ export const menuList =
         const { scrollHeight, scrollTop, offsetHeight } =
           e.currentTarget as HTMLDivElement
         if (scrollHeight - offsetHeight <= scrollTop + 200) {
-          setLastScrollTop(scrollTop)
           onScrollEnd()
         }
       }
@@ -175,13 +167,6 @@ export const menuList =
         element?.removeEventListener('scroll', handleScroll)
       }
     }, [scrollEndCallback, onScrollEnd])
-
-    useEffect(() => {
-      const element = ref.current?.querySelector('[class*="MenuList"]')
-      if (element && lastScrollTop > 0) {
-        element?.scrollTo(0, lastScrollTop)
-      }
-    }, [lastScrollTop])
 
     return (
       <div ref={ref}>
@@ -233,7 +218,7 @@ const GenericSelect = ({
   const inputRef = useRef<HTMLInputElement>(null)
   const theme = useTheme()
   const styles = selectStyles(theme)
-  const [lastScrollTop, setLastScrollTop] = useState(0)
+
   const selectRef =
     useRef<SelectInstance<SelectOption, true, GroupBase<SelectOption>>>(null)
   const [focused, setFocused] = useState(false)
@@ -289,8 +274,6 @@ const GenericSelect = ({
           MultiValueContainer,
           MenuList: menuList({
             onScrollEnd,
-            lastScrollTop,
-            setLastScrollTop,
             isMenuListLoading,
           }),
         }}
