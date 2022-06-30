@@ -44,6 +44,7 @@ import Trash from './trash-svg'
 import UnviewSvg from './unview-svg'
 import ViewSvg from './view-svg'
 import VolumeSvg from './volume-svg'
+import MedicineSvg from './medicine-svg'
 
 const iconMap = {
   alertInfo: AlertInfoSvg,
@@ -70,6 +71,7 @@ const iconMap = {
   forwardArrow: ForwardArrowSvg,
   home: HomeSvg,
   longArrowRight: LongArrowRightSvg,
+  medicine: MedicineSvg,
   minus: MinusSvg,
   more: MoreSvg,
   moreVert: MoreVertSvg,
