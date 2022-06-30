@@ -1,7 +1,9 @@
 import React from 'react'
 
-const SpinnerDotsSvg = () => (
+const SpinnerDotsSvg = ({ size }: { size: string }) => (
   <svg
+    width={size}
+    height={size}
     role="img"
     aria-hidden="true"
     focusable="false"

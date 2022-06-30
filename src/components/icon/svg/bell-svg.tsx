@@ -1,7 +1,13 @@
 import React from 'react'
 
-const BellSvg = () => (
-  <svg viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+const BellSvg = ({ size }: { size: string }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 26 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       strokeWidth="2"
       stroke="currentColor"

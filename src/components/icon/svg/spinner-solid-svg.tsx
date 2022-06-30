@@ -1,7 +1,13 @@
 import React from 'react'
 
-const SpinnerSolidSvg = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+const SpinnerSolidSvg = ({ size }: { size: string }) => (
+  <svg
+    width={size}
+    height={size}
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 20 20"
+  >
     <defs />
     <path
       stroke="currentColor"

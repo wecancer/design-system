@@ -1,7 +1,13 @@
 import React from 'react'
 
-const PendencySvg = () => (
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+const PendenciesSvg = ({ size }: { size: string }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <g clipPath="url(#clip0_1937_7033)">
       <path
         fillRule="evenodd"
@@ -24,4 +30,4 @@ const PendencySvg = () => (
   </svg>
 )
 
-export default PendencySvg
+export default PendenciesSvg
