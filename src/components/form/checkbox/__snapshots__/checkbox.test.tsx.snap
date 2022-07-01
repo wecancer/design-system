@@ -3,33 +3,35 @@
 exports[`<Checkbox /> should render snapshot correctly 1`] = `
 <div>
   <div
-    class="sc-gKclnd fVLuFs"
+    class="sc-jRQBWg dYNDJa"
   >
     <div
       aria-checked="false"
       aria-disabled="false"
-      class="sc-iCfMLu cHzFzy"
+      class="sc-gKclnd iGsJBH"
       role="checkbox"
       tabindex="0"
     />
   </div>
   <div
-    class="sc-gKclnd fVLuFs"
+    class="sc-jRQBWg dYNDJa"
   >
     <div
       aria-checked="true"
       aria-disabled="false"
-      class="sc-iCfMLu iXqDnf"
+      class="sc-gKclnd kdNpyy"
       role="checkbox"
       tabindex="0"
     >
       <div
-        class="sc-bdvvtL bYGNWJ"
         data-icon-name="check"
+        style="display: inline-flex; align-items: center; justify-content: center;"
       >
         <svg
           fill="none"
+          height="16px"
           viewBox="0 0 18 13"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -44,33 +46,35 @@ exports[`<Checkbox /> should render snapshot correctly 1`] = `
     </div>
   </div>
   <div
-    class="sc-gKclnd fVLuFs"
+    class="sc-jRQBWg dYNDJa"
   >
     <div
       aria-checked="false"
       aria-disabled="true"
-      class="sc-iCfMLu cHzFzy"
+      class="sc-gKclnd iGsJBH"
       role="checkbox"
       tabindex="0"
     />
   </div>
   <div
-    class="sc-gKclnd fVLuFs"
+    class="sc-jRQBWg dYNDJa"
   >
     <div
       aria-checked="true"
       aria-disabled="true"
-      class="sc-iCfMLu iXqDnf"
+      class="sc-gKclnd kdNpyy"
       role="checkbox"
       tabindex="0"
     >
       <div
-        class="sc-bdvvtL bYGNWJ"
         data-icon-name="check"
+        style="display: inline-flex; align-items: center; justify-content: center;"
       >
         <svg
           fill="none"
+          height="16px"
           viewBox="0 0 18 13"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -85,22 +89,24 @@ exports[`<Checkbox /> should render snapshot correctly 1`] = `
     </div>
   </div>
   <div
-    class="sc-gKclnd fVLuFs"
+    class="sc-jRQBWg dYNDJa"
   >
     <div
       aria-checked="true"
       aria-disabled="true"
-      class="sc-iCfMLu iXqDnf"
+      class="sc-gKclnd kdNpyy"
       role="checkbox"
       tabindex="0"
     >
       <div
-        class="sc-bdvvtL bYGNWJ"
         data-icon-name="check"
+        style="display: inline-flex; align-items: center; justify-content: center;"
       >
         <svg
           fill="none"
+          height="16px"
           viewBox="0 0 18 13"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -114,7 +120,7 @@ exports[`<Checkbox /> should render snapshot correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-furwcr dDWhsX"
+      class="sc-iCfMLu fCuWw"
       role="button"
       tabindex="0"
     >
@@ -122,17 +128,17 @@ exports[`<Checkbox /> should render snapshot correctly 1`] = `
     </div>
   </div>
   <div
-    class="sc-gKclnd fVLuFs"
+    class="sc-jRQBWg dYNDJa"
   >
     <div
       aria-checked="false"
       aria-disabled="false"
-      class="sc-iCfMLu cHzFzy"
+      class="sc-gKclnd iGsJBH"
       role="checkbox"
       tabindex="0"
     />
     <div
-      class="sc-furwcr dDWhsX"
+      class="sc-iCfMLu fCuWw"
       role="button"
       tabindex="0"
     >

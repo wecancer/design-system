@@ -2,15 +2,15 @@
 
 exports[`<TabSection /> should render snapshot correctly 1`] = `
 <section
-  class="sc-furwcr iphqTA"
+  class="sc-iCfMLu buwirn"
 >
   <header
-    class="sc-iCfMLu gVvKlp"
+    class="sc-gKclnd ghUJAc"
   >
     <button
       aria-disabled="false"
       aria-selected="true"
-      class="sc-gsDKAQ cIQQgU sc-gKclnd fKGuXX"
+      class="sc-bdvvtL cnNbBN sc-jRQBWg bHabxB"
       data-tabtarget="0"
       role="tab"
       type="button"
@@ -20,7 +20,7 @@ exports[`<TabSection /> should render snapshot correctly 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      class="sc-gsDKAQ cIQQgU sc-gKclnd fKGuXX"
+      class="sc-bdvvtL cnNbBN sc-jRQBWg bHabxB"
       data-tabtarget="1"
       role="tab"
       type="button"
@@ -30,7 +30,7 @@ exports[`<TabSection /> should render snapshot correctly 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      class="sc-gsDKAQ cIQQgU sc-gKclnd fKGuXX"
+      class="sc-bdvvtL cnNbBN sc-jRQBWg bHabxB"
       data-tabtarget="2"
       role="tab"
       type="button"

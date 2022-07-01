@@ -2,12 +2,14 @@
 
 exports[`<Icon /> should render snapshot correctly 1`] = `
 <div
-  class="sc-bdvvtL bYGNWJ"
   data-icon-name="alertInfo"
+  style="display: inline-flex; align-items: center; justify-content: center;"
 >
   <svg
     fill="none"
+    height="16px"
     viewBox="0 0 24 24"
+    width="16px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <circle

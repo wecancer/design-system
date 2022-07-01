@@ -20,7 +20,7 @@ const MedicineSvg = ({ size }: { size: string }) => (
       rx="5.12846"
       transform="rotate(-45 0.413603 16.8257)"
       stroke="currentColor"
-      stroke-width="2"
+      strokeWidth="2"
     />
   </svg>
 )

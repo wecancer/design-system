@@ -3,25 +3,25 @@
 exports[`<DateTimePicker /> should render snapshot correctly 1`] = `
 <div>
   <div
-    class="sc-ksdxgE dpSShT"
+    class="sc-bqiRlB dOJgiz"
   >
     <div
-      class="sc-furwcr gLQxJk"
+      class="sc-iCfMLu FBMMr"
       role="button"
       tabindex="0"
     >
       <div
-        class="sc-gsDKAQ kdpXcC"
+        class="sc-bdvvtL dCRIj"
       >
         <input
-          class="sc-dkPtRN kNILkx"
+          class="sc-gsDKAQ fbDsNh"
           placeholder=""
           type="text"
           value="31/12/1899"
         />
         <div
           aria-label="labelDatePicker"
-          class="sc-gKclnd fTVuoW"
+          class="sc-jRQBWg fQRgLw"
           data-label="true"
           role="button"
           tabindex="-1"
@@ -29,16 +29,19 @@ exports[`<DateTimePicker /> should render snapshot correctly 1`] = `
           labelDatePicker
         </div>
         <button
-          class="sc-eCImPb kfvWEQ"
+          class="sc-hKwDye ggsLFI"
           type="button"
         >
           <div
-            class="sc-bdvvtL bYGNWJ icon-right"
+            class="icon-right"
             data-icon-name="calendar"
+            style="display: inline-flex; align-items: center; justify-content: center;"
           >
             <svg
               fill="none"
+              height="16px"
               viewBox="0 0 24 24"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <rect
@@ -120,40 +123,42 @@ exports[`<DateTimePicker /> should render snapshot correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-pVTFL gOVlmP"
+      class="sc-furwcr gLQxJk"
     >
       <div
-        class="sc-kDTinF gpBNoi"
+        class="sc-jrQzAO imIqjJ"
         role="button"
         tabindex="-1"
       >
         <div
-          class="sc-gKclnd sc-jrQzAO fTVuoW bLkIfw"
+          class="sc-jRQBWg sc-pVTFL fQRgLw lfnQHl"
         >
           labelTimePicker
         </div>
         <div>
           <input
-            class="sc-crHmcD dMOKes"
+            class="sc-iqseJM fqdjkG"
             placeholder="0"
             type="number"
             value="0"
           />
           :
           <input
-            class="sc-crHmcD dMOKes"
+            class="sc-iqseJM fqdjkG"
             placeholder="0"
             type="number"
             value="0"
           />
         </div>
         <div
-          class="sc-bdvvtL bYGNWJ"
           data-icon-name="clock"
+          style="display: inline-flex; align-items: center; justify-content: center;"
         >
           <svg
             fill="none"
+            height="16px"
             viewBox="0 0 24 24"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path

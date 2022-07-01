@@ -3,19 +3,21 @@
 exports[`<IncrementStepper /> should render snapshot correctly 1`] = `
 <div>
   <div
-    class="sc-dkPtRN hPjXWK"
+    class="sc-gsDKAQ lfbtqy"
   >
     <button
-      class="sc-gsDKAQ cIQQgU sc-eCImPb irpKkc"
+      class="sc-bdvvtL cnNbBN sc-hKwDye dhVNcE"
       type="button"
     >
       <div
-        class="sc-bdvvtL hBtBol"
         data-icon-name="minus"
+        style="display: inline-flex; align-items: center; justify-content: center;"
       >
         <svg
           fill="none"
+          height="10px"
           viewBox="0 0 21 2"
+          width="10px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -29,21 +31,23 @@ exports[`<IncrementStepper /> should render snapshot correctly 1`] = `
       </div>
     </button>
     <input
-      class="sc-hKwDye fcPFVX"
+      class="sc-dkPtRN dtKvHs"
       type="text"
       value="10"
     />
     <button
-      class="sc-gsDKAQ cIQQgU sc-eCImPb irpKkc"
+      class="sc-bdvvtL cnNbBN sc-hKwDye dhVNcE"
       type="button"
     >
       <div
-        class="sc-bdvvtL hBtBol"
         data-icon-name="plus"
+        style="display: inline-flex; align-items: center; justify-content: center;"
       >
         <svg
           fill="none"
+          height="10px"
           viewBox="0 0 20 20"
+          width="10px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
