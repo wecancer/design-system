@@ -3,40 +3,42 @@
 exports[`<TimePicker /> should render snapshot correctly 1`] = `
 <div>
   <div
-    class="sc-iCfMLu FBMMr"
+    class="sc-gKclnd cUaLCy"
   >
     <div
-      class="sc-pVTFL dEtGtw"
+      class="sc-furwcr bASaRX"
       role="button"
       tabindex="-1"
     >
       <div
-        class="sc-gKclnd sc-furwcr fTVuoW jjgJdu"
+        class="sc-jRQBWg sc-iCfMLu fQRgLw gGAAVt"
       >
         timepicker-label
       </div>
       <div>
         <input
-          class="sc-kDTinF kbKXpV"
+          class="sc-jrQzAO haJaYK"
           placeholder="12"
           type="number"
           value="12"
         />
         :
         <input
-          class="sc-kDTinF kbKXpV"
+          class="sc-jrQzAO haJaYK"
           placeholder="34"
           type="number"
           value="34"
         />
       </div>
       <div
-        class="sc-bdvvtL bYGNWJ"
         data-icon-name="clock"
+        style="display: inline-flex; align-items: center; justify-content: center;"
       >
         <svg
           fill="none"
+          height="16px"
           viewBox="0 0 24 24"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path

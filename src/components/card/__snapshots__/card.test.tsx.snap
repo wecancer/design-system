@@ -6,10 +6,10 @@ exports[`<Card /> should render snapshot correctly 1`] = `
     class="sc-bdvvtL gdXJKY"
   >
     <div
-      class="sc-hKwDye bjuJie"
+      class="sc-dkPtRN fTzDyF"
     />
     <div
-      class="sc-iCfMLu dPfeOm"
+      class="sc-gKclnd fZDwpr"
     >
       The card with image
     </div>
@@ -18,10 +18,10 @@ exports[`<Card /> should render snapshot correctly 1`] = `
     class="sc-bdvvtL bumdSL"
   >
     <div
-      class="sc-hKwDye fTarJn"
+      class="sc-dkPtRN itKhys"
     />
     <div
-      class="sc-iCfMLu hyKfPD"
+      class="sc-gKclnd fDKCpK"
     >
       <p>
         Item 1
@@ -38,15 +38,17 @@ exports[`<Card /> should render snapshot correctly 1`] = `
     class="sc-bdvvtL gdXJKY"
   >
     <div
-      class="sc-dkPtRN eWGRQa"
+      class="sc-gsDKAQ dFgJVi"
     >
       <div
-        class="sc-gsDKAQ jupgag"
         data-icon-name="check"
+        style="display: inline-flex; align-items: center; justify-content: center;"
       >
         <svg
           fill="none"
+          height="32px"
           viewBox="0 0 18 13"
+          width="32px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -60,7 +62,7 @@ exports[`<Card /> should render snapshot correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-iCfMLu dPfeOm"
+      class="sc-gKclnd fZDwpr"
     >
       Card with icon
     </div>
@@ -71,7 +73,7 @@ exports[`<Card /> should render snapshot correctly 1`] = `
     tabindex="0"
   >
     <div
-      class="sc-iCfMLu dPfeOm"
+      class="sc-gKclnd fZDwpr"
     >
       Card clickable
     </div>
@@ -83,23 +85,23 @@ exports[`<Card /> should render snapshot correctly 1`] = `
     tabindex="0"
   >
     <div
-      class="sc-eCImPb hcFpqB"
+      class="sc-hKwDye kIscNR"
     >
       <p
-        class="sc-jRQBWg jSBYXt"
+        class="sc-eCImPb KzQwu"
       >
          
         10
          
       </p>
       <p
-        class="sc-gKclnd vZma-d"
+        class="sc-jRQBWg dtBfvD"
       >
         Patients
       </p>
     </div>
     <div
-      class="sc-iCfMLu KhiQc"
+      class="sc-gKclnd cDQPGl"
     >
       Card clickable
     </div>
@@ -109,23 +111,23 @@ exports[`<Card /> should render snapshot correctly 1`] = `
     style="display: grid; grid-template-columns: minmax(0, 90px) 1fr; align-items: center;"
   >
     <div
-      class="sc-eCImPb imEwWK"
+      class="sc-hKwDye hHxrJm"
     >
       <p
-        class="sc-jRQBWg jSBYXt"
+        class="sc-eCImPb KzQwu"
       >
          
         +99
          
       </p>
       <p
-        class="sc-gKclnd vZma-d"
+        class="sc-jRQBWg dtBfvD"
       >
         Notes
       </p>
     </div>
     <div
-      class="sc-iCfMLu dPfeOm"
+      class="sc-gKclnd fZDwpr"
     >
       Check it out!
     </div>

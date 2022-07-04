@@ -1,7 +1,13 @@
 import React from 'react'
 
-const PatientSvg = () => (
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+const PatientSvg = ({ size }: { size: string }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M1 21.5L1.16547 20.4362C1.37405 19.0954 2.24842 17.9469 3.54504 17.5466C5.13654 17.0553 7.49052 16.5 10 16.5C12.5095 16.5 14.8635 17.0553 16.455 17.5466C17.7516 17.9469 18.6259 19.0954 18.8345 20.4362L19 21.5"
       stroke="currentColor"

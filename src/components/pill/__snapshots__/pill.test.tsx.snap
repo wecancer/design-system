@@ -3,19 +3,19 @@
 exports[`Pill Component should render basic Pill Component correctly 1`] = `
 <div>
   <div
-    class="sc-dkPtRN chlKdc"
+    class="sc-gsDKAQ jXnTrE"
   >
     <p
-      class="sc-gsDKAQ eHDJig"
+      class="sc-bdvvtL hDBIQB"
     >
       test
     </p>
   </div>
   <div
-    class="sc-dkPtRN cVnAYw"
+    class="sc-gsDKAQ glyxzE"
   >
     <p
-      class="sc-gsDKAQ eHDJig"
+      class="sc-bdvvtL hDBIQB"
     >
       test actived
     </p>
@@ -26,20 +26,23 @@ exports[`Pill Component should render basic Pill Component correctly 1`] = `
 exports[`Pill Component should render icons of Pill Component correctly 1`] = `
 <div>
   <div
-    class="sc-dkPtRN chlKdc"
+    class="sc-gsDKAQ jXnTrE"
   >
     <p
-      class="sc-gsDKAQ eHDJig"
+      class="sc-bdvvtL hDBIQB"
     >
       has closed
     </p>
     <div
-      class="sc-bdvvtL hZeSqt sc-hKwDye sc-jRQBWg bhCFhM fmYyGE"
+      class="sc-dkPtRN sc-eCImPb wnXUr gCJZuv"
       data-icon-name="close"
+      style="display: inline-flex; align-items: center; justify-content: center;"
     >
       <svg
         fill="none"
+        height="16px"
         viewBox="0 0 24 24"
+        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -60,15 +63,18 @@ exports[`Pill Component should render icons of Pill Component correctly 1`] = `
     </div>
   </div>
   <div
-    class="sc-dkPtRN chlKdc"
+    class="sc-gsDKAQ jXnTrE"
   >
     <div
-      class="sc-bdvvtL iEQYcl sc-hKwDye sc-eCImPb bhCFhM hWCMKE"
+      class="sc-dkPtRN sc-hKwDye wnXUr kBduCc"
       data-icon-name="check"
+      style="display: inline-flex; align-items: center; justify-content: center;"
     >
       <svg
         fill="none"
+        height="14px"
         viewBox="0 0 18 13"
+        width="14px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -81,21 +87,24 @@ exports[`Pill Component should render icons of Pill Component correctly 1`] = `
       </svg>
     </div>
     <p
-      class="sc-gsDKAQ eHDJig"
+      class="sc-bdvvtL hDBIQB"
     >
       checked
     </p>
   </div>
   <div
-    class="sc-dkPtRN chlKdc"
+    class="sc-gsDKAQ jXnTrE"
   >
     <div
-      class="sc-bdvvtL iEQYcl sc-hKwDye sc-eCImPb bhCFhM hWCMKE"
+      class="sc-dkPtRN sc-hKwDye wnXUr kBduCc"
       data-icon-name="check"
+      style="display: inline-flex; align-items: center; justify-content: center;"
     >
       <svg
         fill="none"
+        height="14px"
         viewBox="0 0 18 13"
+        width="14px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -108,17 +117,20 @@ exports[`Pill Component should render icons of Pill Component correctly 1`] = `
       </svg>
     </div>
     <p
-      class="sc-gsDKAQ eHDJig"
+      class="sc-bdvvtL hDBIQB"
     >
       checked and has closed
     </p>
     <div
-      class="sc-bdvvtL hZeSqt sc-hKwDye sc-jRQBWg bhCFhM fmYyGE"
+      class="sc-dkPtRN sc-eCImPb wnXUr gCJZuv"
       data-icon-name="close"
+      style="display: inline-flex; align-items: center; justify-content: center;"
     >
       <svg
         fill="none"
+        height="16px"
         viewBox="0 0 24 24"
+        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

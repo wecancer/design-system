@@ -1,7 +1,13 @@
 import React from 'react'
 
-const SettingsSvg = () => (
-  <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+const SettingsSvg = ({ size }: { size: string }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 26 26"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <circle cx="13" cy="13" r="4" stroke="currentColor" strokeWidth="2" />
     <path
       strokeWidth="2"

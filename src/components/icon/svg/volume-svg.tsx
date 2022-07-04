@@ -1,7 +1,13 @@
 import React from 'react'
 
-const VolumeSvg = () => (
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+const VolumeSvg = ({ size }: { size: string }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M1 9.16724H5L10 5.16724V19.1672L5 15.1672H1V9.16724Z"
       stroke="currentColor"

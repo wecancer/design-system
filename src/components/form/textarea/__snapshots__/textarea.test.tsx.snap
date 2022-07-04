@@ -2,30 +2,32 @@
 
 exports[`<Textarea /> should render snapshot correctly 1`] = `
 <div
-  class="sc-gKclnd MTxUU"
+  class="sc-jRQBWg fAMovG"
 >
   <textarea
-    class="sc-iCfMLu PuLRv"
+    class="sc-gKclnd dvnvSW"
     rows="2"
   >
     Text message
   </textarea>
   <label
-    class="sc-pVTFL eSYQwE"
+    class="sc-furwcr cDWdYr"
   >
     Text label
   </label>
   <button
-    class="sc-gsDKAQ cIQQgU sc-furwcr khkiIC"
+    class="sc-bdvvtL cnNbBN sc-iCfMLu icSfLh"
     type="button"
   >
     <div
-      class="sc-bdvvtL dvngfV"
       data-icon-name="times"
+      style="display: inline-flex; align-items: center; justify-content: center;"
     >
       <svg
         fill="none"
+        height="22px"
         viewBox="0 0 24 24"
+        width="22px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

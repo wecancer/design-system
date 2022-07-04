@@ -1,7 +1,9 @@
 import React from 'react'
 
-const ChartTreeMapSvg = () => (
+const ChartTreeMapSvg = ({ size }: { size: string }) => (
   <svg
+    width={size}
+    height={size}
     aria-hidden="true"
     focusable="false"
     role="img"

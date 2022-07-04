@@ -1,7 +1,13 @@
 import React from 'react'
 
-const UnviewSvg = () => (
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+const UnviewSvg = ({ size }: { size: string }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M5.67969 3L21.6797 19"
       stroke="currentColor"

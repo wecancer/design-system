@@ -3,15 +3,17 @@
 exports[`<ButtonIcon /> should render snapshot correctly 1`] = `
 <div>
   <button
-    class="sc-dkPtRN fKzOSy"
+    class="sc-gsDKAQ dPcdzW"
   >
     <div
-      class="sc-bdvvtL bYGNWJ"
       data-icon-name="search"
+      style="display: inline-flex; align-items: center; justify-content: center;"
     >
       <svg
         fill="none"
+        height="16px"
         viewBox="0 0 24 24"
+        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -32,15 +34,17 @@ exports[`<ButtonIcon /> should render snapshot correctly 1`] = `
     </div>
   </button>
   <button
-    class="sc-dkPtRN ffBPPe"
+    class="sc-gsDKAQ hrafjW"
   >
     <div
-      class="sc-bdvvtL bYGNWJ"
       data-icon-name="minus"
+      style="display: inline-flex; align-items: center; justify-content: center;"
     >
       <svg
         fill="none"
+        height="16px"
         viewBox="0 0 21 2"
+        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -54,16 +58,18 @@ exports[`<ButtonIcon /> should render snapshot correctly 1`] = `
     </div>
   </button>
   <button
-    class="sc-dkPtRN fKzOSy"
+    class="sc-gsDKAQ dPcdzW"
     title="title test"
   >
     <div
-      class="sc-bdvvtL bYGNWJ"
       data-icon-name="view"
+      style="display: inline-flex; align-items: center; justify-content: center;"
     >
       <svg
         fill="none"
+        height="16px"
         viewBox="0 0 24 24"
+        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -82,16 +88,18 @@ exports[`<ButtonIcon /> should render snapshot correctly 1`] = `
     </div>
   </button>
   <button
-    class="sc-dkPtRN dMBSOR"
+    class="sc-gsDKAQ euNiIp"
     title="title test"
   >
     <div
-      class="sc-bdvvtL bYGNWJ"
       data-icon-name="view"
+      style="display: inline-flex; align-items: center; justify-content: center;"
     >
       <svg
         fill="none"
+        height="16px"
         viewBox="0 0 24 24"
+        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -110,18 +118,20 @@ exports[`<ButtonIcon /> should render snapshot correctly 1`] = `
     </div>
   </button>
   <button
-    class="sc-dkPtRN fKzOSy"
+    class="sc-gsDKAQ dPcdzW"
   >
     <div
-      class="sc-gsDKAQ cbKTir"
+      class="sc-bdvvtL izhSty"
     >
       <div
-        class="sc-bdvvtL bYGNWJ"
         data-icon-name="spinnerSolid"
+        style="display: inline-flex; align-items: center; justify-content: center;"
       >
         <svg
           fill="none"
+          height="16px"
           viewBox="0 0 20 20"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs />
