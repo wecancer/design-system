@@ -1,8 +1,9 @@
 import React from 'react'
+import { SingleValue } from 'react-select'
 
 import { SelectOption } from './types'
+
 import GenericSelect, { Props as GenericProps } from './generic-select'
-import { SingleValue } from 'react-select'
 
 type ChangeParams = {
   value: string
@@ -20,6 +21,7 @@ const Select = ({
   onFocus,
   onChange,
   className,
+  onLoadMore,
   onMenuOpen,
   onScrollEnd,
   options = [],
@@ -38,6 +40,7 @@ const Select = ({
       options={options}
       required={required}
       className={className}
+      onLoadMore={onLoadMore}
       onMenuOpen={onMenuOpen}
       onScrollEnd={onScrollEnd}
       isMenuListLoading={isMenuListLoading}
