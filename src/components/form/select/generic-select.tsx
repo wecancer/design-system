@@ -1,17 +1,18 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import styled, { useTheme, css } from 'styled-components'
 import { Label as InputLabel } from '../input/input'
+import { AsyncPaginate } from 'react-select-async-paginate'
 
 import ReactSelect, {
   GroupBase,
   PropsValue,
   ActionMeta,
   SelectInstance,
+  OptionsOrGroups,
   MultiValueRemoveProps,
   MultiValueGenericProps,
   DropdownIndicatorProps,
   components as SelectComponents,
-  MenuListProps,
 } from 'react-select'
 
 import Icon from '../../icon'
@@ -19,7 +20,6 @@ import selectStyles from './styles'
 import useTranslation from '../../../locale/use-translation'
 import useInputErrorValidation from '../input/use-input-error-validation'
 import { SelectOption, SelectOptions } from './types'
-import Loading from '../../loading'
 
 export const Label = styled(InputLabel)<{
   hasError: boolean
@@ -73,10 +73,6 @@ export const Label = styled(InputLabel)<{
       `
     })()}
   `}
-`
-
-const LoadingContainer = styled.div`
-  padding: 1rem;
 `
 
 const Input = styled.input`
@@ -139,48 +135,21 @@ export const MultiValueRemove = (
 
 type HandleScrollEnd = () => void
 
-type MenuList = {
-  isMenuListLoading?: boolean
-  onScrollEnd: HandleScrollEnd
+export type LoadedMore = {
+  options: SelectOptions
+  hasMore: boolean
+  // can pass anything for the additional attribute
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  additional?: any
 }
 
-export const menuList =
-  ({ onScrollEnd, isMenuListLoading }: MenuList) =>
-  (props: MenuListProps<SelectOption, true>) => {
-    const ref = useRef<HTMLDivElement>(null)
-    const scrollEndCallback = useCallback(onScrollEnd, [])
-
-    useEffect(() => {
-      const handleScroll = (e: Event) => {
-        const { scrollHeight, scrollTop, offsetHeight } =
-          e.currentTarget as HTMLDivElement
-        if (scrollHeight - offsetHeight <= scrollTop + 200) {
-          onScrollEnd()
-        }
-      }
-      const { current } = ref
-      const element = current?.querySelector('[class*="MenuList"]')
-
-      element?.addEventListener('scroll', handleScroll)
-
-      return () => {
-        element?.removeEventListener('scroll', handleScroll)
-      }
-    }, [scrollEndCallback, onScrollEnd])
-
-    return (
-      <div ref={ref}>
-        <SelectComponents.MenuList {...props}>
-          {props.children}
-          {isMenuListLoading && (
-            <LoadingContainer>
-              <Loading />
-            </LoadingContainer>
-          )}
-        </SelectComponents.MenuList>
-      </div>
-    )
-  }
+export type OnLoadMore = (
+  query: string,
+  loadedMore: OptionsOrGroups<SelectOption, GroupBase<SelectOption>>,
+  // can pass anything for the additional attribute
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  additional?: any,
+) => LoadedMore
 
 export type Props = {
   label?: string
@@ -190,9 +159,10 @@ export type Props = {
   className?: string
   onMenuOpen?(): void
   options: SelectOptions
-  onScrollEnd?: HandleScrollEnd
+  onLoadMore?: OnLoadMore
   closeMenuOnSelect?: boolean
   isMenuListLoading?: boolean
+  onScrollEnd?: HandleScrollEnd
   value: PropsValue<SelectOption>
   onChange(
     args: PropsValue<SelectOption>,
@@ -208,16 +178,16 @@ const GenericSelect = ({
   onFocus,
   onChange,
   className,
+  onLoadMore,
   onMenuOpen,
   required = false,
   closeMenuOnSelect,
-  isMenuListLoading,
-  onScrollEnd = () => null,
 }: Props) => {
   const t = useTranslation()
   const inputRef = useRef<HTMLInputElement>(null)
   const theme = useTheme()
   const styles = selectStyles(theme)
+  const hasLoadMore = typeof onLoadMore === 'function'
 
   const selectRef =
     useRef<SelectInstance<SelectOption, true, GroupBase<SelectOption>>>(null)
@@ -238,8 +208,31 @@ const GenericSelect = ({
     },
   )
 
+  const props = {
+    placeholder: '',
+    openMenuOnFocus: true,
+    styles: styles,
+    value: value,
+    options: options,
+    onChange: onChange,
+    onMenuOpen: onMenuOpen,
+    isMulti: isMulti || undefined,
+    onBlur: () => setFocused(false),
+    closeMenuOnSelect: closeMenuOnSelect,
+    noOptionsMessage: () => <p>{t('No options')}</p>,
+    onFocus: () => {
+      setFocused(true)
+      onFocus?.()
+    },
+    components: {
+      MultiValueRemove,
+      DropdownIndicator,
+      MultiValueContainer,
+    },
+  }
+
   return (
-    <Container className={className} hasError={hasError} hasFocus={focused}>
+    <Container hasFocus={focused} hasError={hasError} className={className}>
       {label && (
         <Label
           hasError={hasError}
@@ -251,33 +244,17 @@ const GenericSelect = ({
           {label}
         </Label>
       )}
-      <ReactSelect
-        placeholder=""
-        openMenuOnFocus
-        ref={selectRef}
-        styles={styles}
-        value={value}
-        options={options}
-        onChange={onChange}
-        onMenuOpen={onMenuOpen}
-        isMulti={isMulti || undefined}
-        onBlur={() => setFocused(false)}
-        closeMenuOnSelect={closeMenuOnSelect}
-        noOptionsMessage={() => <p>{t('No options')}</p>}
-        onFocus={() => {
-          setFocused(true)
-          onFocus?.()
-        }}
-        components={{
-          MultiValueRemove,
-          DropdownIndicator,
-          MultiValueContainer,
-          MenuList: menuList({
-            onScrollEnd,
-            isMenuListLoading,
-          }),
-        }}
-      />
+      {hasLoadMore ? (
+        <AsyncPaginate
+          selectRef={selectRef}
+          loadOptions={(search, loadedMore, additionals) =>
+            onLoadMore(search, loadedMore, additionals)
+          }
+          {...props}
+        />
+      ) : (
+        <ReactSelect ref={selectRef} {...props} />
+      )}
       {required && (
         <Input
           type="text"

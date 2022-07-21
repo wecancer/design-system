@@ -6,7 +6,7 @@ import Select, { Props } from '.'
 import { SelectOption } from './types'
 
 const generateOptionsFrom = (fromIndex: number) =>
-  new Array(20).fill(null).map<SelectOption>((el, i) => ({
+  new Array(12).fill(null).map<SelectOption>((el, i) => ({
     label: `Item ${i + fromIndex}`,
     value: `${i + fromIndex}`,
   })) as SelectOption[]
@@ -57,7 +57,8 @@ Required.args = {
 
 const InfinityScrollTemplate: Story<Props> = () => {
   const [value, setValue] = useState('')
-  const [opts, setOpts] = useState<SelectOption[]>(generateOptionsFrom(0))
+  const [count, setCount] = useState(12)
+  const opts = generateOptionsFrom(0)
 
   return (
     <form onSubmit={(e) => e.preventDefault()}>
@@ -66,8 +67,13 @@ const InfinityScrollTemplate: Story<Props> = () => {
         options={opts}
         label="Scroll me"
         onChange={({ value: val }) => setValue(val)}
-        onScrollEnd={() => {
-          setOpts((prev) => [...prev, ...generateOptionsFrom(prev.length - 1)])
+        onLoadMore={(search) => {
+          setCount((prev) => prev + 12)
+          const newValues = generateOptionsFrom(count)
+          return {
+            options: newValues,
+            hasMore: !search,
+          }
         }}
       />
     </form>

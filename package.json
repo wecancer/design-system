@@ -27,7 +27,8 @@
     "nanoid": "^3.1.30",
     "prop-types": "^15.8.1",
     "react-day-picker": "^8.0.0",
-    "react-select": "^5.3.2",
+    "react-select": "^5.2.1",
+    "react-select-async-paginate": "^0.6.1",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
@@ -65,19 +66,19 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
-    "webpack": "^5.65.0",
     "typescript": "^4.4.2",
-    "web-vitals": "^2.1.0"
+    "web-vitals": "^2.1.0",
+    "webpack": "^5.65.0"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0",
-    "styled-components": "^5.3.3",
     "date-fns": "^2.28.0",
-    "react-select": "^5.3.2",
+    "nanoid": "^3.1.30",
     "prop-types": "^15.8.1",
-    "react-dom": "^17.0.2",
+    "react": "^16.8.0 || ^17.0.0",
     "react-day-picker": "^8.0.0-beta.38",
-    "nanoid": "^3.1.30"
+    "react-dom": "^17.0.2",
+    "react-select": "^5.2.1",
+    "styled-components": "^5.3.3"
   },
   "publishConfig": {
     "access": "public",
