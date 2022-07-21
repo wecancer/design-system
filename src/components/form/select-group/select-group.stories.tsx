@@ -1,19 +1,15 @@
 import React, { useState } from 'react'
 import { Story } from '@storybook/react'
 import SelectMulti, { Props } from '.'
+import { SelectOption } from '../select/types'
 
-const options = [
-  { value: '1', label: 'Item 1' },
-  { value: '2', label: 'Item 2' },
-  { value: '3', label: 'Item 3' },
-  { value: '4', label: 'Item 4' },
-  { value: '5', label: 'Item 5' },
-  { value: '6', label: 'Item 6' },
-  { value: '7', label: 'Item 7' },
-  { value: '8', label: 'Item 8' },
-  { value: '9', label: 'Item 9' },
-  { value: '10', label: 'Item 10' },
-]
+const generateOptionsFrom = (fromIndex: number) =>
+  new Array(12).fill(null).map<SelectOption>((el, i) => ({
+    label: `Item ${i + fromIndex}`,
+    value: `${i + fromIndex}`,
+  })) as SelectOption[]
+
+const options = generateOptionsFrom(0)
 
 const Template: Story<Props> = (args) => {
   const [val, setValue] = useState(args.value)
@@ -26,6 +22,33 @@ const Template: Story<Props> = (args) => {
     />
   )
 }
+
+const InfinityScrollTemplate: Story<Props> = (args) => {
+  const [value, setValue] = useState(args.value)
+  const [count, setCount] = useState(12)
+  const opts = generateOptionsFrom(0)
+
+  return (
+    <form onSubmit={(e) => e.preventDefault()}>
+      <SelectMulti
+        value={value}
+        options={opts}
+        label="Scroll me"
+        onChange={({ value: val }) => setValue(val)}
+        onLoadMore={(search) => {
+          setCount((prev) => prev + 12)
+          const newValues = generateOptionsFrom(count)
+          return {
+            options: newValues,
+            hasMore: !search,
+          }
+        }}
+      />
+    </form>
+  )
+}
+
+export const InfinityScroll = InfinityScrollTemplate.bind({})
 
 export const Default = Template.bind({})
 Default.args = {
