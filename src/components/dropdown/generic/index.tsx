@@ -15,6 +15,7 @@ const TriggerContainer = styled.div``
 const BoxContainer = styled.div<{ triggerHeight: number; axisX: AxisX }>`
   ${({ triggerHeight, axisX }) => css`
     position: absolute;
+    z-index: 2;
     top: ${triggerHeight + 10}px;
     ${axisX === 'left'
       ? css`
