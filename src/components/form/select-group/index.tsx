@@ -22,6 +22,7 @@ const SelectGroup = ({
   onChange,
   required,
   className,
+  onLoadMore,
   onScrollEnd,
   options = [],
   isMenuListLoading,
@@ -45,6 +46,7 @@ const SelectGroup = ({
       options={opts}
       required={required}
       className={className}
+      onLoadMore={onLoadMore}
       onScrollEnd={onScrollEnd}
       closeMenuOnSelect={false}
       isMenuListLoading={isMenuListLoading}
