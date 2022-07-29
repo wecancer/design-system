@@ -3,19 +3,19 @@
 exports[`Pill Component should render basic Pill Component correctly 1`] = `
 <div>
   <div
-    class="sc-gsDKAQ jXnTrE"
+    class="sc-gsnTZi hKslZg"
   >
     <p
-      class="sc-bdvvtL hDBIQB"
+      class="sc-bczRLJ drRxDG"
     >
       test
     </p>
   </div>
   <div
-    class="sc-gsDKAQ glyxzE"
+    class="sc-gsnTZi ghfynU"
   >
     <p
-      class="sc-bdvvtL hDBIQB"
+      class="sc-bczRLJ drRxDG"
     >
       test actived
     </p>
@@ -26,15 +26,15 @@ exports[`Pill Component should render basic Pill Component correctly 1`] = `
 exports[`Pill Component should render icons of Pill Component correctly 1`] = `
 <div>
   <div
-    class="sc-gsDKAQ jXnTrE"
+    class="sc-gsnTZi hKslZg"
   >
     <p
-      class="sc-bdvvtL hDBIQB"
+      class="sc-bczRLJ drRxDG"
     >
       has closed
     </p>
     <div
-      class="sc-dkPtRN sc-eCImPb wnXUr gCJZuv"
+      class="sc-dkzDqf sc-eCYdqJ kEBkLQ laruOd"
       data-icon-name="close"
       style="display: inline-flex; align-items: center; justify-content: center;"
     >
@@ -63,10 +63,10 @@ exports[`Pill Component should render icons of Pill Component correctly 1`] = `
     </div>
   </div>
   <div
-    class="sc-gsDKAQ jXnTrE"
+    class="sc-gsnTZi hKslZg"
   >
     <div
-      class="sc-dkPtRN sc-hKwDye wnXUr kBduCc"
+      class="sc-dkzDqf sc-hKMtZM kEBkLQ ggncsn"
       data-icon-name="check"
       style="display: inline-flex; align-items: center; justify-content: center;"
     >
@@ -87,16 +87,16 @@ exports[`Pill Component should render icons of Pill Component correctly 1`] = `
       </svg>
     </div>
     <p
-      class="sc-bdvvtL hDBIQB"
+      class="sc-bczRLJ drRxDG"
     >
       checked
     </p>
   </div>
   <div
-    class="sc-gsDKAQ jXnTrE"
+    class="sc-gsnTZi hKslZg"
   >
     <div
-      class="sc-dkPtRN sc-hKwDye wnXUr kBduCc"
+      class="sc-dkzDqf sc-hKMtZM kEBkLQ ggncsn"
       data-icon-name="check"
       style="display: inline-flex; align-items: center; justify-content: center;"
     >
@@ -117,12 +117,12 @@ exports[`Pill Component should render icons of Pill Component correctly 1`] = `
       </svg>
     </div>
     <p
-      class="sc-bdvvtL hDBIQB"
+      class="sc-bczRLJ drRxDG"
     >
       checked and has closed
     </p>
     <div
-      class="sc-dkPtRN sc-eCImPb wnXUr gCJZuv"
+      class="sc-dkzDqf sc-eCYdqJ kEBkLQ laruOd"
       data-icon-name="close"
       style="display: inline-flex; align-items: center; justify-content: center;"
     >

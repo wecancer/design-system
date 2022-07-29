@@ -2,10 +2,10 @@
 
 exports[`<Dropdown /> should render snapshot correctly 1`] = `
 <div
-  class="sc-bdvvtL iqkGDp custom-classname"
+  class="sc-bczRLJ jIyjKK custom-classname"
 >
   <div
-    class="sc-gsDKAQ"
+    class="sc-gsnTZi"
   >
     <button
       type="button"

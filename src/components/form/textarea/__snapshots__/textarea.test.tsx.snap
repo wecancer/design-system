@@ -2,21 +2,21 @@
 
 exports[`<Textarea /> should render snapshot correctly 1`] = `
 <div
-  class="sc-jRQBWg fAMovG"
+  class="sc-jSMfEi ekhpSh"
 >
   <textarea
-    class="sc-gKclnd dvnvSW"
+    class="sc-gKXOVf kyQfLG"
     rows="2"
   >
     Text message
   </textarea>
   <label
-    class="sc-furwcr cDWdYr"
+    class="sc-ftvSup joJIJE"
   >
     Text label
   </label>
   <button
-    class="sc-bdvvtL cnNbBN sc-iCfMLu icSfLh"
+    class="sc-bczRLJ bjlKKu sc-iBkjds fygWwG"
     type="button"
   >
     <div

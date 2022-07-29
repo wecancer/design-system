@@ -3,35 +3,35 @@
 exports[`<Button /> should render snapshot correctly 1`] = `
 <div>
   <button
-    class="sc-gsDKAQ dfxyJO"
+    class="sc-gsnTZi cpAPPq"
     type="button"
   >
     Primary
   </button>
   <button
-    class="sc-gsDKAQ gFOvoH"
+    class="sc-gsnTZi gWbwPf"
     type="button"
   >
     Secondary
   </button>
   <button
-    class="sc-gsDKAQ euKvYh"
+    class="sc-gsnTZi CptMN"
     type="button"
   >
     Error
   </button>
   <button
-    class="sc-gsDKAQ eaFfsZ"
+    class="sc-gsnTZi bnDfIJ"
     type="button"
   >
     Success
   </button>
   <button
-    class="sc-gsDKAQ hEEWrV"
+    class="sc-gsnTZi bQrWvp"
     type="button"
   >
     <div
-      class="sc-bdvvtL izhSty"
+      class="sc-bczRLJ jPOBKJ"
     >
       <div
         data-icon-name="spinnerSolid"
@@ -57,7 +57,7 @@ exports[`<Button /> should render snapshot correctly 1`] = `
     </div>
   </button>
   <button
-    class="sc-gsDKAQ hEEWrV"
+    class="sc-gsnTZi bQrWvp"
     disabled=""
     type="button"
   >

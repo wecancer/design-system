@@ -2,13 +2,13 @@
 
 exports[`<DropdownIcon /> should render snapshot correctly 1`] = `
 <div
-  class="sc-dkPtRN dVoEeQ"
+  class="sc-dkzDqf hUMDeT"
 >
   <div
-    class="sc-hKwDye"
+    class="sc-hKMtZM"
   >
     <button
-      class="sc-gsDKAQ jlGiIE"
+      class="sc-gsnTZi gxeoBA"
     >
       <div
         data-icon-name="more"
