@@ -120,5 +120,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/wecancer/design-system.git"
-  }
+  },
+  "packageManager": "yarn@3.2.0"
 }
