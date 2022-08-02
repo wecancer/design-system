@@ -13,9 +13,23 @@ const options = generateOptionsFrom(0)
 
 const Template: Story<Props> = (args) => {
   const [val, setValue] = useState(args.value)
+  const testOptions = [
+    { label: 'test1', value: 'valueTest1', disabled: true },
+    { label: 'test2', value: 'valueTest2', disabled: false },
+    { label: 'test3', value: 'valueTest3', disabled: false },
+    { label: 'test4', value: 'valueTest4', disabled: false },
+    { label: 'test5', value: 'valueTest5', disabled: false },
+    { label: 'test6', value: 'valueTest6', disabled: false },
+    { label: 'test7', value: 'valueTest7', disabled: true },
+    { label: 'test8', value: 'valueTest8', disabled: true },
+  ]
+
+  console.log('será? ', val)
+
   return (
     <SelectMulti
       {...args}
+      options={testOptions}
       value={val}
       label="Select group"
       onChange={({ value }) => setValue(value)}
