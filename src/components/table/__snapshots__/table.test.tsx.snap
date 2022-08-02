@@ -2,30 +2,30 @@
 
 exports[`<Table /> should render snapshot correctly 1`] = `
 <ul
-  class="sc-bdvvtL cvfeBv"
+  class="sc-bczRLJ DrHKg"
 >
   <li
-    class="sc-eCImPb dfihNe"
+    class="sc-eCYdqJ jJciug"
   >
     <div
-      class="sc-jRQBWg efedTK"
+      class="sc-jSMfEi jnpQNV"
     >
       <div
-        class="sc-gKclnd edtKzm wc-table-cell"
+        class="sc-gKXOVf iytaLG wc-table-cell"
       >
         <div>
           Head 1
         </div>
       </div>
       <div
-        class="sc-gKclnd edtKzm wc-table-cell"
+        class="sc-gKXOVf iytaLG wc-table-cell"
         role="button"
         tabindex="0"
       >
         <div>
           Head 2
           <div
-            class="sc-iCfMLu eIzGTJ"
+            class="sc-iBkjds cOOvXG"
             data-icon-name="sort"
             style="display: inline-flex; align-items: center; justify-content: center;"
           >
@@ -44,14 +44,14 @@ exports[`<Table /> should render snapshot correctly 1`] = `
         </div>
       </div>
       <div
-        class="sc-gKclnd edtKzm wc-table-cell"
+        class="sc-gKXOVf iytaLG wc-table-cell"
         role="button"
         tabindex="0"
       >
         <div>
           Head 3
           <div
-            class="sc-iCfMLu eIzGTJ"
+            class="sc-iBkjds cOOvXG"
             data-icon-name="sort"
             style="display: inline-flex; align-items: center; justify-content: center;"
           >
@@ -70,7 +70,7 @@ exports[`<Table /> should render snapshot correctly 1`] = `
         </div>
       </div>
       <div
-        class="sc-gKclnd edtKzm wc-table-cell"
+        class="sc-gKXOVf iytaLG wc-table-cell"
       >
         <div>
           Head 4
@@ -79,35 +79,35 @@ exports[`<Table /> should render snapshot correctly 1`] = `
     </div>
   </li>
   <li
-    class="sc-gsDKAQ cVUWzY"
+    class="sc-gsnTZi hrskKg"
     role="button"
   >
     <div
-      class="sc-dkPtRN oQTeg"
+      class="sc-dkzDqf FmEcj"
     >
       <div
-        class="sc-hKwDye ioceDp wc-table-cell"
+        class="sc-hKMtZM iaErHW wc-table-cell"
       >
         <div>
           Warning
         </div>
       </div>
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Clickable
         </div>
       </div>
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Item 3
         </div>
       </div>
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Proin viverra justo vitae aliquam pulvinar. Interdum et malesuada fames ac ante ipsum primis in faucibus.
@@ -116,34 +116,34 @@ exports[`<Table /> should render snapshot correctly 1`] = `
     </div>
   </li>
   <li
-    class="sc-gsDKAQ UKGbb"
+    class="sc-gsnTZi fXkVkn"
   >
     <div
-      class="sc-dkPtRN oQTeg"
+      class="sc-dkzDqf FmEcj"
     >
       <div
-        class="sc-hKwDye ioceDp wc-table-cell"
+        class="sc-hKMtZM iaErHW wc-table-cell"
       >
         <div>
           Error!
         </div>
       </div>
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Item 2
         </div>
       </div>
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Item 3
         </div>
       </div>
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Phasellus vel velit et mi eleifend dignissim. Duis vitae mi magna. Proin in feugiat urna.
@@ -152,34 +152,34 @@ exports[`<Table /> should render snapshot correctly 1`] = `
     </div>
   </li>
   <li
-    class="sc-gsDKAQ bcAwMB"
+    class="sc-gsnTZi egEhph"
   >
     <div
-      class="sc-dkPtRN oQTeg"
+      class="sc-dkzDqf FmEcj"
     >
       <div
-        class="sc-hKwDye ioceDp wc-table-cell"
+        class="sc-hKMtZM iaErHW wc-table-cell"
       >
         <div>
           Item 1
         </div>
       </div>
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Item 2
         </div>
       </div>
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Item 3
         </div>
       </div>
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -188,34 +188,34 @@ exports[`<Table /> should render snapshot correctly 1`] = `
     </div>
   </li>
   <li
-    class="sc-gsDKAQ fNypaA"
+    class="sc-gsnTZi eqNxxE"
   >
     <div
-      class="sc-dkPtRN oQTeg"
+      class="sc-dkzDqf FmEcj"
     >
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Item 1
         </div>
       </div>
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Item 2
         </div>
       </div>
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Item 3
         </div>
       </div>
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Nulla iaculis, erat ultrices egestas pretium, metus augue efficitur massa, blandit elementum arcu dolor at erat.
@@ -224,34 +224,34 @@ exports[`<Table /> should render snapshot correctly 1`] = `
     </div>
   </li>
   <li
-    class="sc-gsDKAQ fNypaA"
+    class="sc-gsnTZi eqNxxE"
   >
     <div
-      class="sc-dkPtRN oQTeg"
+      class="sc-dkzDqf FmEcj"
     >
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Item 1
         </div>
       </div>
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Item 2
         </div>
       </div>
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Item 3
         </div>
       </div>
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Item 4
@@ -260,20 +260,20 @@ exports[`<Table /> should render snapshot correctly 1`] = `
     </div>
   </li>
   <li
-    class="sc-gsDKAQ fNypaA"
+    class="sc-gsnTZi eqNxxE"
   >
     <div
-      class="sc-dkPtRN dGrlTs"
+      class="sc-dkzDqf gGIQir"
     >
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Item 1
         </div>
       </div>
       <div
-        class="sc-hKwDye hdVIBU wc-table-cell wc-table-cell-solid"
+        class="sc-hKMtZM lbUTJH wc-table-cell wc-table-cell-solid"
       >
         <div>
           Item 2

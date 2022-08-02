@@ -3,25 +3,25 @@
 exports[`<DateTimePicker /> should render snapshot correctly 1`] = `
 <div>
   <div
-    class="sc-bqiRlB dOJgiz"
+    class="sc-breuTD kinKbv"
   >
     <div
-      class="sc-iCfMLu FBMMr"
+      class="sc-iBkjds bZGVhU"
       role="button"
       tabindex="0"
     >
       <div
-        class="sc-bdvvtL dCRIj"
+        class="sc-bczRLJ fcflbs"
       >
         <input
-          class="sc-gsDKAQ fbDsNh"
+          class="sc-gsnTZi gXMNNh"
           placeholder=""
           type="text"
           value="31/12/1899"
         />
         <div
           aria-label="labelDatePicker"
-          class="sc-jRQBWg fQRgLw"
+          class="sc-jSMfEi dNATqj"
           data-label="true"
           role="button"
           tabindex="-1"
@@ -29,7 +29,7 @@ exports[`<DateTimePicker /> should render snapshot correctly 1`] = `
           labelDatePicker
         </div>
         <button
-          class="sc-hKwDye ggsLFI"
+          class="sc-hKMtZM jwRrAH"
           type="button"
         >
           <div
@@ -123,28 +123,28 @@ exports[`<DateTimePicker /> should render snapshot correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-furwcr gLQxJk"
+      class="sc-ftvSup fwXMPX"
     >
       <div
-        class="sc-jrQzAO imIqjJ"
+        class="sc-jqUVSM bOUBEc"
         role="button"
         tabindex="-1"
       >
         <div
-          class="sc-jRQBWg sc-pVTFL fQRgLw lfnQHl"
+          class="sc-jSMfEi sc-papXJ dNATqj dRwyZw"
         >
           labelTimePicker
         </div>
         <div>
           <input
-            class="sc-iqseJM fqdjkG"
+            class="sc-iqcoie cZbzpt"
             placeholder="0"
             type="number"
             value="0"
           />
           :
           <input
-            class="sc-iqseJM fqdjkG"
+            class="sc-iqcoie cZbzpt"
             placeholder="0"
             type="number"
             value="0"

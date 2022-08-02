@@ -2,7 +2,7 @@
 
 exports[`<Loading /> should render snapshot correctly 1`] = `
 <div
-  class="sc-bdvvtL izhSty"
+  class="sc-bczRLJ jPOBKJ"
 >
   <div
     data-icon-name="spinnerSolid"
