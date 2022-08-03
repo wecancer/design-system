@@ -46,14 +46,6 @@ const SelectGroup = ({
 
   const newLabel = { label: t('All'), value: '' }
 
-  const onSelectAll = () => {
-    setVerification(true)
-    if (onLoadMore?.length) {
-      value = allValues
-    }
-  }
-
-  console.log('primeiro: ', isAllSelected)
   return (
     <GenericSelect
       isMulti
@@ -68,34 +60,22 @@ const SelectGroup = ({
       isMenuListLoading={isMenuListLoading}
       onChange={(val: MultiValue<SelectOption>, action) => {
         const newOptionValue = val as SelectOptions
-        console.log('segundo isAllSelected: ', isAllSelected)
-        console.log(action)
         if (action.option?.value === selectAllOption.value) {
-          onSelectAll()
+          setVerification(true)
           onChange({ value: isAllSelected ? [] : allValues })
-          console.log('action: ', action.action)
-          console.log('options: ', options)
-          console.log('value: ', value)
-          console.log('bla: ', isAllSelected ? [] : options)
           return
         }
         if (isAllSelected) {
           onChange({ value: isAllSelected ? [] : options })
-          console.log('value: ', value)
         }
         if (action.action === 'clear') {
           setVerification(false)
-          console.log('value: ', value)
-          console.log('limpando..')
         }
         if (value?.includes({ label: 'All', value: '' })) {
           onChange({ value: isAllSelected ? [] : allValues })
-          console.log('value: ', value)
         }
         if (action.removedValue?.label === 'All') {
           setVerification(false)
-          console.log('value: ', value)
-          console.log('deletando tudo')
         }
         onChange({ value: newOptionValue })
       }}

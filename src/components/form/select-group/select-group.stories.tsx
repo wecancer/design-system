@@ -48,8 +48,6 @@ const options = generateOptionsFrom(0)
 const Template: Story<Props> = (args) => {
   const [val, setValue] = useState(args.value)
 
-  console.log('será? ', val)
-
   return (
     <SelectMulti
       {...args}
