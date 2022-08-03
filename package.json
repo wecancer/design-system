@@ -1,6 +1,6 @@
 {
   "name": "@wecancer/design-system",
-  "version": "1.0.29",
+  "version": "1.0.30",
   "homepage": "wecancer-design-system.netlify.app",
   "license": "MIT",
   "main": "dist/wecancer-design-system.cjs.js",
