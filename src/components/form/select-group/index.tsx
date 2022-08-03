@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MultiValue } from 'react-select'
 
 import GenericSelect from '../select/generic-select'
@@ -12,6 +12,7 @@ type ChangeParams = {
 
 export type Props = Omit<SelectProps, 'value' | 'onChange'> & {
   value?: SelectOptions
+  allValues: SelectOptions
   hasSelectAll?: boolean
   onChange(args: ChangeParams): void
 }
@@ -21,6 +22,7 @@ const SelectGroup = ({
   label,
   onChange,
   required,
+  allValues,
   className,
   onLoadMore,
   onScrollEnd,
@@ -29,17 +31,25 @@ const SelectGroup = ({
   hasSelectAll = true,
 }: Props) => {
   const t = useTranslation()
+  const [verification, setVerification] = useState(false)
 
-  const isAllSelected = options.length === value?.length
+  const isAllSelected = options.length === value?.length || verification
   const selectAllOption = {
     label: t(isAllSelected ? 'Unselect all' : 'Select all'),
     value: '__wcds_select-all',
   }
 
   const opts = hasSelectAll ? [selectAllOption, ...options] : options
+
   const newLabel = { label: t('All'), value: '' }
 
-  console.log('value: ', value)
+  const onSelectAll = () => {
+    setVerification(true)
+    if (onLoadMore?.length) {
+      value = allValues
+    }
+  }
+
   console.log('primeiro: ', isAllSelected)
   return (
     <GenericSelect
@@ -49,18 +59,30 @@ const SelectGroup = ({
       options={isAllSelected ? [] : opts}
       required={required}
       className={className}
-      onLoadMore={onLoadMore}
+      onLoadMore={!verification ? onLoadMore : undefined}
       onScrollEnd={onScrollEnd}
       closeMenuOnSelect={false}
       isMenuListLoading={isMenuListLoading}
       onChange={(val: MultiValue<SelectOption>, action) => {
         const newOptionValue = val as SelectOptions
         console.log('segundo isAllSelected: ', isAllSelected)
+        console.log(action)
         if (action.option?.value === selectAllOption.value) {
-          onChange({ value: isAllSelected ? [] : options })
+          onSelectAll()
+          onChange({ value: isAllSelected ? [] : allValues })
           console.log('action: ', action.action)
+          console.log('options: ', options)
+          console.log('value: ', value)
           console.log('bla: ', isAllSelected ? [] : options)
           return
+        }
+        if (action.action === 'clear') {
+          setVerification(false)
+          console.log('limpando..')
+        }
+        if (action.removedValue?.label === 'All') {
+          setVerification(false)
+          console.log('deletando tudo')
         }
         onChange({ value: newOptionValue })
       }}
