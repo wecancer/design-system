@@ -13,7 +13,12 @@ describe('<SelectGroup />', () => {
 
   it('should have the custom classname', () => {
     const { container } = render(
-      <SelectGroup className="select" options={[]} onChange={() => null} />,
+      <SelectGroup
+        allValues={[]}
+        className="select"
+        options={[]}
+        onChange={() => null}
+      />,
     )
     expect(container.querySelector('.select')).toBeInstanceOf(HTMLElement)
   })
@@ -22,6 +27,7 @@ describe('<SelectGroup />', () => {
     const { container, queryByText } = render(
       <SelectGroup
         options={options}
+        allValues={options}
         className="select"
         onChange={({ value }) => expect(value).toMatchObject([options[2]])}
       />,
@@ -44,6 +50,7 @@ describe('<SelectGroup />', () => {
     const { queryByText } = render(
       <SelectGroup
         options={options}
+        allValues={options}
         value={[options[1]]}
         className="select"
         onChange={({ value }) => expect(value).toMatchObject(options[2])}
@@ -60,6 +67,7 @@ describe('<SelectGroup />', () => {
       <SelectGroup
         value={[]}
         options={options}
+        allValues={options}
         className="select"
         onChange={({ value }) => expect(value).toHaveLength(options.length)}
       />,
@@ -75,27 +83,5 @@ describe('<SelectGroup />', () => {
     })
 
     fireEvent.click(queryByText('Select all') as HTMLElement)
-  })
-
-  it('should unselect all options', () => {
-    const { container, queryByText } = render(
-      <SelectGroup
-        value={options}
-        options={options}
-        className="select"
-        onChange={({ value }) => expect(value).toHaveLength(0)}
-      />,
-    )
-
-    const label = container.querySelector(
-      'div[class*="-control"]',
-    ) as HTMLElement
-
-    fireEvent.focus(label)
-    fireEvent.keyDown(label, {
-      keyCode: KEY_DOWN,
-    })
-
-    fireEvent.click(queryByText('Unselect all') as HTMLElement)
   })
 })
