@@ -33,7 +33,10 @@ const SelectGroup = ({
   const t = useTranslation()
   const [verification, setVerification] = useState(false)
 
-  const isAllSelected = options.length === value?.length || verification
+  const isAllSelected = onLoadMore?.length
+    ? allValues.length === value?.length || verification
+    : options.length === value?.length || verification
+
   const selectAllOption = {
     label: t(isAllSelected ? 'Unselect all' : 'Select all'),
     value: '__wcds_select-all',
@@ -76,12 +79,22 @@ const SelectGroup = ({
           console.log('bla: ', isAllSelected ? [] : options)
           return
         }
+        if (isAllSelected) {
+          onChange({ value: isAllSelected ? [] : options })
+          console.log('value: ', value)
+        }
         if (action.action === 'clear') {
           setVerification(false)
+          console.log('value: ', value)
           console.log('limpando..')
+        }
+        if (value?.includes({ label: 'All', value: '' })) {
+          onChange({ value: isAllSelected ? [] : allValues })
+          console.log('value: ', value)
         }
         if (action.removedValue?.label === 'All') {
           setVerification(false)
+          console.log('value: ', value)
           console.log('deletando tudo')
         }
         onChange({ value: newOptionValue })
