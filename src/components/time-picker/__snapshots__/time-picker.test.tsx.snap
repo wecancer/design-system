@@ -3,28 +3,28 @@
 exports[`<TimePicker /> should render snapshot correctly 1`] = `
 <div>
   <div
-    class="sc-gKclnd cUaLCy"
+    class="sc-gKXOVf czoAbi"
   >
     <div
-      class="sc-furwcr bASaRX"
+      class="sc-ftvSup WDbRs"
       role="button"
       tabindex="-1"
     >
       <div
-        class="sc-jRQBWg sc-iCfMLu fQRgLw gGAAVt"
+        class="sc-jSMfEi sc-iBkjds dNATqj jNTCDy"
       >
         timepicker-label
       </div>
       <div>
         <input
-          class="sc-jrQzAO haJaYK"
+          class="sc-jqUVSM drMMqX"
           placeholder="12"
           type="number"
           value="12"
         />
         :
         <input
-          class="sc-jrQzAO haJaYK"
+          class="sc-jqUVSM drMMqX"
           placeholder="34"
           type="number"
           value="34"

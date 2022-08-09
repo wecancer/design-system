@@ -3,25 +3,25 @@
 exports[`<Card /> should render snapshot correctly 1`] = `
 <div>
   <div
-    class="sc-bdvvtL gdXJKY"
+    class="sc-bczRLJ cOveTH"
   >
     <div
-      class="sc-dkPtRN fTzDyF"
+      class="sc-dkzDqf esjBZm"
     />
     <div
-      class="sc-gKclnd fZDwpr"
+      class="sc-gKXOVf hrhlkb"
     >
       The card with image
     </div>
   </div>
   <div
-    class="sc-bdvvtL bumdSL"
+    class="sc-bczRLJ jBxGZw"
   >
     <div
-      class="sc-dkPtRN itKhys"
+      class="sc-dkzDqf limxqf"
     />
     <div
-      class="sc-gKclnd fDKCpK"
+      class="sc-gKXOVf gvlbeu"
     >
       <p>
         Item 1
@@ -35,10 +35,10 @@ exports[`<Card /> should render snapshot correctly 1`] = `
     </div>
   </div>
   <div
-    class="sc-bdvvtL gdXJKY"
+    class="sc-bczRLJ cOveTH"
   >
     <div
-      class="sc-gsDKAQ dFgJVi"
+      class="sc-gsnTZi hEGjTa"
     >
       <div
         data-icon-name="check"
@@ -62,72 +62,72 @@ exports[`<Card /> should render snapshot correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-gKclnd fZDwpr"
+      class="sc-gKXOVf hrhlkb"
     >
       Card with icon
     </div>
   </div>
   <div
-    class="sc-bdvvtL gdXJKY"
+    class="sc-bczRLJ cOveTH"
     role="button"
     tabindex="0"
   >
     <div
-      class="sc-gKclnd fZDwpr"
+      class="sc-gKXOVf hrhlkb"
     >
       Card clickable
     </div>
   </div>
   <div
-    class="sc-bdvvtL bPDKIS"
+    class="sc-bczRLJ bdMVGZ"
     role="button"
     style="display: grid; grid-template-columns: minmax(0, 90px) 1fr; align-items: center;"
     tabindex="0"
   >
     <div
-      class="sc-hKwDye kIscNR"
+      class="sc-hKMtZM dvmCma"
     >
       <p
-        class="sc-eCImPb KzQwu"
+        class="sc-eCYdqJ hjtWbM"
       >
          
         10
          
       </p>
       <p
-        class="sc-jRQBWg dtBfvD"
+        class="sc-jSMfEi gVnUmI"
       >
         Patients
       </p>
     </div>
     <div
-      class="sc-gKclnd cDQPGl"
+      class="sc-gKXOVf dWOLwx"
     >
       Card clickable
     </div>
   </div>
   <div
-    class="sc-bdvvtL gdXJKY"
+    class="sc-bczRLJ cOveTH"
     style="display: grid; grid-template-columns: minmax(0, 90px) 1fr; align-items: center;"
   >
     <div
-      class="sc-hKwDye hHxrJm"
+      class="sc-hKMtZM hxZntt"
     >
       <p
-        class="sc-eCImPb KzQwu"
+        class="sc-eCYdqJ hjtWbM"
       >
          
         +99
          
       </p>
       <p
-        class="sc-jRQBWg dtBfvD"
+        class="sc-jSMfEi gVnUmI"
       >
         Notes
       </p>
     </div>
     <div
-      class="sc-gKclnd fZDwpr"
+      class="sc-gKXOVf hrhlkb"
     >
       Check it out!
     </div>

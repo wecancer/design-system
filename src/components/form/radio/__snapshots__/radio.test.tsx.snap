@@ -3,61 +3,61 @@
 exports[`<Radio /> should render snapshot correctly 1`] = `
 <div>
   <div
-    class="sc-bdvvtL gowonf"
+    class="sc-bczRLJ kfAyjk"
   >
     <div
       aria-checked="false"
       aria-disabled="false"
-      class="sc-gsDKAQ kAIVTa"
+      class="sc-gsnTZi jEPdEC"
       role="radio"
       tabindex="0"
     />
   </div>
   <div
-    class="sc-bdvvtL gowonf"
+    class="sc-bczRLJ kfAyjk"
   >
     <div
       aria-checked="true"
       aria-disabled="false"
-      class="sc-gsDKAQ eTNswP"
+      class="sc-gsnTZi eNWukP"
       role="radio"
       tabindex="0"
     />
   </div>
   <div
-    class="sc-bdvvtL gowonf"
+    class="sc-bczRLJ kfAyjk"
   >
     <div
       aria-checked="false"
       aria-disabled="true"
-      class="sc-gsDKAQ kAIVTa"
+      class="sc-gsnTZi jEPdEC"
       role="radio"
       tabindex="0"
     />
   </div>
   <div
-    class="sc-bdvvtL gowonf"
+    class="sc-bczRLJ kfAyjk"
   >
     <div
       aria-checked="true"
       aria-disabled="true"
-      class="sc-gsDKAQ eTNswP"
+      class="sc-gsnTZi eNWukP"
       role="radio"
       tabindex="0"
     />
   </div>
   <div
-    class="sc-bdvvtL gowonf"
+    class="sc-bczRLJ kfAyjk"
   >
     <div
       aria-checked="true"
       aria-disabled="true"
-      class="sc-gsDKAQ eTNswP"
+      class="sc-gsnTZi eNWukP"
       role="radio"
       tabindex="0"
     />
     <div
-      class="sc-dkPtRN ebgbMx"
+      class="sc-dkzDqf joQWWO"
       role="button"
       tabindex="0"
     >
@@ -65,17 +65,17 @@ exports[`<Radio /> should render snapshot correctly 1`] = `
     </div>
   </div>
   <div
-    class="sc-bdvvtL gowonf"
+    class="sc-bczRLJ kfAyjk"
   >
     <div
       aria-checked="false"
       aria-disabled="false"
-      class="sc-gsDKAQ kAIVTa"
+      class="sc-gsnTZi jEPdEC"
       role="radio"
       tabindex="0"
     />
     <div
-      class="sc-dkPtRN ebgbMx"
+      class="sc-dkzDqf joQWWO"
       role="button"
       tabindex="0"
     >

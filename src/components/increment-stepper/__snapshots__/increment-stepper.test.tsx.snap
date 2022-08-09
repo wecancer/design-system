@@ -3,10 +3,10 @@
 exports[`<IncrementStepper /> should render snapshot correctly 1`] = `
 <div>
   <div
-    class="sc-gsDKAQ lfbtqy"
+    class="sc-gsnTZi kSpyNm"
   >
     <button
-      class="sc-bdvvtL cnNbBN sc-hKwDye dhVNcE"
+      class="sc-bczRLJ bjlKKu sc-hKMtZM eprRJL"
       type="button"
     >
       <div
@@ -31,12 +31,12 @@ exports[`<IncrementStepper /> should render snapshot correctly 1`] = `
       </div>
     </button>
     <input
-      class="sc-dkPtRN dtKvHs"
+      class="sc-dkzDqf cSmgyH"
       type="text"
       value="10"
     />
     <button
-      class="sc-bdvvtL cnNbBN sc-hKwDye dhVNcE"
+      class="sc-bczRLJ bjlKKu sc-hKMtZM eprRJL"
       type="button"
     >
       <div
